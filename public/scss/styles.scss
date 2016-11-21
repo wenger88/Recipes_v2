@@ -1,0 +1,30 @@
+
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/font-awesome";
+
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+	background-repeat: no-repeat !important;
+	min-width: 0px;
+	min-height: 0px;
+}
+
+body {
+		color: #555;
+		margin: 0px;
+		padding: 0px;
+
+		.main-content {
+			margin: 30px;
+
+			.header {
+					font-size: 18pt;
+					text-transform: capitalize;				
+			}
+		}
+}
