@@ -10,23 +10,26 @@
 
 <header class="container">
     <div class="row">
-        <ul class="float-sm-right">
-            <li class="active">
-                <i class="fa fa-facebook"></i>
-            </li>
-            <li class="">
-                <i class="fa fa-twitter"></i>
-            </li>
-            <li class="">
-                <i class="fa fa-google-plus"></i>
-            </li>
-            <li class="">
-                <a class="btn btn-outline-success">Login</a>
-            </li>
-            <li class="">
-                <a class="btn btn-outline-success">Register</a>
-            </li>
-        </ul>
+        <div class="clearfix header-social">
+            <ul class="list-inline clearfix">
+                <li class="list-inline-item">
+                    <i class="fa fa-facebook"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fa fa-twitter"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fa fa-google-plus"></i>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn btn-outline-success">Login</a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn btn-outline-success">Register</a>
+                </li>
+            </ul>
+        </div>
+
         <nav class="navbar navbar-light bg-faded">
             <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
             <div class="collapse navbar-toggleable-md" id="navbarResponsive">
@@ -34,7 +37,7 @@
 
                 <ul class="nav navbar-nav float-sm-right">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" [routerLink]="['/']">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
