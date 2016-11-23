@@ -6,7 +6,7 @@
         <div class="recipe-set" *ngFor="let recipe of recipes">
 
             <div class="recipe-set-image">
-                <a href="">
+                <a [routerLink]="['/recipe-details', recipe.id]">
                     <img [src]="recipe.image" alt="" class="img-fluid">
                 </a>
             </div>

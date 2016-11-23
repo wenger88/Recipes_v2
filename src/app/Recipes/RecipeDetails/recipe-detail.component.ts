@@ -15,7 +15,8 @@ import {ActivatedRoute, Router, Params} from "@angular/router";
 export class RecipeDetailComponent implements OnInit{
 
     recipe: Recipe;
-
+    cuisines: {} = {};
+    cuisine: string;
     constructor(private dataService: DataService, private router: Router ,private route: ActivatedRoute){}
 
     ngOnInit(): void {
@@ -23,6 +24,13 @@ export class RecipeDetailComponent implements OnInit{
             this.dataService.GetSingle(params['id'])
                 .subscribe((recipe: Recipe) => this.recipe = recipe)
         })
+
+        this.dataService.GetAll()
+            .subscribe((recipe: Recipe[]) => {
+                this.cuisines = recipe[0];
+            })
+
+        this.cuisine = this.recipe.courseId
     }
 
 

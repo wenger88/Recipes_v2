@@ -16,6 +16,10 @@ const APP_ROUTES_PROVIDERS: Routes = [
         component: RecipesComponent
     },
     {
+        path: 'recipe-details/:id',
+        component: RecipeDetailComponent
+    },
+    {
         path: 'create',
         component: RecipeCreateComponent
     }
