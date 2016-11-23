@@ -1,0 +1,7 @@
+
+<div *ngIf="recipe">
+    <select [ngModel]="selectedCourse" (ngModelChange)="onChange($event)" name="course" class="form-control font-italic" style="font-size: 0.875rem">
+        <option>Select a course</option>
+        <option *ngFor="let course of recipe.course" [value]="course.id">{{course.name}}</option>
+    </select>
+</div>
