@@ -1,7 +1,7 @@
 
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/scss/font-awesome";
-
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
 
 html {
 	box-sizing: border-box;
@@ -18,7 +18,7 @@ body {
 		color: #555;
 		margin: 0px;
 		padding: 0px;
-
+		font-family: 'Lora', serif;
 		.main-content {
 			margin: 30px;
 
@@ -27,4 +27,19 @@ body {
 					text-transform: capitalize;				
 			}
 		}
+}
+
+a{
+	color: #000;
+	text-decoration: none;
+	outline: none;
+	&:hover{
+		text-decoration: none;
+		outline: none;
+      color: #000;
+	}
+}
+
+button{
+	outline: none;
 }

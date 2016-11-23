@@ -1,9 +1,13 @@
-import { ModuleWithProviders }   from '@angular/core';
 import { Routes, RouterModule }  from '@angular/router';
 
 // no general routes
-const appRoutes: Routes = [];
+const APP_ROUTES_PROVIDERS: Routes = [
+    {
+        path: '',
+        redirectTo: '/recipes',
+        pathMatch: 'full'
+    }
+];
 
-export const appRoutingProviders: any[] = [];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+export const routing = RouterModule.forRoot(APP_ROUTES_PROVIDERS);
