@@ -22,12 +22,29 @@ export class RecipeCreateComponent implements OnInit{
     }
     postRecipeToServer: string;
     @ViewChild('recipeForm') recipeForm: NgForm;
+    selectedOccasion: string = "Select an occasion";
+    occasion: {} = {};
+    cuisine: {} = {};
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
                 private router: Router,){}
 
     ngOnInit(): void {
+        this.dataService.GetAll()
+            .subscribe((recipe: Recipe[]) => {
+                this.occasion = recipe[0];
+            })
+        this.dataService.GetAll()
+            .subscribe((recipe: Recipe[]) => {
+                this.cuisine = recipe[0];
+            })
+    }
+
+    onChange(newValue: any) {
+        console.log(newValue);
+        this.selectedOccasion = newValue;
+        // ... do other stuff here ...
     }
 
     onSubmit(){
