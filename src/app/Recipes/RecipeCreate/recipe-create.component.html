@@ -44,6 +44,52 @@
                                   required
                         ></textarea>
                     </div>
+                    <div>
+                        <div class="top">
+                            <label>Ingredients</label>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <label>Add New Ingredients</label>
+                                    <div class="row">
+                                        <div class="col-xs-10">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="ingredient" ngModel #ingredientName>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <button type="button"
+                                                    class="btn btn-sm btn-success"
+                                                    (click)="addIngredient(ingredientName)"
+                                                    [disabled]="ingredientName.value == ''">ADD
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item ingredient-item"
+                                    *ngFor="let ingredient of recipe.ingredients;let i = index">
+                                    <div class="row">
+
+                                        <div class="col-xs-10">
+                                            <input type="text"
+                                                   class="form-control"
+                                                   name="name-{{i}}"
+                                                   [(ngModel)]="ingredient.name"
+                                                   #ingredientName="ngModel"
+                                                   required
+                                            >
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <button class="btn btn-sm btn-danger" (click)=" removeIngredient(i)">X
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-danger" [hidden]="ingredientName.valid">
+                                        Ingredient name is required
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
