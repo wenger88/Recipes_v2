@@ -17,6 +17,9 @@ import {MainIngredientFilterComponent} from "./Recipes/RecipeFilter/main-ingredi
 import {CourseFilterComponent} from "./Recipes/RecipeFilter/course-filter.component";
 import {CookTimeFilterComponent} from "./Recipes/RecipeFilter/cook-time-filter.component";
 import {OccasionFilterComponent} from "./Recipes/RecipeFilter/occasion-filter.component";
+import {RecipeDetailComponent} from "./Recipes/RecipeDetails/recipe-detail.component";
+import {RecipeEditComponent} from "./Recipes/RecipeEdit/recipe-edit.component";
+import {RecipeCreateComponent} from "./Recipes/RecipeCreate/recipe-create.component";
 
 @NgModule({
 	imports: [
@@ -35,7 +38,10 @@ import {OccasionFilterComponent} from "./Recipes/RecipeFilter/occasion-filter.co
 		MainIngredientFilterComponent,
 		CourseFilterComponent,
 		CookTimeFilterComponent,
-		OccasionFilterComponent
+		OccasionFilterComponent,
+		RecipeDetailComponent,
+		RecipeEditComponent,
+        RecipeCreateComponent
 	],
 	providers: [
 		DataService

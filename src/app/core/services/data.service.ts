@@ -4,9 +4,10 @@
 
 import {Injectable} from "@angular/core";
 import {Recipe} from "../../shared/interfaces";
-import {Http, Response} from "@angular/http";
+import {Http, Response, RequestOptions, Headers} from "@angular/http";
 import {Observable} from "rxjs";
 import 'rxjs/Rx';
+import {error} from "util";
 
 @Injectable()
 export class DataService{
@@ -25,7 +26,18 @@ export class DataService{
     GetSingle(id: number): Observable<Recipe>{
         return this._http.get(this.recipesUrl + '/' + id)
             .map((res: Response) => res.json())
+            .catch(this.handleError);
+    }
+
+    AddRecipe(body: Object): Observable<Recipe>{
+        let bodyString = JSON.stringify(body); // Stringify payload
+        let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
+        let options = new RequestOptions({ headers: headers }); // Create a request option
+
+        return this._http.post(this.recipesUrl, bodyString, options)
+            .map((res: Response) => <Recipe>res.json())
             .catch(this.handleError)
+
     }
 
 
