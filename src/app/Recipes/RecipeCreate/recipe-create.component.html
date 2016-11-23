@@ -1,0 +1,51 @@
+<div *ngIf="recipe">
+    <div class="container">
+
+
+        <div class="row">
+
+            <div class="recipe-create">
+                <h2>Submit Recipe</h2>
+                <p>Food Recipe theme include a Recipe Submit Template. It allow users to submit a recipe with featured
+                    image and related details. A user should be logged in to submit a recipe.</p>
+            </div>
+
+            <form #recipeForm="ngForm" novalidate (ngSubmit)="onSubmit()" (keydown.enter)="keyDownFunction($event)">
+                <div class="col-sm-9">
+                    <div class="form-group">
+                        <label>Image Url</label>
+                        <input type="text"
+                               class="form-control"
+                               name="image"
+                               #image="ngModel"
+                               [(ngModel)]="recipe.image"
+                               required
+                        >
+                    </div>
+                    <div class="img-container" [hidden]="!image.valid">
+                        <img class="img-responsive" [src]="recipe.image" alt="">
+                    </div>
+                    <div class="form-group">
+                        <label>Recipe Title</label>
+                        <input type="text"
+                               class="form-control"
+                               name="title"
+                               [(ngModel)]="recipe.title"
+                               #title="ngModel"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label>Short Description</label>
+                        <textarea name="description"
+                                  rows="5"
+                                  class="form-control"
+                                  [(ngModel)]="recipe.description"
+                                  #description="ngModel"
+                                  required
+                        ></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
