@@ -1,5 +1,6 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {RecipesComponent} from "../../Recipes/recipes.component";
 
 
 const appHeaderRoutes: Routes = [
@@ -21,8 +22,12 @@ const appHeaderRoutes: Routes = [
 		pathMatch: 'full'
 	}*/
 	{
+		path: 'recipes',
+		component: RecipesComponent
+	},
+	{
 		path: '',
-		redirectTo: '',
+		redirectTo: '/recipes',
 		pathMatch: 'full'
 	}
 ];
