@@ -1,0 +1,81 @@
+
+
+.filter{
+  margin-top: -47px;
+  .filter-show{
+    display: inline-block;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    padding: 0 19px;
+    background-color: #000;
+    color: #ffffff;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+    border: none;
+    border-radius: 0;
+    &:before{
+      content: "";
+      width: 20px;
+      height: 49px;
+      display: inline-block;
+      background: #000;
+      transform: rotate(-22deg);
+      position: absolute;
+      right: -10px;
+      top: 3px;
+    }
+
+    i{
+      font-size: 14px;
+      position: relative;
+      left: 5px;
+    }
+  }
+
+
+  .filter-fields{
+    border-bottom: 1px solid #e4d9d1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0;
+
+    .filter-fields-form{
+      flex: 1;
+      margin-right: 15px;
+
+      label{
+        font-size: 14px;
+        font-weight: bold;
+        font-family: "Segoe UI";
+      }
+
+    }
+
+    .form-filter-btn{
+      position: relative;
+      top: 7px;
+      button{
+        background: #6ebe3b;
+        color: #fff;
+        border: 0;
+        width: 42px;
+        height: 38px;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+          background: #000;
+        }
+      }
+
+    }
+
+
+  }
+
+}
