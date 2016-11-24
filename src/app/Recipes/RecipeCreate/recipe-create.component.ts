@@ -22,9 +22,12 @@ export class RecipeCreateComponent implements OnInit{
     }
     postRecipeToServer: string;
     @ViewChild('recipeForm') recipeForm: NgForm;
-    selectedOccasion: string = "Select an occasion";
-    occasion: {} = {};
-    cuisine: {} = {};
+    /*selectedOccasion: string = "Select an occasion";*/
+    cuisines: any[];
+    courses: any[];
+    skillLevel: any[];
+    recipeTypes: any[];
+    occasion: any[];
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -33,19 +36,36 @@ export class RecipeCreateComponent implements OnInit{
     ngOnInit(): void {
         this.dataService.GetAll()
             .subscribe((recipe: Recipe[]) => {
-                this.occasion = recipe[0];
+                this.cuisines = recipe[0].cuisine;
             })
         this.dataService.GetAll()
             .subscribe((recipe: Recipe[]) => {
-                this.cuisine = recipe[0];
+                this.courses = recipe[0].course;
             })
+        this.dataService.GetAll()
+            .subscribe((recipe: Recipe[]) => {
+                this.recipeTypes = recipe[0].recipeType;
+            })
+        this.dataService.GetAll()
+            .subscribe((recipe: Recipe[]) => {
+                this.skillLevel = recipe[0].skillLevel;
+            })
+        this.dataService.GetAll()
+            .subscribe((recipe: Recipe[]) => {
+                this.occasion = recipe[0].occasion;
+            })
+
     }
 
-    onChange(newValue: any) {
+
+    //courseName = this._.filter(this.cuisines, ['id', this.recipe.cuisineId]);
+
+
+    /*onChange(newValue: any) {
         console.log(newValue);
         this.selectedOccasion = newValue;
         // ... do other stuff here ...
-    }
+    }*/
 
     onSubmit(){
         this.dataService.AddRecipe(this.recipe)

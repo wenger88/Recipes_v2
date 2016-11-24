@@ -13,7 +13,7 @@ import {Recipe} from "../../shared/interfaces";
 
 export class MainIngredientFilterComponent{
 
-    recipe: {};
+    mainIngredients: any[];
     selectedIngredient: string = "Select an ingredient";
 
     constructor(private dataService: DataService){}
@@ -27,7 +27,7 @@ export class MainIngredientFilterComponent{
     ngOnInit(): void {
         this.dataService.GetAll()
             .subscribe((cuisine: Recipe[]) => {
-                this.recipe = cuisine[0];
+                this.mainIngredients = cuisine[0].mainIngredient;
             })
     }
 

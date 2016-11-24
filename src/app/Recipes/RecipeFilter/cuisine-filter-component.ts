@@ -6,6 +6,8 @@
 import {Component, OnInit} from "@angular/core";
 import {Recipe} from "../../shared/interfaces";
 import {DataService} from "../../core/services/data.service";
+import 'rxjs/Rx';
+
 @Component({
     selector: 'cuisine-filter',
     /*template: `
@@ -17,7 +19,7 @@ import {DataService} from "../../core/services/data.service";
 })
 
 export class CuisineFilterComponent implements OnInit{
-    recipe: {};
+    cuisines: any[];
     selectedCuisine: string = "Select a cuisine";
 
     constructor(private dataService: DataService){}
@@ -31,7 +33,7 @@ export class CuisineFilterComponent implements OnInit{
     ngOnInit(): void {
         this.dataService.GetAll()
             .subscribe((cuisine: Recipe[]) => {
-                this.recipe = cuisine[0];
+                this.cuisines = cuisine[0].cuisine;
             })
     }
 

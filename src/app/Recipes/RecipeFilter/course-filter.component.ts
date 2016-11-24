@@ -5,13 +5,14 @@
 import {Component} from "@angular/core";
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
+import 'rxjs/Rx';
 @Component({
     selector: 'course-filter',
     template: require('./course-filter.component.html')
 })
 
 export class CourseFilterComponent{
-    recipe: {};
+    courses: any[];
     selectedCourse: string = "Select a course";
 
     constructor(private dataService: DataService){}
@@ -25,7 +26,7 @@ export class CourseFilterComponent{
     ngOnInit(): void {
         this.dataService.GetAll()
             .subscribe((cuisine: Recipe[]) => {
-                this.recipe = cuisine[0];
+                this.courses = cuisine[0].course;
             })
     }
 }

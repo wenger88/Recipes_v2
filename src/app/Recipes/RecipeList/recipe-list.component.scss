@@ -34,12 +34,20 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-
+  height:200px;
   .recipe-set-image{
     width: 39%;
+    height: 100%;
+    a{
+      height: 100%;
+      img{
+        height: 100%;
+      }
+    }
   }
 
   .recipe-set-detail{
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

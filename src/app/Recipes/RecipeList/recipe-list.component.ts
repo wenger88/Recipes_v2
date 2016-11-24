@@ -5,6 +5,7 @@
 import {Component, OnInit} from "@angular/core";
 import {Recipe} from "../../shared/interfaces";
 import {DataService} from "../../core/services/data.service";
+import 'rxjs/Rx';
 
 @Component({
     selector: 'recipe-list',

@@ -1,7 +1,5 @@
 
-<div *ngIf="recipe">
     <select [ngModel]="selectedOccasion" (ngModelChange)="onChange($event)" name="occasion" class="form-control font-italic" style="font-size: 0.875rem">
         <option>Select an occasion</option>
-        <option *ngFor="let occasion of recipe.occasion" [value]="occasion.id">{{occasion.name}}</option>
+        <option *ngFor="let occasion of occasions" [value]="occasion.id">{{occasion.name}}</option>
     </select>
-</div>
