@@ -12,7 +12,7 @@ import {Recipe} from "../../shared/interfaces";
 
 export class OccasionFilterComponent{
 
-    recipe: {};
+    occasions: any[];
     selectedOccasion: string = "Select an occasion";
 
     constructor(private dataService: DataService){}
@@ -26,7 +26,7 @@ export class OccasionFilterComponent{
     ngOnInit(): void {
         this.dataService.GetAll()
             .subscribe((cuisine: Recipe[]) => {
-                this.recipe = cuisine[0];
+                this.occasions = cuisine[0].occasion;
             })
     }
 
