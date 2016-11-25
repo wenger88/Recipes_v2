@@ -7,6 +7,8 @@ import {Router, ActivatedRoute} from "@angular/router";
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
 import {NgForm} from "@angular/forms";
+import * as _ from 'lodash';
+
 @Component({
     selector: 'recipe-create',
     template: require('./recipe-create.component.html'),
@@ -28,6 +30,8 @@ export class RecipeCreateComponent implements OnInit{
     skillLevel: any[];
     recipeTypes: any[];
     occasion: any[];
+    _ = require('lodash');
+
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -55,17 +59,36 @@ export class RecipeCreateComponent implements OnInit{
                 this.occasion = recipe[0].occasion;
             })
 
+        this.recipe.date = new Date();
+
     }
 
+    findCuisineName(value: any){
+        value = parseInt(value);
+        let name = _.filter(this.cuisines,['id', value]);
+        this.recipe.cuisineName = name[0].name;
+    }
 
-    //courseName = this._.filter(this.cuisines, ['id', this.recipe.cuisineId]);
-
-
-    /*onChange(newValue: any) {
-        console.log(newValue);
-        this.selectedOccasion = newValue;
-        // ... do other stuff here ...
-    }*/
+    findRecipeTypeName(value: any){
+        value = parseInt(value);
+        let name = _.filter(this.recipeTypes,['id', value]);
+        this.recipe.recipeTypeName = name[0].name;
+    }
+    findCourseName(value: any){
+        value = parseInt(value);
+        let name = _.filter(this.courses,['id', value]);
+        this.recipe.courseName = name[0].name;
+    }
+    findSkillLevelName(value: any){
+        value = parseInt(value);
+        let name = _.filter(this.skillLevel,['id', value]);
+        this.recipe.skillLevelName = name[0].name;
+    }
+    findOccasionName(value: any){
+        value = parseInt(value);
+        let name = _.filter(this.occasion,['id', value]);
+        this.recipe.occasionName = name[0].name;
+    }
 
     onSubmit(){
         this.dataService.AddRecipe(this.recipe)

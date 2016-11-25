@@ -11,18 +11,18 @@
                 </a>
             </div>
             <div class="recipe-set-detail">
-                <h4>{{recipe.title}}</h4>
+                <h4 class="ellipsis">{{recipe.title}}</h4>
                 <p>{{recipe.description}}</p>
                 <div class="detail-meta">
-                    <ul class="list-inline">
-                        <li class="list-inline-item">
+                    <ul class="list-inline" style="display: flex; justify-content: space-between; align-content: center">
+                        <li class="list-inline-item ellipsis">
                             <i class="fa fa-user"></i>{{recipe.author}}
                         </li>
                         <li class="list-inline-item">
-                            <i class="fa fa-calendar"></i>{{recipe.author}}
+                            <i class="fa fa-calendar"></i>{{recipe.date | date:'dd/MM/yyyy'}}
                         </li>
                         <li class="list-inline-item">
-                            {{recipe.rating}}
+                            <p-rating [(ngModel)]="recipe.rating" [cancel]="false" readonly="true"></p-rating>
                         </li>
                     </ul>
                 </div>

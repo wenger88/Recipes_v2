@@ -84,6 +84,8 @@
       line-height: 26px;
       font-family: 'Lato', sans-serif;
       font-weight: 400;
+      overflow: hidden;
+      max-height: 100px;
     }
 
     .detail-meta{
@@ -97,6 +99,7 @@
         font-weight: 400;
         color: #5e676b;
         line-height: 24px;
+        width: 30%;
         i{
           margin-right: 10px;
         }

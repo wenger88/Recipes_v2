@@ -20,14 +20,17 @@ import {OccasionFilterComponent} from "./Recipes/RecipeFilter/occasion-filter.co
 import {RecipeDetailComponent} from "./Recipes/RecipeDetails/recipe-detail.component";
 import {RecipeEditComponent} from "./Recipes/RecipeEdit/recipe-edit.component";
 import {RecipeCreateComponent} from "./Recipes/RecipeCreate/recipe-create.component";
-
+import {AccordionModule} from 'primeng/primeng';
+import {RatingModule} from 'primeng/primeng';
 @NgModule({
 	imports: [
 		FormsModule,
 		HttpModule,
 		BrowserModule,		
 		SharedModule,
-		routing
+		routing,
+        AccordionModule,
+        RatingModule
 	],
 	declarations: [
 		AppComponent,

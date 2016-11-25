@@ -1,8 +1,12 @@
+<div class="recipes">
+    <div class="container">
 
+        <div class="recipes-title">
+            <h1>Recipe Details Page</h1>
+        </div>
 
-
-
-
+    </div>
+</div>
 
 <div *ngIf="recipe">
     <div class="container">
@@ -10,8 +14,83 @@
 
             <div class="col-sm-9">
 
-                <h1>{{recipe.title}}</h1>
-                <p *ngIf="cName">{{recipe.cuisineName}}</p>
+                <div class="recipe-details-header">
+                    <h2>{{recipe.title}}</h2>
+                </div>
+
+                <div class="recipe-details-image">
+
+                    <figure>
+                        <!--<div class="details-image" [ngStyle]="{'background': 'url(' + recipe?.image+ ')',
+                'background-position': 'center center', 'background-size': 'cover'}"></div>-->
+                        <img [src]="recipe.image" class="img-fluid" alt="">
+                        <figcaption>
+                            <ul class="recipe-details-specs">
+                                <li><span>Yield: </span>{{recipe.yields}}</li>
+                                <li><span>Servings: </span>{{recipe.servings}}</li>
+                                <li><span>Prep Time: </span>{{recipe.preparationTime}}</li>
+                                <li><span>Cook Time: </span>{{recipe.cookTime}}</li>
+                                <li><span>Ready In: </span>{{recipe.readyIn}}</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+                <div class="recipe-details-body">
+
+                    <div class="body-tags">
+                        <ul class="body-tags-list">
+                            <li><span>Cuisine: </span>{{recipe.cuisineName}}</li>
+                            <li><span>Course: </span>{{recipe.courseName}}</li>
+                            <li><span>Skill Level: </span>{{recipe.skillLevelName}}</li>
+                            <li class="text-sm-right"><p-rating style="display: inline-block" [(ngModel)]="recipe.rating" [cancel]="false" readonly="true"></p-rating></li>
+                        </ul>
+                    </div>
+
+                    <div class="body-description">
+                        <p>{{recipe.description}}</p>
+                    </div>
+
+                    <fieldset class="body-ingredients">
+                        <legend><h3>Ingredients</h3></legend>
+                        <ul>
+                            <li *ngFor="let ingredient of recipe.ingredients; let i = index">
+                                <input type="checkbox" [attr.name]="'checkbox'+i" [attr.id]="'checkbox'+i"
+                                       class="css-checkbox"/>
+                                <label [attr.for]="'checkbox'+i" class="css-label">{{ingredient.name}}</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <div class="body-steps">
+                        <h3 class="lined">Step by Step method</h3>
+                        <!--<ul class="step-list">
+                            <li *ngFor="let step of recipe.steps; let i = index" class="step-list-item clearfix">
+                                <div class="step-list-item-detail">
+                                    <h3>Step {{i+1}}</h3>
+                                    <p>{{step.name}}</p>
+                                </div>
+                            </li>
+                        </ul>-->
+
+
+                        <p-accordion>
+                            <p-accordionTab *ngFor="let step of recipe.steps; let i = index" header="Step {{i+1}}" [selected]="i==0">
+                               {{step.name}}
+                            </p-accordionTab>
+                            <!--<p-accordionTab header="Header 2">
+                                Content 2
+                            </p-accordionTab>
+                            <p-accordionTab header="Header 3">
+                                Content 3
+                            </p-accordionTab>-->
+                        </p-accordion>
+                    </div>
+
+                </div>
+
+                <p>{{recipe.date | date:'dd/MM/yyyy'}}</p>
             </div>
         </div>
     </div>

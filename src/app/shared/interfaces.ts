@@ -17,7 +17,7 @@ export interface Recipe {
     readyIn: number,
     tags: string[],
     recipeTypeId: number,
-    recipeName: string,
+    recipeTypeName: string,
     recipeType: any[],
     cuisineId: number,
     cuisineName: any,
@@ -34,7 +34,8 @@ export interface Recipe {
     skillLevelId: number,
     skillLevelName: string,
     author: string,
-    rating: number
+    rating: number,
+    date: any
 }
 
 export interface Ingredients {

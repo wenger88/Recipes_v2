@@ -43,3 +43,37 @@ a{
 button{
 	outline: none!important;
 }
+
+.ui-accordion .ui-accordion-header a{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background: #e7e3e1;
+	border: 1px solid #e4d9d1;
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-weight: 700;
+	color: #000000;
+	font-size: 18px;
+	text-decoration: none!important;
+	&:hover{
+		background: darken(#e4d9d1, 1%);
+	}
+}
+.ui-accordion .ui-accordion-header a[aria-selected=true]{
+	background: darken(#e4d9d1, 1%);
+}
+.ui-accordion .ui-accordion-content{
+	background: #F8F6F5;
+	font-family: "Segoe UI", sans-serif;
+	font-size: 15px;
+	line-height: 26px;
+	border: 1px solid #e4d9d1;
+	border-top: none;
+
+}
+
+.ellipsis{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
