@@ -174,7 +174,7 @@
                                            #yield="ngModel"
                                            required>
                                 </div>
-                                <div class="alert alert-danger" [hidden]="yield.valid">Servings is required
+                                <div class="alert alert-danger" [hidden]="yield.valid">Yield is required
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -195,7 +195,7 @@
                                     <label>Occasion</label>
                                     <select [(ngModel)]="recipe.occasionId" name="occasion"
                                             class="form-control font-italic"
-                                            style="font-size: 0.875rem">
+                                            style="font-size: 0.875rem" #occasions (change)="findOccasionName(occasions.value)">
                                         <option *ngFor="let occ of occasion" [value]="occ.id">{{occ.name}}</option>
                                     </select>
                                 </div>
@@ -265,7 +265,7 @@
                                     <label>Recipe Type</label>
                                     <select [(ngModel)]="recipe.recipeTypeId" name="recipeType"
                                             class="form-control font-italic"
-                                            style="font-size: 0.875rem">
+                                            style="font-size: 0.875rem" #recipeType (change)="findRecipeTypeName(recipeType.value)">
                                         <option *ngFor="let type of recipeTypes" [value]="type.id">{{type.name}}</option>
                                     </select>
                                 </div>
@@ -274,7 +274,7 @@
                                 <div class="form-group">
                                     <label>Cuisine</label>
                                     <select [(ngModel)]="recipe.cuisineId" name="cuisine"
-                                            class="form-control font-italic" style="font-size: 0.875rem">
+                                            class="form-control font-italic" style="font-size: 0.875rem" #cuisine (change)="findCuisineName(cuisine.value)">
                                         <option *ngFor="let cuisine of cuisines" [value]="cuisine.id">{{cuisine.name}}
                                         </option>
                                     </select>
@@ -284,7 +284,7 @@
                                 <div class="form-group">
                                     <label>Course</label>
                                     <select [(ngModel)]="recipe.courseId" name="course" class="form-control font-italic"
-                                            style="font-size: 0.875rem">
+                                            style="font-size: 0.875rem" #course (change)="findCourseName(course.value)">
                                         <option *ngFor="let course of courses" [value]="course.id">{{course.name}}</option>
                                     </select>
                                 </div>
@@ -293,7 +293,7 @@
                                 <div class="form-group">
                                     <label>Skill Level</label>
                                     <select [(ngModel)]="recipe.skillLevelId" name="skillLevel"
-                                            class="form-control font-italic" style="font-size: 0.875rem">
+                                            class="form-control font-italic" style="font-size: 0.875rem" #skills (change)="findSkillLevelName(skills.value)">
                                         <option *ngFor="let skill of skillLevel" [value]="skill.id">{{skill.name}}</option>
                                     </select>
                                 </div>
