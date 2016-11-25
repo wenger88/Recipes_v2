@@ -21,8 +21,6 @@
                 <div class="recipe-details-image">
 
                     <figure>
-                        <!--<div class="details-image" [ngStyle]="{'background': 'url(' + recipe?.image+ ')',
-                'background-position': 'center center', 'background-size': 'cover'}"></div>-->
                         <img [src]="recipe.image" class="img-fluid" alt="">
                         <figcaption>
                             <ul class="recipe-details-specs">
@@ -44,7 +42,10 @@
                             <li><span>Cuisine: </span>{{recipe.cuisineName}}</li>
                             <li><span>Course: </span>{{recipe.courseName}}</li>
                             <li><span>Skill Level: </span>{{recipe.skillLevelName}}</li>
-                            <li class="text-sm-right"><p-rating style="display: inline-block" [(ngModel)]="recipe.rating" [cancel]="false" readonly="true"></p-rating></li>
+                            <li class="text-sm-right">
+                                <p-rating style="display: inline-block" [(ngModel)]="recipe.rating" [cancel]="false"
+                                          readonly="true"></p-rating>
+                            </li>
                         </ul>
                     </div>
 
@@ -65,32 +66,16 @@
 
                     <div class="body-steps">
                         <h3 class="lined">Step by Step method</h3>
-                        <!--<ul class="step-list">
-                            <li *ngFor="let step of recipe.steps; let i = index" class="step-list-item clearfix">
-                                <div class="step-list-item-detail">
-                                    <h3>Step {{i+1}}</h3>
-                                    <p>{{step.name}}</p>
-                                </div>
-                            </li>
-                        </ul>-->
-
-
                         <p-accordion>
-                            <p-accordionTab *ngFor="let step of recipe.steps; let i = index" header="Step {{i+1}}" [selected]="i==0">
-                               {{step.name}}
+                            <p-accordionTab *ngFor="let step of recipe.steps; let i = index" header="Step {{i+1}}"
+                                            [selected]="i==0">
+                                {{step.name}}
                             </p-accordionTab>
-                            <!--<p-accordionTab header="Header 2">
-                                Content 2
-                            </p-accordionTab>
-                            <p-accordionTab header="Header 3">
-                                Content 3
-                            </p-accordionTab>-->
                         </p-accordion>
                     </div>
 
                 </div>
 
-                <p>{{recipe.date | date:'dd/MM/yyyy'}}</p>
             </div>
         </div>
     </div>
