@@ -1,3 +1,6 @@
+
+@import "~bootstrap/scss/bootstrap";
+
 .recipes {
   background: url("http://res.cloudinary.com/wenger88/image/upload/v1479887096/free-food-backgrounds-7_khzmph.jpg") no-repeat center fixed;
   background-size: cover;
@@ -106,7 +109,7 @@ figure{
       list-style: none;
       font-family: "Segoe UI", sans-serif;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 14px;
       &:last-of-type{
         flex: 1;
       }
@@ -275,3 +278,23 @@ figure{
 
 
 
+@include media-breakpoint-down(sm){
+  .body-tags-list{
+    flex-direction: column;
+    li{
+      padding: 5px 0;
+      text-align: center;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs){
+  .recipe-details-body{
+    padding: 0!important;
+    .body-ingredients{
+      li{
+        padding-left: 0!important;
+      }
+    }
+  }
+}

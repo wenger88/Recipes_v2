@@ -1,6 +1,8 @@
 
+@import "~bootstrap/scss/bootstrap";
 
-.recent-recipes{
+
+.recent-recipes {
   overflow: hidden;
   margin-top: 50px;
   transition: all .5s ease-in;
@@ -14,7 +16,7 @@
     font-style: italic;
     margin-bottom: 30px;
 
-    &:after{
+    &:after {
       content: "";
       display: inline-block;
       width: 100%;
@@ -29,24 +31,35 @@
 
 }
 
-.recipe-set{
+.recipe-set {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  height:200px;
-  .recipe-set-image{
+  height: 200px;
+  .recipe-set-image {
     width: 39%;
     height: 100%;
-    a{
+
+    a {
       height: 100%;
-      img{
+      display: block;
+      overflow: hidden;
+      img {
         height: 100%;
+        width: 100%;
+        transition: transform .3s ease-in-out;
+        &:hover{
+          transform: scale(1.2);
+          transition: transform .3s ease-in-out;
+          opacity: .8;
+        }
+
       }
     }
   }
 
-  .recipe-set-detail{
+  .recipe-set-detail {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -56,7 +69,7 @@
     margin: 10px;
     padding: 10px 25px;
 
-    h4{
+    h4 {
       line-height: 30px;
       margin-top: 0;
       font-family: 'Lato', sans-serif;
@@ -66,8 +79,13 @@
       font-style: normal;
       position: relative;
       padding-bottom: 10px;
-
-      &:after{
+      a{
+        color: #000;
+        &:hover{
+          color: #FF4136;
+        }
+      }
+      &:after {
         content: "";
         display: inline-block;
         width: 50px;
@@ -79,7 +97,7 @@
       }
     }
 
-    p{
+    p {
       font-size: 15px;
       line-height: 26px;
       font-family: 'Lato', sans-serif;
@@ -88,29 +106,88 @@
       max-height: 100px;
     }
 
-    .detail-meta{
+    .detail-meta {
 
-      li{
-        padding-left: 20px;
-        margin-right: 10px;
-        position: relative;
-        display: inline-block;
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-        color: #5e676b;
-        line-height: 24px;
-        width: 30%;
-        i{
+      .flex-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        li {
+          /*padding-left: 20px;*/
           margin-right: 10px;
-        }
-        &:first-of-type{
-          padding-left: 0;
-        }
+          position: relative;
+          display: inline-block;
+          font-family: 'Lora', sans-serif;
+          font-weight: 400;
+          font-style: italic;
+          font-size: 14px;
+          color: #5e676b;
+          line-height: 24px;
+          width: 30%;
+          i {
+            margin-right: 10px;
+          }
+          &:first-of-type {
+            padding-left: 0;
+          }
 
+        }
       }
 
     }
 
   }
 
+}
+
+@include media-breakpoint-down(sm){
+
+  .recipe-set{
+    height: auto!important;
+    flex-direction: column;
+
+    &-image{
+      width: 100%!important;
+      overflow: hidden;
+      height: 240px!important;
+      a{
+        display: block;
+        height: auto!important;
+        img{
+          width: 100%;
+        }
+      }
+    }
+
+    &-detail{
+      width: 100%!important;
+      p{
+        max-height: 80px!important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs){
+  .recipe-set{
+    &-image{
+      height: 100%!important;
+    }
+    &-detail{
+      p{
+        margin-bottom: 0;
+      }
+
+      .flex-container{
+        margin: 0;
+        flex-direction: column-reverse;
+        li{
+          padding: 5px 0;
+          width: 100%!important;
+          height: 24px;
+        }
+      }
+    }
+  }
 }
