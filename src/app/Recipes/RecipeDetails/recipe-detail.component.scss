@@ -185,11 +185,12 @@ figure{
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        vertical-align: baseline!important;
       }
     }
   }
 
-  .body-steps{
+  .body-steps, .body-author{
     margin: 50px 0;
     overflow: hidden;
     h3.lined{
@@ -241,10 +242,34 @@ figure{
       }
     }
 
+  }
 
+  .body-author{
+    margin: 50px 0 10px 0;
+    h3.lined{
+      font-weight: 400;
+      font-size: 1em;
+    }
 
+    span{
+      font-weight: 700;
+    }
 
   }
+
+  .customButton{
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    margin-top: 0px;
+    transition: 0.2s all ease-in-out;
+    border-radius: 0;
+  }
+
 
 }
 

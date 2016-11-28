@@ -23,6 +23,28 @@
 
                     <form class="recipe-form" #recipeForm="ngForm" novalidate (ngSubmit)="onSubmit()"
                           (keydown.enter)="keyDownFunction($event)">
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Author</label>
+                                    <input type="text" class="form-control" [(ngModel)]="recipe.author" #author="ngModel" name="author" required>
+                                </div>
+                                <div class="alert alert-danger" [hidden]="author.valid">Author is
+                                    required
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group text-sm-left">
+                                    <label>Rating</label>
+                                    <div style="padding: 7px">
+                                        <p-rating style="display: inline-block" [(ngModel)]="recipe.rating" [cancel]="false" name="rating" ></p-rating>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <div class="form-group">
                             <label>Image Url</label>
                             <input type="text"

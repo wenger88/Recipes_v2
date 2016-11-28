@@ -2,6 +2,7 @@ import { Routes, RouterModule }  from '@angular/router';
 import {RecipesComponent} from "./Recipes/recipes.component";
 import {RecipeDetailComponent} from "./Recipes/RecipeDetails/recipe-detail.component";
 import {RecipeCreateComponent} from "./Recipes/RecipeCreate/recipe-create.component";
+import {RecipeEditComponent} from "./Recipes/RecipeEdit/recipe-edit.component";
 
 // no general routes
 const APP_ROUTES_PROVIDERS: Routes = [
@@ -18,6 +19,10 @@ const APP_ROUTES_PROVIDERS: Routes = [
     {
         path: 'recipe-details/:id',
         component: RecipeDetailComponent
+    },
+    {
+        path: 'recipe-edit/:id',
+        component: RecipeEditComponent
     },
     {
         path: 'create',

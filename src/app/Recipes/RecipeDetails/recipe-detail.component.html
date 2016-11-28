@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-sm-9">
+            <div class="col-md-9 col-xs-12">
 
                 <div class="recipe-details-header">
                     <h2>{{recipe.title}}</h2>
@@ -73,8 +73,17 @@
                             </p-accordionTab>
                         </p-accordion>
                     </div>
+                    <div class="body-author">
+                        <h3 class="lined">Written By: <span>{{recipe.author}}</span></h3>
+                    </div>
+
+                    <div class="clearfix">
+                        <button class="btn customButton edit btn-primary float-sm-left" type="button" [routerLink]="['/recipe-edit', recipe.id]"><i class="fa fa-pencil-square-o"></i> Edit</button>
+                        <button class="btn customButton btn-danger float-sm-right" type="button" (click)="onDelete()"><i class="fa fa-trash-o"></i> Delete</button>
+                    </div>
 
                 </div>
+
 
             </div>
         </div>
