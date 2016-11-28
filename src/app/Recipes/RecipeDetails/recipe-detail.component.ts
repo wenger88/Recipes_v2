@@ -28,6 +28,15 @@ export class RecipeDetailComponent implements OnInit{
     }
 
 
+    onDelete(){
+        this.dataService.Delete(this.recipe.id)
+            .subscribe((recipe) => {
+                this.router.navigate([''])
+            })
+    }
+
+
+
 
 
 }

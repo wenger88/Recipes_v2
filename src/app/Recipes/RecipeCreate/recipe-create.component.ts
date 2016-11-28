@@ -24,7 +24,6 @@ export class RecipeCreateComponent implements OnInit{
     }
     postRecipeToServer: string;
     @ViewChild('recipeForm') recipeForm: NgForm;
-    /*selectedOccasion: string = "Select an occasion";*/
     cuisines: any[];
     courses: any[];
     skillLevel: any[];

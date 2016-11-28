@@ -39,6 +39,17 @@ export class DataService{
 
     }
 
+    public Update = (itemToUpdate: Recipe): Observable<boolean> => {
+        return this._http.put(this.recipesUrl + '/' + itemToUpdate.id, itemToUpdate)
+            .map((response: Response) => <Recipe>response.json())
+            .catch(this.handleError);
+    }
+
+    public Delete = (id: number): Observable<Response> => {
+        return this._http.delete(this.recipesUrl + '/' + id)
+            .catch(this.handleError);
+    }
+
 
     private handleError(error: Response){
         console.log(error);
