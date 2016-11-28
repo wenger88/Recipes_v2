@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-9 col-xs-12">
+            <div class="col-lg-9 col-md-12">
 
                 <div class="recipe-details-header">
                     <h2>{{recipe.title}}</h2>
@@ -42,7 +42,7 @@
                             <li><span>Cuisine: </span>{{recipe.cuisineName}}</li>
                             <li><span>Course: </span>{{recipe.courseName}}</li>
                             <li><span>Skill Level: </span>{{recipe.skillLevelName}}</li>
-                            <li class="text-sm-right">
+                            <li class="text-md-right">
                                 <p-rating style="display: inline-block" [(ngModel)]="recipe.rating" [cancel]="false"
                                           readonly="true"></p-rating>
                             </li>
@@ -78,8 +78,8 @@
                     </div>
 
                     <div class="clearfix">
-                        <button class="btn customButton edit btn-primary float-sm-left" type="button" [routerLink]="['/recipe-edit', recipe.id]"><i class="fa fa-pencil-square-o"></i> Edit</button>
-                        <button class="btn customButton btn-danger float-sm-right" type="button" (click)="onDelete()"><i class="fa fa-trash-o"></i> Delete</button>
+                        <button class="btn customButton edit btn-primary float-xs-left" type="button" [routerLink]="['/recipe-edit', recipe.id]"><i class="fa fa-pencil-square-o"></i> Edit</button>
+                        <button class="btn customButton btn-danger float-xs-right" type="button" (click)="onDelete()"><i class="fa fa-trash-o"></i> Delete</button>
                     </div>
 
                 </div>

@@ -31,12 +31,12 @@ body {
 
 a{
 	color: #000;
-	text-decoration: none;
+	text-decoration: none!important;
 	outline: none;
 	&:hover{
 		text-decoration: none;
 		outline: none;
-      color: #000;
+      	color: #000;
 	}
 }
 
@@ -77,3 +77,90 @@ button{
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
+
+/*
+@include media-breakpoint-down(md) {
+	.header .flex-container{
+		flex-direction: column-reverse;
+		.header-logo{
+			width: 100%!important;
+			position: relative!important;
+			img{
+				width: 100px;
+			}
+		}
+		.header-upper-nav{
+			margin-bottom: 0!important;
+			ul{
+				width: 100%;
+			}
+		}
+	}
+
+}
+*/
+
+/*@include media-breakpoint-down(sm){
+
+	.recipe-set{
+		height: auto!important;
+		flex-direction: column;
+
+		&-image{
+			width: 100%!important;
+			overflow: hidden;
+			height: 240px!important;
+			a{
+				display: block;
+				height: auto!important;
+				img{
+					width: 100%;
+				}
+			}
+		}
+
+		&-detail{
+			width: 100%!important;
+			p{
+				max-height: 80px!important;
+			}
+		}
+	}
+
+
+}*/
+
+/*
+@include media-breakpoint-down(xs){
+	!*.recipe-set{
+		&-image{
+			height: 100%!important;
+		}
+		&-detail{
+			p{
+				margin-bottom: 0;
+			}
+
+			.flex-container{
+				margin: 0;
+				flex-direction: column-reverse;
+				li{
+					padding: 5px 0;
+					width: 100%!important;
+					height: 24px;
+				}
+			}
+		}
+	}*!
+
+	.recipe-details-body{
+		padding: 0!important;
+		.body-ingredients{
+			li{
+				padding-left: 0!important;
+			}
+		}
+	}
+
+
+}*/

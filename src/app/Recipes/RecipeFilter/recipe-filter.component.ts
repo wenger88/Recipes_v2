@@ -9,13 +9,13 @@ import {Component, style, animate, state, transition, trigger} from "@angular/co
     selector: 'recipe-filter',
     animations: [
         trigger('flyInOut', [
-            state('in', style({transform: 'translateX(0)'})),
+            state('in', style({transform: 'translateY(0)'})),
             transition('void => *', [
-                style({transform: 'translateX(-100%)'}),//
+                style({transform: 'translateY(-100%)', opacity: '0'}),//
                 animate(500)
             ]),
             transition('* => void', [
-                animate(500, style({transform: 'translateX(-100%)'}))
+                animate(500, style({transform: 'translateY(-100%)', opacity: '0'}))
             ])
         ])
     ],

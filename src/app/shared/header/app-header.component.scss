@@ -1,13 +1,23 @@
+@import "~bootstrap/scss/bootstrap";
 
 
 .header{
   padding-top: 20px;
+  padding-bottom: 20px;
   font-style: italic;
   color: #000;
+
+  .flex-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
   &-logo{
-    position: relative;
-    width: 86%;
-    bottom: 10px;
+    position: absolute;
+    left: 15px;
+    width: 100px;
+    top:10px;
   }
 
   &-upper-nav{
@@ -15,6 +25,10 @@
 
     li{
       display: inline-block;
+      a{
+        color: #000;
+        text-decoration: none;
+      }
     }
 
   }
@@ -31,7 +45,7 @@
       margin: 0;
       &:hover{
         background: #000000;
-        color: #fff;
+        color: #fff!important;
       }
     }
 
@@ -68,6 +82,27 @@
 
     }
 
+  }
+
+}
+
+@include media-breakpoint-down(md) {
+  .header .flex-container{
+    flex-direction: column-reverse;
+    .header-logo{
+      width: 100%!important;
+      position: relative!important;
+      top: 0!important;
+      img{
+        width: 100px;
+      }
+    }
+    .header-upper-nav{
+      margin-bottom: 0!important;
+      ul{
+        width: 100%;
+      }
+    }
   }
 
 }

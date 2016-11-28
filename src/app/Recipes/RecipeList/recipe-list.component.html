@@ -11,10 +11,10 @@
                 </a>
             </div>
             <div class="recipe-set-detail">
-                <h4 class="ellipsis">{{recipe.title}}</h4>
+                <h4 class="ellipsis"><a [routerLink]="['/recipe-details', recipe.id]">{{recipe.title}}</a></h4>
                 <p>{{recipe.description}}</p>
                 <div class="detail-meta">
-                    <ul class="list-inline" style="display: flex; justify-content: space-between; align-content: center">
+                    <ul class="list-inline flex-container">
                         <li class="list-inline-item ellipsis">
                             <i class="fa fa-user"></i>{{recipe.author}}
                         </li>
