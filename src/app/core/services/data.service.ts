@@ -3,7 +3,7 @@
  */
 
 import {Injectable} from "@angular/core";
-import {Recipe} from "../../shared/interfaces";
+import {Recipe, Comments} from "../../shared/interfaces";
 import {Http, Response, RequestOptions, Headers} from "@angular/http";
 import {Observable} from "rxjs";
 import 'rxjs/Rx';
@@ -12,6 +12,7 @@ import 'rxjs/Rx';
 export class DataService{
 
     recipesUrl: string = 'http://localhost:3000/recipes';
+    commentsUrl: string = 'http://localhost:3000/comments';
     recipe: Recipe[];
 
     constructor(private _http: Http){}
@@ -21,6 +22,30 @@ export class DataService{
             .map((res: Response) => res.json())
             .catch(this.handleError);
     }
+
+
+    getAllComments(id: number): Observable<Comments[]>{
+        // http://localhost:3000/recipes/:id/comments
+        // http://localhost:3000/comments/:id { recipeId: id }
+        return this._http.get(`${this.recipesUrl}/${id}/comments`)
+         .map((res: Response) => res.json())
+         .catch(this.handleError);
+        /*return this._http.get(this.recipesUrl + '/' + id + '/' + comments)
+            .map((res: Response) => res.json())
+            .catch(this.handleError);*/
+    }
+
+    addComment(body: Object): Observable<Comments>{
+        let bodyString = JSON.stringify(body); // Stringify payload
+        let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
+        let options = new RequestOptions({ headers: headers }); // Create a request option
+
+        return this._http.post(this.commentsUrl, bodyString, options)
+            .map((res: Response) => <Comments>res.json())
+            .catch(this.handleError)
+
+    }
+
 
     GetSingle(id: number): Observable<Recipe>{
         return this._http.get(this.recipesUrl + '/' + id)

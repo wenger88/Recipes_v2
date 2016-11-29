@@ -22,6 +22,8 @@ import {RecipeEditComponent} from "./Recipes/RecipeEdit/recipe-edit.component";
 import {RecipeCreateComponent} from "./Recipes/RecipeCreate/recipe-create.component";
 import {AccordionModule} from 'primeng/primeng';
 import {RatingModule} from 'primeng/primeng';
+import {RecipeCommentsComponent} from "./Recipes/RecipeDetails/RecipeComments/recipe-comments.component";
+import {RecipeSingleCommentComponent} from "./Recipes/RecipeDetails/RecipeComments/recipe-single-comment.component";
 @NgModule({
 	imports: [
 		FormsModule,
@@ -44,7 +46,9 @@ import {RatingModule} from 'primeng/primeng';
 		OccasionFilterComponent,
 		RecipeDetailComponent,
 		RecipeEditComponent,
-        RecipeCreateComponent
+        RecipeCreateComponent,
+		RecipeCommentsComponent,
+        RecipeSingleCommentComponent
 	],
 	providers: [
 		DataService

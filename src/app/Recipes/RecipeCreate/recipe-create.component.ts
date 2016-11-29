@@ -20,7 +20,8 @@ export class RecipeCreateComponent implements OnInit{
 
     recipe = <Recipe>{
         ingredients: [],
-        steps: []
+        steps: [],
+        comments: []
     }
     postRecipeToServer: string;
     @ViewChild('recipeForm') recipeForm: NgForm;
