@@ -691,6 +691,66 @@
       "content": "o",
       "recipeId": 1,
       "id": 14
+    },
+    {
+      "name": "k",
+      "content": "k",
+      "recipeId": 1,
+      "id": 15
+    },
+    {
+      "name": "Goran",
+      "content": "I created this on a cold day when I didn't want to go to the store. I came up with this using just what I had in the house. With only 3 ingredients it couldn't be easier. You can also make mini loaves or meatballs with this recipe.",
+      "recipeId": 1,
+      "id": 16
+    },
+    {
+      "name": "Goran",
+      "content": "onSubmit(name: HTMLInputElement, comment: HTMLInputElement){\n\n        let newComments: any = {\n            'name': name.value,\n            'content': comment.value,\n            'recipeId': this.recipe.id\n        }\n\n         if (newComments.name != \"\" || newComments.comment != \"\"){\n             console.log(newComments);\n             //this.comments.push(newComments);\n             this.dataService.addComment(newComments)\n                 .subscribe(\n                     (data) => {\n                         //this.postCommentsToServer = JSON.stringify(data);\n                         let postCommentsToServer = JSON.stringify(data);\n                     },\n                     error => console.log(\"Error HTTP Post Service\"), // in case of failure show this message\n                     () => console.log(\"Job Done Post!\")\n                 );\n             name.value = null;\n             comment.value = null;\n         }else{\n         console.log('Empty Fields!');\n         }\n\n         console.log(newComments);\n    }",
+      "recipeId": 4,
+      "id": 17
+    },
+    {
+      "name": "kco",
+      "content": "asd",
+      "recipeId": 4,
+      "id": 18
+    },
+    {
+      "name": "fd",
+      "content": "fd",
+      "recipeId": 4,
+      "id": 19
+    },
+    {
+      "name": "fd",
+      "content": "fd",
+      "recipeId": 4,
+      "id": 20
+    },
+    {
+      "name": "as",
+      "content": "as",
+      "recipeId": 4,
+      "id": 21
+    },
+    {
+      "name": "LilSnoo",
+      "content": "I've been meaning to make this recipe for months, but couldn't find the frozen peppers and I didn't want to substitute and tinker too much with the recipe. I finally stumbled across Birds Eye Tri-Color Pepper & Onion Blend and thought that would be perfect. I figured because of the simple ingredients in this recipe, the onions would only benefit the flavor. First off, I love that this is healthy and easy! Second, I also love that there's none of that sweet meatloaf glaze that way too many meatloaf recipes seem to have. Eww. Third, I HIGHLY recommend seasoning the raw meat with salt and pepper. I made it as written, and ended up having to add salt because it was kind of bland without. I bet garlic powder would also be a nice addition if you want to keep things easy. Overall, a very tasty recipe, and one that I'll keep saved for days I'm looking for something simple. Thanks s!",
+      "recipeId": 3,
+      "id": 22
+    },
+    {
+      "name": "bradpick66",
+      "content": "I made this last night for dinner for the first time. It was really good. The whole family loved it. Will definitely make it again.",
+      "recipeId": 3,
+      "id": 23
+    },
+    {
+      "name": "Teena Simmons Smelser",
+      "content": "It was very good but I would have liked to mention it could use a gravy or sauce like traditional meatloaf.",
+      "recipeId": 3,
+      "id": 24
     }
   ]
 }

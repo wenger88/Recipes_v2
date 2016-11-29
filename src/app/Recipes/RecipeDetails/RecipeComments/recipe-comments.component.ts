@@ -29,7 +29,7 @@ export class RecipeCommentsComponent implements OnInit{
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
-                private router: Router,){}
+                private router: Router){}
 
     ngOnInit(): void {
 
@@ -43,6 +43,7 @@ export class RecipeCommentsComponent implements OnInit{
                 this.comments = comments;
                 console.log(this.comments);
             })
+
 
     }
 
@@ -68,6 +69,8 @@ export class RecipeCommentsComponent implements OnInit{
                  );
              name.value = null;
              comment.value = null;
+             window.location.reload();
+
          }else{
          console.log('Empty Fields!');
          }
