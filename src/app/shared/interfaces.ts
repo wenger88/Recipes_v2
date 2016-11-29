@@ -35,7 +35,8 @@ export interface Recipe {
     skillLevelName: string,
     author: string,
     rating: number,
-    date: any
+    date: any,
+    comments: Comments[]
 }
 
 export interface Ingredients {
@@ -59,6 +60,15 @@ export interface Nutritional {
     sodium: string,
     carbohydrate: string,
     cholesterol: string
+}
+
+export interface Comments{
+    id: number,
+    recipeId: number,
+    name: string,
+    comment: string,
+    data: string,
+    rating: number
 }
 
 export interface Cuisine {
