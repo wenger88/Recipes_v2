@@ -1,9 +1,24 @@
-
-<div class="row">
-    <ul class="list-group">
-        <li class="list-group-item">
-            {{comment?.name}}
-        </li>
-        <li class="list-group-item">{{comment?.content}}</li>
-    </ul>
+<div class="comment">
+    <div class="comment-head">
+        <div class="comment-head-image">
+            <img src="http://placehold.it/50x50" alt="">
+        </div>
+        <div class="comment-head-name">
+            {{comment.name}}
+        </div>
+        <div class="comment-head-like">
+            <i class="fa fa-thumbs-up"></i>
+        </div>
+    </div>
+    <div class="comment-info">
+        <div class="comment-info-rating">
+            <p-rating [(ngModel)]="comment.rating" [cancel]="false" readonly="true"></p-rating>
+        </div>
+        <div class="comment-info-date">
+            {{comment.date | date: 'short'}}
+        </div>
+    </div>
+    <div class="comment-body">
+        {{comment.content}}
+    </div>
 </div>

@@ -3,32 +3,7 @@
 
         <h2>Recent Recipes</h2>
 
-        <div class="recipe-set" *ngFor="let recipe of recipes">
-
-            <div class="recipe-set-image">
-                <a [routerLink]="['/recipe-details', recipe.id]">
-                    <img [src]="recipe.image" alt="" class="img-fluid">
-                </a>
-            </div>
-            <div class="recipe-set-detail">
-                <h4 class="ellipsis"><a [routerLink]="['/recipe-details', recipe.id]">{{recipe.title}}</a></h4>
-                <p>{{recipe.description}}</p>
-                <div class="detail-meta">
-                    <ul class="list-inline flex-container">
-                        <li class="list-inline-item ellipsis">
-                            <i class="fa fa-user"></i>{{recipe.author}}
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fa fa-calendar"></i>{{recipe.date | date:'dd/MM/yyyy'}}
-                        </li>
-                        <li class="list-inline-item">
-                            <p-rating [(ngModel)]="recipe.rating" [cancel]="false" readonly="true"></p-rating>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
+        <recipe-item [recipe]="recipe" *ngFor="let recipe of recipes"></recipe-item>
 
     </div>
 </div>

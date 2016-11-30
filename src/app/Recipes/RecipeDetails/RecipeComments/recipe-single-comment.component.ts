@@ -13,6 +13,7 @@ import {Recipe, Comments} from "../../../shared/interfaces";
 export class RecipeSingleCommentComponent{
 
     @Input() recipe: Recipe;
+    @Input() comment: Comments[];
     constructor(){}
 
 }

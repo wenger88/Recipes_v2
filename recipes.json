@@ -495,182 +495,6 @@
     {
       "ingredients": [
         {
-          "name": "1 1/2 cups all-purpose flour"
-        },
-        {
-          "name": "1 1/2 cups packed brown sugar"
-        },
-        {
-          "name": "1/2 cup butter, softened"
-        },
-        {
-          "name": "1 cup pecan halves"
-        },
-        {
-          "name": "2/3 cup butter"
-        },
-        {
-          "name": "1 cup milk chocolate chip"
-        }
-      ],
-      "steps": [
-        {
-          "name": "Combine flour, 1 cup brown sugar and softened butter in large mixer bowl. Beat at medium speed of electric mixer 2 to 3 minutes or until mixture resembles fine crumbs. Pat mixture evenly onto bottom of ungreased 13 x 9 inch baking pan. Sprinkle pecans evenly over crumb mixture."
-        },
-        {
-          "name": "Combine 2/3 cup butter and remaining 1/2 cup brown sugar in small saucepan. cook and stir over medium heat until entire surface is bubbly. cook and stir 1/2 to 1 minute more. Pour into pan, spreading evenly over crust."
-        },
-        {
-          "name": "Bake in 350 degrees F (175 degrees C) oven 18 to 20 minutes or until entire surface is bubbly. Remove from oven; immediately sprinkle with chocolate pieces. Let stand 2 to 3 minutes to allow chocolate to melt; use knife to swirl chocolate slightly. Cool completely in pan on wire rack. Use sharp knife to cut into 48 bars."
-        }
-      ],
-      "comments": [],
-      "date": "2016-11-29T10:49:19.223Z",
-      "title": "Pecan Turtles® Bars",
-      "author": "Marlyn Carrillo",
-      "description": "These are easy and delicious.",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/36834.jpg",
-      "servings": 48,
-      "occasionName": "Easter",
-      "occasionId": 2,
-      "yields": 6,
-      "preparationTime": "10 m",
-      "cookTime": "10h",
-      "readyIn": "10 h 10 m",
-      "recipeTypeName": "Cookie",
-      "recipeTypeId": 9,
-      "cuisineName": "Italian",
-      "cuisineId": 17,
-      "skillLevelName": "Intermediate",
-      "skillLevelId": 1,
-      "id": 2,
-      "courseName": "Soup and Stew",
-      "courseId": 10
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [
-        {
-          "name": "s",
-          "comment": "s"
-        }
-      ],
-      "date": "2016-11-29T11:02:57.897Z",
-      "author": "s",
-      "image": "http://media3.s-nbcnews.com/j/newscms/2015_43/824786/baconwrappedturkey-151019-1_d5f54d0375d15a0a182ddf3a71369cc4.today-inline-large.jpg",
-      "title": "Chicken",
-      "description": "sadasd",
-      "yields": 2,
-      "servings": 2,
-      "preparationTime": 2,
-      "cookTime": 2,
-      "readyIn": 2,
-      "id": 3
-    },
-    {
-      "ingredients": [
-        {
-          "name": "asd"
-        }
-      ],
-      "steps": [
-        {
-          "name": "asd"
-        }
-      ],
-      "comments": [
-        {
-          "name": "d",
-          "comment": "d"
-        },
-        {
-          "name": "ds",
-          "comment": "asdasd"
-        }
-      ],
-      "date": "2016-11-29T12:18:55.647Z",
-      "author": "Goran Pavlovski",
-      "image": "http://images.media-allrecipes.com/userphotos/560x315/276397.jpg",
-      "title": "asd",
-      "description": "dfsdf fdsdf",
-      "yields": 3,
-      "servings": 2,
-      "occasionName": "Halloween",
-      "occasionId": 5,
-      "preparationTime": 22,
-      "cookTime": 3,
-      "readyIn": "4 h 10 m",
-      "id": 4
-    },
-    {
-      "ingredients": [
-        {
-          "name": "3/4 cup milk"
-        },
-        {
-          "name": "2 tablespoons white vinegar"
-        },
-        {
-          "name": "1 cup all-purpose flour"
-        },
-        {
-          "name": "2 tablespoons white sugar"
-        },
-        {
-          "name": "1 teaspoon baking powder"
-        },
-        {
-          "name": "1/2 teaspoon baking soda"
-        },
-        {
-          "name": "1/2 teaspoon salt"
-        },
-        {
-          "name": "1 egg"
-        },
-        {
-          "name": "2 tablespoons butter, melted"
-        },
-        {
-          "name": "cooking spray"
-        }
-      ],
-      "steps": [
-        {
-          "name": "Combine milk with vinegar in a medium bowl and set aside for 5 minutes to \"sour\"."
-        },
-        {
-          "name": "Combine flour, sugar, baking powder, baking soda, and salt in a large mixing bowl. Whisk egg and butter into \"soured\" milk. Pour the flour mixture into the wet ingredients and whisk until lumps are gone."
-        },
-        {
-          "name": "Heat a large skillet over medium heat, and coat with cooking spray. Pour 1/4 cupfuls of batter onto the skillet, and cook until bubbles appear on the surface. Flip with a spatula, and cook until browned on the other side."
-        }
-      ],
-      "comments": [],
-      "date": "2016-11-30T11:59:50.250Z",
-      "author": "Goran Pavlovski",
-      "title": "Fluffy Pancakes",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/842371.jpg",
-      "description": "Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist.",
-      "yields": "2",
-      "servings": "4",
-      "recipeTypeName": "Quick and Easy",
-      "recipeTypeId": "15",
-      "courseName": "Breakfast and Brunch",
-      "courseId": "2",
-      "skillLevelName": "Beginner",
-      "skillLevelId": "0",
-      "cuisineName": "Thai",
-      "cuisineId": "30",
-      "preparationTime": "10 m",
-      "cookTime": "10 m",
-      "readyIn": "25 m",
-      "id": 5
-    },
-    {
-      "ingredients": [
-        {
           "name": "2 cups all-purpose flour"
         },
         {
@@ -824,18 +648,18 @@
       "preparationTime": "25 m",
       "cookTime": "30 m",
       "readyIn": "55 m",
-      "servings": "4",
+      "servings": 4,
       "occasionName": "Spring",
-      "occasionId": "10",
-      "yields": "3",
+      "occasionId": 10,
+      "yields": 3,
       "recipeTypeName": "Vegetarian",
-      "recipeTypeId": "19",
-      "cuisineName": "Japanese",
-      "cuisineId": "19",
+      "recipeTypeId": 19,
+      "cuisineName": "Indian",
+      "cuisineId": 15,
       "courseName": "Salad",
-      "courseId": "5",
+      "courseId": 5,
       "skillLevelName": "Beginner",
-      "skillLevelId": "0",
+      "skillLevelId": 0,
       "id": 8
     }
   ],
@@ -847,62 +671,6 @@
       "recipeId": 1,
       "rating": 0,
       "date": 0
-    },
-    {
-      "name": "s",
-      "content": "s",
-      "recipeId": 3,
-      "rating": 3,
-      "date": "2016-11-30T10:07:42.017Z",
-      "id": 1
-    },
-    {
-      "name": "Goran",
-      "content": "As the name implies, this project is built on top of Angular 2 and Typescript. Naturally, other techologies are also used:",
-      "recipeId": 3,
-      "rating": 5,
-      "date": "2016-11-30T10:08:46.164Z",
-      "id": 2
-    },
-    {
-      "name": "sdds",
-      "content": "sdds",
-      "recipeId": 3,
-      "rating": 4,
-      "date": "2016-11-30T10:26:45.092Z",
-      "id": 3
-    },
-    {
-      "name": "vb",
-      "content": "vb",
-      "recipeId": 2,
-      "rating": 3,
-      "date": "2016-11-30T10:46:13.185Z",
-      "id": 4
-    },
-    {
-      "name": "vbb",
-      "content": "vbb",
-      "recipeId": 2,
-      "rating": 4,
-      "date": "2016-11-30T10:46:26.507Z",
-      "id": 5
-    },
-    {
-      "name": "as",
-      "content": "sdds",
-      "recipeId": 2,
-      "rating": 1,
-      "date": "2016-11-30T10:57:36.069Z",
-      "id": 6
-    },
-    {
-      "name": "",
-      "content": "",
-      "recipeId": 2,
-      "rating": 5,
-      "date": "2016-11-30T10:57:48.451Z",
-      "id": 7
     },
     {
       "name": "Goran",
@@ -943,62 +711,6 @@
       "rating": 1,
       "date": "2016-11-30T11:57:07.171Z",
       "id": 12
-    },
-    {
-      "name": "kris",
-      "content": "This recipe has served me well for years. Whenever we have overnight company, everyone insists these are the best pancakes they've ever eaten. For those afraid of sour milk, it is simply a substitute for buttermilk. I use soured milk in every recipe that I have that calls for buttermilk and it works like a charm. It does NOT make things taste sour! Another note: the pancakes will start to \"foam up\" after you stir them. Resist the urge to stir them again. All those bubbles is what makes them so fluffy. The batter will be very thick and difficult to pour at this point. Also, as others have said, this does not serve 8. In my house, it serves 4 of us. Enjoy.",
-      "recipeId": 5,
-      "rating": 5,
-      "date": "2016-11-30T12:03:00.956Z",
-      "id": 13
-    },
-    {
-      "name": "happywife05",
-      "content": "I always use lemon juice instead of vinegar for my soured milk. That being said, I feel like the proportions were a little odd in this recipe. Not sure what it was, but the flavor seemed a little unbalanced and \"after-tastey\". I usually do 1 TBS vinegar/lemon juice to 1 C milk for sour milk, (this recipe calls for 2 TBS acid to 3/4 C milk) so maybe there was too much acid. I had high hopes for this recipe, but it wasn't our favorite, sorry.",
-      "recipeId": 5,
-      "rating": 3,
-      "date": "2016-11-30T12:11:06.866Z",
-      "id": 14
-    },
-    {
-      "name": "Goran",
-      "content": "asdasdsadasd",
-      "recipeId": 5,
-      "rating": 2,
-      "date": "2016-11-30T12:15:35.607Z",
-      "id": 15
-    },
-    {
-      "name": "j",
-      "content": "j",
-      "recipeId": 5,
-      "rating": 5,
-      "date": "2016-11-30T12:18:32.590Z",
-      "id": 16
-    },
-    {
-      "name": "f",
-      "content": "f",
-      "recipeId": 5,
-      "rating": 1,
-      "date": "2016-11-30T12:19:07.423Z",
-      "id": 17
-    },
-    {
-      "name": "asd",
-      "content": "d",
-      "recipeId": 5,
-      "rating": 2,
-      "date": "2016-11-30T12:20:14.269Z",
-      "id": 18
-    },
-    {
-      "name": "a",
-      "content": "a",
-      "recipeId": 5,
-      "rating": 1,
-      "date": "2016-11-30T12:38:26.163Z",
-      "id": 19
     },
     {
       "name": "JOLDEROG",
@@ -1087,6 +799,70 @@
       "rating": 5,
       "date": "2016-11-30T14:53:08.755Z",
       "id": 30
+    },
+    {
+      "name": "Goran",
+      "content": "sdfsdf",
+      "recipeId": 7,
+      "rating": 5,
+      "date": "2016-11-30T17:53:09.955Z",
+      "id": 31
+    },
+    {
+      "name": "sd",
+      "content": "sd",
+      "recipeId": 7,
+      "rating": 3,
+      "date": "2016-11-30T18:06:13.822Z",
+      "id": 32
+    },
+    {
+      "name": "a",
+      "content": "a",
+      "recipeId": 7,
+      "rating": 1,
+      "date": "2016-11-30T18:06:25.709Z",
+      "id": 33
+    },
+    {
+      "name": "b",
+      "content": "b",
+      "recipeId": 7,
+      "rating": 1,
+      "date": "2016-11-30T18:06:37.449Z",
+      "id": 34
+    },
+    {
+      "name": "a",
+      "content": "a",
+      "recipeId": 7,
+      "rating": "",
+      "date": "2016-11-30T18:06:48.999Z",
+      "id": 35
+    },
+    {
+      "name": "Goran",
+      "content": "This is a beginner level tutorial to ease you into Angular 2, although there are many resources online to create Components, these articles exist as part of a series. This article will guide you through So let’s get started with creating a Component in Angular 2!",
+      "recipeId": 6,
+      "rating": 1,
+      "date": "2016-11-30T18:37:55.363Z",
+      "id": 36
+    },
+    {
+      "name": "Goran",
+      "content": "This is a beginner level tutorial to ease you into Angular 2, although there are many resources online to create Components, these articles exist as part of a series. This article will guide you through So let’s get started with creating a Component in Angular 2!",
+      "recipeId": 8,
+      "rating": 1,
+      "date": "2016-11-30T18:56:43.188Z",
+      "id": 37
+    },
+    {
+      "name": "Goran",
+      "content": "This is a beginner level tutorial to ease you into Angular 2, although there are many resources online to create Components, these articles exist as part of a series. This article will guide you through So let’s get started with creating a Component in Angular 2!",
+      "recipeId": 8,
+      "rating": 1,
+      "date": "2016-11-30T18:57:06.558Z",
+      "id": 38
     }
   ]
 }

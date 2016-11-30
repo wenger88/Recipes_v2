@@ -10,7 +10,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label>Rating</label>
-                <p-rating style="position: relative; top: 10px;" [cancel]="false" name="rating" #rating ngModel></p-rating>
+                <p-rating [cancel]="false" name="rating" #rating ngModel></p-rating>
             </div>
         </div>
     </div>
@@ -24,27 +24,4 @@
 
 </form>
 <hr>
-<div class="comment" *ngFor="let comment of comments">
-    <div class="comment-head">
-        <div class="comment-head-image">
-            <img src="http://placehold.it/50x50" alt="">
-        </div>
-        <div class="comment-head-name">
-            {{comment.name}}
-        </div>
-        <div class="comment-head-like">
-            <i class="fa fa-thumbs-up"></i>
-        </div>
-    </div>
-    <div class="comment-info">
-        <div class="comment-info-rating">
-            <p-rating [(ngModel)]="comment.rating" [cancel]="false" readonly="true"></p-rating>
-        </div>
-        <div class="comment-info-date">
-            {{comment.date | date: 'short'}}
-        </div>
-    </div>
-    <div class="comment-body">
-        {{comment.content}}
-    </div>
-</div>
+<single-comment [comment]="comment" *ngFor="let comment of comments"></single-comment>

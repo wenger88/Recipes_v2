@@ -1,4 +1,4 @@
-
+@import "~bootstrap/scss/bootstrap";
 
 .filter{
   margin-top: -47px;
@@ -75,6 +75,25 @@
 
     }
 
+
+  }
+
+}
+
+@include media-breakpoint-down(sm){
+
+  .filter-fields{
+    flex-direction: column;
+    .filter-fields-form{
+      width: 100%;
+      margin-right: 0!important;
+    }
+    .form-filter-btn{
+      width: 100%;
+      button{
+        float: right;
+      }
+    }
 
   }
 

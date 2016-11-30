@@ -20,9 +20,7 @@ export class RecipeDetailComponent implements OnInit{
 
     recipe: Recipe;
     comments: any[];
-    //rating:any[];
     _ = require('lodash');
-    total: number = 0;
 
     constructor(private dataService: DataService, private router: Router ,private route: ActivatedRoute){}
 
@@ -48,7 +46,6 @@ export class RecipeDetailComponent implements OnInit{
                                 this.recipe.rating = 0;
                             }
 
-                            /*this.rating = _.map(this.comments, 'rating');*/
                             console.log(this.recipe.rating);
                             //console.log(this.rating);
                         })
