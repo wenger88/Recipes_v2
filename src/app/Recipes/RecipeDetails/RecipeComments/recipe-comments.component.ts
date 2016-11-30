@@ -2,7 +2,7 @@
  * Created by goran.pavlovski on 11/29/2016.
  */
 
-import {Component, Input, OnInit, ViewChild} from "@angular/core";
+import {Component, Input, OnInit, ViewChild, Output, EventEmitter} from "@angular/core";
 import {Recipe, Comments} from "../../../shared/interfaces";
 import {Router, ActivatedRoute} from "@angular/router";
 import {DataService} from "../../../core/services/data.service";
@@ -24,8 +24,7 @@ export class RecipeCommentsComponent implements OnInit{
     //comments: any[] = [];
     @ViewChild('recipeComment') recipeComment: NgForm;
     _ = require('lodash');
-    //comments: Comments[];
-    postCommentsToServer: string;
+    date: any;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -33,30 +32,28 @@ export class RecipeCommentsComponent implements OnInit{
 
     ngOnInit(): void {
 
-        /*this.dataService.getAllComments()
-            .subscribe((comments: Comments[])=>{
-                this.comments = _.filter(comments, ['recipeId', comments[0].recipeId]);
-                console.log(this.comments);
-            })*/
         this.dataService.getAllComments(this.recipe.id)
             .subscribe((comments: Comments[])=>{
                 this.comments = comments;
                 console.log(this.comments);
             })
 
-
+        this.date = new Date();
+        console.log(typeof this.date);
     }
 
-    onSubmit(name: HTMLInputElement, comment: HTMLInputElement){
+    onSubmit(name: HTMLInputElement, comment: HTMLInputElement, rating: any){
 
         let newComments: any = {
             'name': name.value,
             'content': comment.value,
-            'recipeId': this.recipe.id
+            'recipeId': this.recipe.id,
+            'rating': rating.value,
+            'date': this.date
         }
 
          if (newComments.name != "" || newComments.comment != ""){
-             console.log(newComments);
+             //console.log(newComments);
              //this.comments.push(newComments);
              this.dataService.addComment(newComments)
                  .subscribe(
@@ -69,13 +66,14 @@ export class RecipeCommentsComponent implements OnInit{
                  );
              name.value = null;
              comment.value = null;
+             console.log(this.recipe.rating);
              window.location.reload();
 
          }else{
-         console.log('Empty Fields!');
+            console.log('Empty Fields!');
          }
 
-         console.log(newComments);
+         //console.log(newComments);
     }
 
 }

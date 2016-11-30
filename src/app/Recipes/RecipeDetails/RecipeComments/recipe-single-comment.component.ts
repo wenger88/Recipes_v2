@@ -1,5 +1,5 @@
 import {Component, Input} from "@angular/core";
-import {Recipe} from "../../../shared/interfaces";
+import {Recipe, Comments} from "../../../shared/interfaces";
 /**
  * Created by goran.pavlovski on 11/29/2016.
  */
@@ -13,7 +13,6 @@ import {Recipe} from "../../../shared/interfaces";
 export class RecipeSingleCommentComponent{
 
     @Input() recipe: Recipe;
-
     constructor(){}
 
 }

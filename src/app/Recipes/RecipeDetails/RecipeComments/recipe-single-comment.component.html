@@ -1,11 +1,9 @@
 
-<div class="row" *ngFor="let comment of comments">
-
+<div class="row">
     <ul class="list-group">
         <li class="list-group-item">
-            {{comment.name}}
+            {{comment?.name}}
         </li>
-        <li class="list-group-item">{{comment.comment}}</li>
+        <li class="list-group-item">{{comment?.content}}</li>
     </ul>
-
 </div>

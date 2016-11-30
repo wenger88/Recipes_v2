@@ -2,7 +2,7 @@
  * Created by goran.pavlovski on 11/23/2016.
  */
 
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, Output, EventEmitter} from "@angular/core";
 import {Recipe, Comments} from "../../shared/interfaces";
 import {DataService} from "../../core/services/data.service";
 import {ActivatedRoute, Router, Params} from "@angular/router";
@@ -20,7 +20,9 @@ export class RecipeDetailComponent implements OnInit{
 
     recipe: Recipe;
     comments: any[];
+    //rating:any[];
     _ = require('lodash');
+    total: number = 0;
 
     constructor(private dataService: DataService, private router: Router ,private route: ActivatedRoute){}
 
@@ -29,25 +31,31 @@ export class RecipeDetailComponent implements OnInit{
             this.dataService.GetSingle(params['id'])
                 .subscribe((recipe: Recipe) => {
                     this.recipe = recipe;
-                    /*this.dataService.getAllComments(this.recipe.id)
+                    this.dataService.getAllComments(this.recipe.id)
                         .subscribe((comments: Comments[])=>{
                             this.comments = comments;
                             console.log(this.comments);
-                        })*/
+                            if (this.comments.length != 0){
+                                this.recipe.rating = _.chain(this.comments)
+                                    .filter(n => n.rating > 0)
+                                    .map('rating')
+                                    .sum()
+                                    .value()
+                                this.recipe.rating = Math.round(this.recipe.rating/this.comments.length);
+                                this.recipe['rating'] = this.recipe.rating;
+                                console.log(this.recipe.rating);
+                            }else {
+                                this.recipe.rating = 0;
+                            }
+
+                            /*this.rating = _.map(this.comments, 'rating');*/
+                            console.log(this.recipe.rating);
+                            //console.log(this.rating);
+                        })
                 })
         })
-
-
-
-       /* this.dataService.GetAll().subscribe((recipe: Recipe[])=>{
-            let elem = _.filter(recipe, ['id', this.recipe.id]);
-            console.log(elem);
-            this.comments = elem[0].comments;
-        })*/
-
-
-
     }
+
 
     onDelete(){
         this.dataService.Delete(this.recipe.id)

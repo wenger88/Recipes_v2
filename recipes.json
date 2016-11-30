@@ -602,6 +602,241 @@
       "cookTime": 3,
       "readyIn": "4 h 10 m",
       "id": 4
+    },
+    {
+      "ingredients": [
+        {
+          "name": "3/4 cup milk"
+        },
+        {
+          "name": "2 tablespoons white vinegar"
+        },
+        {
+          "name": "1 cup all-purpose flour"
+        },
+        {
+          "name": "2 tablespoons white sugar"
+        },
+        {
+          "name": "1 teaspoon baking powder"
+        },
+        {
+          "name": "1/2 teaspoon baking soda"
+        },
+        {
+          "name": "1/2 teaspoon salt"
+        },
+        {
+          "name": "1 egg"
+        },
+        {
+          "name": "2 tablespoons butter, melted"
+        },
+        {
+          "name": "cooking spray"
+        }
+      ],
+      "steps": [
+        {
+          "name": "Combine milk with vinegar in a medium bowl and set aside for 5 minutes to \"sour\"."
+        },
+        {
+          "name": "Combine flour, sugar, baking powder, baking soda, and salt in a large mixing bowl. Whisk egg and butter into \"soured\" milk. Pour the flour mixture into the wet ingredients and whisk until lumps are gone."
+        },
+        {
+          "name": "Heat a large skillet over medium heat, and coat with cooking spray. Pour 1/4 cupfuls of batter onto the skillet, and cook until bubbles appear on the surface. Flip with a spatula, and cook until browned on the other side."
+        }
+      ],
+      "comments": [],
+      "date": "2016-11-30T11:59:50.250Z",
+      "author": "Goran Pavlovski",
+      "title": "Fluffy Pancakes",
+      "image": "http://images.media-allrecipes.com/userphotos/720x405/842371.jpg",
+      "description": "Tall and fluffy. These pancakes are just right. Topped with strawberries and whipped cream, they are impossible to resist.",
+      "yields": "2",
+      "servings": "4",
+      "recipeTypeName": "Quick and Easy",
+      "recipeTypeId": "15",
+      "courseName": "Breakfast and Brunch",
+      "courseId": "2",
+      "skillLevelName": "Beginner",
+      "skillLevelId": "0",
+      "cuisineName": "Thai",
+      "cuisineId": "30",
+      "preparationTime": "10 m",
+      "cookTime": "10 m",
+      "readyIn": "25 m",
+      "id": 5
+    },
+    {
+      "ingredients": [
+        {
+          "name": "2 cups all-purpose flour"
+        },
+        {
+          "name": "2 cups all-purpose flour"
+        },
+        {
+          "name": "2 teaspoons baking powder"
+        },
+        {
+          "name": "1/2 teaspoon baking soda"
+        },
+        {
+          "name": "1 1/2 teaspoons ground cinnamon"
+        },
+        {
+          "name": "1 teaspoon salt"
+        },
+        {
+          "name": "1 cup buttermilk"
+        },
+        {
+          "name": "1/4 cup vegetable oil"
+        },
+        {
+          "name": "2 eggs"
+        },
+        {
+          "name": "2 teaspoons vanilla extract"
+        },
+        {
+          "name": "2 tablespoons white sugar"
+        },
+        {
+          "name": "1 teaspoon ground cinnamon"
+        },
+        {
+          "name": "2 teaspoons margarine"
+        }
+      ],
+      "steps": [
+        {
+          "name": "Preheat oven to 350 degrees F (175 degrees C). Grease one 9x5 inch loaf pan."
+        },
+        {
+          "name": "Measure flour, 1 cup sugar, baking powder, baking soda, 1 1/2 teaspoons cinnamon, salt, buttermilk, oil, eggs and vanilla into large mixing bowl. Beat 3 minutes. Pour into prepared loaf pan. Smooth top."
+        },
+        {
+          "name": "Combine 2 tablespoons white sugar, 1 teaspoon cinnamon and butter, mixing until crumbly. Sprinkle topping over smoothed batter. Using knife, cut in a light swirling motion to give a marbled effect."
+        },
+        {
+          "name": "Bake for about 50 minutes. Test with toothpick. When inserted it should come out clean. Remove bread from pan to rack to cool."
+        }
+      ],
+      "comments": [],
+      "date": "2016-11-30T12:48:18.340Z",
+      "rating": 0,
+      "title": "Cinnamon Bread",
+      "description": "This is a lovely way to start off your morning when you want a little something different than your usual. Note: If you don't have buttermilk you may substitute milk with 1 tablespoon vinegar to measure 1 cup.",
+      "author": "Carol",
+      "image": "http://images.media-allrecipes.com/userphotos/720x405/4160696.jpg",
+      "yields": "5",
+      "preparationTime": "20 m",
+      "cookTime": "50 m",
+      "readyIn": "1 h 10 m",
+      "occasionName": "Spring",
+      "occasionId": "10",
+      "servings": "6",
+      "id": 6
+    },
+    {
+      "ingredients": [],
+      "steps": [],
+      "comments": [],
+      "date": "2016-11-30T12:54:53.834Z",
+      "title": "Pizza Casserole",
+      "description": "This recipe takes all the good things we love on pizza and combines them with egg noodles to form a great, one-dish casserole to feed your family.",
+      "image": "http://images.media-allrecipes.com/userphotos/720x405/4219038.jpg",
+      "author": "Gregg Bacon Jr.",
+      "yields": "3",
+      "preparationTime": "10 m",
+      "cookTime": "10 m",
+      "readyIn": "25 m",
+      "servings": "6",
+      "id": 7
+    },
+    {
+      "ingredients": [
+        {
+          "name": "1 1/2 tablespoons vegetable oil"
+        },
+        {
+          "name": "1 small onion, diced"
+        },
+        {
+          "name": "1 teaspoon minced fresh ginger root"
+        },
+        {
+          "name": "4 cloves garlic, minced"
+        },
+        {
+          "name": "2 potatoes, cubed"
+        },
+        {
+          "name": "4 carrots, cubed"
+        },
+        {
+          "name": "1 fresh jalapeno pepper, seeded and sliced"
+        },
+        {
+          "name": "3 tablespoons ground unsalted cashews"
+        },
+        {
+          "name": "1 (4 ounce) can tomato sauce"
+        },
+        {
+          "name": "2 teaspoons salt"
+        },
+        {
+          "name": "1 1/2 tablespoons curry powder"
+        },
+        {
+          "name": "1 cup frozen green peas"
+        },
+        {
+          "name": "1/2 green bell pepper, chopped"
+        },
+        {
+          "name": "1/2 red bell pepper, chopped"
+        },
+        {
+          "name": "1 cup heavy cream"
+        },
+        {
+          "name": "1 bunch fresh cilantro for garnish"
+        }
+      ],
+      "steps": [
+        {
+          "name": "Heat the oil in a skillet over medium heat. Stir in the onion, and cook until tender. Mix in ginger and garlic, and continue cooking 1 minute. Mix potatoes, carrots, jalapeno, cashews, and tomato sauce. Season with salt and curry powder. Cook and stir 10 minutes, or until potatoes are tender."
+        },
+        {
+          "name": "Stir peas, green bell pepper, red bell pepper, and cream into the skillet. Reduce heat to low, cover, and simmer 10 minutes. Garnish with cilantro to serve."
+        }
+      ],
+      "comments": [],
+      "date": "2016-11-30T14:27:21.615Z",
+      "author": "YAKUTA",
+      "image": "http://images.media-allrecipes.com/userphotos/720x405/3787267.jpg",
+      "title": "Vegetarian Korma",
+      "description": "This is an easy and exotic Indian dish. It's rich, creamy, mildly spiced, and extremely flavorful. Serve with naan and rice.",
+      "preparationTime": "25 m",
+      "cookTime": "30 m",
+      "readyIn": "55 m",
+      "servings": "4",
+      "occasionName": "Spring",
+      "occasionId": "10",
+      "yields": "3",
+      "recipeTypeName": "Vegetarian",
+      "recipeTypeId": "19",
+      "cuisineName": "Japanese",
+      "cuisineId": "19",
+      "courseName": "Salad",
+      "courseId": "5",
+      "skillLevelName": "Beginner",
+      "skillLevelId": "0",
+      "id": 8
     }
   ],
   "comments": [
@@ -609,148 +844,249 @@
       "id": 0,
       "name": "Goran",
       "content": "asdasd",
-      "recipeId": 1
+      "recipeId": 1,
+      "rating": 0,
+      "date": 0
     },
     {
       "name": "s",
       "content": "s",
-      "recipeId": 1,
+      "recipeId": 3,
+      "rating": 3,
+      "date": "2016-11-30T10:07:42.017Z",
       "id": 1
     },
     {
-      "name": "a",
-      "content": "a",
-      "recipeId": 1,
+      "name": "Goran",
+      "content": "As the name implies, this project is built on top of Angular 2 and Typescript. Naturally, other techologies are also used:",
+      "recipeId": 3,
+      "rating": 5,
+      "date": "2016-11-30T10:08:46.164Z",
       "id": 2
     },
     {
-      "name": "b",
-      "content": "b",
-      "recipeId": 1,
+      "name": "sdds",
+      "content": "sdds",
+      "recipeId": 3,
+      "rating": 4,
+      "date": "2016-11-30T10:26:45.092Z",
       "id": 3
     },
     {
-      "name": "c",
-      "content": "c",
-      "recipeId": 1,
+      "name": "vb",
+      "content": "vb",
+      "recipeId": 2,
+      "rating": 3,
+      "date": "2016-11-30T10:46:13.185Z",
       "id": 4
     },
     {
-      "name": "v",
-      "content": "v",
-      "recipeId": 1,
+      "name": "vbb",
+      "content": "vbb",
+      "recipeId": 2,
+      "rating": 4,
+      "date": "2016-11-30T10:46:26.507Z",
       "id": 5
+    },
+    {
+      "name": "as",
+      "content": "sdds",
+      "recipeId": 2,
+      "rating": 1,
+      "date": "2016-11-30T10:57:36.069Z",
+      "id": 6
+    },
+    {
+      "name": "",
+      "content": "",
+      "recipeId": 2,
+      "rating": 5,
+      "date": "2016-11-30T10:57:48.451Z",
+      "id": 7
+    },
+    {
+      "name": "Goran",
+      "content": "asdasdsdasd",
+      "recipeId": 1,
+      "rating": 4,
+      "date": "2016-11-30T11:01:22.395Z",
+      "id": 8
+    },
+    {
+      "name": "s",
+      "content": "d",
+      "recipeId": 1,
+      "rating": 4,
+      "date": "2016-11-30T11:02:19.262Z",
+      "id": 9
+    },
+    {
+      "name": "sdasd",
+      "content": "asdasd",
+      "recipeId": 1,
+      "rating": 2,
+      "date": "2016-11-30T11:50:18.193Z",
+      "id": 10
+    },
+    {
+      "name": "gggg",
+      "content": "ggg",
+      "recipeId": 1,
+      "rating": 5,
+      "date": "2016-11-30T11:50:54.624Z",
+      "id": 11
+    },
+    {
+      "name": "s",
+      "content": "s",
+      "recipeId": 4,
+      "rating": 1,
+      "date": "2016-11-30T11:57:07.171Z",
+      "id": 12
+    },
+    {
+      "name": "kris",
+      "content": "This recipe has served me well for years. Whenever we have overnight company, everyone insists these are the best pancakes they've ever eaten. For those afraid of sour milk, it is simply a substitute for buttermilk. I use soured milk in every recipe that I have that calls for buttermilk and it works like a charm. It does NOT make things taste sour! Another note: the pancakes will start to \"foam up\" after you stir them. Resist the urge to stir them again. All those bubbles is what makes them so fluffy. The batter will be very thick and difficult to pour at this point. Also, as others have said, this does not serve 8. In my house, it serves 4 of us. Enjoy.",
+      "recipeId": 5,
+      "rating": 5,
+      "date": "2016-11-30T12:03:00.956Z",
+      "id": 13
+    },
+    {
+      "name": "happywife05",
+      "content": "I always use lemon juice instead of vinegar for my soured milk. That being said, I feel like the proportions were a little odd in this recipe. Not sure what it was, but the flavor seemed a little unbalanced and \"after-tastey\". I usually do 1 TBS vinegar/lemon juice to 1 C milk for sour milk, (this recipe calls for 2 TBS acid to 3/4 C milk) so maybe there was too much acid. I had high hopes for this recipe, but it wasn't our favorite, sorry.",
+      "recipeId": 5,
+      "rating": 3,
+      "date": "2016-11-30T12:11:06.866Z",
+      "id": 14
+    },
+    {
+      "name": "Goran",
+      "content": "asdasdsadasd",
+      "recipeId": 5,
+      "rating": 2,
+      "date": "2016-11-30T12:15:35.607Z",
+      "id": 15
+    },
+    {
+      "name": "j",
+      "content": "j",
+      "recipeId": 5,
+      "rating": 5,
+      "date": "2016-11-30T12:18:32.590Z",
+      "id": 16
     },
     {
       "name": "f",
       "content": "f",
-      "recipeId": 1,
-      "id": 6
-    },
-    {
-      "name": "d",
-      "content": "d",
-      "recipeId": 1,
-      "id": 7
-    },
-    {
-      "name": "x",
-      "content": "x",
-      "recipeId": 1,
-      "id": 8
-    },
-    {
-      "name": "z",
-      "content": "z",
-      "recipeId": 1,
-      "id": 9
-    },
-    {
-      "name": "h",
-      "content": "h",
-      "recipeId": 1,
-      "id": 10
-    },
-    {
-      "name": "o",
-      "content": "o",
-      "id": 11
-    },
-    {
-      "name": "o",
-      "content": "o",
-      "id": 12
-    },
-    {
-      "name": "o",
-      "content": "o",
-      "id": 13
-    },
-    {
-      "name": "o",
-      "content": "o",
-      "recipeId": 1,
-      "id": 14
-    },
-    {
-      "name": "k",
-      "content": "k",
-      "recipeId": 1,
-      "id": 15
-    },
-    {
-      "name": "Goran",
-      "content": "I created this on a cold day when I didn't want to go to the store. I came up with this using just what I had in the house. With only 3 ingredients it couldn't be easier. You can also make mini loaves or meatballs with this recipe.",
-      "recipeId": 1,
-      "id": 16
-    },
-    {
-      "name": "Goran",
-      "content": "onSubmit(name: HTMLInputElement, comment: HTMLInputElement){\n\n        let newComments: any = {\n            'name': name.value,\n            'content': comment.value,\n            'recipeId': this.recipe.id\n        }\n\n         if (newComments.name != \"\" || newComments.comment != \"\"){\n             console.log(newComments);\n             //this.comments.push(newComments);\n             this.dataService.addComment(newComments)\n                 .subscribe(\n                     (data) => {\n                         //this.postCommentsToServer = JSON.stringify(data);\n                         let postCommentsToServer = JSON.stringify(data);\n                     },\n                     error => console.log(\"Error HTTP Post Service\"), // in case of failure show this message\n                     () => console.log(\"Job Done Post!\")\n                 );\n             name.value = null;\n             comment.value = null;\n         }else{\n         console.log('Empty Fields!');\n         }\n\n         console.log(newComments);\n    }",
-      "recipeId": 4,
+      "recipeId": 5,
+      "rating": 1,
+      "date": "2016-11-30T12:19:07.423Z",
       "id": 17
     },
     {
-      "name": "kco",
-      "content": "asd",
-      "recipeId": 4,
+      "name": "asd",
+      "content": "d",
+      "recipeId": 5,
+      "rating": 2,
+      "date": "2016-11-30T12:20:14.269Z",
       "id": 18
     },
     {
-      "name": "fd",
-      "content": "fd",
-      "recipeId": 4,
+      "name": "a",
+      "content": "a",
+      "recipeId": 5,
+      "rating": 1,
+      "date": "2016-11-30T12:38:26.163Z",
       "id": 19
     },
     {
-      "name": "fd",
-      "content": "fd",
-      "recipeId": 4,
+      "name": "JOLDEROG",
+      "content": "I followed the advice of other reviewers and doubled the topping, putting half in the center of the loafs. I baked mini loafs and plan to give them as gifts. Also, I baked the bread in stoneware and the pan made a huge difference, the sides of the bread were a light golden brown. Great recipe - thanks!",
+      "recipeId": 6,
+      "rating": 5,
+      "date": "2016-11-30T12:52:15.050Z",
       "id": 20
     },
     {
-      "name": "as",
-      "content": "as",
-      "recipeId": 4,
+      "name": "g",
+      "content": "g",
+      "recipeId": 7,
+      "rating": 5,
+      "date": "2016-11-30T13:04:22.600Z",
       "id": 21
     },
     {
-      "name": "LilSnoo",
-      "content": "I've been meaning to make this recipe for months, but couldn't find the frozen peppers and I didn't want to substitute and tinker too much with the recipe. I finally stumbled across Birds Eye Tri-Color Pepper & Onion Blend and thought that would be perfect. I figured because of the simple ingredients in this recipe, the onions would only benefit the flavor. First off, I love that this is healthy and easy! Second, I also love that there's none of that sweet meatloaf glaze that way too many meatloaf recipes seem to have. Eww. Third, I HIGHLY recommend seasoning the raw meat with salt and pepper. I made it as written, and ended up having to add salt because it was kind of bland without. I bet garlic powder would also be a nice addition if you want to keep things easy. Overall, a very tasty recipe, and one that I'll keep saved for days I'm looking for something simple. Thanks s!",
-      "recipeId": 3,
+      "name": "d",
+      "content": "s",
+      "recipeId": 7,
+      "rating": 4,
+      "date": "2016-11-30T13:19:19.369Z",
       "id": 22
     },
     {
-      "name": "bradpick66",
-      "content": "I made this last night for dinner for the first time. It was really good. The whole family loved it. Will definitely make it again.",
-      "recipeId": 3,
+      "name": "d",
+      "content": "s",
+      "recipeId": 7,
+      "rating": 1,
+      "date": "2016-11-30T13:19:31.126Z",
       "id": 23
     },
     {
-      "name": "Teena Simmons Smelser",
-      "content": "It was very good but I would have liked to mention it could use a gravy or sauce like traditional meatloaf.",
-      "recipeId": 3,
+      "name": "s",
+      "content": "s",
+      "recipeId": 7,
+      "rating": 1,
+      "date": "2016-11-30T13:21:11.581Z",
       "id": 24
+    },
+    {
+      "name": "s",
+      "content": "d",
+      "recipeId": 7,
+      "rating": 4,
+      "date": "2016-11-30T13:30:56.998Z",
+      "id": 25
+    },
+    {
+      "name": "amm2007",
+      "content": "This is very much like crockpot pizza. Same concept as the casserole you just layer the ingredients in a crockpot and place on low for 4 hours or until cheese is melted. I prefer sprial noodles instead of egg noodles for the crockpot they hold better.",
+      "recipeId": 6,
+      "rating": 4,
+      "date": "2016-11-30T14:03:41.724Z",
+      "id": 26
+    },
+    {
+      "name": "tibbadee",
+      "content": "If there was a better rating than five stars I would certainly give it to this recipe. It was a total hit here and my mom told me that it was the best thing I'd ever cooked, & she wants me to make it often now. The only changes I made: I added an extra tablespoon of ground cashews, and also I added the curry at the beginning and cooked it with the onion to bring out more of the spicy taste (I was told this is how traditional Indian cooking is done). All in all this was a simply delicious meal and it tasted exactly like something I would expect to find in an Indian restaurant. The ingredients are simple yet the taste is extremely flavorful and just a tad sweet. The only negative thing I have to say is, the ten minutes the recipe gives you to cook the potatoes is simply ridiculous. I had to leave them for about half-an-hour and even then they were very firm (but not raw). Also, make sure you stir a lot because the stuff tends to stick a little to the bottom at first. Next time (I'm going to make this often!), I'll cook the potatoes a little before-hand, and I'll also add cauliflower.",
+      "recipeId": 8,
+      "rating": 5,
+      "date": "2016-11-30T14:30:43.242Z",
+      "id": 27
+    },
+    {
+      "name": "sweetsuzie",
+      "content": "Good starting point. Like many others found it needed more seasoning. I added about 4 cardamon pods, 1 tsp cumin, upped the curry to 2tbs instead of the 1.5tbs, and added a few sprinkles of cinammon. Also, doubled the garlic amount. Didn't use the bell peppers, instead used cauliflower and added fish. So yummy but even better next day. Seriously as good as restaraunt if not better....",
+      "recipeId": 8,
+      "rating": 3,
+      "date": "2016-11-30T14:31:31.601Z",
+      "id": 28
+    },
+    {
+      "name": "jules6728",
+      "content": "This was very good once I upped the amount of curry and added garam marsala and fresh ground pepper. At the end, I still felt like it was missing something, so I added a pinch of brown sugar and it was just the right touch to compliment the curry flavor! Will definitely make again.",
+      "recipeId": 8,
+      "rating": 4,
+      "date": "2016-11-30T14:35:02.201Z",
+      "id": 29
+    },
+    {
+      "name": "SAMKHERM",
+      "content": "I've mad ethis many times. Try adding a little coconut milk it balances the spice a bit. Also DON'T use sweet potatoes, the consistency didn't work well nor the flavor. I like to add turmeric as well to give it a little more oomph. Definitely a keeper!",
+      "recipeId": 8,
+      "rating": 5,
+      "date": "2016-11-30T14:53:08.755Z",
+      "id": 30
     }
   ]
 }

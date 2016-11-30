@@ -43,7 +43,7 @@
                             <li><span>Course: </span>{{recipe.courseName}}</li>
                             <li><span>Skill Level: </span>{{recipe.skillLevelName}}</li>
                             <li class="text-md-right">
-                                <p-rating style="display: inline-block" [(ngModel)]="recipe.rating" [cancel]="false"
+                                <p-rating style="display: inline-block" [(ngModel)]="recipe.rating"  [cancel]="false"
                                           readonly="true"></p-rating>
                             </li>
                         </ul>
@@ -82,13 +82,12 @@
                         <button class="btn customButton btn-danger float-xs-right" type="button" (click)="onDelete()"><i class="fa fa-trash-o"></i> Delete</button>
                     </div>
 
+                    <div class="recipe-comments">
+                        <h2>Rate and Review</h2>
+                    </div>
+                    <recipe-comment [recipe]="recipe" [comments]="comments"></recipe-comment>
+
                 </div>
-
-                <hr>
-
-                <recipe-comment [recipe]="recipe" [comments]="comments"></recipe-comment>
-                <hr>
-
 
             </div>
         </div>

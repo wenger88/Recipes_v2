@@ -67,7 +67,7 @@ export interface Comments{
     recipeId: number,
     name: string,
     comment: string,
-    data: string,
+    date: string,
     rating: number
 }
 
