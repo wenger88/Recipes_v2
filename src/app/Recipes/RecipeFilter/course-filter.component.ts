@@ -6,6 +6,7 @@ import {Component} from "@angular/core";
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
 import 'rxjs/Rx';
+import {Response} from "@angular/http";
 @Component({
     selector: 'course-filter',
     template: require('./course-filter.component.html')
@@ -24,9 +25,9 @@ export class CourseFilterComponent{
     }
 
     ngOnInit(): void {
-        this.dataService.GetAll()
-            .subscribe((cuisine: Recipe[]) => {
-                this.courses = cuisine[0].course;
+        this.dataService.getAllCourses()
+            .subscribe((course: Response[]) => {
+                this.courses = course
             })
     }
 }

@@ -4,7 +4,8 @@
 
 import {Component} from "@angular/core";
 import {DataService} from "../../core/services/data.service";
-import {Recipe} from "../../shared/interfaces";
+import {Occasion} from "../../shared/interfaces";
+import {Response} from "@angular/http";
 @Component({
     selector: 'occasion-filter',
     template: require('./occasion-filter.component.html')
@@ -24,9 +25,14 @@ export class OccasionFilterComponent{
     }
 
     ngOnInit(): void {
-        this.dataService.GetAll()
+        /*this.dataService.GetAll()
             .subscribe((cuisine: Recipe[]) => {
                 this.occasions = cuisine[0].occasion;
+            })*/
+
+        this.dataService.getAllOccasions()
+            .subscribe((occasion: Response[])=>{
+                this.occasions = occasion
             })
     }
 

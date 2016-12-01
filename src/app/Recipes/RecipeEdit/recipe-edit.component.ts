@@ -5,9 +5,10 @@
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router, ActivatedRoute, Params} from "@angular/router";
 import {DataService} from "../../core/services/data.service";
-import {Recipe} from "../../shared/interfaces";
+import {Recipe, RecipeType, Cuisine, Course, Occasion, SkillLevel} from "../../shared/interfaces";
 import {NgForm} from "@angular/forms";
 import * as _ from 'lodash';
+import {Response} from "@angular/http";
 
 @Component({
     selector: 'recipe-edit',
@@ -40,51 +41,66 @@ export class RecipeEditComponent implements OnInit{
 
         this.dataService.GetAll()
             .subscribe((recipe: Recipe[]) => {
-                this.cuisines = recipe[0].cuisine;
-            })
-        this.dataService.GetAll()
-            .subscribe((recipe: Recipe[]) => {
                 this.courses = recipe[0].course;
             })
-        this.dataService.GetAll()
-            .subscribe((recipe: Recipe[]) => {
-                this.recipeTypes = recipe[0].recipeType;
+
+        this.dataService.getAllRecipeTypes()
+            .subscribe((recipeType: Response[]) => {
+                this.recipeTypes = recipeType
             })
-        this.dataService.GetAll()
-            .subscribe((recipe: Recipe[]) => {
-                this.skillLevel = recipe[0].skillLevel;
+
+        this.dataService.getAllCuisines()
+            .subscribe((cuisine: Response[]) => {
+                this.cuisines = cuisine;
             })
-        this.dataService.GetAll()
-            .subscribe((recipe: Recipe[]) => {
-                this.occasion = recipe[0].occasion;
+
+        this.dataService.getAllCourses()
+            .subscribe((course: Response[]) => {
+                this.courses = course
             })
+
+        this.dataService.getAllOccasions()
+            .subscribe((occasion: Response[])=>{
+                this.occasion = occasion
+            })
+
+        this.dataService.getAllSkills()
+            .subscribe((skill: Response[])=>{
+                this.skillLevel = skill
+            })
+
     }
 
     findCuisineName(value: any){
         value = parseInt(value);
         let name = _.filter(this.cuisines,['id', value]);
         this.recipe.cuisineName = name[0].name;
+        console.log('cuisineId: ',value);
     }
 
     findRecipeTypeName(value: any){
         value = parseInt(value);
         let name = _.filter(this.recipeTypes,['id', value]);
         this.recipe.recipeTypeName = name[0].name;
+        console.log('recipeTypeId: ',value);
     }
     findCourseName(value: any){
         value = parseInt(value);
         let name = _.filter(this.courses,['id', value]);
         this.recipe.courseName = name[0].name;
+        console.log('courseId: ',value);
     }
     findSkillLevelName(value: any){
         value = parseInt(value);
         let name = _.filter(this.skillLevel,['id', value]);
         this.recipe.skillLevelName = name[0].name;
+        console.log('skillId: ',value);
     }
     findOccasionName(value: any){
         value = parseInt(value);
         let name = _.filter(this.occasion,['id', value]);
         this.recipe.occasionName = name[0].name;
+        console.log('occasionId: ',value);
     }
 
     onSubmit(){

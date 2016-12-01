@@ -4,9 +4,10 @@
 
 
 import {Component, OnInit} from "@angular/core";
-import {Recipe} from "../../shared/interfaces";
+import {Recipe, Cuisine} from "../../shared/interfaces";
 import {DataService} from "../../core/services/data.service";
 import 'rxjs/Rx';
+import {Response} from "@angular/http";
 
 @Component({
     selector: 'cuisine-filter',
@@ -31,9 +32,9 @@ export class CuisineFilterComponent implements OnInit{
     }
 
     ngOnInit(): void {
-        this.dataService.GetAll()
-            .subscribe((cuisine: Recipe[]) => {
-                this.cuisines = cuisine[0].cuisine;
+        this.dataService.getAllCuisines()
+            .subscribe((cuisine: Response[]) => {
+                this.cuisines = cuisine;
             })
     }
 

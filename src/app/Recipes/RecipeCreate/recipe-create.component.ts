@@ -8,6 +8,8 @@ import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
 import {NgForm} from "@angular/forms";
 import * as _ from 'lodash';
+import {Response} from "@angular/http";
+import {CloudinaryOptions, CloudinaryUploader} from "ng2-cloudinary";
 
 @Component({
     selector: 'recipe-create',
@@ -31,37 +33,71 @@ export class RecipeCreateComponent implements OnInit{
     recipeTypes: any[];
     occasion: any[];
     _ = require('lodash');
+    someUrl: any;
 
+    cloudinaryImage: any;
 
+    cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
+        cloud_name: 'wenger88',
+        upload_preset: 'uqocz1cg',
+        autoUpload: true
+    });
+
+    uploader: CloudinaryUploader = new CloudinaryUploader(this.cloudinaryOptions);
+    options: CloudinaryOptions = new CloudinaryOptions({ cloud_name: 'wenger88'});
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
-                private router: Router,){}
+                private router: Router,){
+
+        let _self = this;
+
+        //Override onSuccessItem function to record cloudinary response data
+        this.uploader.onSuccessItem = function(item: any, response: string, status: number, headers: any) {
+            //response is the cloudinary response
+            //see http://cloudinary.com/documentation/upload_images#upload_response
+            this.cloudinaryImage = JSON.parse(response);
+
+            console.log(this.cloudinaryImage);
+
+            return {item, response, status, headers};
+        };
+
+        console.log(this.cloudinaryImage);
+    }
+
+
 
     ngOnInit(): void {
-        this.dataService.GetAll()
-            .subscribe((recipe: Recipe[]) => {
-                this.cuisines = recipe[0].cuisine;
+        this.dataService.getAllRecipeTypes()
+            .subscribe((recipeType: Response[]) => {
+                this.recipeTypes = recipeType
             })
-        this.dataService.GetAll()
-            .subscribe((recipe: Recipe[]) => {
-                this.courses = recipe[0].course;
+
+        this.dataService.getAllCuisines()
+            .subscribe((cuisine: Response[]) => {
+                this.cuisines = cuisine;
             })
-        this.dataService.GetAll()
-            .subscribe((recipe: Recipe[]) => {
-                this.recipeTypes = recipe[0].recipeType;
+
+        this.dataService.getAllCourses()
+            .subscribe((course: Response[]) => {
+                this.courses = course
             })
-        this.dataService.GetAll()
-            .subscribe((recipe: Recipe[]) => {
-                this.skillLevel = recipe[0].skillLevel;
+
+        this.dataService.getAllOccasions()
+            .subscribe((occasion: Response[])=>{
+                this.occasion = occasion
             })
-        this.dataService.GetAll()
-            .subscribe((recipe: Recipe[]) => {
-                this.occasion = recipe[0].occasion;
+
+        this.dataService.getAllSkills()
+            .subscribe((skill: Response[])=>{
+                this.skillLevel = skill
             })
 
         this.recipe.date = new Date();
 
     }
+
+
 
     findCuisineName(value: any){
         value = parseInt(value);
@@ -126,7 +162,7 @@ export class RecipeCreateComponent implements OnInit{
         }
 
         console.log(ingredient);
-
+        console.log(this.cloudinaryImage);
     }
 
     addDirection(directionName: HTMLInputElement){

@@ -5,6 +5,7 @@
 import {Component} from "@angular/core";
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
+import {Response} from "@angular/http";
 
 @Component({
     selector: "main-ingredient-filter",
@@ -25,9 +26,10 @@ export class MainIngredientFilterComponent{
     }
 
     ngOnInit(): void {
-        this.dataService.GetAll()
-            .subscribe((cuisine: Recipe[]) => {
-                this.mainIngredients = cuisine[0].mainIngredient;
+
+        this.dataService.getMainIngredient()
+            .subscribe((mainIngredients: Response[])=>{
+                this.mainIngredients = mainIngredients
             })
     }
 

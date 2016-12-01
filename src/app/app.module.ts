@@ -25,6 +25,11 @@ import {RatingModule} from 'primeng/primeng';
 import {RecipeCommentsComponent} from "./Recipes/RecipeDetails/RecipeComments/recipe-comments.component";
 import {RecipeSingleCommentComponent} from "./Recipes/RecipeDetails/RecipeComments/recipe-single-comment.component";
 import {RecipeItemComponent} from "./Recipes/RecipeList/recipe-tem.component";
+import {FileUploadModule} from "primeng/components/fileupload/fileupload";
+import {FileUploadComponent} from "./Recipes/FileUpload/file-upload.component";
+import {UploadService} from "./core/services/UploadService";
+import {Ng2CloudinaryModule} from "ng2-cloudinary";
+import {CloudinaryImageComponent} from "./Recipes/cloudinary-image.component/cloudinary-image.component";
 @NgModule({
 	imports: [
 		FormsModule,
@@ -33,7 +38,9 @@ import {RecipeItemComponent} from "./Recipes/RecipeList/recipe-tem.component";
 		SharedModule,
 		routing,
         AccordionModule,
-        RatingModule
+        RatingModule,
+		FileUploadModule,
+        Ng2CloudinaryModule
 	],
 	declarations: [
 		AppComponent,
@@ -50,10 +57,13 @@ import {RecipeItemComponent} from "./Recipes/RecipeList/recipe-tem.component";
         RecipeCreateComponent,
 		RecipeCommentsComponent,
         RecipeSingleCommentComponent,
-		RecipeItemComponent
+		RecipeItemComponent,
+        FileUploadComponent,
+        CloudinaryImageComponent
 	],
 	providers: [
-		DataService
+		DataService,
+        UploadService
 	], 
 	exports: [],
 	bootstrap: [AppComponent],
