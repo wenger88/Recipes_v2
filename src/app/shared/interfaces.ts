@@ -68,7 +68,8 @@ export interface Comments{
     name: string,
     comment: string,
     date: string,
-    rating: number
+    rating: number,
+    likes: number
 }
 
 export interface Cuisine {

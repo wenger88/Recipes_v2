@@ -1,7 +1,7 @@
 {
   "recipes": [
     {
-      "id": "0",
+      "id": 0,
       "title": "ted",
       "description": "Nam ornare arcu turpis, nec congu Curabitur quis euismod. Nam ornare arcu turpis, nec congu Curabitur quis euismod. Nam ornare gsfg",
       "image": "http://www.mysticpizza.com/admin/resources/pizza-pepperoni-w857h456.jpg",
@@ -62,259 +62,79 @@
     {
       "ingredients": [
         {
-          "name": "1 (3.5 ounce) package cook and serve butterscotch pudding mix"
+          "name": "1 tablespoon canola oil"
         },
         {
-          "name": "1/2 cup butter"
+          "name": "4 cloves garlic, minced, or more to taste"
         },
         {
-          "name": "1/2 cup packed brown sugar"
+          "name": "1 tablespoon minced fresh ginger"
         },
         {
-          "name": "1 egg"
+          "name": "1 pound ground beef"
         },
         {
-          "name": "1 1/2 cups all-purpose flour"
+          "name": "1/2 head white cabbage, shredded"
         },
         {
-          "name": "1/2 teaspoon baking soda"
+          "name": "1/2 head red cabbage, shredded"
         },
         {
-          "name": "1 1/2 teaspoons ground ginger"
+          "name": "2 large carrots, peeled and cut into thin strips"
         },
         {
-          "name": "1 teaspoon ground cinnamon"
+          "name": "1 red bell pepper, cut into very thin strips"
+        },
+        {
+          "name": "1/2 cup reduced-sodium soy sauce"
+        },
+        {
+          "name": "2 tablespoons sesame oil"
+        },
+        {
+          "name": "1 dash hot sauce, or to taste"
+        },
+        {
+          "name": "salt and ground black pepper to taste"
+        },
+        {
+          "name": "2 tablespoons chopped fresh cilantro, or to taste"
+        },
+        {
+          "name": "1 lime wedge"
         }
       ],
       "steps": [
         {
-          "name": "In a medium bowl, cream together the dry butterscotch pudding mix, butter, and brown sugar until smooth. Stir in the egg. Combine the flour, baking soda, ginger, and cinnamon; stir into the pudding mixture. Cover, and chill dough until firm, about 1 hour."
+          "name": "Heat canola oil in a very large skillet or wok over medium heat. Add garlic and ginger; cook and stir until fragrant, 1 to 2 minutes. Add ground beef; cook and stir until browned and crumbly, 5 to 7 minutes."
         },
         {
-          "name": "Preheat the oven to 350 degrees F (175 degrees C). Grease baking sheets. On a floured board, roll dough out to about 1/8 inch thickness, and cut into man shapes using a cookie cutter. Place cookies 2 inches apart on the prepared baking sheets."
+          "name": "Push ground beef to 1 side of skillet and add white cabbage, red cabbage, carrots, and red bell pepper. Mix vegetables with the beef and cook, stirring occasionally, until vegetables are just tender, 5 to 6 minutes."
         },
         {
-          "name": "Bake for 10 to 12 minutes in the preheated oven, until cookies are golden at the edges. Cool on wire racks."
+          "name": "Stir soy sauce, sesame oil, and hot sauce into beef-vegetable mixture until well mixed; season with salt and pepper. Serve slaw with fresh cilantro, lime wedge, and more hot sauce."
         }
       ],
-      "date": "2016-11-29T09:46:38.433Z",
-      "description": "\"This recipe for gingerbread men uses butterscotch pudding mix and doesn't require molasses!\"",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/797434.jpg",
-      "author": "Kim",
-      "title": "Gingerbread Men",
-      "servings": 30,
-      "occasionName": "New Year's",
-      "occasionId": 7,
-      "preparationTime": "25 m",
-      "cookTime": "12 m",
-      "readyIn": "1 h 37 m",
-      "recipeTypeName": "Cookie",
-      "recipeTypeId": 9,
-      "cuisineName": "Cowboy",
-      "cuisineId": 7,
-      "courseName": "Snack",
-      "courseId": 8,
+      "comments": [],
+      "date": "2016-12-01T19:53:23.602Z",
+      "title": "Addictive Asian Beef Slaw (Crack Slaw)",
+      "description": "This meal has it all - beef, shredded veggies, soy sauce, hot sauce, and lots of fresh cilantro. This dish is truly addictive.",
+      "author": "Stasty Cook",
+      "preparationTime": "20 m",
+      "cookTime": "11 m",
+      "readyIn": "31 m",
+      "servings": 4,
+      "yields": 4,
+      "recipeTypeName": "Quick and Easy",
+      "recipeTypeId": 15,
+      "cuisineName": "French",
+      "cuisineId": 11,
+      "courseName": "Salad",
+      "courseId": 5,
       "skillLevelName": "Beginner",
       "skillLevelId": 0,
-      "yields": 3,
-      "id": 1,
-      "comments": []
-    },
-    {
-      "ingredients": [
-        {
-          "name": "2 cups all-purpose flour"
-        },
-        {
-          "name": "2 cups all-purpose flour"
-        },
-        {
-          "name": "2 teaspoons baking powder"
-        },
-        {
-          "name": "1/2 teaspoon baking soda"
-        },
-        {
-          "name": "1 1/2 teaspoons ground cinnamon"
-        },
-        {
-          "name": "1 teaspoon salt"
-        },
-        {
-          "name": "1 cup buttermilk"
-        },
-        {
-          "name": "1/4 cup vegetable oil"
-        },
-        {
-          "name": "2 eggs"
-        },
-        {
-          "name": "2 teaspoons vanilla extract"
-        },
-        {
-          "name": "2 tablespoons white sugar"
-        },
-        {
-          "name": "1 teaspoon ground cinnamon"
-        },
-        {
-          "name": "2 teaspoons margarine"
-        }
-      ],
-      "steps": [
-        {
-          "name": "Preheat oven to 350 degrees F (175 degrees C). Grease one 9x5 inch loaf pan."
-        },
-        {
-          "name": "Measure flour, 1 cup sugar, baking powder, baking soda, 1 1/2 teaspoons cinnamon, salt, buttermilk, oil, eggs and vanilla into large mixing bowl. Beat 3 minutes. Pour into prepared loaf pan. Smooth top."
-        },
-        {
-          "name": "Combine 2 tablespoons white sugar, 1 teaspoon cinnamon and butter, mixing until crumbly. Sprinkle topping over smoothed batter. Using knife, cut in a light swirling motion to give a marbled effect."
-        },
-        {
-          "name": "Bake for about 50 minutes. Test with toothpick. When inserted it should come out clean. Remove bread from pan to rack to cool."
-        }
-      ],
-      "comments": [],
-      "date": "2016-11-30T12:48:18.340Z",
-      "rating": 0,
-      "title": "Cinnamon Bread",
-      "description": "This is a lovely way to start off your morning when you want a little something different than your usual. Note: If you don't have buttermilk you may substitute milk with 1 tablespoon vinegar to measure 1 cup.",
-      "author": "Carol",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/4160696.jpg",
-      "yields": "5",
-      "preparationTime": "20 m",
-      "cookTime": "50 m",
-      "readyIn": "1 h 10 m",
-      "occasionName": "Spring",
-      "occasionId": "10",
-      "servings": "6",
-      "id": 6
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [],
-      "date": "2016-11-30T12:54:53.834Z",
-      "title": "Pizza Casserole",
-      "description": "This recipe takes all the good things we love on pizza and combines them with egg noodles to form a great, one-dish casserole to feed your family.",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/4219038.jpg",
-      "author": "Gregg Bacon Jr.",
-      "yields": "3",
-      "preparationTime": "10 m",
-      "cookTime": "10 m",
-      "readyIn": "25 m",
-      "servings": "6",
-      "id": 7
-    },
-    {
-      "ingredients": [
-        {
-          "name": "d"
-        }
-      ],
-      "steps": [
-        {
-          "name": "f"
-        }
-      ],
-      "comments": [],
-      "date": "2016-12-01T12:06:10.769Z",
-      "author": "Gregg Bacon Jr.",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/4160696.jpg",
-      "title": "Cinnamon Bread",
-      "description": "dfg",
-      "yields": "4",
-      "servings": "4",
-      "preparationTime": "4",
-      "cookTime": "4",
-      "readyIn": "4",
-      "recipeTypeName": "Low Carb",
-      "recipeTypeId": "14",
-      "courseName": "Snack",
-      "courseId": "8",
-      "cuisineName": "Irish",
-      "cuisineId": "16",
-      "skillLevelName": "Intermediate",
-      "skillLevelId": "1",
-      "id": 8
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [],
-      "date": "2016-12-01T12:06:58.727Z",
-      "author": "Gregg Bacon Jr.",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/4219038.jpg",
-      "title": "asd",
-      "description": "fsdfsdfsdf",
-      "yields": "4",
-      "servings": "2",
-      "cookTime": "4",
-      "preparationTime": "2",
-      "readyIn": "6",
-      "id": 9
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [],
-      "date": "2016-12-01T15:01:38.870Z",
-      "author": "s",
-      "title": "Fluffy Pancakes",
-      "description": "sd",
-      "yields": "3",
-      "servings": "3",
-      "preparationTime": "10 m",
-      "cookTime": "10 m",
-      "readyIn": "1 h 10 m",
-      "id": 10
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [],
-      "date": "2016-12-01T15:18:21.737Z",
-      "author": "Goran Pavlovski",
-      "title": "Fluffy Pancakes",
-      "description": "asd",
-      "preparationTime": "2",
-      "cookTime": "4",
-      "readyIn": "1 h 10 m",
-      "servings": "4",
-      "yields": "5",
-      "id": 11
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [],
-      "date": "2016-12-01T15:55:00.384Z",
-      "preparationTime": "2",
-      "cookTime": "2",
-      "readyIn": "2",
-      "yields": "5",
-      "servings": "3",
-      "author": "Goran Pavlovski",
-      "title": "Cinnamon Bread",
-      "description": "asdasd",
-      "id": 12
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [],
-      "date": "2016-12-01T15:55:00.384Z",
-      "preparationTime": "2",
-      "cookTime": "2",
-      "readyIn": "2",
-      "yields": "5",
-      "servings": "3",
-      "author": "Goran Pavlovski",
-      "title": "Cinnamon Bread",
-      "description": "asdasd",
-      "id": 13
+      "id": 2,
+      "image": "http://images.media-allrecipes.com/userphotos/720x405/3589695.jpg"
     }
   ],
   "comments": [
@@ -324,247 +144,78 @@
       "content": "asdasd",
       "recipeId": 1,
       "rating": 0,
-      "date": 0
+      "date": 0,
+      "likes": 0
     },
     {
-      "name": "Goran",
-      "content": "asdasdsdasd",
-      "recipeId": 1,
-      "rating": 4,
-      "date": "2016-11-30T11:01:22.395Z",
-      "id": 8
-    },
-    {
-      "name": "s",
-      "content": "d",
-      "recipeId": 1,
-      "rating": 4,
-      "date": "2016-11-30T11:02:19.262Z",
-      "id": 9
-    },
-    {
-      "name": "sdasd",
-      "content": "asdasd",
-      "recipeId": 1,
+      "name": "fg",
+      "content": "fg",
+      "recipeId": 2,
       "rating": 2,
-      "date": "2016-11-30T11:50:18.193Z",
-      "id": 10
+      "date": "2016-12-01T20:24:58.455Z",
+      "id": 1
     },
     {
-      "name": "gggg",
-      "content": "ggg",
-      "recipeId": 1,
-      "rating": 5,
-      "date": "2016-11-30T11:50:54.624Z",
-      "id": 11
-    },
-    {
-      "name": "s",
-      "content": "s",
-      "recipeId": 4,
+      "name": "er",
+      "content": "er",
+      "recipeId": 2,
       "rating": 1,
-      "date": "2016-11-30T11:57:07.171Z",
-      "id": 12
-    },
-    {
-      "name": "JOLDEROG",
-      "content": "I followed the advice of other reviewers and doubled the topping, putting half in the center of the loafs. I baked mini loafs and plan to give them as gifts. Also, I baked the bread in stoneware and the pan made a huge difference, the sides of the bread were a light golden brown. Great recipe - thanks!",
-      "recipeId": 6,
-      "rating": 5,
-      "date": "2016-11-30T12:52:15.050Z",
-      "id": 20
-    },
-    {
-      "name": "g",
-      "content": "g",
-      "recipeId": 7,
-      "rating": 5,
-      "date": "2016-11-30T13:04:22.600Z",
-      "id": 21
+      "date": "2016-12-01T20:32:32.378Z",
+      "likes": 0,
+      "id": 2
     },
     {
       "name": "d",
       "content": "s",
-      "recipeId": 7,
-      "rating": 4,
-      "date": "2016-11-30T13:19:19.369Z",
-      "id": 22
-    },
-    {
-      "name": "d",
-      "content": "s",
-      "recipeId": 7,
-      "rating": 1,
-      "date": "2016-11-30T13:19:31.126Z",
-      "id": 23
-    },
-    {
-      "name": "s",
-      "content": "s",
-      "recipeId": 7,
-      "rating": 1,
-      "date": "2016-11-30T13:21:11.581Z",
-      "id": 24
-    },
-    {
-      "name": "s",
-      "content": "d",
-      "recipeId": 7,
-      "rating": 4,
-      "date": "2016-11-30T13:30:56.998Z",
-      "id": 25
-    },
-    {
-      "name": "amm2007",
-      "content": "This is very much like crockpot pizza. Same concept as the casserole you just layer the ingredients in a crockpot and place on low for 4 hours or until cheese is melted. I prefer sprial noodles instead of egg noodles for the crockpot they hold better.",
-      "recipeId": 6,
-      "rating": 4,
-      "date": "2016-11-30T14:03:41.724Z",
-      "id": 26
-    },
-    {
-      "name": "tibbadee",
-      "content": "If there was a better rating than five stars I would certainly give it to this recipe. It was a total hit here and my mom told me that it was the best thing I'd ever cooked, & she wants me to make it often now. The only changes I made: I added an extra tablespoon of ground cashews, and also I added the curry at the beginning and cooked it with the onion to bring out more of the spicy taste (I was told this is how traditional Indian cooking is done). All in all this was a simply delicious meal and it tasted exactly like something I would expect to find in an Indian restaurant. The ingredients are simple yet the taste is extremely flavorful and just a tad sweet. The only negative thing I have to say is, the ten minutes the recipe gives you to cook the potatoes is simply ridiculous. I had to leave them for about half-an-hour and even then they were very firm (but not raw). Also, make sure you stir a lot because the stuff tends to stick a little to the bottom at first. Next time (I'm going to make this often!), I'll cook the potatoes a little before-hand, and I'll also add cauliflower.",
-      "recipeId": 8,
-      "rating": 5,
-      "date": "2016-11-30T14:30:43.242Z",
-      "id": 27
-    },
-    {
-      "name": "sweetsuzie",
-      "content": "Good starting point. Like many others found it needed more seasoning. I added about 4 cardamon pods, 1 tsp cumin, upped the curry to 2tbs instead of the 1.5tbs, and added a few sprinkles of cinammon. Also, doubled the garlic amount. Didn't use the bell peppers, instead used cauliflower and added fish. So yummy but even better next day. Seriously as good as restaraunt if not better....",
-      "recipeId": 8,
-      "rating": 3,
-      "date": "2016-11-30T14:31:31.601Z",
-      "id": 28
-    },
-    {
-      "name": "jules6728",
-      "content": "This was very good once I upped the amount of curry and added garam marsala and fresh ground pepper. At the end, I still felt like it was missing something, so I added a pinch of brown sugar and it was just the right touch to compliment the curry flavor! Will definitely make again.",
-      "recipeId": 8,
-      "rating": 4,
-      "date": "2016-11-30T14:35:02.201Z",
-      "id": 29
-    },
-    {
-      "name": "SAMKHERM",
-      "content": "I've mad ethis many times. Try adding a little coconut milk it balances the spice a bit. Also DON'T use sweet potatoes, the consistency didn't work well nor the flavor. I like to add turmeric as well to give it a little more oomph. Definitely a keeper!",
-      "recipeId": 8,
-      "rating": 5,
-      "date": "2016-11-30T14:53:08.755Z",
-      "id": 30
-    },
-    {
-      "name": "Goran",
-      "content": "sdfsdf",
-      "recipeId": 7,
-      "rating": 5,
-      "date": "2016-11-30T17:53:09.955Z",
-      "id": 31
-    },
-    {
-      "name": "sd",
-      "content": "sd",
-      "recipeId": 7,
-      "rating": 3,
-      "date": "2016-11-30T18:06:13.822Z",
-      "id": 32
-    },
-    {
-      "name": "a",
-      "content": "a",
-      "recipeId": 7,
-      "rating": 1,
-      "date": "2016-11-30T18:06:25.709Z",
-      "id": 33
-    },
-    {
-      "name": "b",
-      "content": "b",
-      "recipeId": 7,
-      "rating": 1,
-      "date": "2016-11-30T18:06:37.449Z",
-      "id": 34
-    },
-    {
-      "name": "a",
-      "content": "a",
-      "recipeId": 7,
+      "recipeId": 2,
       "rating": "",
-      "date": "2016-11-30T18:06:48.999Z",
-      "id": 35
+      "date": "2016-12-01T20:57:36.428Z",
+      "likes": 0,
+      "id": 3
     },
     {
-      "name": "Goran",
-      "content": "This is a beginner level tutorial to ease you into Angular 2, although there are many resources online to create Components, these articles exist as part of a series. This article will guide you through So let’s get started with creating a Component in Angular 2!",
-      "recipeId": 6,
+      "name": "asd",
+      "content": "asdasd",
+      "recipeId": 2,
+      "rating": "",
+      "date": "2016-12-01T20:57:42.262Z",
+      "likes": 0,
+      "id": 4
+    },
+    {
+      "name": "asd",
+      "content": "asd",
+      "recipeId": 2,
+      "rating": 5,
+      "date": "2016-12-01T20:57:48.248Z",
+      "likes": 0,
+      "id": 5
+    },
+    {
+      "name": "[p",
+      "content": "p[",
+      "recipeId": 2,
       "rating": 1,
-      "date": "2016-11-30T18:37:55.363Z",
-      "id": 36
+      "date": "2016-12-01T21:01:21.730Z",
+      "likes": 0,
+      "id": 6
     },
     {
-      "name": "Goran",
-      "content": "This is a beginner level tutorial to ease you into Angular 2, although there are many resources online to create Components, these articles exist as part of a series. This article will guide you through So let’s get started with creating a Component in Angular 2!",
-      "recipeId": 8,
-      "rating": 1,
-      "date": "2016-11-30T18:56:43.188Z",
-      "id": 37
-    },
-    {
-      "name": "Goran",
-      "content": "This is a beginner level tutorial to ease you into Angular 2, although there are many resources online to create Components, these articles exist as part of a series. This article will guide you through So let’s get started with creating a Component in Angular 2!",
-      "recipeId": 8,
-      "rating": 1,
-      "date": "2016-11-30T18:57:06.558Z",
-      "id": 38
-    },
-    {
-      "name": "Dude",
-      "content": "This is a casserole but it is definitely not nachos. Miracle Whip has no place in Nachos, and neither does corn.",
-      "recipeId": "SyNfeYaGx",
+      "name": "dfdf",
+      "content": "dfdf",
+      "recipeId": 2,
       "rating": 3,
-      "date": "2016-12-01T10:48:46.810Z",
-      "id": 39
+      "date": "2016-12-01T21:25:51.786Z",
+      "id": 7
     },
     {
-      "name": "ALLY99",
-      "content": "DELICIOUS! I did make a quite a few changes though. First, I sauteed some onion in with my ground beef. I used Mexicorn, and instead of the Miracle Whip, I used just over 1/2 cup of fat free sour cream instead. I also used a packet of taco seasoning rather than the chili powder. In my pantry, there were some refried black beans I wanted to get rid of, and I figured this would be a good way to do that. Boy, was I right! I layered it on top of the beef mixture in my 9x13. For the crushed chips, I used Fritos rather than tortilla chips, and last but not least, I used 2 cups of Mexican cheeses rather than just Colby. In essence, I guess I changed almost everything about the recipe. LOL! But it was DELICOIUS! Ally",
-      "recipeId": "SyNfeYaGx",
-      "rating": 5,
-      "date": "2016-12-01T10:49:16.437Z",
-      "id": 40
-    },
-    {
-      "name": "sd",
-      "content": "sd",
-      "recipeId": "0",
-      "rating": 2,
-      "date": "2016-12-01T10:50:00.703Z",
-      "id": 41
-    },
-    {
-      "name": "g",
-      "content": "g",
-      "recipeId": 1,
-      "rating": 1,
-      "date": "2016-12-01T10:56:13.435Z",
-      "id": 42
-    },
-    {
-      "name": "k",
-      "content": "k",
-      "recipeId": 1,
-      "rating": 1,
-      "date": "2016-12-01T10:56:29.985Z",
-      "id": 43
-    },
-    {
-      "name": "kl",
-      "content": "k",
-      "recipeId": "B1q9QK6Gg",
-      "rating": 5,
-      "date": "2016-12-01T11:05:26.699Z",
-      "id": 44
+      "name": "kkkuk",
+      "content": "kkkkuku",
+      "recipeId": 2,
+      "rating": 4,
+      "date": "2016-12-01T21:26:39.473Z",
+      "likes": 0,
+      "id": 8
     }
   ],
   "cuisine": [

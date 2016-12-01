@@ -49,7 +49,8 @@ export class RecipeCommentsComponent implements OnInit{
             'content': comment.value,
             'recipeId': this.recipe.id,
             'rating': rating.value,
-            'date': this.date
+            'date': this.date,
+            'likes': 0
         }
 
          if (newComments.name != "" || newComments.comment != ""){

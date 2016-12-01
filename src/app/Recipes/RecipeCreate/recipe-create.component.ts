@@ -7,9 +7,9 @@ import {Router, ActivatedRoute} from "@angular/router";
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
 import {NgForm} from "@angular/forms";
+import {CloudinaryOptions, CloudinaryUploader} from "ng2-cloudinary";
 import * as _ from 'lodash';
 import {Response} from "@angular/http";
-import {CloudinaryOptions, CloudinaryUploader} from "ng2-cloudinary";
 
 @Component({
     selector: 'recipe-create',
@@ -40,10 +40,12 @@ export class RecipeCreateComponent implements OnInit{
     cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
         cloud_name: 'wenger88',
         upload_preset: 'uqocz1cg',
-        autoUpload: true
+        autoUpload: true,
     });
 
     uploader: CloudinaryUploader = new CloudinaryUploader(this.cloudinaryOptions);
+
+
     options: CloudinaryOptions = new CloudinaryOptions({ cloud_name: 'wenger88'});
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
@@ -56,7 +58,7 @@ export class RecipeCreateComponent implements OnInit{
             //response is the cloudinary response
             //see http://cloudinary.com/documentation/upload_images#upload_response
             this.cloudinaryImage = JSON.parse(response);
-
+            this.someUrl = this.cloudinaryImage;
             console.log(this.cloudinaryImage);
 
             return {item, response, status, headers};
@@ -94,6 +96,8 @@ export class RecipeCreateComponent implements OnInit{
             })
 
         this.recipe.date = new Date();
+
+
 
     }
 

@@ -27,7 +27,6 @@ import {RecipeSingleCommentComponent} from "./Recipes/RecipeDetails/RecipeCommen
 import {RecipeItemComponent} from "./Recipes/RecipeList/recipe-tem.component";
 import {FileUploadModule} from "primeng/components/fileupload/fileupload";
 import {FileUploadComponent} from "./Recipes/FileUpload/file-upload.component";
-import {UploadService} from "./core/services/UploadService";
 import {Ng2CloudinaryModule} from "ng2-cloudinary";
 import {CloudinaryImageComponent} from "./Recipes/cloudinary-image.component/cloudinary-image.component";
 @NgModule({
@@ -62,8 +61,7 @@ import {CloudinaryImageComponent} from "./Recipes/cloudinary-image.component/clo
         CloudinaryImageComponent
 	],
 	providers: [
-		DataService,
-        UploadService
+		DataService
 	], 
 	exports: [],
 	bootstrap: [AppComponent],

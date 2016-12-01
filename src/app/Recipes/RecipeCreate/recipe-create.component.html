@@ -268,8 +268,9 @@
                                            class="form-control"
                                            name="ready"
                                            [(ngModel)]="recipe.readyIn"
+                                           (change)="getReadyTime(preparation, cookTime)"
                                            #ready="ngModel"
-                                           required>
+                                           readonly>
                                 </div>
                                 <div class="alert alert-danger" [hidden]="ready.valid">Ready time is
                                     required

@@ -99,6 +99,12 @@ export class DataService{
             .catch(this.handleError);
     }
 
+/*    getSingleComment(id: number): Observable<Comments>{
+        return this._http.get(this.commentsUrl + '/' + id)
+            .map((res: Response) => res.json())
+            .catch(this.handleError);
+    }*/
+
     AddRecipe(body: Object): Observable<Recipe>{
         let bodyString = JSON.stringify(body); // Stringify payload
         let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON

@@ -7,7 +7,7 @@
             {{comment.name}}
         </div>
         <div class="comment-head-like">
-            <i class="fa fa-thumbs-up"></i>
+            <button [ngClass]="{active: liked}" (click)="likedComment()" [disabled]="liked" type="button" class="btn thumbsUp"><i class="fa fa-thumbs-up"></i></button>
         </div>
     </div>
     <div class="comment-info">
@@ -22,3 +22,4 @@
         {{comment.content}}
     </div>
 </div>
+

@@ -27,22 +27,27 @@
       font-weight: bold;
     }
     &-like{
-      margin-right: 15px;
-      color: #6ebe3b;
-      background: #fff;
-      width: 30px;
-      height: 30px;
-      text-align: center;
-      border-radius: 50%;
-      line-height: 26px;
-      border: 2px solid #6ebe3b;
-      cursor: pointer;
-      transition: all .3s ease-in-out;
-      &:hover{
-        background: #6ebe3b;
-        color: #fff;
-        transition: all .3s ease-in;
+      .thumbsUp{
+        margin-right: 15px;
+        color: #6ebe3b;
+        background: #fff;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        border-radius: 50%;
+        line-height: 26px;
+        border: 2px solid #6ebe3b;
+        cursor: pointer;
+        padding: 0;
+
+        transition: all .3s ease-in-out;
+        &:hover, &.active{
+          background: #6ebe3b;
+          color: #fff;
+          transition: all .3s ease-in;
+        }
       }
+
     }
   }
   &-info{
