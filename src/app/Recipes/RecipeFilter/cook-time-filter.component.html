@@ -1,5 +1,5 @@
 
-<select class="form-control font-italic" style="font-size: 0.875rem">
+<select [ngModel]="selectedCookTime" (ngModelChange)="onChange($event)" class="form-control font-italic" style="font-size: 0.875rem">
     <option>Select cooking time</option>
     <option>< 15 minutes</option>
     <option>< 30 minutes</option>

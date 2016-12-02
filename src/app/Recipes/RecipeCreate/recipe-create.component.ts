@@ -52,6 +52,8 @@ export class RecipeCreateComponent implements OnInit{
                 private dataService: DataService,
                 private router: Router,){
 
+        console.log(this.uploader);
+
         let _self = this;
 
         //Override onSuccessItem function to record cloudinary response data

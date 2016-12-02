@@ -3,7 +3,9 @@
  */
 
 
-import {Component, style, animate, state, transition, trigger} from "@angular/core";
+import {Component, Output, EventEmitter, style, animate, state, transition, trigger} from "@angular/core";
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import {DataService} from "../../core/services/data.service";
 
 @Component({
     selector: 'recipe-filter',
@@ -23,14 +25,35 @@ import {Component, style, animate, state, transition, trigger} from "@angular/co
     styles: [require('./recipe-filter.component.scss')]
 })
 
-export class RecipeFilterComponent{
+export class RecipeFilterComponent {
+
+    @Output() filter: EventEmitter<any> = new EventEmitter();
+
+    filterForm: FormGroup;
 
     show = false;
 
-    constructor(){}
+    constructor(
+        private dataService: DataService,
+        private formBuilder: FormBuilder
+    ){
+
+    }
 
     showFilter(){
         this.show = !this.show;
     }
+
+    ngOnInit() {
+        this.filterForm = this.formBuilder.group({
+            'cuisineId': [ '' ]
+        });
+    }
+
+    //*
+    onSubmit(){
+        this.filter.emit(this.filterForm.value);
+    }
+    //*/
 
 }

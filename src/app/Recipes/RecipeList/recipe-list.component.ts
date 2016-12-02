@@ -8,8 +8,8 @@ import {DataService} from "../../core/services/data.service";
 import 'rxjs/Rx';
 
 
-
 @Component({
+
     selector: 'recipe-list',
     template: require('./recipe-list.component.html'),
     styles: [require('./recipe-list.component.scss')]
@@ -29,5 +29,7 @@ export class RecipeListComponent implements OnInit{
 
     }
 
-
+    getAll(filters: any) {
+        console.log(filters);
+    }
 }

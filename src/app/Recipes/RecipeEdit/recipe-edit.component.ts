@@ -25,6 +25,7 @@ export class RecipeEditComponent implements OnInit{
     skillLevel: any[];
     recipeTypes: any[];
     occasion: any[];
+    mainIngredient: any[];
     _ = require('lodash');
     errorMessage: string;
 
@@ -69,6 +70,19 @@ export class RecipeEditComponent implements OnInit{
                 this.skillLevel = skill
             })
 
+        this.dataService.getMainIngredient()
+            .subscribe((mainIngredient: Response[])=>{
+                this.mainIngredient = mainIngredient
+            })
+
+
+    }
+
+    findMainIngredientName(value: any){
+        value = parseInt(value);
+        let name = _.filter(this.mainIngredient,['id', value]);
+        this.recipe.mainIngredientName = name[0].name;
+        console.log(this.recipe.mainIngredientName);
     }
 
     findCuisineName(value: any){

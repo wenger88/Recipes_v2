@@ -3,7 +3,8 @@
  */
 
 
-import {Component, OnInit} from "@angular/core";
+import {Component, Input, OnInit} from "@angular/core";
+import {FormControl} from "@angular/forms";
 import {Recipe, Cuisine} from "../../shared/interfaces";
 import {DataService} from "../../core/services/data.service";
 import 'rxjs/Rx';
@@ -20,6 +21,7 @@ import {Response} from "@angular/http";
 })
 
 export class CuisineFilterComponent implements OnInit{
+    @Input() control: FormControl;
     cuisines: any[];
     selectedCuisine: string = "Select a cuisine";
 
