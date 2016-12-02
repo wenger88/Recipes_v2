@@ -98,3 +98,17 @@
   }
 
 }
+
+.active{
+  background: #c1452b!important;
+  &:before{
+    background: #c1452b!important;
+  }
+  i{
+    background: #c1452b!important;
+    &:before{
+      content: '\f077'!important;
+    }
+
+  }
+}

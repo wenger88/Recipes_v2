@@ -40,7 +40,8 @@ export class RecipeDetailComponent implements OnInit{
                                     .sum()
                                     .value()
                                 this.recipe.rating = Math.round(this.recipe.rating/this.comments.length);
-                                this.recipe['rating'] = this.recipe.rating;
+                                //this.recipe['rating'] = this.recipe.rating;
+                                //Array.prototype.push(this.recipe,this.recipe.rating);
                                 console.log(this.recipe.rating);
                             }else {
                                 this.recipe.rating = 0;
