@@ -2,10 +2,12 @@
  * Created by goran.pavlovski on 11/22/2016.
  */
 
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, ChangeDetectionStrategy} from "@angular/core";
 import {Recipe} from "../../shared/interfaces";
 import {DataService} from "../../core/services/data.service";
 import 'rxjs/Rx';
+
+
 
 @Component({
     selector: 'recipe-list',
@@ -16,7 +18,7 @@ import 'rxjs/Rx';
 export class RecipeListComponent implements OnInit{
 
     recipes: Recipe[];
-
+    page: number = 1;
     constructor(private dataService: DataService){}
 
     ngOnInit(){
@@ -24,6 +26,8 @@ export class RecipeListComponent implements OnInit{
             .subscribe((recipes: Recipe[]) => {
                 this.recipes = recipes;
             })
+
     }
+
 
 }

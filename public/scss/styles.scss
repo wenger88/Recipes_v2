@@ -1,81 +1,82 @@
-
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/scss/font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *, *:before, *:after {
-	box-sizing: inherit;
-	background-repeat: no-repeat !important;
-	min-width: 0px;
-	min-height: 0px;
+  box-sizing: inherit;
+  background-repeat: no-repeat !important;
+  min-width: 0px;
+  min-height: 0px;
 }
 
 body {
-		color: #555;
-		margin: 0px;
-		padding: 0px;
-		font-family: 'Lora', serif;
-		.main-content {
-			margin: 30px;
+  color: #555;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lora', serif;
+  .main-content {
+    margin: 30px;
 
-			.header {
-					font-size: 18pt;
-					text-transform: capitalize;				
-			}
-		}
+    .header {
+      font-size: 18pt;
+      text-transform: capitalize;
+    }
+  }
 }
 
-a{
-	color: #000;
-	text-decoration: none!important;
-	outline: none;
-	&:hover{
-		text-decoration: none;
-		outline: none;
-      	color: #000;
-	}
+a {
+  color: #000;
+  text-decoration: none !important;
+  outline: none;
+  &:hover {
+    text-decoration: none;
+    outline: none;
+    color: #000;
+  }
 }
 
-button{
-	outline: none!important;
+button {
+  outline: none !important;
 }
 
-.ui-accordion .ui-accordion-header a{
-	padding-top: 1em;
-	padding-bottom: 1em;
-	background: #e7e3e1;
-	border: 1px solid #e4d9d1;
-	font-family: 'Lora', serif;
-	font-style: italic;
-	font-weight: 700;
-	color: #000000;
-	font-size: 18px;
-	text-decoration: none!important;
-	&:hover{
-		background: darken(#e4d9d1, 1%);
-	}
+.ui-accordion .ui-accordion-header a {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background: #e7e3e1;
+  border: 1px solid #e4d9d1;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #000000;
+  font-size: 18px;
+  text-decoration: none !important;
+  &:hover {
+    background: darken(#e4d9d1, 1%);
+  }
 }
-.ui-accordion .ui-accordion-header a[aria-selected=true]{
-	background: darken(#e4d9d1, 1%);
+
+.ui-accordion .ui-accordion-header a[aria-selected=true] {
+  background: darken(#e4d9d1, 1%);
 }
-.ui-accordion .ui-accordion-content{
-	background: #F8F6F5;
-	font-family: "Segoe UI", sans-serif;
-	font-size: 15px;
-	line-height: 26px;
-	border: 1px solid #e4d9d1;
-	border-top: none;
+
+.ui-accordion .ui-accordion-content {
+  background: #F8F6F5;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 26px;
+  border: 1px solid #e4d9d1;
+  border-top: none;
 
 }
 
-.ellipsis{
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 /*
@@ -165,33 +166,83 @@ button{
 
 }*/
 .spinner {
-	width: 40px;
-	height: 40px;
-	background-color: #333;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
 
-	margin: 100px auto;
-	-webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-	animation: sk-rotateplane 1.2s infinite ease-in-out;
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
 
 @-webkit-keyframes sk-rotateplane {
-	0% { -webkit-transform: perspective(120px) }
-	50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-	100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+  0% {
+    -webkit-transform: perspective(120px)
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg)
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+  }
 }
 
 @keyframes sk-rotateplane {
-	0% {
-		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-		-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
-	} 50% {
-		  transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-		  -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
-	  } 100% {
-			transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-			-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-		}
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
 }
-.loading{
-	background-color: #d35400;
+
+.loading {
+  background-color: #d35400;
+}
+
+.ng2-pagination {
+  padding-left: 0!important;
+  li {
+    background: #000 !important;
+    cursor: pointer;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: bold;
+     a, button{
+      color: #fff!important;
+       &:hover{
+         background: #6ebe3b !important;
+         color: #fff;
+       }
+
+    }
+    &.current {
+      background: #6ebe3b !important;
+      color: #fff;
+    }
+
+    &.pagination-previous, &.pagination-next{
+      font-family: 'Lora', serif;
+      font-style: italic;
+      background: transparent!important;
+
+      a{
+        color: #000!important;
+        &:hover{
+          background: none!important;
+          color: #6ebe3b!important;
+        }
+      }
+      &.disabled{
+        color: #dddddd!important;
+      }
+    }
+
+  }
+
 }

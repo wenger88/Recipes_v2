@@ -29,6 +29,10 @@ import {FileUploadModule} from "primeng/components/fileupload/fileupload";
 import {FileUploadComponent} from "./Recipes/FileUpload/file-upload.component";
 import {Ng2CloudinaryModule} from "ng2-cloudinary";
 import {CloudinaryImageComponent} from "./Recipes/cloudinary-image.component/cloudinary-image.component";
+import {Ng2PaginationModule} from "ng2-pagination";
+import {ListPaginationComponent} from "./Recipes/RecipeList/ListPagination/list-pagination.component";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+
 @NgModule({
 	imports: [
 		FormsModule,
@@ -39,7 +43,9 @@ import {CloudinaryImageComponent} from "./Recipes/cloudinary-image.component/clo
         AccordionModule,
         RatingModule,
 		FileUploadModule,
-        Ng2CloudinaryModule
+        Ng2CloudinaryModule,
+		Ng2PaginationModule,
+		NgbModule
 	],
 	declarations: [
 		AppComponent,
@@ -58,7 +64,8 @@ import {CloudinaryImageComponent} from "./Recipes/cloudinary-image.component/clo
         RecipeSingleCommentComponent,
 		RecipeItemComponent,
         FileUploadComponent,
-        CloudinaryImageComponent
+        CloudinaryImageComponent,
+		ListPaginationComponent
 	],
 	providers: [
 		DataService

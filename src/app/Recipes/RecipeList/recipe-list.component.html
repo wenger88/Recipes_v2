@@ -3,7 +3,7 @@
 
         <h2>Recent Recipes</h2>
 
-        <recipe-item [recipe]="recipe" *ngFor="let recipe of recipes"></recipe-item>
-
+        <recipe-item [recipe]="recipe" *ngFor="let recipe of recipes  | paginate: { id: 'server', itemsPerPage: 5, currentPage: page  }"></recipe-item>
+        <pagination-controls (pageChange)="page = $event" #api id="server"></pagination-controls>
     </div>
 </div>
