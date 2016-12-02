@@ -44,13 +44,13 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <nav class="navbar navbar-light bg-faded">
-                            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse"
+                            <button class="navbar-toggler hidden-md-up " type="button" data-toggle="collapse"
                                     data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                                    aria-label="Toggle navigation"></button>
-                            <div class="collapse navbar-toggleable-sm" id="navbarResponsive">
+                                    aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"></button>
+                            <div class="collapse navbar-toggleable-sm" [attr.aria-expanded]="!isCollapsed" [ngClass]="{'in': !isCollapsed}" id="navbarResponsive">
                                 <a class="navbar-brand" href="#"></a>
 
-                                <ul class="nav navbar-nav float-sm-right">
+                                <ul class="nav navbar-nav float-md-right">
                                     <li class="nav-item active">
                                         <a class="nav-link" [routerLink]="['/recipes']">Home</a>
                                     </li>

@@ -142,6 +142,7 @@ export class RecipeCreateComponent implements OnInit{
             );
         //console.log(this.recipe);
     }
+
     removeDirection(i: number){
         this.recipe.steps.splice(i,1);
         this.recipeForm.form.markAsDirty();

@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';  
 
 import { AppHeaderComponent, appHeaderRouting } from './header';
+import { CommonModule } from '@angular/common';
+import {BrowserModule} from "@angular/platform-browser";
 
 @NgModule({
 	imports: [
-		appHeaderRouting
+		BrowserModule,
+		appHeaderRouting,
+		CommonModule
 	],
 	exports: [
 		AppHeaderComponent,

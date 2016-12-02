@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
 	styles: [require('./app-header.component.scss')]
 })
 
-export class AppHeaderComponent { }
+export class AppHeaderComponent {
+
+	isCollapsed: boolean = true;
+
+	constructor(){}
+
+	openNavbar(){
+		this.isCollapsed = !this.isCollapsed;
+	}
+
+}
