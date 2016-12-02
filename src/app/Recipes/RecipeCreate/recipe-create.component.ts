@@ -32,6 +32,7 @@ export class RecipeCreateComponent implements OnInit{
     skillLevel: any[];
     recipeTypes: any[];
     occasion: any[];
+    mainIngredient: any[];
     _ = require('lodash');
     someUrl: any;
 
@@ -67,7 +68,11 @@ export class RecipeCreateComponent implements OnInit{
         console.log(this.cloudinaryImage);
     }
 
-
+    getReadyTime(x: any, y: any):number{
+        x = parseInt(x);
+        y = parseInt(y);
+        return this.recipe.readyIn =  x + y;
+    }
 
     ngOnInit(): void {
         this.dataService.getAllRecipeTypes()
@@ -95,6 +100,11 @@ export class RecipeCreateComponent implements OnInit{
                 this.skillLevel = skill
             })
 
+        this.dataService.getMainIngredient()
+            .subscribe((mainIngredient: Response[])=>{
+                this.mainIngredient = mainIngredient
+            })
+
         this.recipe.date = new Date();
 
 
@@ -102,6 +112,14 @@ export class RecipeCreateComponent implements OnInit{
     }
 
 
+
+
+
+    findMainIngredientName(value: any){
+        value = parseInt(value);
+        let name = _.filter(this.mainIngredient,['id', value]);
+        this.recipe.mainIngredientName = name[0].name;
+    }
 
     findCuisineName(value: any){
         value = parseInt(value);

@@ -56,6 +56,8 @@
       "courseId": "8",
       "cuisineName": "Italian",
       "cuisineId": "17",
+      "mainIngredientName": "Duck",
+      "mainIngredientId": "1",
       "skillLevelName": "Advanced",
       "skillLevelId": "2"
     },
@@ -135,6 +137,21 @@
       "skillLevelId": 0,
       "id": 2,
       "image": "http://images.media-allrecipes.com/userphotos/720x405/3589695.jpg"
+    },
+    {
+      "ingredients": [],
+      "steps": [],
+      "comments": [],
+      "date": "2016-12-02T08:50:47.546Z",
+      "author": "Goran Pavlovski",
+      "title": "Fluffy Pancakes",
+      "description": "asdasd",
+      "mainIngredientName": "Chicken",
+      "mainIngredientId": "3",
+      "servings": "23",
+      "preparationTime": "e",
+      "cookTime": "w",
+      "id": 3
     }
   ],
   "comments": [

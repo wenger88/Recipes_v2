@@ -23,6 +23,7 @@ export interface Recipe {
     cuisineName: any,
     cuisine: any[],
     mainIngredientId: number,
+    mainIngredientName: string,
     mainIngredient: any[],
     courseName: string,
     courseId: number

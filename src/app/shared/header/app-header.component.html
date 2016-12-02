@@ -44,8 +44,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <nav class="navbar navbar-light bg-faded">
-                            <button class="navbar-toggler hidden-md-up " type="button" data-toggle="collapse"
-                                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                            <button class="navbar-toggler hidden-md-up " [ngClass]="{'collapsed': isCollapsed}" type="button" data-toggle="collapse"
+                                    data-target="#navbarResponsive" aria-controls="navbarResponsive" [attr.aria-expanded]="!isCollapsed"
                                     aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"></button>
                             <div class="collapse navbar-toggleable-sm" [attr.aria-expanded]="!isCollapsed" [ngClass]="{'in': !isCollapsed}" id="navbarResponsive">
                                 <a class="navbar-brand" href="#"></a>
