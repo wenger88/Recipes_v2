@@ -46,7 +46,10 @@ export class RecipeFilterComponent {
 
     ngOnInit() {
         this.filterForm = this.formBuilder.group({
-            'cuisineId': [ '' ]
+            'cuisineId': [ '' ],
+            'courseId': [ '' ],
+            'mainIngredientId': [ '' ],
+            'occasionId': [ '' ]
         });
     }
 

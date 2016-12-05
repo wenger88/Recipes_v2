@@ -11,13 +11,13 @@
                     <div class="filter-fields-form">
                         <div class="form-group">
                             <label>Ingredient</label>
-                            <main-ingredient-filter></main-ingredient-filter>
+                            <main-ingredient-filter [control]="filterForm.controls['mainIngredientId']"></main-ingredient-filter>
                         </div>
                     </div>
                     <div class="filter-fields-form">
                         <div class="form-group">
                             <label>Course</label>
-                            <course-filter></course-filter>
+                            <course-filter [control]="filterForm.controls['courseId']"></course-filter>
                         </div>
                     </div>
                     <div class="filter-fields-form">
@@ -35,7 +35,7 @@
                     <div class="filter-fields-form">
                         <div class="form-group">
                             <label>Occasion</label>
-                            <occasion-filter></occasion-filter>
+                            <occasion-filter [control]="filterForm.controls['occasionId']"></occasion-filter>
                         </div>
                     </div>
                     <div class="form-filter-btn">

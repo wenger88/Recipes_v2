@@ -1,5 +1,5 @@
 
-    <select [ngModel]="selectedIngredient" (ngModelChange)="onChange($event)" name="ingredient" class="form-control font-italic" style="font-size: 0.875rem">
+    <select [formControl]="control" name="ingredient" class="form-control font-italic" style="font-size: 0.875rem">
         <option>Select an ingredient</option>
         <option *ngFor="let ingredient of mainIngredients" [value]="ingredient.id">{{ingredient.name}}</option>
     </select>

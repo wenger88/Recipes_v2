@@ -30,7 +30,7 @@ import {FileUploadComponent} from "./Recipes/FileUpload/file-upload.component";
 import {Ng2CloudinaryModule} from "ng2-cloudinary";
 import {CloudinaryImageComponent} from "./Recipes/cloudinary-image.component/cloudinary-image.component";
 import {Ng2PaginationModule} from "ng2-pagination";
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
 	imports: [
@@ -44,7 +44,8 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 		FileUploadModule,
         Ng2CloudinaryModule,
 		Ng2PaginationModule,
-		NgbModule
+        NgbModule.forRoot(),
+
 	],
 	declarations: [
 		AppComponent,

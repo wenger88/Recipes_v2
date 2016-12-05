@@ -4,7 +4,7 @@
 
 import {Injectable} from "@angular/core";
 import {Recipe, Comments, RecipeType, Cuisine, Course, SkillLevel, Occasion} from "../../shared/interfaces";
-import {Http, Response, RequestOptions, Headers} from "@angular/http";
+import {Http, Response, RequestOptions, Headers, URLSearchParams} from "@angular/http";
 import {Observable} from "rxjs";
 import 'rxjs/Rx';
 
@@ -22,11 +22,29 @@ export class DataService{
     imagesUrl: string = 'http://localhost:3000/images';
     recipe: Recipe[];
 
+
     constructor(private _http: Http){}
 
-    GetAll(): Observable<Recipe[]>{
+    /*GetAll(): Observable<Recipe[]>{
         return this._http.get(this.recipesUrl)
             .map((res: Response) => res.json())
+            .catch(this.handleError);
+    }*/
+
+    GetAll(page: number = 1, limit: number = 2): Observable<Recipe[]>{
+        let params: URLSearchParams = new URLSearchParams();
+        params.set('_page', page.toString());
+        params.set('_limit', limit.toString());
+        return this._http.get(this.recipesUrl, { search: params })
+            .map((res: Response) => {
+                let response = res.json();
+                if (res.headers.get('X-Total-Count')) {
+                    response.meta = {
+                        totalCount: res.headers.get('X-Total-Count')
+                    };
+                }
+                return response;
+            })
             .catch(this.handleError);
     }
 

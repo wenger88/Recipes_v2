@@ -2,10 +2,11 @@
  * Created by goran.pavlovski on 11/23/2016.
  */
 
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 import {DataService} from "../../core/services/data.service";
 import {Occasion} from "../../shared/interfaces";
 import {Response} from "@angular/http";
+import {FormControl} from "@angular/forms";
 @Component({
     selector: 'occasion-filter',
     template: require('./occasion-filter.component.html')
@@ -15,6 +16,7 @@ export class OccasionFilterComponent{
 
     occasions: any[];
     selectedOccasion: string = "Select an occasion";
+    @Input() control: FormControl;
 
     constructor(private dataService: DataService){}
 

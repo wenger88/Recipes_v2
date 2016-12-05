@@ -2,10 +2,11 @@
  * Created by goran.pavlovski on 11/23/2016.
  */
 
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
 import {Response} from "@angular/http";
+import {FormControl} from "@angular/forms";
 
 @Component({
     selector: "main-ingredient-filter",
@@ -16,6 +17,8 @@ export class MainIngredientFilterComponent{
 
     mainIngredients: any[];
     selectedIngredient: string = "Select an ingredient";
+    @Input() control: FormControl;
+
 
     constructor(private dataService: DataService){}
 
