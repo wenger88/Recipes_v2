@@ -1,114 +1,37 @@
 {
   "recipes": [
     {
-      "id": 0,
-      "title": "ted",
-      "description": "Nam ornare arcu turpis, nec congu Curabitur quis euismod. Nam ornare arcu turpis, nec congu Curabitur quis euismod. Nam ornare gsfg",
-      "image": "http://www.mysticpizza.com/admin/resources/pizza-pepperoni-w857h456.jpg",
-      "ingredients": [
-        {
-          "id": 0,
-          "name": "asdasdasd"
-        },
-        {
-          "id": 1,
-          "name": "asdasdasdasd"
-        }
-      ],
-      "steps": [
-        {
-          "id": 0,
-          "name": "asdasdasdasdasd"
-        }
-      ],
-      "nutritionals": [
-        {
-          "id": 0,
-          "proteine": "6.60g",
-          "deitaryFiber": "50g",
-          "fatTotal": "60g",
-          "energy": "900mg",
-          "fatSaturated": "39.5g",
-          "sodium": "10g",
-          "carbonhydrate": "0",
-          "cholesterol": "80g"
-        }
-      ],
-      "yields": 4,
-      "servings": 6,
-      "preparationTime": 15,
-      "cookTime": 30,
-      "readyIn": 45,
-      "tags": [
-        "garlic",
-        "pizza",
-        "onion",
-        "roasted"
-      ],
-      "author": "Goran Pavlovski",
-      "rating": 4,
-      "recipeTypeName": "Sauce",
-      "recipeTypeId": 17,
+      "ingredients": [],
+      "steps": [],
       "comments": [],
-      "occasionName": "Fourth of July",
-      "occasionId": "3",
-      "courseName": "Snack",
-      "courseId": "8",
-      "cuisineName": "Italian",
-      "cuisineId": "17",
-      "mainIngredientName": "Duck",
-      "mainIngredientId": "1",
-      "skillLevelName": "Advanced",
-      "skillLevelId": "2"
+      "date": "2016-12-06T15:50:10.848Z",
+      "author": "Goran Pavlovski",
+      "image": "recipe-images/togi9ojpqurlpz99msv5",
+      "title": "Fluffy Pancakes",
+      "description": "jkjkhjkhjkhjkhjkhjk",
+      "mainIngredientName": "Egg",
+      "mainIngredientId": "5",
+      "servings": "7",
+      "readyIn": "25",
+      "id": 1
     },
     {
       "ingredients": [],
       "steps": [],
       "comments": [],
-      "date": "2016-12-06T11:05:09.602Z",
+      "date": "2016-12-06T16:06:41.607Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1481040416/recipe-images/tfbo11y7rtog7tj0rnlm.jpg",
       "author": "Goran Pavlovski",
       "title": "Fluffy Pancakes",
-      "description": "asdasdsad",
-      "mainIngredientName": "Chicken",
-      "mainIngredientId": "3",
-      "servings": "4",
+      "description": "hjjgjhgjhgjh",
+      "mainIngredientName": "Egg",
+      "mainIngredientId": "5",
+      "servings": "6",
       "readyIn": "45",
-      "recipeTypeName": "Vegetarian",
-      "recipeTypeId": "19",
-      "cuisineName": "Irish",
-      "cuisineId": "16",
-      "skillLevelName": "Advanced",
-      "skillLevelId": "2",
-      "courseName": "Dinner",
-      "courseId": "12",
-      "occasionName": "Fourth of July",
-      "occasionId": "3",
-      "id": "1",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/4160696.jpg",
-      "preparationTime": "6",
-      "cookTime": "6"
-    }
-  ],
-  "comments": [
-    {
-      "name": "Goran",
-      "content": "sdsdsdsd",
-      "recipeId": "1",
-      "rating": 3,
-      "date": "2016-12-06T11:09:34.341Z",
-      "likes": 0,
-      "id": 1
-    },
-    {
-      "name": "Jack",
-      "content": "asdasdasdasdasdasdasd",
-      "recipeId": "1",
-      "rating": 5,
-      "date": "2016-12-06T13:48:36.577Z",
-      "likes": 0,
       "id": 2
     }
   ],
+  "comments": [],
   "cuisine": [
     {
       "id": 1,
@@ -490,10 +413,6 @@
     }
   ],
   "images": [
-    {
-      "id": 0,
-      "recipeId": 1
-    },
     {
       "id": 1
     },

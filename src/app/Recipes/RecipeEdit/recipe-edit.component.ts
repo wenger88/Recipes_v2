@@ -9,6 +9,7 @@ import {Recipe} from "../../shared/interfaces";
 import {NgForm} from "@angular/forms";
 import * as _ from 'lodash';
 import {Response} from "@angular/http";
+import {CloudinaryOptions, CloudinaryUploader} from "ng2-cloudinary";
 
 @Component({
     selector: 'recipe-edit',
@@ -29,10 +30,27 @@ export class RecipeEditComponent implements OnInit{
     _ = require('lodash');
     errorMessage: string;
 
+    cloudinaryImage: any;
+    cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
+        cloud_name: 'wenger88',
+        upload_preset: 'uqocz1cg',
+        autoUpload: true,
+    });
+    private uploader = new CloudinaryUploader(this.cloudinaryOptions);
+
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
                 private router: Router,
-    ){}
+    ){
+
+        this.uploader.onSuccessItem = (item:any, response:any, status:any, headers:any) => {
+            let _self = this;
+            _self.cloudinaryImage = JSON.parse(response);
+            console.log("ImageUpload:uploaded:", this.cloudinaryImage);
+            this.recipe.image = _self.cloudinaryImage.url;
+        };
+
+    }
 
     ngOnInit(): void {
         this.route.params.subscribe((params: Params) => {

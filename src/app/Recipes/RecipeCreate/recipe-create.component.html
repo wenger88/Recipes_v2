@@ -33,40 +33,20 @@
                                 <div class="alert alert-danger" [hidden]="author.valid">Required Field
                                 </div>
                             </div>
-                            <!--<div class="col-sm-6">
-                                <div class="form-group text-sm-left">
-                                    <label>Rating</label>
-                                    <div style="padding: 7px">
-                                        <p-rating style="display: inline-block" [(ngModel)]="recipe.rating" [cancel]="false" name="rating" ></p-rating>
-                                    </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Upload Image</label>
+                                    <input type="file" ng2FileSelect [uploader]="uploader" #image="ngModel"
+                                           [(ngModel)]="recipe.image" name="file" />
                                 </div>
-                            </div>-->
+                            </div>
                         </div>
 
 
-                        <!--<div class="form-group">
-                            <label>Image Url</label>
-                            <input type="text"
-                                   class="form-control"
-                                   name="image"
-                                   #image="ngModel"
-                                   [(ngModel)]="recipe.image"
-                                   required
-                                   pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpe?g|gif|png))(?:\?([^#]*))?(?:#(.*))?"
-                            >
-                        </div>
-                        <div class="alert alert-danger" [hidden]="image.valid">Ready time is
-                            required
-                        </div>-->
-                        <!--<div class="img-container" [hidden]="!image.valid">
+                        <div class="img-container" *ngIf="image.value">
                             <img class="img-fluid" [src]="recipe.image" alt="">
-                        </div>-->
-                        <div class="form-group">
-                            <label>Upload Image</label>
-                            <!--<input type="file" ng2FileSelect [uploader]="uploader" name="file" />-->
-                            <file-upload [recipe]="recipe" ></file-upload>
-                            <cl-image public-id="" [options]="options"></cl-image>
                         </div>
+
                         <div class="form-group">
                             <label>Recipe Title</label>
                             <input type="text"

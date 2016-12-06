@@ -10,6 +10,7 @@ import {NgForm} from "@angular/forms";
 import {CloudinaryOptions, CloudinaryUploader} from "ng2-cloudinary";
 import * as _ from 'lodash';
 import {Response} from "@angular/http";
+import {FileUpload} from "primeng/components/fileupload/fileupload";
 
 @Component({
     selector: 'recipe-create',
@@ -37,44 +38,32 @@ export class RecipeCreateComponent implements OnInit{
     someUrl: any;
     spinners = true;
     cloudinaryImage: any;
-
     cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
         cloud_name: 'wenger88',
         upload_preset: 'uqocz1cg',
         autoUpload: true,
     });
-
-    uploader: CloudinaryUploader = new CloudinaryUploader(this.cloudinaryOptions);
-
-
+    private uploader = new CloudinaryUploader(this.cloudinaryOptions);
+    //uploader: CloudinaryUploader = new CloudinaryUploader(this.cloudinaryOptions);
     options: CloudinaryOptions = new CloudinaryOptions({ cloud_name: 'wenger88'});
+
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
-                private router: Router,){
+                private router: Router){
 
-        console.log(this.uploader);
-
-        let _self = this;
-
-        //Override onSuccessItem function to record cloudinary response data
-        this.uploader.onSuccessItem = function(item: any, response: string, status: number, headers: any) {
-            //response is the cloudinary response
-            //see http://cloudinary.com/documentation/upload_images#upload_response
-            this.cloudinaryImage = JSON.parse(response);
-            this.someUrl = this.cloudinaryImage;
-            console.log(this.cloudinaryImage);
-
-            return {item, response, status, headers};
+        this.uploader.onSuccessItem = (item:any, response:any, status:any, headers:any) => {
+            let _self = this;
+            _self.cloudinaryImage = JSON.parse(response);
+            console.log("ImageUpload:uploaded:", this.cloudinaryImage);
+            this.recipe.image = _self.cloudinaryImage.url;
         };
-
-        console.log(this.cloudinaryImage);
     }
 
-    getReadyTime(x: any, y: any):number{
+   /* getReadyTime(x: any, y: any):number{
         x = parseInt(x);
         y = parseInt(y);
         return this.recipe.readyIn =  x + y;
-    }
+    }*/
 
     ngOnInit(): void {
         this.dataService.getAllRecipeTypes()
@@ -108,7 +97,6 @@ export class RecipeCreateComponent implements OnInit{
             })
 
         this.recipe.date = new Date();
-
     }
 
 
@@ -184,7 +172,6 @@ export class RecipeCreateComponent implements OnInit{
         }
 
         console.log(ingredient);
-        console.log(this.cloudinaryImage);
     }
 
     addDirection(directionName: HTMLInputElement){

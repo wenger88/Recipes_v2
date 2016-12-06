@@ -20,6 +20,7 @@ export class DataService{
     skillUrl: string = 'http://localhost:3000/skillLevel';
     mainIngredientUrl: string = 'http://localhost:3000/mainIngredient';
     imagesUrl: string = 'http://localhost:3000/images';
+    _limit: number = 5;
     recipe: Recipe[];
 
 
@@ -34,6 +35,7 @@ export class DataService{
     getFilters(page: number, filters: any){
         let params: URLSearchParams = new URLSearchParams();
         params.set('_page', page.toString());
+        params.set('_limit', this._limit.toString());
         if (typeof filters !== 'undefined') {
             for ( let key in filters ) {
                 if (filters[key]) {
