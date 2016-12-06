@@ -6,6 +6,7 @@
 import {Component, Output, EventEmitter, style, animate, state, transition, trigger} from "@angular/core";
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import {DataService} from "../../core/services/data.service";
+import {Recipe} from "../../shared/interfaces";
 
 @Component({
     selector: 'recipe-filter',
@@ -30,8 +31,9 @@ export class RecipeFilterComponent {
     @Output() filter: EventEmitter<any> = new EventEmitter();
 
     filterForm: FormGroup;
-
+    recipes: Recipe[];
     show = false;
+    resetButton = false;
 
     constructor(
         private dataService: DataService,
@@ -46,17 +48,25 @@ export class RecipeFilterComponent {
 
     ngOnInit() {
         this.filterForm = this.formBuilder.group({
-            'cuisineId': [ '' ],
-            'courseId': [ '' ],
-            'mainIngredientId': [ '' ],
-            'occasionId': [ '' ]
+            'cuisineId': [ null ],
+            'courseId': [ null ],
+            'mainIngredientId': [ null],
+            'occasionId': [ null ],
+            'readyIn': [ null ],
         });
     }
 
     //*
     onSubmit(){
+        //this.resetButton = !this.resetButton;
         this.filter.emit(this.filterForm.value);
     }
     //*/
+
+    onClear(){
+
+        this.filter.emit(this.filterForm.reset());
+    }
+
 
 }

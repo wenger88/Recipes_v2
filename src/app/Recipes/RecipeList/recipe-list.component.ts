@@ -2,12 +2,11 @@
  * Created by goran.pavlovski on 11/22/2016.
  */
 
-import {Component, OnInit, ChangeDetectionStrategy} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {Recipe} from "../../shared/interfaces";
 import {DataService} from "../../core/services/data.service";
 import 'rxjs/Rx';
-import {Router, ActivatedRoute} from "@angular/router";
-import {Subscription, Subject} from "rxjs";
+import {Subscription} from "rxjs";
 
 
 @Component({
@@ -21,20 +20,23 @@ export class RecipeListComponent implements OnInit{
 
     recipes: Recipe[];
     page: number = 1;
-    sub: Subscription;
     totalCount = 0;
 
     constructor(private dataService: DataService){}
 
     ngOnInit(){
-        this.getAll();
+        this.getAll(event);
     }
 
-    getAll() {
-        this.dataService.GetAll(this.page)
+    getAll(event: any) {
+        this.dataService.GetAll(this.page, event)
             .subscribe((recipes: Recipe[]) => {
                 this.recipes = recipes;
                 this.totalCount = recipes['meta']['totalCount'];
             })
+        console.log(event);
     }
+
+
+
 }

@@ -18,7 +18,6 @@ export class CourseFilterComponent{
     selectedCourse: string = "Select a course";
     @Input() control: FormControl;
 
-
     constructor(private dataService: DataService){}
 
     onChange(newValue: any) {

@@ -5,7 +5,7 @@
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router, ActivatedRoute, Params} from "@angular/router";
 import {DataService} from "../../core/services/data.service";
-import {Recipe, RecipeType, Cuisine, Course, Occasion, SkillLevel} from "../../shared/interfaces";
+import {Recipe} from "../../shared/interfaces";
 import {NgForm} from "@angular/forms";
 import * as _ from 'lodash';
 import {Response} from "@angular/http";
@@ -82,7 +82,7 @@ export class RecipeEditComponent implements OnInit{
         value = parseInt(value);
         let name = _.filter(this.mainIngredient,['id', value]);
         this.recipe.mainIngredientName = name[0].name;
-        console.log(this.recipe.mainIngredientName);
+        console.log('mainIngredient: ',value);
     }
 
     findCuisineName(value: any){

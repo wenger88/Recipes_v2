@@ -1,5 +1,5 @@
 
     <select [formControl]="control" name="occasion" class="form-control font-italic" style="font-size: 0.875rem">
-        <option>Select an occasion</option>
+        <option  [value]="null" disabled>Select occasion</option>
         <option *ngFor="let occasion of occasions" [value]="occasion.id">{{occasion.name}}</option>
     </select>

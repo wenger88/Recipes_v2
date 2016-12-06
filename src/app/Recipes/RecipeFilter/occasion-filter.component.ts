@@ -4,7 +4,6 @@
 
 import {Component, Input} from "@angular/core";
 import {DataService} from "../../core/services/data.service";
-import {Occasion} from "../../shared/interfaces";
 import {Response} from "@angular/http";
 import {FormControl} from "@angular/forms";
 @Component({

@@ -30,8 +30,7 @@
                                     <label>Author</label>
                                     <input type="text" class="form-control" [(ngModel)]="recipe.author" #author="ngModel" name="author" required>
                                 </div>
-                                <div class="alert alert-danger" [hidden]="author.valid">Author is
-                                    required
+                                <div class="alert alert-danger" [hidden]="author.valid">Required Field
                                 </div>
                             </div>
                             <!--<div class="col-sm-6">
@@ -56,8 +55,7 @@
                                    pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpe?g|gif|png))(?:\?([^#]*))?(?:#(.*))?"
                             >
                         </div>
-                        <div class="alert alert-danger" [hidden]="image.valid">Ready time is
-                            required
+                        <div class="alert alert-danger" [hidden]="image.valid">Required Field
                         </div>
                         <div class="img-container" [hidden]="!image.valid">
                             <img class="img-fluid" [src]="recipe.image" alt="">
@@ -71,8 +69,7 @@
                                    #title="ngModel"
                                    required>
                         </div>
-                        <div class="alert alert-danger" [hidden]="title.valid">Ready time is
-                            required
+                        <div class="alert alert-danger" [hidden]="title.valid">Required Field
                         </div>
                         <div class="form-group">
                             <label>Short Description</label>
@@ -84,8 +81,7 @@
                                       required
                             ></textarea>
                         </div>
-                        <div class="alert alert-danger" [hidden]="description.valid">Ready time is
-                            required
+                        <div class="alert alert-danger" [hidden]="description.valid">Required Field
                         </div>
                         <div class="top">
                             <label>Ingredients</label>
@@ -129,7 +125,7 @@
                                 </span>
                                 </div>
                                 <div class="alert alert-danger" [hidden]="ingredientName.valid">
-                                    Ingredient is required
+                                    Required Field
                                 </div>
                             </div>
                         </div>
@@ -180,7 +176,7 @@
                                 </span>
 
                                 </div>
-                                <div class="alert alert-danger" [hidden]="directionName.valid">Steps are required
+                                <div class="alert alert-danger" [hidden]="directionName.valid">Required Field
                                 </div>
                             </div>
                         </div>
@@ -189,14 +185,14 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Main Ingredient</label>
-                                    <select [(ngModel)]="recipe.mainIngredientId" name="recipeType"
+                                    <select [(ngModel)]="recipe.mainIngredientId" name="mainIngredient"
                                             class="form-control font-italic"
                                             style="font-size: 0.875rem" #mainIngredients (change)="findMainIngredientName(mainIngredients.value)">
                                         <option *ngFor="let mainIng of mainIngredient" [value]="mainIng.id">{{mainIng.name}}</option>
                                     </select>
                                 </div>
-                                <div class="alert alert-danger" [hidden]="mainIngredients.value">Required Field
-                                </div>
+                               <!-- <div class="alert alert-danger" [hidden]="mainIngredients.value">Required Field
+                                </div>-->
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
@@ -208,7 +204,7 @@
                                            #servings="ngModel"
                                            required>
                                 </div>
-                                <div class="alert alert-danger" [hidden]="servings.valid">Servings is required
+                                <div class="alert alert-danger" [hidden]="servings.valid">Required Field
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -226,7 +222,7 @@
 
 
                         <div class="row">
-                            <div class="col-sm-4">
+                            <!--<div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Preparation Time</label>
                                     <input type="text"
@@ -253,7 +249,7 @@
                                 <div class="alert alert-danger" [hidden]="cookTime.valid">Cooking time is
                                     required
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Ready In</label>
@@ -264,8 +260,7 @@
                                            #ready="ngModel"
                                            required>
                                 </div>
-                                <div class="alert alert-danger" [hidden]="ready.valid">Ready time is
-                                    required
+                                <div class="alert alert-danger" [hidden]="ready.valid">Required Field
                                 </div>
                             </div>
                         </div>

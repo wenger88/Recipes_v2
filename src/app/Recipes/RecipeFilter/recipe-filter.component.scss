@@ -36,14 +36,15 @@
     }
   }
 
-
+.filter-container{
+  border-bottom: 1px solid #e4d9d1;
+  padding: 22px 0;
   .filter-fields{
-    border-bottom: 1px solid #e4d9d1;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 0;
+
 
     .filter-fields-form{
       flex: 1;
@@ -60,14 +61,15 @@
     .form-filter-btn{
       position: relative;
       top: 7px;
-      button{
+      .searchButton{
         background: #6ebe3b;
         color: #fff;
         border: 0;
         width: 42px;
         height: 38px;
         text-align: center;
-        cursor: pointer;
+        padding: 0;
+        border-radius: 0;
         &:hover{
           background: #000;
         }
@@ -77,8 +79,29 @@
 
 
   }
+  .form-clear-filter-btn{
+    position: relative;
+    top: 7px;
+    button{
+      background: #c1452b;
+      color: #fff;
+      border: 0;
+      width: 42px;
+      height: 38px;
+      text-align: center;
+      cursor: pointer;
+      &:hover{
+        background: #000;
+      }
+    }
+
+  }
+}
 
 }
+
+
+
 
 @include media-breakpoint-down(sm){
 

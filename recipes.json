@@ -62,341 +62,42 @@
       "skillLevelId": "2"
     },
     {
-      "ingredients": [
-        {
-          "name": "1 tablespoon canola oil"
-        },
-        {
-          "name": "4 cloves garlic, minced, or more to taste"
-        },
-        {
-          "name": "1 tablespoon minced fresh ginger"
-        },
-        {
-          "name": "1 pound ground beef"
-        },
-        {
-          "name": "1/2 head white cabbage, shredded"
-        },
-        {
-          "name": "1/2 head red cabbage, shredded"
-        },
-        {
-          "name": "2 large carrots, peeled and cut into thin strips"
-        },
-        {
-          "name": "1 red bell pepper, cut into very thin strips"
-        },
-        {
-          "name": "1/2 cup reduced-sodium soy sauce"
-        },
-        {
-          "name": "2 tablespoons sesame oil"
-        },
-        {
-          "name": "1 dash hot sauce, or to taste"
-        },
-        {
-          "name": "salt and ground black pepper to taste"
-        },
-        {
-          "name": "2 tablespoons chopped fresh cilantro, or to taste"
-        },
-        {
-          "name": "1 lime wedge"
-        }
-      ],
-      "steps": [
-        {
-          "name": "Heat canola oil in a very large skillet or wok over medium heat. Add garlic and ginger; cook and stir until fragrant, 1 to 2 minutes. Add ground beef; cook and stir until browned and crumbly, 5 to 7 minutes."
-        },
-        {
-          "name": "Push ground beef to 1 side of skillet and add white cabbage, red cabbage, carrots, and red bell pepper. Mix vegetables with the beef and cook, stirring occasionally, until vegetables are just tender, 5 to 6 minutes."
-        },
-        {
-          "name": "Stir soy sauce, sesame oil, and hot sauce into beef-vegetable mixture until well mixed; season with salt and pepper. Serve slaw with fresh cilantro, lime wedge, and more hot sauce."
-        }
-      ],
-      "comments": [],
-      "date": "2016-12-01T19:53:23.602Z",
-      "title": "Addictive Asian Beef Slaw (Crack Slaw)",
-      "description": "This meal has it all - beef, shredded veggies, soy sauce, hot sauce, and lots of fresh cilantro. This dish is truly addictive.",
-      "author": "Stasty Cook",
-      "preparationTime": "20 m",
-      "cookTime": "11 m",
-      "readyIn": "31 m",
-      "servings": 4,
-      "yields": 4,
-      "recipeTypeName": "Quick and Easy",
-      "recipeTypeId": 15,
-      "cuisineName": "French",
-      "cuisineId": 11,
-      "courseName": "Salad",
-      "courseId": 5,
-      "skillLevelName": "Beginner",
-      "skillLevelId": 0,
-      "id": "2",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/3589695.jpg",
-      "mainIngredientName": "Beef",
-      "mainIngredientId": "1",
-      "occasionName": "Fourth of July",
-      "occasionId": "3"
-    },
-    {
       "ingredients": [],
       "steps": [],
       "comments": [],
-      "date": "2016-12-02T08:50:47.546Z",
+      "date": "2016-12-06T11:05:09.602Z",
       "author": "Goran Pavlovski",
       "title": "Fluffy Pancakes",
-      "description": "asdasd",
+      "description": "asdasdsad",
       "mainIngredientName": "Chicken",
       "mainIngredientId": "3",
-      "servings": "23",
-      "preparationTime": "e",
-      "cookTime": "w",
-      "id": 3
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [],
-      "date": "2016-12-02T09:38:41.107Z",
-      "author": "LUNCH*LADY",
-      "title": "Cinnamon Bread",
-      "description": "ghfgh",
-      "mainIngredientName": "Egg",
-      "mainIngredientId": "5",
-      "servings": "5",
-      "preparationTime": "4",
-      "cookTime": "4",
-      "readyIn": "8",
-      "id": 4
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [],
-      "date": "2016-12-02T12:34:43.605Z",
-      "servings": "6",
-      "mainIngredientName": "Duck",
-      "mainIngredientId": "4",
-      "occasionName": "New Year's",
-      "occasionId": "7",
-      "preparationTime": "4",
-      "cookTime": "30 m",
-      "readyIn": "2",
-      "author": "Gregg Bacon Jr.",
-      "title": "Cinnamon Bread",
-      "description": "bnbnbnbn",
-      "id": 5
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [],
-      "date": "2016-12-02T12:35:27.190Z",
-      "author": "Gregg Bacon Jr.",
-      "title": "asd",
-      "description": "asdasdasdasd",
-      "mainIngredientName": "Chicken",
-      "mainIngredientId": "3",
-      "servings": "2",
-      "preparationTime": "4",
-      "cookTime": "4",
-      "readyIn": "8",
-      "id": "6",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/4160696.jpg",
+      "servings": "4",
+      "readyIn": "45",
+      "recipeTypeName": "Vegetarian",
+      "recipeTypeId": "19",
+      "cuisineName": "Irish",
+      "cuisineId": "16",
+      "skillLevelName": "Advanced",
+      "skillLevelId": "2",
+      "courseName": "Dinner",
+      "courseId": "12",
       "occasionName": "Fourth of July",
       "occasionId": "3",
-      "cuisineName": "Italian",
-      "cuisineId": "17",
-      "recipeTypeName": "Salsa",
-      "recipeTypeId": "16",
-      "courseName": "Salad",
-      "courseId": "5",
-      "skillLevelName": "Advanced",
-      "skillLevelId": "2"
-    },
-    {
-      "ingredients": [],
-      "steps": [],
-      "comments": [],
-      "date": "2016-12-02T15:01:14.871Z",
-      "author": "Goran Pavlovski",
-      "title": "Fluffy Pancakes",
-      "description": "ghhghgh",
-      "mainIngredientName": "Duck",
-      "mainIngredientId": "4",
-      "servings": "5",
-      "occasionName": "Game Day",
-      "occasionId": "4",
-      "preparationTime": "2",
-      "cookTime": "2",
-      "readyIn": "4",
-      "recipeTypeName": "Cookie",
-      "recipeTypeId": "9",
-      "cuisineName": "Jamaican",
-      "cuisineId": "18",
-      "courseName": "Side Dish",
-      "courseId": "7",
-      "skillLevelName": "Intermediate",
-      "skillLevelId": "1",
-      "id": "SklGa-kml",
-      "image": "http://images.media-allrecipes.com/userphotos/720x405/4219038.jpg"
+      "id": "1",
+      "image": "http://images.media-allrecipes.com/userphotos/720x405/4160696.jpg",
+      "preparationTime": "6",
+      "cookTime": "6"
     }
   ],
   "comments": [
     {
-      "id": 0,
       "name": "Goran",
-      "content": "asdasd",
-      "recipeId": 1,
-      "rating": 0,
-      "date": 0,
-      "likes": 0
-    },
-    {
-      "name": "fg",
-      "content": "fg",
-      "recipeId": 2,
-      "rating": 2,
-      "date": "2016-12-01T20:24:58.455Z",
+      "content": "sdsdsdsd",
+      "recipeId": "1",
+      "rating": 3,
+      "date": "2016-12-06T11:09:34.341Z",
+      "likes": 0,
       "id": 1
-    },
-    {
-      "name": "er",
-      "content": "er",
-      "recipeId": 2,
-      "rating": 1,
-      "date": "2016-12-01T20:32:32.378Z",
-      "likes": 0,
-      "id": 2
-    },
-    {
-      "name": "d",
-      "content": "s",
-      "recipeId": 2,
-      "rating": "",
-      "date": "2016-12-01T20:57:36.428Z",
-      "likes": 0,
-      "id": 3
-    },
-    {
-      "name": "asd",
-      "content": "asdasd",
-      "recipeId": 2,
-      "rating": "",
-      "date": "2016-12-01T20:57:42.262Z",
-      "likes": 0,
-      "id": 4
-    },
-    {
-      "name": "asd",
-      "content": "asd",
-      "recipeId": 2,
-      "rating": 5,
-      "date": "2016-12-01T20:57:48.248Z",
-      "likes": 0,
-      "id": 5
-    },
-    {
-      "name": "[p",
-      "content": "p[",
-      "recipeId": 2,
-      "rating": 1,
-      "date": "2016-12-01T21:01:21.730Z",
-      "likes": 0,
-      "id": 6
-    },
-    {
-      "name": "dfdf",
-      "content": "dfdf",
-      "recipeId": 2,
-      "rating": 3,
-      "date": "2016-12-01T21:25:51.786Z",
-      "id": 7
-    },
-    {
-      "name": "kkkuk",
-      "content": "kkkkuku",
-      "recipeId": 2,
-      "rating": 4,
-      "date": "2016-12-01T21:26:39.473Z",
-      "likes": 0,
-      "id": 8
-    },
-    {
-      "name": "d",
-      "content": "d",
-      "recipeId": 3,
-      "rating": 4,
-      "date": "2016-12-02T09:25:24.263Z",
-      "likes": 0,
-      "id": 9
-    },
-    {
-      "name": "asd",
-      "content": "dsd",
-      "recipeId": 3,
-      "rating": 1,
-      "date": "2016-12-02T09:30:19.603Z",
-      "likes": 0,
-      "id": 10
-    },
-    {
-      "name": "f",
-      "content": "f",
-      "recipeId": 3,
-      "rating": 1,
-      "date": "2016-12-02T09:37:11.838Z",
-      "likes": 0,
-      "id": 11
-    },
-    {
-      "name": "g",
-      "content": "g",
-      "recipeId": 3,
-      "rating": 5,
-      "date": "2016-12-02T09:37:35.219Z",
-      "likes": 0,
-      "id": 12
-    },
-    {
-      "name": "Goran",
-      "content": "asdasd",
-      "recipeId": 4,
-      "rating": 5,
-      "date": "2016-12-02T09:39:09.499Z",
-      "likes": 0,
-      "id": 13
-    },
-    {
-      "name": "s",
-      "content": "asdsad",
-      "recipeId": 6,
-      "rating": 3,
-      "date": "2016-12-02T13:58:49.056Z",
-      "likes": 0,
-      "id": 14
-    },
-    {
-      "name": "d",
-      "content": "d",
-      "recipeId": "2",
-      "rating": 5,
-      "date": "2016-12-02T14:51:26.890Z",
-      "likes": 0,
-      "id": 15
-    },
-    {
-      "name": "t",
-      "content": "t",
-      "recipeId": "2",
-      "rating": 5,
-      "date": "2016-12-02T14:51:51.648Z",
-      "likes": 0,
-      "id": 16
     }
   ],
   "cuisine": [

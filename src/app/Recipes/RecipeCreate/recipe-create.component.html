@@ -30,8 +30,7 @@
                                     <label>Author</label>
                                     <input type="text" class="form-control" [(ngModel)]="recipe.author" #author="ngModel" name="author" required>
                                 </div>
-                                <div class="alert alert-danger" [hidden]="author.valid">Author is
-                                    required
+                                <div class="alert alert-danger" [hidden]="author.valid">Required Field
                                 </div>
                             </div>
                             <!--<div class="col-sm-6">
@@ -77,8 +76,7 @@
                                    #title="ngModel"
                                    required>
                         </div>
-                        <div class="alert alert-danger" [hidden]="title.valid">Ready time is
-                            required
+                        <div class="alert alert-danger" [hidden]="title.valid">Required Field
                         </div>
                         <div class="form-group">
                             <label>Short Description</label>
@@ -90,8 +88,7 @@
                                       required
                             ></textarea>
                         </div>
-                        <div class="alert alert-danger" [hidden]="description.valid">Ready time is
-                            required
+                        <div class="alert alert-danger" [hidden]="description.valid">Required Field
                         </div>
                         <div class="top">
                             <label>Ingredients</label>
@@ -186,7 +183,7 @@
                                 </span>
 
                                 </div>
-                                <div class="alert alert-danger" [hidden]="directionName.valid">Steps are required
+                                <div class="alert alert-danger" [hidden]="directionName.valid">Required Field
                                 </div>
                             </div>
                         </div>
@@ -195,9 +192,10 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Main Ingredient</label>
-                                    <select [(ngModel)]="recipe.mainIngredientId" name="recipeType"
+                                    <select [(ngModel)]="recipe.mainIngredientId" name="mainIngredient"
                                             class="form-control font-italic"
                                             style="font-size: 0.875rem" #mainIngredients (change)="findMainIngredientName(mainIngredients.value)">
+                                        <option [value]="null" disabled >Select main ingredient</option>
                                         <option *ngFor="let mainIng of mainIngredient" [value]="mainIng.id">{{mainIng.name}}</option>
                                     </select>
                                 </div>
@@ -214,7 +212,7 @@
                                            #servings="ngModel"
                                            required>
                                 </div>
-                                <div class="alert alert-danger" [hidden]="servings.valid">Servings is required
+                                <div class="alert alert-danger" [hidden]="servings.valid">Required Field
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -223,6 +221,7 @@
                                     <select [(ngModel)]="recipe.occasionId" name="occasion"
                                             class="form-control font-italic"
                                             style="font-size: 0.875rem" #occasions (change)="findOccasionName(occasions.value)">
+                                        <option [value]="null" disabled >Select an occasion</option>
                                         <option *ngFor="let occ of occasion" [value]="occ.id">{{occ.name}}</option>
                                     </select>
                                 </div>
@@ -232,10 +231,10 @@
 
 
                         <div class="row">
-                            <div class="col-sm-4">
+                            <!--<div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Preparation Time</label>
-                                    <input type="text"
+                                    <input type="number"
                                            class="form-control"
                                            name="preparation"
                                            [(ngModel)]="recipe.preparationTime"
@@ -249,7 +248,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Cook Time</label>
-                                    <input type="text"
+                                    <input type="number"
                                            class="form-control"
                                            name="cookTime"
                                            [(ngModel)]="recipe.cookTime"
@@ -259,19 +258,19 @@
                                 <div class="alert alert-danger" [hidden]="cookTime.valid">Cooking time is
                                     required
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label>Ready In</label>
+                                    <label>Ready In (<span style="font-style: italic">minutes</span>)</label>
                                     <input type="text"
                                            class="form-control"
                                            name="ready"
                                            [(ngModel)]="recipe.readyIn"
                                            #ready="ngModel"
+                                           required
                                     >
                                 </div>
-                                <div class="alert alert-danger" [hidden]="ready.valid">Ready time is
-                                    required
+                                <div class="alert alert-danger" [hidden]="ready.valid">Required Field
                                 </div>
                             </div>
                         </div>
@@ -293,6 +292,7 @@
                                     <select [(ngModel)]="recipe.recipeTypeId" name="recipeType"
                                             class="form-control font-italic"
                                             style="font-size: 0.875rem" #recipeType (change)="findRecipeTypeName(recipeType.value)">
+                                        <option [value]="null" disabled >Select recipe type</option>
                                         <option *ngFor="let type of recipeTypes" [value]="type.id">{{type.name}}</option>
                                     </select>
                                 </div>
@@ -302,6 +302,7 @@
                                     <label>Cuisine</label>
                                     <select [(ngModel)]="recipe.cuisineId" name="cuisine"
                                             class="form-control font-italic" style="font-size: 0.875rem" #cuisine (change)="findCuisineName(cuisine.value)">
+                                        <option [value]="null" disabled >Select cuisine</option>
                                         <option *ngFor="let cuisine of cuisines" [value]="cuisine.id">{{cuisine.name}}
                                         </option>
                                     </select>
@@ -312,6 +313,7 @@
                                     <label>Course</label>
                                     <select [(ngModel)]="recipe.courseId" name="course" class="form-control font-italic"
                                             style="font-size: 0.875rem" #course (change)="findCourseName(course.value)">
+                                        <option [value]="null" disabled >Select course</option>
                                         <option *ngFor="let course of courses" [value]="course.id">{{course.name}}</option>
                                     </select>
                                 </div>
@@ -321,6 +323,7 @@
                                     <label>Skill Level</label>
                                     <select [(ngModel)]="recipe.skillLevelId" name="skillLevel"
                                             class="form-control font-italic" style="font-size: 0.875rem" #skills (change)="findSkillLevelName(skills.value)">
+                                        <option value="" disabled [selected]="!recipe.skillLevelId">Select skill</option>
                                         <option *ngFor="let skill of skillLevel" [value]="skill.id">{{skill.name}}</option>
                                     </select>
                                 </div>

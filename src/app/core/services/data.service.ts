@@ -31,11 +31,22 @@ export class DataService{
             .catch(this.handleError);
     }*/
 
-    GetAll(page: number = 1, limit: number = 2): Observable<Recipe[]>{
+    getFilters(page: number, filters: any){
         let params: URLSearchParams = new URLSearchParams();
         params.set('_page', page.toString());
-        params.set('_limit', limit.toString());
-        return this._http.get(this.recipesUrl, { search: params })
+        if (typeof filters !== 'undefined') {
+            for ( let key in filters ) {
+                if (filters[key]) {
+                    params.set(key, filters[key]);
+                }
+            }
+        }
+        return params;
+    }
+
+    GetAll(page: number = 1, filters?: any): Observable<Recipe[]>{
+
+        return this._http.get(this.recipesUrl, { search: this.getFilters(page, filters) })
             .map((res: Response) => {
                 let response = res.json();
                 if (res.headers.get('X-Total-Count')) {

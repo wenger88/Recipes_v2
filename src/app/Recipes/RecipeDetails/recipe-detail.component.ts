@@ -22,6 +22,8 @@ export class RecipeDetailComponent implements OnInit{
     comments: any[];
     _ = require('lodash');
 
+    readyIn: any;
+
     constructor(private dataService: DataService, private router: Router ,private route: ActivatedRoute){}
 
     ngOnInit(): void {
@@ -52,7 +54,12 @@ export class RecipeDetailComponent implements OnInit{
                         })
                 })
         })
+
+
+
+
     }
+
 
 
     onDelete(){

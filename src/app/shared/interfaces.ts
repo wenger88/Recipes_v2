@@ -12,9 +12,9 @@ export interface Recipe {
     nutritionals: Nutritional[],
     yields: number,
     servings: number,
-    preparationTime: number,
-    cookTime: number,
-    readyIn: number,
+    preparationTime: any,
+    cookTime: any,
+    readyIn: any,
     tags: string[],
     recipeTypeId: number,
     recipeTypeName: string,
@@ -94,6 +94,11 @@ export interface Course {
 }
 
 export interface Occasion {
+    id: number,
+    name: string,
+}
+
+export interface MainIngredient {
     id: number,
     name: string,
 }

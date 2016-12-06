@@ -35,7 +35,7 @@ export class RecipeCreateComponent implements OnInit{
     mainIngredient: any[];
     _ = require('lodash');
     someUrl: any;
-
+    spinners = true;
     cloudinaryImage: any;
 
     cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
@@ -109,12 +109,7 @@ export class RecipeCreateComponent implements OnInit{
 
         this.recipe.date = new Date();
 
-
-
     }
-
-
-
 
 
     findMainIngredientName(value: any){
@@ -161,6 +156,8 @@ export class RecipeCreateComponent implements OnInit{
                 () => console.log("Job Done Post !")
             );
         //console.log(this.recipe);
+
+
     }
 
     removeDirection(i: number){
