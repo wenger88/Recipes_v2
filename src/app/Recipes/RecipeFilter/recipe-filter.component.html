@@ -30,7 +30,7 @@
                         <div class="filter-fields-form">
                             <div class="form-group">
                                 <label>Cooking Time</label>
-                                <cook-time-filter [control]="filterForm.controls['readyIn']"></cook-time-filter>
+                                <cook-time-filter [control]="filterForm.controls['readyIn_lte']"></cook-time-filter>
                             </div>
                         </div>
                         <div class="filter-fields-form">
@@ -40,11 +40,11 @@
                             </div>
                         </div>
                         <div class="form-filter-btn">
-                            <button type="submit" class="btn searchButton" [disabled]="filterForm.value.cuisineId == null && filterForm.value.mainIngredientId == null && filterForm.value.courseId == null && filterForm.value.readyIn == null && filterForm.value.occasionId == null "><i class="fa fa-search"></i></button>
+                            <button type="submit" class="btn searchButton" [disabled]="filterForm.value.cuisineId == null && filterForm.value.mainIngredientId == null && filterForm.value.courseId == null && filterForm.value.readyIn_lte == null && filterForm.value.occasionId == null "><i class="fa fa-search"></i></button>
                         </div>
 
                     </div>
-                    <div class="form-clear-filter-btn" *ngIf="filterForm.value.cuisineId != null || filterForm.value.mainIngredientId != null || filterForm.value.courseId != null || filterForm.value.readyIn != null || filterForm.value.occasionId != null ">
+                    <div class="form-clear-filter-btn" *ngIf="filterForm.value.cuisineId != null || filterForm.value.mainIngredientId != null || filterForm.value.courseId != null || filterForm.value.readyIn_lte != null || filterForm.value.occasionId != null ">
                         <button (click)="onClear($event)" type="submit"><i class="fa fa-remove"></i></button>
                     </div>
                 </div>
