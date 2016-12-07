@@ -179,8 +179,8 @@
                                         <option *ngFor="let mainIng of mainIngredient" [value]="mainIng.id">{{mainIng.name}}</option>
                                     </select>
                                 </div>
-                                <div class="alert alert-danger" [hidden]="mainIngredients.value">Required Field
-                                </div>
+                                <!--<div class="alert alert-danger" [hidden]="mainIngredients.value">Required Field
+                                </div>-->
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
@@ -190,6 +190,7 @@
                                            name="servings"
                                            [(ngModel)]="recipe.servings"
                                            #servings="ngModel"
+                                           onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
                                            required>
                                 </div>
                                 <div class="alert alert-danger" [hidden]="servings.valid">Required Field
@@ -247,6 +248,7 @@
                                            name="ready"
                                            [(ngModel)]="recipe.readyIn"
                                            #ready="ngModel"
+                                           onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
                                            required
                                     >
                                 </div>

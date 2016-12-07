@@ -553,6 +553,140 @@
       "courseName": "Sandwich",
       "courseId": "6",
       "id": 8
+    },
+    {
+      "ingredients": [
+        {
+          "name": "3 cups half-and-half"
+        },
+        {
+          "name": "1 cup 2% milk"
+        },
+        {
+          "name": "1/2 cup white sugar"
+        },
+        {
+          "name": "1/2 cup unsweetened cocoa powder"
+        },
+        {
+          "name": "1 tablespoon vanilla extract"
+        },
+        {
+          "name": "1 tablespoon coconut extract"
+        },
+        {
+          "name": "1/2 teaspoon kosher salt"
+        },
+        {
+          "name": "1/2 cup whipped cream, or more to taste"
+        },
+        {
+          "name": "1/4 cup toasted, shredded coconut"
+        }
+      ],
+      "steps": [
+        {
+          "name": "Whisk half-and-half, milk, sugar, and cocoa powder in a saucepan over medium-high heat until cocoa and sugar dissolve. Remove from heat when mixture begins to steam, 5 to 10 minutes."
+        },
+        {
+          "name": "Whisk vanilla extract, coconut extract, and salt into cocoa mixture. Pour into glasses and top each with whipped cream and toasted coconut."
+        }
+      ],
+      "comments": [],
+      "date": "2016-12-07T12:24:28.137Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1481113483/recipe-images/cynehrzymjo1tkgwnjha.jpg",
+      "title": "Hawaiian Hot Chocolate",
+      "author": "L Mac",
+      "description": "I created this drink from the memories of a trip to Hawaii, where I met my (now) husband. Surprisingly, it does get chilly in Hawaii, especially at night and in cold, rainy regions. This is a different take on the usual cold and frozen Hawaiian libations.",
+      "servings": "4",
+      "occasionName": "Spring",
+      "occasionId": "10",
+      "cuisineName": "Hawaiian",
+      "cuisineId": "13",
+      "courseName": "Drink",
+      "courseId": "4",
+      "skillLevelName": "Beginner",
+      "skillLevelId": "0",
+      "readyIn": "15",
+      "id": 9
+    },
+    {
+      "ingredients": [
+        {
+          "name": "2 (8 ounce) packages angel hair pasta"
+        },
+        {
+          "name": "1/4 cup butter"
+        },
+        {
+          "name": "2/3 cup sliced onion"
+        },
+        {
+          "name": "1/4 cup all-purpose flour"
+        },
+        {
+          "name": "2 cups milk"
+        },
+        {
+          "name": "1 teaspoon salt"
+        },
+        {
+          "name": "1/4 teaspoon ground white pepper"
+        },
+        {
+          "name": "1/2 teaspoon poultry seasoning"
+        },
+        {
+          "name": "1/4 teaspoon ground mustard"
+        },
+        {
+          "name": "1 cup shredded sharp Cheddar cheese, divided"
+        },
+        {
+          "name": "2 tablespoons chopped pimento peppers (optional)"
+        },
+        {
+          "name": "1 (4.5 ounce) can sliced mushrooms"
+        },
+        {
+          "name": "1 pound cooked turkey, sliced"
+        }
+      ],
+      "steps": [
+        {
+          "name": "Preheat the oven to 400 degrees F (200 degrees C). Bring a large pot of lightly salted water to a boil. Add the pasta and cook for 4 minutes, or until almost tender. Drain."
+        },
+        {
+          "name": "Melt the butter in a saucepan over medium heat. Add the onion; cook and stir until tender. Stir in the flour until blended, then gradually stir in the milk so that no lumps form. Season with salt, pepper, poultry seasoning and mustard. Cook over medium heat, stirring constantly until the mixture thickens. Remove from the heat and add 2/3 cup cheese and pimento, stirring until cheese melts. Add undrained mushrooms to cheese sauce."
+        },
+        {
+          "name": "Place a layer of pasta in the bottom of a 9x13 inch baking dish. Cover with a layer of turkey, and then a layer of cheese sauce. Repeat the layers. Sprinkle remaining 1/3 cup cheese over top."
+        },
+        {
+          "name": "Bake for about 25 minutes in the preheated oven, until sauce is bubbly and cheese on top is toasted."
+        }
+      ],
+      "comments": [],
+      "date": "2016-12-07T13:05:49.460Z",
+      "title": "Turkey Tetrazzini",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1481116030/recipe-images/agjt8mdyxgbeqswjjj2i.jpg",
+      "author": "Earla Taylor",
+      "description": "This is a great recipe for leftover turkey. Even those who say they don't like turkey will eat this. May be assembled in advance and frozen: heat covered dish at 350 degrees F (175 degrees C) for 1 1/2 hours.",
+      "mainIngredientName": "Turkey",
+      "mainIngredientId": "13",
+      "servings": "50",
+      "occasionName": "Thanksgiving",
+      "occasionId": "13",
+      "readyIn": "55",
+      "cuisineName": "Chinese",
+      "cuisineId": "6",
+      "courseName": "Dinner",
+      "courseId": "12",
+      "skillLevelName": "Intermediate",
+      "skillLevelId": "1",
+      "recipeTypeName": "Quick and Easy",
+      "recipeTypeId": "15",
+      "id": 10
     }
   ],
   "comments": [

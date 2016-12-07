@@ -21,6 +21,7 @@ export class DataService{
     mainIngredientUrl: string = 'http://localhost:3000/mainIngredient';
     imagesUrl: string = 'http://localhost:3000/images';
     _limit: number = 5;
+    _page: number = 1;
     recipe: Recipe[];
 
 
@@ -37,6 +38,7 @@ export class DataService{
         params.set('_page', page.toString());
         params.set('_limit', this._limit.toString());
         if (typeof filters !== 'undefined') {
+            //params.set('_page', '1');
             for ( let key in filters ) {
                 if (filters[key]) {
                     params.set(key, filters[key]);
@@ -47,13 +49,13 @@ export class DataService{
     }
 
     GetAll(page: number = 1, filters?: any): Observable<Recipe[]>{
-
+        //page = this.getFilters().
         return this._http.get(this.recipesUrl, { search: this.getFilters(page, filters) })
             .map((res: Response) => {
                 let response = res.json();
                 if (res.headers.get('X-Total-Count')) {
                     response.meta = {
-                        totalCount: res.headers.get('X-Total-Count')
+                        totalCount: res.headers.get('X-Total-Count'),
                     };
                 }
                 return response;

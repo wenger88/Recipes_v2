@@ -29,6 +29,9 @@ export class RecipeListComponent implements OnInit{
     }
 
     getAll(event: any) {
+        if (typeof event !== 'undefined') {
+            this.page = 1;
+        }
         this.dataService.GetAll(this.page, event)
             .subscribe((recipes: Recipe[]) => {
                 this.recipes = recipes;
