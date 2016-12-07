@@ -15,7 +15,7 @@
 
   &-logo{
     position: absolute;
-    left: 15px;
+    /*left: 15px;*/
     width: 100px;
     top:10px;
   }
@@ -109,4 +109,8 @@
 
 .collapse.in{
   display: block;
+}
+
+.active{
+  color: #6EBE3B!important;
 }

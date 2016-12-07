@@ -131,82 +131,15 @@ button {
 
 }*/
 
-/*
 @include media-breakpoint-down(xs){
-	!*.recipe-set{
-		&-image{
-			height: 100%!important;
-		}
-		&-detail{
-			p{
-				margin-bottom: 0;
-			}
-
-			.flex-container{
-				margin: 0;
-				flex-direction: column-reverse;
-				li{
-					padding: 5px 0;
-					width: 100%!important;
-					height: 24px;
-				}
-			}
-		}
-	}*!
-
-	.recipe-details-body{
-		padding: 0!important;
-		.body-ingredients{
-			li{
-				padding-left: 0!important;
-			}
-		}
-	}
-
-
-}*/
-.spinner {
-  width: 40px;
-  height: 40px;
-  background-color: #333;
-
-  margin: 100px auto;
-  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-  animation: sk-rotateplane 1.2s infinite ease-in-out;
-}
-
-@-webkit-keyframes sk-rotateplane {
-  0% {
-    -webkit-transform: perspective(120px)
-  }
-  50% {
-    -webkit-transform: perspective(120px) rotateY(180deg)
-  }
-  100% {
-    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+  .recipes{
+    h1{
+      font-size: 18px!important;
+    }
   }
 }
 
-@keyframes sk-rotateplane {
-  0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
-  }
-  50% {
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
-  }
-  100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-  }
-}
-
-.loading {
-  background-color: #d35400;
-}
-
-.ng2-pagination {
+/*.ng2-pagination {
   padding: 1rem 0!important;
   li {
     background: #000 !important;
@@ -245,4 +178,33 @@ button {
 
   }
 
+}*/
+
+.page-link {
+  position: relative;
+  float: left;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  font-weight: bold;
+  font-family: 'Lora', sans-serif;
+  &:hover{
+    background: #6ebe3b;
+    color: #fff;
+  }
+}
+
+.page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover{
+  background: #6ebe3b;
+  color: #fff;
+  border: 1px solid #ddd;
+}
+
+.page-item.disabled .page-link, .page-item.disabled .page-link:focus, .page-item.disabled .page-link:hover{
+  background: #5e676b;
+  color: #fff;
+  cursor: not-allowed!important;
 }

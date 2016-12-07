@@ -8,6 +8,7 @@ import {DataService} from "../../core/services/data.service";
 import {ActivatedRoute, Router, Params} from "@angular/router";
 import 'rxjs/Rx';
 import * as _ from 'lodash';
+import {TimePipe} from "../../shared/TimePipe";
 import {Response} from "@angular/http";
 
 @Component({
