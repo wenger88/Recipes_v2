@@ -1,9 +1,9 @@
 import {Routes, RouterModule}  from '@angular/router';
 
-import {RecipesComponent} from "./Recipes/recipes.component";
-import {RecipeDetailComponent} from "./Recipes/RecipeDetails/recipe-detail.component";
-import {RecipeCreateComponent} from "./Recipes/recipe-create/recipe-create.component";
-import {RecipeEditComponent} from "./Recipes/recipe-edit/recipe-edit.component";
+import {RecipesComponent} from "./recipes/recipes.component";
+import {RecipeDetailComponent} from "./recipes/recipe-details/recipe-detail.component";
+import {RecipeCreateComponent} from "./recipes/recipe-create/recipe-create.component";
+import {RecipeEditComponent} from "./recipes/recipe-edit/recipe-edit.component";
 
 // no general routes
 const APP_ROUTES_PROVIDERS: Routes = [
