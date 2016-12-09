@@ -20,7 +20,7 @@
                     </div>
 
                     <form class="recipe-form" #recipeForm="ngForm" novalidate (ngSubmit)="onSubmit()"
-                          (keydown.enter)="keyDownFunction($event)">
+                          >
 
                         <div class="row">
                             <div class="col-sm-6">
@@ -36,7 +36,7 @@
                                 <div class="form-group">
                                     <label>Upload Image</label>
                                     <input type="file" ng2FileSelect [uploader]="uploader" #image="ngModel"
-                                           [(ngModel)]="recipe.image" name="image"/>
+                                           [(ngModel)]="recipe.image" name="image" class="form-control"/>
                                 </div>
                             </div>
                         </div>

@@ -59,8 +59,12 @@ export class RecipeFilterComponent {
 
     //*/
 
-    onClear() {
-        this.filter.emit(this.filterForm.reset());
+    reset() {
+        /*this.filterForm.reset();
+        this.filter.emit({});*/
+        this.filterForm.reset();
+        this.filter.emit(this.filterForm.value);
+        console.log(this.filterForm.value);
     }
 
 

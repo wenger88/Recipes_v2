@@ -1,4 +1,5 @@
-@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
 
 .recipes {
   background: url("http://res.cloudinary.com/wenger88/image/upload/v1479887096/free-food-backgrounds-7_khzmph.jpg") no-repeat center fixed;

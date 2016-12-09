@@ -6,7 +6,7 @@
         </div>
         <div class="col-xs-12" style="overflow: hidden;">
 
-            <form [formGroup]="filterForm" novalidate (ngSubmit)="onSubmit()" (keydown.enter)="keyDownFunction($event)">
+            <form [formGroup]="filterForm" novalidate (ngSubmit)="onSubmit()">
                 <div class="filter-container" *ngIf="show" [@flyInOut]="show">
                     <div class="filter-fields">
                         <div class="filter-fields-form">
@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-clear-filter-btn"
                          *ngIf="filterForm.value.cuisineId != null || filterForm.value.mainIngredientId != null || filterForm.value.courseId != null || filterForm.value.readyIn_lte != null || filterForm.value.occasionId != null ">
-                        <button (click)="onClear($event)" type="submit"><i class="fa fa-remove"></i></button>
+                        <button (click)="reset()" type="button"><i class="fa fa-remove"></i></button>
                     </div>
                 </div>
 

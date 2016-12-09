@@ -1,4 +1,5 @@
-@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
 
 .header {
   padding-top: 20px;
