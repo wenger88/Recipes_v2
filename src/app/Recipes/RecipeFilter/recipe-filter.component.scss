@@ -1,8 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
 
-.filter{
+.filter {
   margin-top: -47px;
-  .filter-show{
+  .filter-show {
     display: inline-block;
     height: 46px;
     line-height: 46px;
@@ -17,7 +17,7 @@
     position: relative;
     border: none;
     border-radius: 0;
-    &:before{
+    &:before {
       content: "";
       width: 20px;
       height: 49px;
@@ -29,101 +29,95 @@
       top: 3px;
     }
 
-    i{
+    i {
       font-size: 14px;
       position: relative;
       left: 5px;
     }
   }
 
-.filter-container{
-  border-bottom: 1px solid #e4d9d1;
-  padding: 22px 0;
-  position: relative;
-  .filter-fields{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .filter-container {
+    border-bottom: 1px solid #e4d9d1;
+    padding: 22px 0;
+    position: relative;
+    .filter-fields {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
+      .filter-fields-form {
+        flex: 1;
+        margin-right: 15px;
 
-    .filter-fields-form{
-      flex: 1;
-      margin-right: 15px;
+        label {
+          font-size: 14px;
+          font-weight: bold;
+          font-family: "Segoe UI";
+        }
 
-      label{
-        font-size: 14px;
-        font-weight: bold;
-        font-family: "Segoe UI";
+      }
+
+      .form-filter-btn {
+        /*position: relative;
+        top: 7px;*/
+        margin-top: 14px;
+        .searchButton {
+          background: #6ebe3b;
+          color: #fff;
+          border: 0;
+          width: 42px;
+          height: 38px;
+          text-align: center;
+          padding: 0;
+          border-radius: 0;
+          &:hover {
+            background: #000;
+          }
+        }
+
       }
 
     }
-
-    .form-filter-btn{
+    .form-clear-filter-btn {
       /*position: relative;
       top: 7px;*/
-      margin-top: 14px;
-      .searchButton{
-        background: #6ebe3b;
+      button {
+        background: #c1452b;
         color: #fff;
         border: 0;
         width: 42px;
         height: 38px;
         text-align: center;
-        padding: 0;
-        border-radius: 0;
-        &:hover{
+        cursor: pointer;
+        &:hover {
           background: #000;
         }
       }
 
     }
-
-
   }
-  .form-clear-filter-btn{
-    /*position: relative;
-    top: 7px;*/
-    button{
-      background: #c1452b;
-      color: #fff;
-      border: 0;
-      width: 42px;
-      height: 38px;
-      text-align: center;
-      cursor: pointer;
-      &:hover{
-        background: #000;
-      }
-    }
-
-  }
-}
 
 }
 
+@include media-breakpoint-down(sm) {
 
+  .form-clear-filter-btn {
+    position: absolute !important;
+    //top: 100%!important;
+    bottom: 22px !important;
+  }
 
-
-@include media-breakpoint-down(sm){
-
-    .form-clear-filter-btn{
-      position: absolute!important;
-      //top: 100%!important;
-      bottom: 22px!important;
-    }
-
-
-  .filter-fields{
+  .filter-fields {
     flex-direction: column;
-    .filter-fields-form{
+    .filter-fields-form {
       width: 100%;
-      margin-right: 0!important;
+      margin-right: 0 !important;
     }
-    .form-filter-btn{
+    .form-filter-btn {
       width: 100%;
-      margin-top: 0!important;
-      button{
+      margin-top: 0 !important;
+      button {
         float: right;
       }
     }
@@ -132,15 +126,15 @@
 
 }
 
-.active{
-  background: #c1452b!important;
-  &:before{
-    background: #c1452b!important;
+.active {
+  background: #c1452b !important;
+  &:before {
+    background: #c1452b !important;
   }
-  i{
-    background: #c1452b!important;
-    &:before{
-      content: '\f077'!important;
+  i {
+    background: #c1452b !important;
+    &:before {
+      content: '\f077' !important;
     }
 
   }

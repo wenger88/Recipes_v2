@@ -1,78 +1,75 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule  } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
-import { routing } from './app.routing';
+import {routing} from './app-routing.module';
 
-import { AppComponent }   from './app.component';
+import {AppComponent}   from './app.component';
 
-import { SharedModule } from './shared';
+import {SharedModule} from './shared';
 import {RecipesComponent} from "./Recipes/recipes.component";
 import {DataService} from "./core/services/data.service";
 import {RecipeFilterComponent} from "./Recipes/RecipeFilter/recipe-filter.component";
 import {RecipeListComponent} from "./Recipes/RecipeList/recipe-list.component";
-import {CuisineFilterComponent} from "./Recipes/RecipeFilter/cuisine-filter-component";
-import {MainIngredientFilterComponent} from "./Recipes/RecipeFilter/main-ingredient-filter.component";
-import {CourseFilterComponent} from "./Recipes/RecipeFilter/course-filter.component";
-import {CookTimeFilterComponent} from "./Recipes/RecipeFilter/cook-time-filter.component";
-import {OccasionFilterComponent} from "./Recipes/RecipeFilter/occasion-filter.component";
+import {CuisineFilterComponent} from "./Recipes/RecipeFilter/recipe-cuisine-filter/cuisine-filter-component";
+import {MainIngredientFilterComponent} from "./Recipes/RecipeFilter/recipe-ingredient-filter/main-ingredient-filter.component";
+import {CourseFilterComponent} from "./Recipes/RecipeFilter/recipe-course-filter/course-filter.component";
+import {CookTimeFilterComponent} from "./Recipes/RecipeFilter/recipe-readyIn-filter/ready-filter.component";
+import {OccasionFilterComponent} from "./Recipes/RecipeFilter/recipe-occasion-filter/occasion-filter.component";
 import {RecipeDetailComponent} from "./Recipes/RecipeDetails/recipe-detail.component";
-import {RecipeEditComponent} from "./Recipes/RecipeEdit/recipe-edit.component";
-import {RecipeCreateComponent} from "./Recipes/RecipeCreate/recipe-create.component";
+import {RecipeEditComponent} from "./Recipes/recipe-edit/recipe-edit.component";
+import {RecipeCreateComponent} from "./Recipes/recipe-create/recipe-create.component";
 import {AccordionModule} from 'primeng/primeng';
 import {RatingModule} from 'primeng/primeng';
-import {RecipeCommentsComponent} from "./Recipes/RecipeDetails/RecipeComments/recipe-comments.component";
-import {RecipeSingleCommentComponent} from "./Recipes/RecipeDetails/RecipeComments/recipe-single-comment.component";
-import {RecipeItemComponent} from "./Recipes/RecipeList/recipe-tem.component";
+import {RecipeCommentsComponent} from "./Recipes/RecipeDetails/recipe-comments/recipe-comments.component";
+import {RecipeSingleCommentComponent} from "./Recipes/RecipeDetails/recipe-comments/recipe-single-comment.component";
+import {RecipeItemComponent} from "./Recipes/RecipeList/recipe-item/recipe-item.component";
 import {FileUploadModule} from "primeng/components/fileupload/fileupload";
-import {FileUploadComponent} from "./Recipes/FileUpload/file-upload.component";
 import {Ng2CloudinaryModule} from "ng2-cloudinary";
-import {CloudinaryImageComponent} from "./Recipes/cloudinary-image.component/cloudinary-image.component";
 import {Ng2PaginationModule} from "ng2-pagination";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {TimePipe} from "./shared/TimePipe";
+import {ConvertMinutesPipe} from "./shared/convert-minutes.pipe";
 
 @NgModule({
-	imports: [
-		FormsModule,
-		HttpModule,
-		BrowserModule,		
-		SharedModule,
-		routing,
+    imports: [
+        FormsModule,
+        HttpModule,
+        BrowserModule,
+        SharedModule,
+        routing,
         AccordionModule,
         RatingModule,
-		FileUploadModule,
+        FileUploadModule,
         Ng2CloudinaryModule,
-		Ng2PaginationModule,
+        Ng2PaginationModule,
         NgbModule.forRoot(),
 
-	],
-	declarations: [
-		AppComponent,
-		RecipesComponent,
-		RecipeFilterComponent,
-		RecipeListComponent,
+    ],
+    declarations: [
+        AppComponent,
+        RecipesComponent,
+        RecipeFilterComponent,
+        RecipeListComponent,
         CuisineFilterComponent,
-		MainIngredientFilterComponent,
-		CourseFilterComponent,
-		CookTimeFilterComponent,
-		OccasionFilterComponent,
-		RecipeDetailComponent,
-		RecipeEditComponent,
+        MainIngredientFilterComponent,
+        CourseFilterComponent,
+        CookTimeFilterComponent,
+        OccasionFilterComponent,
+        RecipeDetailComponent,
+        RecipeEditComponent,
         RecipeCreateComponent,
-		RecipeCommentsComponent,
+        RecipeCommentsComponent,
         RecipeSingleCommentComponent,
-		RecipeItemComponent,
-        FileUploadComponent,
-        CloudinaryImageComponent,
-		TimePipe
-	],
-	providers: [
-		DataService
-	], 
-	exports: [],
-	bootstrap: [AppComponent],
+        RecipeItemComponent,
+        ConvertMinutesPipe
+    ],
+    providers: [
+        DataService
+    ],
+    exports: [],
+    bootstrap: [AppComponent],
 })
 
-export class AppModule {}
+export class AppModule {
+}

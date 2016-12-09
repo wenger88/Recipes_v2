@@ -1,0 +1,28 @@
+<form #recipeComment="ngForm" class="post-comment" (ngSubmit)="onSubmit(name, content, rating)">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="commentName" class="form-control" #name ngModel>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Rating</label>
+                <p-rating [cancel]="false" name="rating" #rating ngModel></p-rating>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Message</label>
+        <textarea name="comment" rows="5" class="form-control" #content ngModel></textarea>
+    </div>
+
+    <button type="submit" class="btn customButton" [disabled]="name.value == '' || content.value == ''">Add comment
+    </button>
+
+</form>
+<hr>
+<recipe-single-comment [comment]="comment" *ngFor="let comment of comments"></recipe-single-comment>

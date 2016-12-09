@@ -1,0 +1,5 @@
+<select [formControl]="control" name="cuisine" class="form-control font-italic" style="font-size: 0.875rem">
+    <option [value]="null" disabled>Select cuisine</option>
+    <option *ngFor="let cuisine of cuisines" [value]="cuisine.id">{{cuisine.name}}</option>
+</select>
+

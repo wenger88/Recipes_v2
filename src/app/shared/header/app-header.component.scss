@@ -1,51 +1,50 @@
 @import "~bootstrap/scss/bootstrap";
 
-
-.header{
+.header {
   padding-top: 20px;
   padding-bottom: 20px;
   font-style: italic;
   color: #000;
 
-  .flex-container{
+  .flex-container {
     display: flex;
     justify-content: center;
     align-content: center;
   }
 
-  &-logo{
+  &-logo {
     position: absolute;
     /*left: 15px;*/
     width: 100px;
-    top:10px;
+    top: 10px;
   }
 
-  &-upper-nav{
+  &-upper-nav {
     margin-bottom: 30px;
 
-    li{
+    li {
       display: inline-block;
-      a{
+      a {
         color: #000;
         text-decoration: none;
       }
     }
 
   }
-  .list-inline-item{
+  .list-inline-item {
     margin-right: 15px;
-    a{
-      &:hover{
+    a {
+      &:hover {
         color: #6ebe3b;
       }
     }
-    &-btn{
+    &-btn {
       border: 1px solid #000000;
       padding: 6px 12px;
       margin: 0;
-      &:hover{
+      &:hover {
         background: #000000;
-        color: #fff!important;
+        color: #fff !important;
       }
     }
 
@@ -53,29 +52,29 @@
 
 }
 
-.navbar{
+.navbar {
   padding: 0;
   background: none;
 
-  .navbar-nav{
+  .navbar-nav {
 
-    .nav-item{
+    .nav-item {
       margin-left: 28px;
 
-      .nav-link{
+      .nav-link {
         color: #000;
-        &:hover{
+        &:hover {
           color: #6ebe3b;
         }
       }
-      &-btn{
+      &-btn {
         color: #fff;
         background: #6EBE3B;
         border: 0;
         border-radius: 0;
         font-size: 1.1rem;
         outline: 0;
-        &:hover{
+        &:hover {
           background: #000000;
         }
       }
@@ -87,19 +86,19 @@
 }
 
 @include media-breakpoint-down(md) {
-  .header .flex-container{
+  .header .flex-container {
     flex-direction: column-reverse;
-    .header-logo{
-      width: 100%!important;
-      position: relative!important;
-      top: 0!important;
-      img{
+    .header-logo {
+      width: 100% !important;
+      position: relative !important;
+      top: 0 !important;
+      img {
         width: 100px;
       }
     }
-    .header-upper-nav{
-      margin-bottom: 0!important;
-      ul{
+    .header-upper-nav {
+      margin-bottom: 0 !important;
+      ul {
         width: 100%;
       }
     }
@@ -107,10 +106,10 @@
 
 }
 
-.collapse.in{
+.collapse.in {
   display: block;
 }
 
-.active{
-  color: #6EBE3B!important;
+.active {
+  color: #6EBE3B !important;
 }

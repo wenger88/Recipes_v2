@@ -1,33 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
-
-.recent-recipes {
-  overflow: hidden;
-  margin-top: 50px;
-  transition: all .5s ease-in;
-
-  h2 {
-    margin-top: 0;
-    font-size: 24px;
-    position: relative;
-    font-family: Lora, sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    margin-bottom: 30px;
-
-    &:after {
-      content: "";
-      display: inline-block;
-      width: 100%;
-      height: 1px;
-      position: absolute;
-      background: #e7e3e1;
-      margin-left: 20px;
-      margin-top: 15px;
-    }
-
-  }
-
-}
+@import "../../../../../node_modules/bootstrap/scss/bootstrap";
 
 .recipe-set {
   display: flex;
@@ -44,8 +15,8 @@
       display: block;
       overflow: hidden;
       img {
-        height: 100%;
-        width: 100%;
+        height: 100% !important;
+        width: 100% !important;
         transition: transform .3s ease-in-out;
         &:hover {
           transform: scale(1.2);
@@ -55,6 +26,10 @@
 
       }
     }
+  }
+
+  img {
+
   }
 
   .recipe-set-detail {

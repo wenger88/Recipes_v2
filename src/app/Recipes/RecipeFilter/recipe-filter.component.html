@@ -7,49 +7,55 @@
         <div class="col-xs-12" style="overflow: hidden;">
 
             <form [formGroup]="filterForm" novalidate (ngSubmit)="onSubmit()" (keydown.enter)="keyDownFunction($event)">
-                <div class="filter-container"  *ngIf="show" [@flyInOut]="show">
+                <div class="filter-container" *ngIf="show" [@flyInOut]="show">
                     <div class="filter-fields">
                         <div class="filter-fields-form">
                             <div class="form-group">
                                 <label>Ingredient</label>
-                                <main-ingredient-filter [control]="filterForm.controls['mainIngredientId']"></main-ingredient-filter>
+                                <recipe-ingredient-filter
+                                        [control]="filterForm.controls['mainIngredientId']"></recipe-ingredient-filter>
                             </div>
                         </div>
                         <div class="filter-fields-form">
                             <div class="form-group">
                                 <label>Course</label>
-                                <course-filter [control]="filterForm.controls['courseId']"></course-filter>
+                                <recipe-course-filter
+                                        [control]="filterForm.controls['courseId']"></recipe-course-filter>
                             </div>
                         </div>
                         <div class="filter-fields-form">
                             <div class="form-group">
                                 <label>Cuisine</label>
-                                <cuisine-filter [control]="filterForm.controls['cuisineId']"></cuisine-filter>
+                                <recipe-cuisine-filter
+                                        [control]="filterForm.controls['cuisineId']"></recipe-cuisine-filter>
                             </div>
                         </div>
                         <div class="filter-fields-form">
                             <div class="form-group">
                                 <label>Cooking Time</label>
-                                <cook-time-filter [control]="filterForm.controls['readyIn_lte']"></cook-time-filter>
+                                <recipe-ready-filter
+                                        [control]="filterForm.controls['readyIn_lte']"></recipe-ready-filter>
                             </div>
                         </div>
                         <div class="filter-fields-form">
                             <div class="form-group">
                                 <label>Occasion</label>
-                                <occasion-filter [control]="filterForm.controls['occasionId']"></occasion-filter>
+                                <recipe-occasion-filter
+                                        [control]="filterForm.controls['occasionId']"></recipe-occasion-filter>
                             </div>
                         </div>
                         <div class="form-filter-btn">
-                            <button type="submit" class="btn searchButton" [disabled]="filterForm.value.cuisineId == null && filterForm.value.mainIngredientId == null && filterForm.value.courseId == null && filterForm.value.readyIn_lte == null && filterForm.value.occasionId == null "><i class="fa fa-search"></i></button>
+                            <button type="submit" class="btn searchButton"
+                                    [disabled]="filterForm.value.cuisineId == null && filterForm.value.mainIngredientId == null && filterForm.value.courseId == null && filterForm.value.readyIn_lte == null && filterForm.value.occasionId == null ">
+                                <i class="fa fa-search"></i></button>
                         </div>
 
                     </div>
-                    <div class="form-clear-filter-btn" *ngIf="filterForm.value.cuisineId != null || filterForm.value.mainIngredientId != null || filterForm.value.courseId != null || filterForm.value.readyIn_lte != null || filterForm.value.occasionId != null ">
+                    <div class="form-clear-filter-btn"
+                         *ngIf="filterForm.value.cuisineId != null || filterForm.value.mainIngredientId != null || filterForm.value.courseId != null || filterForm.value.readyIn_lte != null || filterForm.value.occasionId != null ">
                         <button (click)="onClear($event)" type="submit"><i class="fa fa-remove"></i></button>
                     </div>
                 </div>
-
-
 
             </form>
         </div>

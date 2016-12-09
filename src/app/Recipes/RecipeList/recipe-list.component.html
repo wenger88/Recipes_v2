@@ -1,4 +1,3 @@
-
 <recipe-filter (filter)="getAll($event)"></recipe-filter>
 
 <div class="row">
@@ -6,7 +5,8 @@
         <div class="recent-recipes">
             <h2>Recent Recipes</h2>
             <recipe-item [recipe]="recipe" *ngFor="let recipe of recipes"></recipe-item>
-            <ngb-pagination [collectionSize]="totalCount" [pageSize]="5" [(page)]="page" (pageChange)="getAll()"></ngb-pagination>
+            <ngb-pagination [collectionSize]="totalCount" [pageSize]="5" [(page)]="page"
+                            (pageChange)="getAll()"></ngb-pagination>
         </div>
     </div>
 

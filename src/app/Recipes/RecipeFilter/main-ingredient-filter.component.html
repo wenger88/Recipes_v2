@@ -1,5 +1,0 @@
-
-    <select [formControl]="control" name="ingredient" class="form-control font-italic" style="font-size: 0.875rem">
-        <option  [value]="null" disabled>Select ingredient</option>
-        <option *ngFor="let ingredient of mainIngredients" [value]="ingredient.id">{{ingredient.name}}</option>
-    </select>

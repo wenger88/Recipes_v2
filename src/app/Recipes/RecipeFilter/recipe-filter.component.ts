@@ -1,10 +1,9 @@
 /**
  * Created by goran.pavlovski on 11/22/2016.
  */
-
-
 import {Component, Output, EventEmitter, style, animate, state, transition, trigger} from "@angular/core";
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import {FormGroup, FormBuilder} from '@angular/forms';
+
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
 
@@ -29,42 +28,38 @@ import {Recipe} from "../../shared/interfaces";
 export class RecipeFilterComponent {
 
     @Output() filter: EventEmitter<any> = new EventEmitter();
-
     filterForm: FormGroup;
     recipes: Recipe[];
     show = false;
-    resetButton = false;
 
-    constructor(
-        private dataService: DataService,
-        private formBuilder: FormBuilder
-    ){
+    constructor(private dataService: DataService,
+                private formBuilder: FormBuilder) {
 
     }
 
-    showFilter(){
+    showFilter() {
         this.show = !this.show;
     }
 
     ngOnInit() {
         this.filterForm = this.formBuilder.group({
-            'cuisineId': [ null ],
-            'courseId': [ null ],
-            'mainIngredientId': [ null],
-            'occasionId': [ null ],
-            'readyIn_lte': [ null ],
+            'cuisineId': [null],
+            'courseId': [null],
+            'mainIngredientId': [null],
+            'occasionId': [null],
+            'readyIn_lte': [null],
         });
     }
 
     //*
-    onSubmit(){
-        //this.resetButton = !this.resetButton;
+    onSubmit() {
         this.filter.emit(this.filterForm.value);
+        console.log(this.filterForm.value)
     }
+
     //*/
 
-    onClear(){
-
+    onClear() {
         this.filter.emit(this.filterForm.reset());
     }
 

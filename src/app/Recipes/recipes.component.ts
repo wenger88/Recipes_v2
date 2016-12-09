@@ -11,10 +11,5 @@ import {Component} from "@angular/core";
     styles: [require('./recipes.component.scss')]
 })
 
-export class RecipesComponent{
-
-
-
-
-
+export class RecipesComponent {
 }
