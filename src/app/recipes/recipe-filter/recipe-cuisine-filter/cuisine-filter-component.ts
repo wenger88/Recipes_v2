@@ -6,9 +6,9 @@ import {Component, Input, OnInit} from "@angular/core";
 import {FormControl} from "@angular/forms";
 import {Response} from "@angular/http";
 
-import {DataService} from "../../../core/services/data.service";
 
 import 'rxjs/Rx';
+import {RecipeService} from "../../recipes.service";
 
 @Component({
     selector: 'recipe-cuisine-filter',
@@ -19,11 +19,11 @@ export class CuisineFilterComponent implements OnInit {
     @Input() control: FormControl;
     cuisines: any[];
 
-    constructor(private dataService: DataService) {
+    constructor(private recipeService: RecipeService) {
     }
 
     ngOnInit(): void {
-        this.dataService.getAllCuisines()
+        this.recipeService.getAllCuisines()
             .subscribe((cuisine: Response[]) => {
                 this.cuisines = cuisine;
             })

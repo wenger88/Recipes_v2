@@ -5,8 +5,8 @@
 import {Component, OnInit, Input} from "@angular/core";
 import {FormControl} from "@angular/forms";
 
-import {DataService} from "../../../core/services/data.service";
 import {Recipe} from "../../../shared/interfaces";
+import {RecipeService} from "../../recipes.service";
 
 @Component({
     selector: 'recipe-ready-filter',
@@ -18,15 +18,15 @@ export class CookTimeFilterComponent implements OnInit {
     recipes: Recipe[];
     @Input() control: FormControl;
 
-    constructor(private dataService: DataService) {
+    constructor(private recipeService: RecipeService) {
     }
 
     ngOnInit(): void {
 
-        this.dataService.getAllRecipes()
+        /*this.recipeService.getAllRecipes()
             .subscribe((cook: Recipe[]) => {
                 this.recipes = cook
-            })
+            })*/
 
     }
 

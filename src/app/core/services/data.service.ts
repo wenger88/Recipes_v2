@@ -13,14 +13,9 @@ import 'rxjs/Rx';
 @Injectable()
 export class DataService {
 
-    recipesUrl: string = 'http://localhost:3000/recipes';
+    recipesUrl: string = 'recipes';
     commentsUrl: string = 'http://localhost:3000/comments';
-    recipeTypeUrl: string = 'http://localhost:3000/recipeType';
-    cuisineUrl: string = 'http://localhost:3000/cuisine';
-    courseUrl: string = 'http://localhost:3000/course';
-    occasionUrl: string = 'http://localhost:3000/occasion';
-    skillUrl: string = 'http://localhost:3000/skillLevel';
-    mainIngredientUrl: string = 'http://localhost:3000/mainIngredient';
+
     _limit: number = 5;
     _page: number = 1;
     recipe: Recipe[];
@@ -71,7 +66,7 @@ export class DataService {
          .catch(this.handleError);*/
     }
 
-    getAllRecipeTypes(): Observable<Response[]> {
+/*    getAllRecipeTypes(): Observable<Response[]> {
         return this.http.get(this.recipeTypeUrl)
             .map((res: Response) => res.json())
             .catch(this.handleError)
@@ -105,7 +100,7 @@ export class DataService {
         return this.http.get(this.mainIngredientUrl)
             .map((res: Response) => res.json())
             .catch(this.handleError)
-    }
+    }*/
 
 
     addComment(body: Object): Observable<Comments> {
@@ -155,9 +150,8 @@ export class DataService {
     }
 
 
-    private handleError(error: Response) {
-        console.log(error);
-        return Observable.throw(error.json().error || 'Server error');
+    private handleError(error: Response){
+        return Observable.throw(error || 'Server error');
     }
 
 

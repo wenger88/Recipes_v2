@@ -30,6 +30,7 @@ import {Ng2CloudinaryModule} from "ng2-cloudinary";
 import {Ng2PaginationModule} from "ng2-pagination";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ConvertMinutesPipe} from "./shared/convert-minutes.pipe";
+import {RecipeService} from "./recipes/recipes.service";
 
 @NgModule({
     imports: [
@@ -65,7 +66,8 @@ import {ConvertMinutesPipe} from "./shared/convert-minutes.pipe";
         ConvertMinutesPipe
     ],
     providers: [
-        DataService
+        DataService,
+        RecipeService
     ],
     exports: [],
     bootstrap: [AppComponent],

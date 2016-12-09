@@ -6,9 +6,8 @@ import {Component, Input} from "@angular/core";
 import {Response} from "@angular/http";
 import {FormControl} from "@angular/forms";
 
-import {DataService} from "../../../core/services/data.service";
-
 import 'rxjs/Rx';
+import {RecipeService} from "../../recipes.service";
 
 @Component({
     selector: 'recipe-course-filter',
@@ -19,11 +18,11 @@ export class CourseFilterComponent {
     courses: any[];
     @Input() control: FormControl;
 
-    constructor(private dataService: DataService) {
+    constructor(private recipeService: RecipeService) {
     }
 
     ngOnInit(): void {
-        this.dataService.getAllCourses()
+        this.recipeService.getAllCourses()
             .subscribe((course: Response[]) => {
                 this.courses = course
             })

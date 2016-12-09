@@ -6,7 +6,7 @@ import {Component, Input} from "@angular/core";
 import {Response} from "@angular/http";
 import {FormControl} from "@angular/forms";
 
-import {DataService} from "../../../core/services/data.service";
+import {RecipeService} from "../../recipes.service";
 
 @Component({
     selector: "recipe-ingredient-filter",
@@ -19,12 +19,12 @@ export class MainIngredientFilterComponent {
     @Input() control: FormControl;
 
 
-    constructor(private dataService: DataService) {
+    constructor(private recipeService: RecipeService) {
     }
 
     ngOnInit(): void {
 
-        this.dataService.getMainIngredient()
+        this.recipeService.getMainIngredient()
             .subscribe((mainIngredients: Response[]) => {
                 this.mainIngredients = mainIngredients
             })

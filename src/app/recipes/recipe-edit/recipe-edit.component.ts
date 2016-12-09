@@ -12,6 +12,7 @@ import {Recipe} from "../../shared/interfaces";
 
 import {CloudinaryOptions, CloudinaryUploader} from "ng2-cloudinary";
 import * as _ from 'lodash';
+import {RecipeService} from "../recipes.service";
 
 
 @Component({
@@ -43,6 +44,7 @@ export class RecipeEditComponent implements OnInit {
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
+                private recipeService: RecipeService,
                 private router: Router,) {
 
         this.uploader.onSuccessItem = (item: any, response: any, status: any, headers: any) => {
@@ -60,37 +62,37 @@ export class RecipeEditComponent implements OnInit {
                 .subscribe((recipe: Recipe) => this.recipe = recipe)
         });
 
-        this.dataService.getAllCourses()
+        this.recipeService.getAllCourses()
             .subscribe((course: Response[]) => {
                 this.courses = course;
             })
 
-        this.dataService.getAllRecipeTypes()
+        this.recipeService.getAllRecipeTypes()
             .subscribe((recipeType: Response[]) => {
                 this.recipeTypes = recipeType
             })
 
-        this.dataService.getAllCuisines()
+        this.recipeService.getAllCuisines()
             .subscribe((cuisine: Response[]) => {
                 this.cuisines = cuisine;
             })
 
-        this.dataService.getAllCourses()
+        this.recipeService.getAllCourses()
             .subscribe((course: Response[]) => {
                 this.courses = course
             })
 
-        this.dataService.getAllOccasions()
+        this.recipeService.getAllOccasions()
             .subscribe((occasion: Response[]) => {
                 this.occasion = occasion
             })
 
-        this.dataService.getAllSkills()
+        this.recipeService.getAllSkills()
             .subscribe((skill: Response[]) => {
                 this.skillLevel = skill
             })
 
-        this.dataService.getMainIngredient()
+        this.recipeService.getMainIngredient()
             .subscribe((mainIngredient: Response[]) => {
                 this.mainIngredient = mainIngredient
             })

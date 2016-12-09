@@ -6,7 +6,7 @@ import {Component, Input} from "@angular/core";
 import {FormControl} from "@angular/forms";
 import {Response} from "@angular/http";
 
-import {DataService} from "../../../core/services/data.service";
+import {RecipeService} from "../../recipes.service";
 
 
 @Component({
@@ -19,11 +19,11 @@ export class OccasionFilterComponent {
     occasions: any[];
     @Input() control: FormControl;
 
-    constructor(private dataService: DataService) {
+    constructor(private recipeService: RecipeService) {
     }
 
     ngOnInit(): void {
-        this.dataService.getAllOccasions()
+        this.recipeService.getAllOccasions()
             .subscribe((occasion: Response[]) => {
                 this.occasions = occasion
             })

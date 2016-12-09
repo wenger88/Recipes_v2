@@ -32,8 +32,7 @@ export class RecipeFilterComponent {
     recipes: Recipe[];
     show = false;
 
-    constructor(private dataService: DataService,
-                private formBuilder: FormBuilder) {
+    constructor(private formBuilder: FormBuilder) {
 
     }
 
