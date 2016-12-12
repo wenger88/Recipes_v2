@@ -8,12 +8,12 @@ import {Response, Http} from "@angular/http";
 @Injectable()
 export class RecipeService{
 
-    recipeTypeUrl: string = 'http://localhost:3000/recipeType';
-    cuisineUrl: string = 'http://localhost:3000/cuisine';
-    courseUrl: string = 'http://localhost:3000/course';
-    occasionUrl: string = 'http://localhost:3000/occasion';
-    skillUrl: string = 'http://localhost:3000/skillLevel';
-    mainIngredientUrl: string = 'http://localhost:3000/mainIngredient';
+    recipeTypeUrl: string = API_URL + '/recipeType';
+    cuisineUrl: string = API_URL + '/cuisine';
+    courseUrl: string = API_URL + '/course';
+    occasionUrl: string = API_URL + '/occasion';
+    skillUrl: string = API_URL + '/skillLevel';
+    mainIngredientUrl: string = API_URL + '/mainIngredient';
 
 
     constructor(private http: Http){}

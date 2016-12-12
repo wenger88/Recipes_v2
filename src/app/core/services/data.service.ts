@@ -13,8 +13,8 @@ import 'rxjs/Rx';
 @Injectable()
 export class DataService {
 
-    recipesUrl: string = 'recipes';
-    commentsUrl: string = 'http://localhost:3000/comments';
+    recipesUrl: string = API_URL + '/recipes';
+    commentsUrl: string = API_URL + '/comments';
 
     _limit: number = 5;
     _page: number = 1;
@@ -43,6 +43,7 @@ export class DataService {
         //page = this.getFilters().
         return this.http.get(this.recipesUrl, {search: this.getFilters(page, filters)})
             .map((res: Response) => {
+                console.log(res)
                 let response = res.json();
                 if (res.headers.get('X-Total-Count')) {
                     response.meta = {

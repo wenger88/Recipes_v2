@@ -25,4 +25,4 @@
 
 </form>
 <hr>
-<recipe-single-comment [comment]="comment" *ngFor="let comment of comments"></recipe-single-comment>
+<recipe-single-comment [comment]="comment" *ngFor="let comment of comments; let i = index;"></recipe-single-comment>

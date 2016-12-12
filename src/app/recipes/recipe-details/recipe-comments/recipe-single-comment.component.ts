@@ -17,7 +17,7 @@ export class RecipeSingleCommentComponent {
     @Input() recipe: Recipe;
     @Input() comment: Comments;
     singleComment: any;
-    counter: number;
+    counter: number = Math.floor(Math.random() * 10) + 1
     liked: boolean = false;
 
     constructor() {
