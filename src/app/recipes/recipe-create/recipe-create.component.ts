@@ -5,7 +5,7 @@
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router, ActivatedRoute} from "@angular/router";
 import {Response} from "@angular/http";
-import {NgForm} from "@angular/forms";
+import {NgForm, FormGroup, FormBuilder, FormControl} from "@angular/forms";
 
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
@@ -29,13 +29,17 @@ export class RecipeCreateComponent implements OnInit {
         comments: []
     }
     postRecipeToServer: string;
-    @ViewChild('recipeForm') recipeForm: NgForm;
+    //@ViewChild('recipeForm') recipeForm: NgForm;
+    recipeForm: FormGroup;
+    ingredientName = new FormControl;
+    directionName = new FormControl;
     cuisines: any[];
     courses: any[];
     skillLevel: any[];
     recipeTypes: any[];
     occasion: any[];
     mainIngredient: any[];
+    mainIng = new FormControl;
     _ = require('lodash');
     cloudinaryImage: any;
     cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
@@ -49,7 +53,8 @@ export class RecipeCreateComponent implements OnInit {
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
                 private recipeService: RecipeService,
-                private router: Router) {
+                private router: Router,
+                private fb: FormBuilder) {
 
         this.uploader.onSuccessItem = (item: any, response: any, status: any, headers: any) => {
             let _self = this;
@@ -60,6 +65,22 @@ export class RecipeCreateComponent implements OnInit {
     }
 
     ngOnInit(): void {
+
+        this.recipeForm = this.fb.group({
+            author: [''],
+            title: [''],
+            description: [''],
+            readyIn: [''],
+            servings: [''],
+            mainIngredientId: [''],
+            recipeTypeId: [''],
+            cuisineId: [''],
+            courseId: [''],
+            occasionId: [''],
+            skillLevelId: ['']
+        })
+
+
         this.recipeService.getAllRecipeTypes()
             .subscribe((recipeType: Response[]) => {
                 this.recipeTypes = recipeType
@@ -91,46 +112,11 @@ export class RecipeCreateComponent implements OnInit {
             })
 
         this.recipe.date = new Date();
-    }
 
-
-    findMainIngredientName(value: any) {
-        value = parseInt(value);
-        let name = _.filter(this.mainIngredient, ['id', value]);
-        this.recipe.mainIngredientName = name[0].name;
-    }
-
-    findCuisineName(value: any) {
-        value = parseInt(value);
-        let name = _.filter(this.cuisines, ['id', value]);
-        this.recipe.cuisineName = name[0].name;
-    }
-
-    findRecipeTypeName(value: any) {
-        value = parseInt(value);
-        let name = _.filter(this.recipeTypes, ['id', value]);
-        this.recipe.recipeTypeName = name[0].name;
-    }
-
-    findCourseName(value: any) {
-        value = parseInt(value);
-        let name = _.filter(this.courses, ['id', value]);
-        this.recipe.courseName = name[0].name;
-    }
-
-    findSkillLevelName(value: any) {
-        value = parseInt(value);
-        let name = _.filter(this.skillLevel, ['id', value]);
-        this.recipe.skillLevelName = name[0].name;
-    }
-
-    findOccasionName(value: any) {
-        value = parseInt(value);
-        let name = _.filter(this.occasion, ['id', value]);
-        this.recipe.occasionName = name[0].name;
     }
 
     onSubmit() {
+        Object.assign(this.recipe, this.recipeForm.value);
         this.dataService.addRecipe(this.recipe)
             .subscribe(
                 (data) => {
@@ -146,23 +132,24 @@ export class RecipeCreateComponent implements OnInit {
 
     removeDirection(i: number) {
         this.recipe.steps.splice(i, 1);
-        this.recipeForm.form.markAsDirty();
+        //this.recipeForm.form.markAsDirty();
     }
 
     removeIngredient(i: number) {
         this.recipe.ingredients.splice(i, 1);
-        this.recipeForm.form.markAsDirty();
+        //this.recipeForm.form.markAsDirty();
     }
 
     addIngredient(name: HTMLInputElement) {
         let ingredient: any = {
-            'name': name.value,
+            'name': name,
         }
 
         if (ingredient.name != "") {
             console.log(ingredient);
             this.recipe.ingredients.push(ingredient);
-            name.value = null;
+            //name = null;
+            this.ingredientName.reset();
         } else {
             console.log('Empty Fields!');
         }
@@ -171,13 +158,14 @@ export class RecipeCreateComponent implements OnInit {
 
     addDirection(directionName: HTMLInputElement) {
         let direction: any = {
-            'name': directionName.value,
+            'description': directionName,
         }
 
         if (direction.name != "") {
             console.log(direction);
             this.recipe.steps.push(direction);
-            directionName.value = null;
+            //directionName.value = null;
+            this.directionName.reset();
         } else {
             console.log('Empty Fields!');
         }

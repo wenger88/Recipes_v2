@@ -5,7 +5,7 @@
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router, ActivatedRoute, Params} from "@angular/router";
 import {Response} from "@angular/http";
-import {NgForm} from "@angular/forms";
+import {NgForm, FormBuilder, FormControl, FormGroup} from "@angular/forms";
 
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
@@ -24,7 +24,10 @@ import {RecipeService} from "../recipes.service";
 export class RecipeEditComponent implements OnInit {
 
     recipe: Recipe;
-    @ViewChild('recipeForm') recipeForm: NgForm;
+    //@ViewChild('recipeForm') recipeForm: NgForm;
+    recipeForm: FormGroup;
+    ingredientName = new FormControl;
+    directionName = new FormControl;
     cuisines: any[];
     courses: any[];
     skillLevel: any[];
@@ -45,7 +48,8 @@ export class RecipeEditComponent implements OnInit {
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
                 private recipeService: RecipeService,
-                private router: Router,) {
+                private router: Router,
+                private fb: FormBuilder) {
 
         this.uploader.onSuccessItem = (item: any, response: any, status: any, headers: any) => {
             let _self = this;
@@ -57,9 +61,31 @@ export class RecipeEditComponent implements OnInit {
     }
 
     ngOnInit(): void {
+
+
+
+
         this.route.params.subscribe((params: Params) => {
             this.dataService.getSingleRecipe(params['id'])
-                .subscribe((recipe: Recipe) => this.recipe = recipe)
+                .subscribe((recipe: Recipe) => {
+                this.recipe = recipe
+                    console.log(this.recipe)
+
+                    this.recipeForm = this.fb.group({
+                        author: [this.recipe.author],
+                        title: [this.recipe.title],
+                        description: [this.recipe.description],
+                        readyIn: [this.recipe.readyIn],
+                        servings: [this.recipe.servings],
+                        mainIngredientId: [this.recipe.mainIngredientId],
+                        recipeTypeId: [this.recipe.recipeTypeId],
+                        cuisineId: [this.recipe.cuisineId],
+                        courseId: [this.recipe.courseId],
+                        occasionId: [this.recipe.occasionId],
+                        skillLevelId: [this.recipe.skillLevelId]
+                    })
+            })
+
         });
 
         this.recipeService.getAllCourses()
@@ -96,6 +122,8 @@ export class RecipeEditComponent implements OnInit {
             .subscribe((mainIngredient: Response[]) => {
                 this.mainIngredient = mainIngredient
             })
+
+
 
     }
 
@@ -142,10 +170,11 @@ export class RecipeEditComponent implements OnInit {
     }
 
     onSubmit() {
+        Object.assign(this.recipe, this.recipeForm.value);
         this.dataService.updateRecipe(this.recipe)
             .subscribe((status: boolean) => {
                 if (status) {
-                    this.recipeForm.form.markAsPristine();
+                    //this.recipeForm.form.markAsPristine();
                     this.router.navigate(['/recipe-details', this.recipe.id]);
                     console.log(this.recipeForm);
                 } else {
@@ -156,23 +185,23 @@ export class RecipeEditComponent implements OnInit {
 
     removeDirection(i: number) {
         this.recipe.steps.splice(i, 1);
-        this.recipeForm.form.markAsDirty();
+        //this.recipeForm.form.markAsDirty();
     }
 
     removeIngredient(i: number) {
         this.recipe.ingredients.splice(i, 1);
-        this.recipeForm.form.markAsDirty();
+        //this.recipeForm.form.markAsDirty();
     }
 
     addIngredient(name: HTMLInputElement) {
         let ingredient: any = {
-            'name': name.value,
+            'name': name,
         }
 
         if (ingredient.name != "") {
             console.log(ingredient);
             this.recipe.ingredients.push(ingredient);
-            name.value = null;
+            this.ingredientName.reset();
         } else {
             console.log('Empty Fields!');
         }
@@ -183,13 +212,13 @@ export class RecipeEditComponent implements OnInit {
 
     addDirection(directionName: HTMLInputElement) {
         let direction: any = {
-            'name': directionName.value,
+            'description': directionName,
         }
 
         if (direction.name != "") {
             console.log(direction);
             this.recipe.steps.push(direction);
-            directionName.value = null;
+            this.directionName.reset();
         } else {
             console.log('Empty Fields!');
         }

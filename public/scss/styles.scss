@@ -79,58 +79,6 @@ button {
   overflow: hidden;
 }
 
-/*
-@include media-breakpoint-down(md) {
-	.header .flex-container{
-		flex-direction: column-reverse;
-		.header-logo{
-			width: 100%!important;
-			position: relative!important;
-			img{
-				width: 100px;
-			}
-		}
-		.header-upper-nav{
-			margin-bottom: 0!important;
-			ul{
-				width: 100%;
-			}
-		}
-	}
-
-}
-*/
-
-/*@include media-breakpoint-down(sm){
-
-	.recipe-set{
-		height: auto!important;
-		flex-direction: column;
-
-		&-image{
-			width: 100%!important;
-			overflow: hidden;
-			height: 240px!important;
-			a{
-				display: block;
-				height: auto!important;
-				img{
-					width: 100%;
-				}
-			}
-		}
-
-		&-detail{
-			width: 100%!important;
-			p{
-				max-height: 80px!important;
-			}
-		}
-	}
-
-
-}*/
-
 @include media-breakpoint-down(xs){
   .recipes{
     h1{
@@ -138,47 +86,6 @@ button {
     }
   }
 }
-
-/*.ng2-pagination {
-  padding: 1rem 0!important;
-  li {
-    background: #000 !important;
-    cursor: pointer;
-    font-family: "Segoe UI", sans-serif;
-    font-weight: bold;
-     a, button{
-      color: #fff!important;
-       &:hover{
-         background: #6ebe3b !important;
-         color: #fff;
-       }
-
-    }
-    &.current {
-      background: #6ebe3b !important;
-      color: #fff;
-    }
-
-    &.pagination-previous, &.pagination-next{
-      font-family: 'Lora', serif;
-      font-style: italic;
-      background: transparent!important;
-
-      a{
-        color: #000!important;
-        &:hover{
-          background: none!important;
-          color: #6ebe3b!important;
-        }
-      }
-      &.disabled{
-        color: #dddddd!important;
-      }
-    }
-
-  }
-
-}*/
 
 .page-link {
   position: relative;

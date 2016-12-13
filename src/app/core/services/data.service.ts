@@ -29,7 +29,6 @@ export class DataService {
         params.set('_page', page.toString());
         params.set('_limit', this._limit.toString());
         if (typeof filters !== 'undefined') {
-            //params.set('_page', '1');
             for (let key in filters) {
                 if (filters[key]) {
                     params.set(key, filters[key]);
@@ -40,7 +39,6 @@ export class DataService {
     }
 
     getAllRecipes(page: number = 1, filters?: any): Observable<Recipe[]> {
-        //page = this.getFilters().
         return this.http.get(this.recipesUrl, {search: this.getFilters(page, filters)})
             .map((res: Response) => {
                 console.log(res)

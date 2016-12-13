@@ -4,7 +4,7 @@
 
 import {Component, Input, OnInit, ViewChild} from "@angular/core";
 import {Router, ActivatedRoute} from "@angular/router";
-import {NgForm} from "@angular/forms";
+import {NgForm, FormBuilder, FormGroup} from "@angular/forms";
 
 import {Recipe, Comments} from "../../../shared/interfaces";
 import {DataService} from "../../../core/services/data.service";
@@ -20,16 +20,25 @@ export class RecipeCommentsComponent implements OnInit {
 
     @Input() recipe: Recipe;
     @Input() comments: Comments[];
-    @ViewChild('recipeComment') recipeComment: NgForm;
+    //@ViewChild('recipeComment') recipeComment: NgForm;
+    recipeComment: FormGroup;
     _ = require('lodash');
     date: any;
 
     constructor(private route: ActivatedRoute,
                 private dataService: DataService,
-                private router: Router) {
+                private router: Router,
+                private fb: FormBuilder) {
     }
 
     ngOnInit(): void {
+
+        this.recipeComment = this.fb.group({
+            commentName: [''],
+            rating: [''],
+            content: ['']
+        })
+
 
         this.dataService.getAllComments(this.recipe.id)
             .subscribe((comments: Comments[]) => {
@@ -44,10 +53,10 @@ export class RecipeCommentsComponent implements OnInit {
     onSubmit(name: HTMLInputElement, comment: HTMLInputElement, rating: any) {
 
         let newComments: any = {
-            'name': name.value,
-            'content': comment.value,
+            'name': name,
+            'content': comment,
             'recipeId': this.recipe.id,
-            'rating': rating.value,
+            'rating': rating,
             'date': this.date,
             'likes': 0
         }
@@ -62,8 +71,7 @@ export class RecipeCommentsComponent implements OnInit {
                     error => console.log("Error HTTP Post Service"), // in case of failure show this message
                     () => console.log("Job Done Post!")
                 );
-            name.value = null;
-            comment.value = null;
+            this.recipeComment.reset();
             console.log(this.recipe.rating);
             window.location.reload();
 

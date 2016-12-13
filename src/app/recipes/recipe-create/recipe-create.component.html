@@ -19,72 +19,62 @@
                         <p>Please fill all the forms and share your recipe with the world!</p>
                     </div>
 
-                    <form class="recipe-form" #recipeForm="ngForm" novalidate (ngSubmit)="onSubmit()"
+                    <form class="recipe-form" [formGroup]="recipeForm" novalidate (ngSubmit)="onSubmit()"
                           >
 
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Author</label>
-                                    <input type="text" class="form-control" [(ngModel)]="recipe.author"
-                                           #author="ngModel" name="author" required>
-                                </div>
-                                <div class="alert alert-danger" [hidden]="author.valid">Required Field
+                                    <input type="text" class="form-control" formControlName="author">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Upload Image</label>
-                                    <input type="file" ng2FileSelect [uploader]="uploader" #image="ngModel"
-                                           [(ngModel)]="recipe.image" name="image" class="form-control"/>
+                                    <input type="file" ng2FileSelect [uploader]="uploader" class="form-control"/>
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="img-container" *ngIf="image.value">
+                        <!--<div class="img-container" *ngIf="image.value">
                             <img class="img-fluid" [src]="recipe.image" alt="">
-                        </div>
+                        </div>-->
 
                         <div class="form-group">
                             <label>Recipe Title</label>
                             <input type="text"
                                    class="form-control"
-                                   name="title"
-                                   [(ngModel)]="recipe.title"
-                                   #title="ngModel"
-                                   required>
-                        </div>
+                                   formControlName="title"
+                            >
+                        </div><!--
                         <div class="alert alert-danger" [hidden]="title.valid">Required Field
-                        </div>
+                        </div>-->
                         <div class="form-group">
                             <label>Short Description</label>
-                            <textarea name="description"
+                            <textarea formControlName="description"
                                       rows="5"
                                       class="form-control"
-                                      [(ngModel)]="recipe.description"
-                                      #description="ngModel"
-                                      required
                             ></textarea>
-                        </div>
+                        </div><!--
                         <div class="alert alert-danger" [hidden]="description.valid">Required Field
-                        </div>
+                        </div>-->
                         <div class="top">
                             <label>Ingredients</label>
                             <div class="input-group">
                                 <input type="text"
                                        class="form-control"
                                        aria-describedby="basic-addon1"
-                                       name="ingredient"
-                                       ngModel
-                                       #ingredientName>
+                                       [formControl]="ingredientName"
+                                >
                                 <span class="input-group-btn">
                                     <button style="background: #6ebe3b; color: #fff;"
                                             type="button"
                                             class="btn"
                                             id="basic-addon1"
-                                            (click)="addIngredient(ingredientName)"
-                                            [disabled]="ingredientName.value == ''">
+                                            (click)="addIngredient(ingredientName.value)"
+                                            >
                                         <i class="fa fa-plus"></i>
                                     </button>
                                 </span>
@@ -97,9 +87,8 @@
                                            class="form-control"
                                            aria-describedby="basic-addon2"
                                            name="name-{{i}}"
-                                           [(ngModel)]="ingredient.name"
-                                           #ingredientName="ngModel"
-                                           required>
+                                           [value]="ingredient.name"
+                                    >
                                     <span class="input-group-btn">
                                     <button style="background: #FF4136; color: #fff;"
                                             type="button"
@@ -110,10 +99,10 @@
                                     </button>
                                 </span>
                                 </div>
-                                <div class="alert alert-danger" [hidden]="ingredientName.valid">
+                                <!--<div class="alert alert-danger" [hidden]="ingredientName.valid">
                                     Ingredient is required
                                 </div>
-                            </div>
+-->                            </div>
                         </div>
 
                         <div class="top">
@@ -121,18 +110,16 @@
                             <div class="input-group">
                             <textarea class="form-control"
                                       aria-describedby="basic-addon3"
-                                      name="direction"
-                                      #directionName
                                       rows="5"
-                                      ngModel>
+                                      [formControl]="directionName"
+                                      >
                             </textarea>
                                 <span class="input-group-btn" style="vertical-align: top;">
                                     <button style="background: #6ebe3b; color: #fff;"
                                             type="button"
                                             class="btn"
                                             id="basic-addon3"
-                                            (click)="addDirection(directionName)"
-                                            [disabled]="directionName.value == ''"
+                                            (click)="addDirection(directionName.value)"
                                     >
                                         <i class="fa fa-plus"></i>
                                     </button>
@@ -144,12 +131,10 @@
                                 <div class="input-group">
                                 <textarea style="width: 100%"
                                           name="dName-{{i}}"
-                                          [(ngModel)]="steps.name"
                                           class="form-control"
                                           rows="5"
-                                          required
-                                          #directionName="ngModel"
                                           aria-describedby="basic-addon4"
+                                          [value]="steps.description"
                                 ></textarea>
                                     <span class="input-group-btn" style="vertical-align: top;">
                                     <button style="background: #FF4136; color: #fff;"
@@ -162,8 +147,7 @@
                                 </span>
 
                                 </div>
-                                <div class="alert alert-danger" [hidden]="directionName.valid">Required Field
-                                </div>
+
                             </div>
                         </div>
 
@@ -171,12 +155,13 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Main Ingredient</label>
-                                    <select [(ngModel)]="recipe.mainIngredientId" name="mainIngredient"
+                                    <select formControlName="mainIngredientId"
                                             class="form-control font-italic"
-                                            style="font-size: 0.875rem" #mainIngredients
-                                            (change)="findMainIngredientName(mainIngredients.value)">
+                                            style="font-size: 0.875rem"
+
+                                    >
                                         <option [value]="null" disabled>Select main ingredient</option>
-                                        <option *ngFor="let mainIng of mainIngredient" [value]="mainIng.id">
+                                        <option  *ngFor="let mainIng of mainIngredient" [value]="mainIng.id" >
                                             {{mainIng.name}}
                                         </option>
                                     </select>
@@ -187,22 +172,18 @@
                                     <label>Servings</label>
                                     <input type="text"
                                            class="form-control"
-                                           name="servings"
-                                           [(ngModel)]="recipe.servings"
-                                           #servings="ngModel"
+                                           formControlName="servings"
                                            onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
-                                           required>
-                                </div>
-                                <div class="alert alert-danger" [hidden]="servings.valid">Required Field
+                                    >
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label>Occasion</label>
-                                    <select [(ngModel)]="recipe.occasionId" name="occasion"
+                                    <select formControlName="occasionId"
                                             class="form-control font-italic"
-                                            style="font-size: 0.875rem" #occasions
-                                            (change)="findOccasionName(occasions.value)">
+                                            style="font-size: 0.875rem"
+                                    >
                                         <option [value]="null" disabled>Select an occasion</option>
                                         <option *ngFor="let occ of occasion" [value]="occ.id">{{occ.name}}</option>
                                     </select>
@@ -216,15 +197,12 @@
                                     <label>Ready In (<span style="font-style: italic">minutes</span>)</label>
                                     <input type="text"
                                            class="form-control"
-                                           name="ready"
-                                           [(ngModel)]="recipe.readyIn"
-                                           #ready="ngModel"
+                                           formControlName="readyIn"
                                            onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
-                                           required
                                     >
                                 </div>
-                                <div class="alert alert-danger" [hidden]="ready.valid">Required Field
-                                </div>
+                                <!--<div class="alert alert-danger" [hidden]="ready.valid">Required Field
+                                </div>-->
                             </div>
                         </div>
 
@@ -232,10 +210,9 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Recipe Type</label>
-                                    <select [(ngModel)]="recipe.recipeTypeId" name="recipeType"
+                                    <select formControlName="recipeTypeId"
                                             class="form-control font-italic"
-                                            style="font-size: 0.875rem" #recipeType
-                                            (change)="findRecipeTypeName(recipeType.value)">
+                                            style="font-size: 0.875rem">
                                         <option [value]="null" disabled>Select recipe type</option>
                                         <option *ngFor="let type of recipeTypes" [value]="type.id">{{type.name}}
                                         </option>
@@ -245,9 +222,8 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Cuisine</label>
-                                    <select [(ngModel)]="recipe.cuisineId" name="cuisine"
-                                            class="form-control font-italic" style="font-size: 0.875rem" #cuisine
-                                            (change)="findCuisineName(cuisine.value)">
+                                    <select  formControlName="cuisineId"
+                                            class="form-control font-italic" style="font-size: 0.875rem">
                                         <option [value]="null" disabled>Select cuisine</option>
                                         <option *ngFor="let cuisine of cuisines" [value]="cuisine.id">{{cuisine.name}}
                                         </option>
@@ -257,8 +233,9 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Course</label>
-                                    <select [(ngModel)]="recipe.courseId" name="course" class="form-control font-italic"
-                                            style="font-size: 0.875rem" #course (change)="findCourseName(course.value)">
+                                    <select formControlName="courseId"
+                                            class="form-control font-italic"
+                                            style="font-size: 0.875rem" >
                                         <option [value]="null" disabled>Select course</option>
                                         <option *ngFor="let course of courses" [value]="course.id">{{course.name}}
                                         </option>
@@ -268,9 +245,10 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Skill Level</label>
-                                    <select [(ngModel)]="recipe.skillLevelId" name="skillLevel"
-                                            class="form-control font-italic" style="font-size: 0.875rem" #skills
-                                            (change)="findSkillLevelName(skills.value)">
+                                    <select formControlName="skillLevelId"
+                                            class="form-control font-italic"
+                                            style="font-size: 0.875rem"
+                                    >
                                         <option value="" disabled [selected]="!recipe.skillLevelId">Select skill
                                         </option>
                                         <option *ngFor="let skill of skillLevel" [value]="skill.id">{{skill.name}}
@@ -280,8 +258,7 @@
                             </div>
 
                             <div class="text-xs-center">
-                                <button class="btn customButton" type="submit"
-                                        [disabled]="!recipeForm.dirty || !recipeForm.valid">Submit Your Recipe
+                                <button class="btn customButton" type="submit">Submit Your Recipe
                                 </button>
                             </div>
 
