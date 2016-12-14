@@ -95,11 +95,19 @@
   }
 
   .alert-danger {
-    margin-top: -25px;
+    margin-top: 5px;
   }
+  p.small{
+    color: #FF4136;
+  }
+
 }
 
 .img-container {
   width: 200px;
   margin-bottom: 20px;
+}
+
+.has-error{
+  border: 1px solid #FF4136!important;
 }

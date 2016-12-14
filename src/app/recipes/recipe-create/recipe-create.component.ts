@@ -5,7 +5,7 @@
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router, ActivatedRoute} from "@angular/router";
 import {Response} from "@angular/http";
-import {NgForm, FormGroup, FormBuilder, FormControl} from "@angular/forms";
+import {NgForm, FormGroup, FormBuilder, FormControl, Validators, FormArray} from "@angular/forms";
 
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
@@ -65,19 +65,22 @@ export class RecipeCreateComponent implements OnInit {
     }
 
     ngOnInit(): void {
-
+        let i = 0;
         this.recipeForm = this.fb.group({
-            author: [''],
-            title: [''],
-            description: [''],
-            readyIn: [''],
-            servings: [''],
-            mainIngredientId: [''],
-            recipeTypeId: [''],
-            cuisineId: [''],
-            courseId: [''],
-            occasionId: [''],
-            skillLevelId: ['']
+            author: new FormControl('', [Validators.required]),
+            title: new FormControl('', [Validators.required]),
+            description: new FormControl('', [Validators.required]),
+            readyIn: new FormControl('', [Validators.required]),
+            servings: new FormControl('', [Validators.required]),
+            mainIngredientId: new FormControl(''),
+            recipeTypeId: new FormControl(''),
+            cuisineId: new FormControl(''),
+            courseId: new FormControl(''),
+            occasionId: new FormControl(''),
+            skillLevelId: new FormControl(''),
+            ingredients: this.fb.array([
+                //this.initIngredient(''),
+            ])
         })
 
 
@@ -115,6 +118,18 @@ export class RecipeCreateComponent implements OnInit {
 
     }
 
+    addIngredients(newIng: string) {
+        const control = <FormArray>this.recipeForm.controls['ingredients'];
+        control.push(this.initIngredient(newIng));
+    }
+
+    initIngredient(newIng: string) {
+        return this.fb.group({
+            description: [newIng, Validators.required]
+        });
+    }
+
+
     onSubmit() {
         Object.assign(this.recipe, this.recipeForm.value);
         this.dataService.addRecipe(this.recipe)
@@ -128,6 +143,11 @@ export class RecipeCreateComponent implements OnInit {
             );
         //console.log(this.recipe);
 
+    }
+
+    noWhitespace(event: any){
+        if (event.which === 32 &&  event.target.selectionStart === 0)
+            return false;
     }
 
     removeDirection(i: number) {
@@ -155,6 +175,7 @@ export class RecipeCreateComponent implements OnInit {
         }
         console.log(ingredient);
     }
+
 
     addDirection(directionName: HTMLInputElement) {
         let direction: any = {

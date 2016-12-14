@@ -5,7 +5,7 @@
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router, ActivatedRoute, Params} from "@angular/router";
 import {Response} from "@angular/http";
-import {NgForm, FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {NgForm, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
@@ -72,11 +72,11 @@ export class RecipeEditComponent implements OnInit {
                     console.log(this.recipe)
 
                     this.recipeForm = this.fb.group({
-                        author: [this.recipe.author],
-                        title: [this.recipe.title],
-                        description: [this.recipe.description],
-                        readyIn: [this.recipe.readyIn],
-                        servings: [this.recipe.servings],
+                        author: [this.recipe.author, Validators.required],
+                        title: [this.recipe.title, Validators.required],
+                        description: [this.recipe.description, Validators.required],
+                        readyIn: [this.recipe.readyIn, Validators.required],
+                        servings: [this.recipe.servings, Validators.required],
                         mainIngredientId: [this.recipe.mainIngredientId],
                         recipeTypeId: [this.recipe.recipeTypeId],
                         cuisineId: [this.recipe.cuisineId],
@@ -125,6 +125,11 @@ export class RecipeEditComponent implements OnInit {
 
 
 
+    }
+
+    noWhitespace(event: any){
+        if (event.which === 32 &&  event.target.selectionStart === 0)
+            return false;
     }
 
     findMainIngredientName(value: any) {

@@ -67,37 +67,50 @@ export class RecipeDetailComponent implements OnInit {
         this.recipeService.getMainIngredient()
             .subscribe((mainIngredient: Response[]) => {
                 this.mainIngredient = mainIngredient
-                this.findMainIngredientName(this.recipe.mainIngredientId);
+                if (this.recipe.mainIngredientId){
+                    this.findMainIngredientName(this.recipe.mainIngredientId);
+                }
             })
 
         this.recipeService.getAllRecipeTypes()
             .subscribe((recipeType: Response[]) => {
                 this.recipeTypes = recipeType
-                this.findRecipeTypeName(this.recipe.recipeTypeId);
+                if (this.recipe.recipeTypeId){
+                    this.findRecipeTypeName(this.recipe.recipeTypeId);
+                }
             })
 
         this.recipeService.getAllCuisines()
             .subscribe((cuisine: Response[]) => {
                 this.cuisines = cuisine;
-                this.findCuisineName(this.recipe.cuisineId);
+                if (this.recipe.cuisineId){
+                    this.findCuisineName(this.recipe.cuisineId);
+                }
             })
 
         this.recipeService.getAllCourses()
             .subscribe((course: Response[]) => {
                 this.courses = course
-                this.findCourseName(this.recipe.courseId)
+                if (this.recipe.courseId){
+                    this.findCourseName(this.recipe.courseId)
+                }
             })
 
         this.recipeService.getAllOccasions()
             .subscribe((occasion: Response[]) => {
                 this.occasion = occasion
-                this.findOccasionName(this.recipe.occasionId)
+                if (this.recipe.occasionId){
+                    this.findOccasionName(this.recipe.occasionId)
+                }
+
             })
 
         this.recipeService.getAllSkills()
             .subscribe((skill: Response[]) => {
                 this.skillLevel = skill
-                this.findSkillLevelName(this.recipe.skillLevelId)
+                if (this.recipe.skillLevelId){
+                    this.findSkillLevelName(this.recipe.skillLevelId)
+                }
             })
 
 

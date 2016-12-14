@@ -26,13 +26,17 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Author</label>
-                                    <input type="text" class="form-control" formControlName="author">
+                                    <input type="text" class="form-control" formControlName="author" (onkeydown)="noWhitespace($event)">
+                                    <div *ngIf="recipeForm.controls['author'].hasError('required')"
+                                         class="alert alert-danger">You must include author.
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Upload Image</label>
-                                    <input type="file" ng2FileSelect [uploader]="uploader" name="file" class="form-control"/>
+                                    <input type="file" ng2FileSelect [uploader]="uploader" name="file"
+                                           class="form-control"/>
                                 </div>
                             </div>
                         </div>
@@ -45,15 +49,23 @@
                             <input type="text"
                                    class="form-control"
                                    formControlName="title"
+                                   (onkeydown)="noWhitespace($event)"
                             >
+                            <div *ngIf="recipeForm.controls['title'].hasError('required')" class="alert alert-danger">
+                                You must include title.
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>Short Description</label>
-                            <textarea name="description"
-                                      rows="5"
+                            <textarea rows="5"
                                       class="form-control"
                                       formControlName="description"
+                                      (onkeydown)="noWhitespace($event)"
                             ></textarea>
+                            <div *ngIf="recipeForm.controls['description'].hasError('required')"
+                                 class="alert alert-danger">
+                                You must include description.
+                            </div>
                         </div>
 
                         <div class="top">
@@ -64,6 +76,7 @@
                                        aria-describedby="basic-addon1"
                                        name="ingredient"
                                        [formControl]="ingredientName"
+                                       (onkeydown)="noWhitespace($event)"
                                 >
                                 <span class="input-group-btn">
                                     <button style="background: #6ebe3b; color: #fff;"
@@ -85,6 +98,7 @@
                                            aria-describedby="basic-addon2"
                                            name="name-{{i}}"
                                            [value]="ingredient.name"
+                                           (onkeydown)="noWhitespace($event)"
                                     >
                                     <span class="input-group-btn">
                                     <button style="background: #FF4136; color: #fff;"
@@ -105,9 +119,9 @@
                             <div class="input-group">
                             <textarea class="form-control"
                                       aria-describedby="basic-addon3"
-                                      name="direction"
                                       [formControl]="directionName"
                                       rows="5"
+                                      (onkeydown)="noWhitespace($event)"
                             >
                             </textarea>
                                 <span class="input-group-btn" style="vertical-align: top;">
@@ -131,6 +145,7 @@
                                           rows="5"
                                           [value]="steps.description"
                                           aria-describedby="basic-addon4"
+                                          (onkeydown)="noWhitespace($event)"
                                 ></textarea>
                                     <span class="input-group-btn" style="vertical-align: top;">
                                     <button style="background: #FF4136; color: #fff;"
@@ -160,8 +175,6 @@
                                         </option>
                                     </select>
                                 </div>
-                                <!-- <div class="alert alert-danger" [hidden]="mainIngredients.value">Required Field
-                                 </div>-->
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
@@ -171,6 +184,10 @@
                                            formControlName="servings"
                                            onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
                                     >
+                                    <div *ngIf="recipeForm.controls['servings'].hasError('required')"
+                                         class="alert alert-danger">
+                                        You must include servings.
+                                    </div>
                                 </div>
 
                             </div>
@@ -196,6 +213,10 @@
                                            formControlName="readyIn"
                                            onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
                                     >
+                                    <div *ngIf="recipeForm.controls['readyIn'].hasError('required')"
+                                         class="alert alert-danger">
+                                        You must include time.
+                                    </div>
                                 </div>
 
                             </div>
@@ -250,7 +271,7 @@
                             </div>
 
                             <div class="text-xs-center">
-                                <button class="btn customButton" type="submit">Save Your
+                                <button class="btn customButton" type="submit" [disabled]="!recipeForm.valid">Save Your
                                     Recipe
                                 </button>
                             </div>

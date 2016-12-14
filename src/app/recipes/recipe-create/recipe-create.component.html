@@ -19,90 +19,147 @@
                         <p>Please fill all the forms and share your recipe with the world!</p>
                     </div>
 
-                    <form class="recipe-form" [formGroup]="recipeForm" novalidate (ngSubmit)="onSubmit()"
-                          >
+                    <form class="recipe-form" [formGroup]="recipeForm" novalidate (ngSubmit)="onSubmit()">
 
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Author</label>
-                                    <input type="text" class="form-control" formControlName="author">
+                                    <input type="text" class="form-control" formControlName="author"
+                                           (onkeydown)="noWhitespace($event)">
+                                    <div *ngIf="recipeForm.controls['author'].hasError('required')"
+                                         class="alert alert-danger">You must include author.
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Upload Image</label>
-                                    <input type="file" ng2FileSelect [uploader]="uploader" class="form-control"/>
+                                    <input type="file" ng2FileSelect [uploader]="uploader" class="form-control" required
+                                           style="padding: 5px"/>
+                                    <div *ngIf="recipe.image == null" class="alert alert-danger">You must upload
+                                        image.
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
 
-                        <!--<div class="img-container" *ngIf="image.value">
+                        <div class="img-container" *ngIf="recipe.image != null">
                             <img class="img-fluid" [src]="recipe.image" alt="">
-                        </div>-->
+                        </div>
 
                         <div class="form-group">
                             <label>Recipe Title</label>
                             <input type="text"
                                    class="form-control"
                                    formControlName="title"
+                                   (onkeydown)="noWhitespace($event)"
                             >
-                        </div><!--
-                        <div class="alert alert-danger" [hidden]="title.valid">Required Field
-                        </div>-->
+                            <div *ngIf="recipeForm.controls['title'].hasError('required')" class="alert alert-danger">
+                                You must include title.
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label>Short Description</label>
                             <textarea formControlName="description"
                                       rows="5"
                                       class="form-control"
+                                      (onkeydown)="noWhitespace($event)"
                             ></textarea>
-                        </div><!--
-                        <div class="alert alert-danger" [hidden]="description.valid">Required Field
-                        </div>-->
-                        <div class="top">
+                            <div *ngIf="recipeForm.controls['description'].hasError('required')"
+                                 class="alert alert-danger">
+                                You must include description.
+                            </div>
+                        </div>
+                         <!--<div class="top">
+                             <label>Ingredients</label>
+                             <div class="input-group">
+                                 <input type="text"
+                                        class="form-control"
+                                        aria-describedby="basic-addon1"
+                                        [formControl]="ingredientName"
+                                        (onkeydown)="noWhitespace($event)"
+                                 >
+                                 <span class="input-group-btn">
+                                     <button style="background: #6ebe3b; color: #fff;"
+                                             type="button"
+                                             class="btn"
+                                             id="basic-addon1"
+                                             (click)="addIngredient(ingredientName.value)"
+                                             [disabled]="!ingredientName.value"
+                                     >
+                                         <i class="fa fa-plus"></i>
+                                     </button>
+                                 </span>
+                             </div>
+                             <div class="ingredient-item"
+                                  *ngFor="let ingredient of recipe.ingredients;let i = index">
+
+                                 <div class="input-group">
+                                     <input type="text"
+                                            class="form-control"
+                                            aria-describedby="basic-addon2"
+                                            (onkeydown)="noWhitespace($event)"
+                                            [value]="ingredient.name"
+                                     >
+                                     <span class="input-group-btn">
+                                         <button style="background: #FF4136; color: #fff;"
+                                                 type="button"
+                                                 class="btn"
+                                                 id="basic-addon2"
+                                                 (click)="removeIngredient(i)">
+                                             <i class="fa fa-remove"></i>
+                                         </button>
+                                     </span>
+                                 </div>
+                             </div>
+                         </div>-->
+
+                        <div class="top" formArrayName="ingredients">
                             <label>Ingredients</label>
                             <div class="input-group">
                                 <input type="text"
                                        class="form-control"
                                        aria-describedby="basic-addon1"
-                                       [formControl]="ingredientName"
+                                       #newIng
+                                       (onkeydown)="noWhitespace($event)"
                                 >
                                 <span class="input-group-btn">
-                                    <button style="background: #6ebe3b; color: #fff;"
-                                            type="button"
-                                            class="btn"
-                                            id="basic-addon1"
-                                            (click)="addIngredient(ingredientName.value)"
-                                            >
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </span>
+                                     <button style="background: #6ebe3b; color: #fff;"
+                                             type="button"
+                                             class="btn"
+                                             id="basic-addon1"
+                                             (click)="addIngredients(newIng.value)"
+                                     >
+                                         <i class="fa fa-plus"></i>
+                                     </button>
+                                 </span>
                             </div>
-                            <div class="ingredient-item"
-                                 *ngFor="let ingredient of recipe.ingredients;let i = index">
-
-                                <div class="input-group">
-                                    <input type="text"
-                                           class="form-control"
-                                           aria-describedby="basic-addon2"
-                                           name="name-{{i}}"
-                                           [value]="ingredient.name"
-                                    >
-                                    <span class="input-group-btn">
-                                    <button style="background: #FF4136; color: #fff;"
-                                            type="button"
-                                            class="btn"
-                                            id="basic-addon2"
-                                            (click)="removeIngredient(i)">
-                                        <i class="fa fa-remove"></i>
-                                    </button>
-                                </span>
+                            <div *ngFor="let ing of recipeForm.controls.ingredients.controls;let i = index">
+                                <div [formGroupName]="i">
+                                    <div class="input-group">
+                                        <input type="text"
+                                               class="form-control"
+                                               aria-describedby="basic-addon1"
+                                               formControlName="description"
+                                               (onkeydown)="noWhitespace($event)"
+                                        >
+                                        <span class="input-group-btn">
+                                     <button style="background: #FF4136; color: #fff;"
+                                             type="button"
+                                             class="btn"
+                                             id="basic-addon2"
+                                             (click)="removeIngredient(i)">
+                                             <i class="fa fa-remove"></i>
+                                         </button>
+                                 </span>
+                                        <small [hidden]="recipeForm.controls.ingredients.controls[i].controls.description.valid">
+                                            Street is required
+                                        </small>
+                                    </div>
                                 </div>
-                                <!--<div class="alert alert-danger" [hidden]="ingredientName.valid">
-                                    Ingredient is required
-                                </div>
--->                            </div>
+                            </div>
                         </div>
 
                         <div class="top">
@@ -112,7 +169,8 @@
                                       aria-describedby="basic-addon3"
                                       rows="5"
                                       [formControl]="directionName"
-                                      >
+                                      (onkeydown)="noWhitespace($event)"
+                            >
                             </textarea>
                                 <span class="input-group-btn" style="vertical-align: top;">
                                     <button style="background: #6ebe3b; color: #fff;"
@@ -120,6 +178,7 @@
                                             class="btn"
                                             id="basic-addon3"
                                             (click)="addDirection(directionName.value)"
+                                            [disabled]="!directionName.value"
                                     >
                                         <i class="fa fa-plus"></i>
                                     </button>
@@ -135,9 +194,11 @@
                                           rows="5"
                                           aria-describedby="basic-addon4"
                                           [value]="steps.description"
+                                          (onkeydown)="noWhitespace($event)"
                                 ></textarea>
                                     <span class="input-group-btn" style="vertical-align: top;">
-                                    <button style="background: #FF4136; color: #fff;"
+                                    <button
+                                            style="background: #FF4136; color: #fff;"
                                             type="button"
                                             class="btn"
                                             id="basic-addon4"
@@ -160,8 +221,10 @@
                                             style="font-size: 0.875rem"
 
                                     >
-                                        <option [value]="null" disabled>Select main ingredient</option>
-                                        <option  *ngFor="let mainIng of mainIngredient" [value]="mainIng.id" >
+                                        <option value="" disabled [selected]="!recipe.mainIngredientId">Select main
+                                            ingredient
+                                        </option>
+                                        <option *ngFor="let mainIng of mainIngredient" [value]="mainIng.id">
                                             {{mainIng.name}}
                                         </option>
                                     </select>
@@ -175,6 +238,10 @@
                                            formControlName="servings"
                                            onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
                                     >
+                                    <div *ngIf="recipeForm.controls['servings'].hasError('required')"
+                                         class="alert alert-danger">
+                                        You must include servings.
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -184,7 +251,8 @@
                                             class="form-control font-italic"
                                             style="font-size: 0.875rem"
                                     >
-                                        <option [value]="null" disabled>Select an occasion</option>
+                                        <option value="" disabled [selected]="!recipe.occasionId">Select an occasion
+                                        </option>
                                         <option *ngFor="let occ of occasion" [value]="occ.id">{{occ.name}}</option>
                                     </select>
                                 </div>
@@ -200,9 +268,12 @@
                                            formControlName="readyIn"
                                            onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
                                     >
+                                    <div *ngIf="recipeForm.controls['readyIn'].hasError('required')"
+                                         class="alert alert-danger">
+                                        You must include time.
+                                    </div>
                                 </div>
-                                <!--<div class="alert alert-danger" [hidden]="ready.valid">Required Field
-                                </div>-->
+
                             </div>
                         </div>
 
@@ -213,7 +284,8 @@
                                     <select formControlName="recipeTypeId"
                                             class="form-control font-italic"
                                             style="font-size: 0.875rem">
-                                        <option [value]="null" disabled>Select recipe type</option>
+                                        <option value="" disabled [selected]="!recipe.recipeTypeId">Select recipe type
+                                        </option>
                                         <option *ngFor="let type of recipeTypes" [value]="type.id">{{type.name}}
                                         </option>
                                     </select>
@@ -222,9 +294,9 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Cuisine</label>
-                                    <select  formControlName="cuisineId"
+                                    <select formControlName="cuisineId"
                                             class="form-control font-italic" style="font-size: 0.875rem">
-                                        <option [value]="null" disabled>Select cuisine</option>
+                                        <option value="" disabled [selected]="!recipe.cuisineId">Select cuisine</option>
                                         <option *ngFor="let cuisine of cuisines" [value]="cuisine.id">{{cuisine.name}}
                                         </option>
                                     </select>
@@ -235,8 +307,8 @@
                                     <label>Course</label>
                                     <select formControlName="courseId"
                                             class="form-control font-italic"
-                                            style="font-size: 0.875rem" >
-                                        <option [value]="null" disabled>Select course</option>
+                                            style="font-size: 0.875rem">
+                                        <option value="" disabled [selected]="!recipe.courseId">Select course</option>
                                         <option *ngFor="let course of courses" [value]="course.id">{{course.name}}
                                         </option>
                                     </select>
@@ -258,7 +330,8 @@
                             </div>
 
                             <div class="text-xs-center">
-                                <button class="btn customButton" type="submit">Submit Your Recipe
+                                <button class="btn customButton" type="submit"
+                                        [disabled]="!recipeForm.valid || recipe.image == null">Submit Your Recipe
                                 </button>
                             </div>
 
