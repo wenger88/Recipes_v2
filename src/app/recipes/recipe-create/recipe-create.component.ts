@@ -24,8 +24,6 @@ export class RecipeCreateComponent implements OnInit {
 
 
     recipe = <Recipe>{
-        ingredients: [],
-        steps: [],
         comments: []
     }
     postRecipeToServer: string;
@@ -39,7 +37,10 @@ export class RecipeCreateComponent implements OnInit {
     recipeTypes: any[];
     occasion: any[];
     mainIngredient: any[];
-    mainIng = new FormControl;
+    newIng = new FormControl;
+    newStep = new FormControl;
+    steps: FormArray;
+    image = new FormControl;
     _ = require('lodash');
     cloudinaryImage: any;
     cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
@@ -66,22 +67,6 @@ export class RecipeCreateComponent implements OnInit {
 
     ngOnInit(): void {
         let i = 0;
-        this.recipeForm = this.fb.group({
-            author: new FormControl('', [Validators.required]),
-            title: new FormControl('', [Validators.required]),
-            description: new FormControl('', [Validators.required]),
-            readyIn: new FormControl('', [Validators.required]),
-            servings: new FormControl('', [Validators.required]),
-            mainIngredientId: new FormControl(''),
-            recipeTypeId: new FormControl(''),
-            cuisineId: new FormControl(''),
-            courseId: new FormControl(''),
-            occasionId: new FormControl(''),
-            skillLevelId: new FormControl(''),
-            ingredients: this.fb.array([
-                //this.initIngredient(''),
-            ])
-        })
 
 
         this.recipeService.getAllRecipeTypes()
@@ -116,23 +101,73 @@ export class RecipeCreateComponent implements OnInit {
 
         this.recipe.date = new Date();
 
+        this.recipeForm = this.fb.group({
+            author: new FormControl('', [Validators.required]),
+            title: new FormControl('', [Validators.required]),
+            description: new FormControl('', [Validators.required]),
+            readyIn: new FormControl('', [Validators.required]),
+            servings: new FormControl('', [Validators.required]),
+            mainIngredientId: new FormControl(''),
+            recipeTypeId: new FormControl(''),
+            cuisineId: new FormControl(''),
+            courseId: new FormControl(''),
+            occasionId: new FormControl(''),
+            skillLevelId: new FormControl(''),
+            ingredients: this.fb.array([]),
+            steps: this.buildStepArray()
+        })
+
     }
 
     addIngredients(newIng: string) {
         const control = <FormArray>this.recipeForm.controls['ingredients'];
         control.push(this.initIngredient(newIng));
+        this.newIng.reset();
+    }
+    removeIngredients(i: number) {
+        const control = <FormArray>this.recipeForm.controls['ingredients'];
+        control.removeAt(i);
     }
 
-    initIngredient(newIng: string) {
+    initIngredient(newIng: string): FormGroup {
         return this.fb.group({
             description: [newIng, Validators.required]
         });
     }
 
 
+
+    /*addSteps(newStep: string){
+        const control = <FormArray>this.recipeForm.controls['steps'];
+        control.push(this.initStep(newStep));
+        this.newStep.reset();
+    }*/
+    buildStepArray(): FormArray{
+        this.steps = this.fb.array([
+            this.buildStepGroup()
+        ]);
+        return this.steps;
+    }
+
+    buildStepGroup(): FormGroup{
+        return this.fb.group({
+            description: ['', Validators.required]
+        });
+    }
+
+    addSteps(){
+        this.steps.push(this.buildStepGroup());
+    }
+
+    removeSteps(i: number){
+        const control = <FormArray>this.recipeForm.controls['steps'];
+        control.removeAt(i);
+    }
+
+
     onSubmit() {
         Object.assign(this.recipe, this.recipeForm.value);
-        this.dataService.addRecipe(this.recipe)
+        this.dataService.addRecipe(this.recipeForm.value)
             .subscribe(
                 (data) => {
                     this.postRecipeToServer = JSON.stringify(data);
@@ -155,7 +190,7 @@ export class RecipeCreateComponent implements OnInit {
         //this.recipeForm.form.markAsDirty();
     }
 
-    removeIngredient(i: number) {
+    /*removeIngredient(i: number) {
         this.recipe.ingredients.splice(i, 1);
         //this.recipeForm.form.markAsDirty();
     }
@@ -174,7 +209,7 @@ export class RecipeCreateComponent implements OnInit {
             console.log('Empty Fields!');
         }
         console.log(ingredient);
-    }
+    }*/
 
 
     addDirection(directionName: HTMLInputElement) {

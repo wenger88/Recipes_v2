@@ -27,7 +27,7 @@
                                     <label>Author</label>
                                     <input type="text" class="form-control" formControlName="author"
                                            (onkeydown)="noWhitespace($event)">
-                                    <div *ngIf="recipeForm.controls['author'].hasError('required')"
+                                    <div *ngIf="recipeForm.controls['author'].hasError('required') && recipeForm.controls['author'].touched"
                                          class="alert alert-danger">You must include author.
                                     </div>
                                 </div>
@@ -36,8 +36,8 @@
                                 <div class="form-group">
                                     <label>Upload Image</label>
                                     <input type="file" ng2FileSelect [uploader]="uploader" class="form-control" required
-                                           style="padding: 5px"/>
-                                    <div *ngIf="recipe.image == null" class="alert alert-danger">You must upload
+                                           style="padding: 5px" [formControl]="image"/>
+                                    <div *ngIf="!recipe.image && image.touched" class="alert alert-danger">You must upload
                                         image.
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                    formControlName="title"
                                    (onkeydown)="noWhitespace($event)"
                             >
-                            <div *ngIf="recipeForm.controls['title'].hasError('required')" class="alert alert-danger">
+                            <div *ngIf="recipeForm.controls['title'].hasError('required') && recipeForm.controls['title'].touched" class="alert alert-danger">
                                 You must include title.
                             </div>
                         </div>
@@ -67,62 +67,62 @@
                                       class="form-control"
                                       (onkeydown)="noWhitespace($event)"
                             ></textarea>
-                            <div *ngIf="recipeForm.controls['description'].hasError('required')"
+                            <div *ngIf="recipeForm.controls['description'].hasError('required') && recipeForm.controls['description'].touched"
                                  class="alert alert-danger">
                                 You must include description.
                             </div>
                         </div>
-                         <!--<div class="top">
-                             <label>Ingredients</label>
-                             <div class="input-group">
-                                 <input type="text"
-                                        class="form-control"
-                                        aria-describedby="basic-addon1"
-                                        [formControl]="ingredientName"
-                                        (onkeydown)="noWhitespace($event)"
-                                 >
-                                 <span class="input-group-btn">
-                                     <button style="background: #6ebe3b; color: #fff;"
-                                             type="button"
-                                             class="btn"
-                                             id="basic-addon1"
-                                             (click)="addIngredient(ingredientName.value)"
-                                             [disabled]="!ingredientName.value"
-                                     >
-                                         <i class="fa fa-plus"></i>
-                                     </button>
-                                 </span>
-                             </div>
-                             <div class="ingredient-item"
-                                  *ngFor="let ingredient of recipe.ingredients;let i = index">
-
-                                 <div class="input-group">
-                                     <input type="text"
-                                            class="form-control"
-                                            aria-describedby="basic-addon2"
-                                            (onkeydown)="noWhitespace($event)"
-                                            [value]="ingredient.name"
-                                     >
-                                     <span class="input-group-btn">
-                                         <button style="background: #FF4136; color: #fff;"
-                                                 type="button"
-                                                 class="btn"
-                                                 id="basic-addon2"
-                                                 (click)="removeIngredient(i)">
-                                             <i class="fa fa-remove"></i>
-                                         </button>
-                                     </span>
-                                 </div>
-                             </div>
-                         </div>-->
-
-                        <div class="top" formArrayName="ingredients">
+                        <!--<div class="top">
                             <label>Ingredients</label>
                             <div class="input-group">
                                 <input type="text"
                                        class="form-control"
                                        aria-describedby="basic-addon1"
-                                       #newIng
+                                       [formControl]="ingredientName"
+                                       (onkeydown)="noWhitespace($event)"
+                                >
+                                <span class="input-group-btn">
+                                    <button style="background: #6ebe3b; color: #fff;"
+                                            type="button"
+                                            class="btn"
+                                            id="basic-addon1"
+                                            (click)="addIngredient(ingredientName.value)"
+                                            [disabled]="!ingredientName.value"
+                                    >
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="ingredient-item"
+                                 *ngFor="let ingredient of recipe.ingredients;let i = index">
+
+                                <div class="input-group">
+                                    <input type="text"
+                                           class="form-control"
+                                           aria-describedby="basic-addon2"
+                                           (onkeydown)="noWhitespace($event)"
+                                           [value]="ingredient.name"
+                                    >
+                                    <span class="input-group-btn">
+                                        <button style="background: #FF4136; color: #fff;"
+                                                type="button"
+                                                class="btn"
+                                                id="basic-addon2"
+                                                (click)="removeIngredient(i)">
+                                            <i class="fa fa-remove"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>-->
+
+                        <!--<div class="top" formArrayName="ingredients">
+                            <label>Ingredients</label>
+                            <div class="input-group">
+                                <input type="text"
+                                       class="form-control"
+                                       aria-describedby="basic-addon1"
+                                       [formControl]="newIng"
                                        (onkeydown)="noWhitespace($event)"
                                 >
                                 <span class="input-group-btn">
@@ -130,6 +130,7 @@
                                              type="button"
                                              class="btn"
                                              id="basic-addon1"
+                                             [disabled]="!newIng.value"
                                              (click)="addIngredients(newIng.value)"
                                      >
                                          <i class="fa fa-plus"></i>
@@ -146,29 +147,33 @@
                                                (onkeydown)="noWhitespace($event)"
                                         >
                                         <span class="input-group-btn">
-                                     <button style="background: #FF4136; color: #fff;"
-                                             type="button"
-                                             class="btn"
-                                             id="basic-addon2"
-                                             (click)="removeIngredient(i)">
-                                             <i class="fa fa-remove"></i>
-                                         </button>
-                                 </span>
-                                        <small [hidden]="recipeForm.controls.ingredients.controls[i].controls.description.valid">
-                                            Street is required
-                                        </small>
+                                            <button style="background: #FF4136; color: #fff;"
+                                                    type="button"
+                                                    class="btn"
+                                                    id="basic-addon2"
+                                                    (click)="removeIngredients(i)"
+
+                                            >
+                                                 <i class="fa fa-remove"></i>
+                                            </button>
+                                        </span>
+
+                                    </div>
+                                    <div *ngIf="!recipeForm.controls.ingredients.controls[i].controls.description.valid"
+                                         class="alert alert-danger" style="margin-top: -25px;">
+                                        Ingredient field is empty.
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
 
-                        <div class="top">
-                            <label>Steps</label>
+                        <div class="top" formArrayName="steps">
+                            <!--<label>Steps</label>
                             <div class="input-group">
                             <textarea class="form-control"
                                       aria-describedby="basic-addon3"
                                       rows="5"
-                                      [formControl]="directionName"
+                                      [formControl]="newStep"
                                       (onkeydown)="noWhitespace($event)"
                             >
                             </textarea>
@@ -177,39 +182,57 @@
                                             type="button"
                                             class="btn"
                                             id="basic-addon3"
-                                            (click)="addDirection(directionName.value)"
-                                            [disabled]="!directionName.value"
+                                            (click)="addSteps(newStep.value)"
+                                            [disabled]="!newStep.value"
                                     >
                                         <i class="fa fa-plus"></i>
                                     </button>
                                 </span>
-                            </div>
+                            </div>-->
                             <div class="ingredient-item"
-                                 *ngFor="let steps of recipe.steps;let i = index">
+                                 *ngFor="let step of steps.controls; let i = index" [formGroupName]="i">
 
-                                <div class="input-group">
-                                <textarea style="width: 100%"
-                                          name="dName-{{i}}"
-                                          class="form-control"
-                                          rows="5"
-                                          aria-describedby="basic-addon4"
-                                          [value]="steps.description"
-                                          (onkeydown)="noWhitespace($event)"
-                                ></textarea>
-                                    <span class="input-group-btn" style="vertical-align: top;">
-                                    <button
-                                            style="background: #FF4136; color: #fff;"
-                                            type="button"
-                                            class="btn"
-                                            id="basic-addon4"
-                                            (click)="removeDirection(i)">
-                                        <i class="fa fa-remove"></i>
-                                    </button>
-                                </span>
+                                <div>
+
+                                    <div class="input-group">
+                                        <textarea style="width: 100%"
+                                              class="form-control"
+                                              rows="5"
+                                              aria-describedby="basic-addon4"
+                                              formControlName="description"
+                                              (onkeydown)="noWhitespace($event)"
+                                        ></textarea>
+                                        <span class="input-group-btn" style="vertical-align: top;">
+                                            <button
+                                                style="background: #FF4136; color: #fff;"
+                                                type="button"
+                                                class="btn"
+                                                id="basic-addon4"
+                                                (click)="removeSteps(i)">
+                                            <i class="fa fa-remove"></i>
+                                            </button>
+                                        </span>
+
+                                    </div>
+                                    <div *ngIf="!recipeForm.controls.steps.controls[i].controls.description.valid"
+                                         class="alert alert-danger" style="margin-top: -25px;">
+                                        Direction field is empty.
+                                    </div>
+
 
                                 </div>
 
+
                             </div>
+                            <button type="button" (click)="addSteps()" class="btn btn-outline-primary">Add Steps</button>
+                        </div>
+
+                        <div class="top">
+                            <ul class="list-group">
+                                <li class="list-group-item" *ngFor="let step of recipeForm.controls.steps.value">
+                                    {{step.description}}
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="row">
@@ -238,7 +261,7 @@
                                            formControlName="servings"
                                            onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
                                     >
-                                    <div *ngIf="recipeForm.controls['servings'].hasError('required')"
+                                    <div *ngIf="recipeForm.controls['servings'].hasError('required') && recipeForm.controls['servings'].touched"
                                          class="alert alert-danger">
                                         You must include servings.
                                     </div>
@@ -268,7 +291,7 @@
                                            formControlName="readyIn"
                                            onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
                                     >
-                                    <div *ngIf="recipeForm.controls['readyIn'].hasError('required')"
+                                    <div *ngIf="recipeForm.controls['readyIn'].hasError('required') && recipeForm.controls['readyIn'].touched"
                                          class="alert alert-danger">
                                         You must include time.
                                     </div>
@@ -339,9 +362,11 @@
 
 
                     </form>
+                    {{recipeForm.value | json}}
                 </div>
 
             </div>
         </div>
     </div>
 </div>
+

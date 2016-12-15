@@ -5,7 +5,7 @@
 import {Component, OnInit, ViewChild} from "@angular/core";
 import {Router, ActivatedRoute, Params} from "@angular/router";
 import {Response} from "@angular/http";
-import {NgForm, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {NgForm, FormBuilder, FormControl, FormGroup, Validators, FormArray} from "@angular/forms";
 
 import {DataService} from "../../core/services/data.service";
 import {Recipe} from "../../shared/interfaces";
@@ -28,6 +28,9 @@ export class RecipeEditComponent implements OnInit {
     recipeForm: FormGroup;
     ingredientName = new FormControl;
     directionName = new FormControl;
+    newIng = new FormControl;
+    newStep = new FormControl;
+    image = new FormControl;
     cuisines: any[];
     courses: any[];
     skillLevel: any[];
@@ -36,7 +39,7 @@ export class RecipeEditComponent implements OnInit {
     mainIngredient: any[];
     _ = require('lodash');
     errorMessage: string;
-
+    steps: FormArray;
     cloudinaryImage: any;
     cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
         cloud_name: 'wenger88',
@@ -62,9 +65,6 @@ export class RecipeEditComponent implements OnInit {
 
     ngOnInit(): void {
 
-
-
-
         this.route.params.subscribe((params: Params) => {
             this.dataService.getSingleRecipe(params['id'])
                 .subscribe((recipe: Recipe) => {
@@ -82,7 +82,9 @@ export class RecipeEditComponent implements OnInit {
                         cuisineId: [this.recipe.cuisineId],
                         courseId: [this.recipe.courseId],
                         occasionId: [this.recipe.occasionId],
-                        skillLevelId: [this.recipe.skillLevelId]
+                        skillLevelId: [this.recipe.skillLevelId],
+                        ingredients: [this.recipe.ingredients],
+                        steps: this.buildStepArray()
                     })
             })
 
@@ -126,6 +128,79 @@ export class RecipeEditComponent implements OnInit {
 
 
     }
+
+    buildStepArray(): FormArray{
+        this.steps = this.fb.array([
+            this.previousSteps,
+            this.buildStepGroup()
+        ]);
+        return this.steps;
+    }
+
+    buildStepGroup(): FormGroup{
+        return this.fb.group({
+
+            description: ['', Validators.required]
+        });
+    }
+
+    previousSteps(): FormGroup{
+        return this.fb.group({
+            steps: [this.recipe.steps]
+        })
+    }
+
+    addSteps(){
+        this.steps.push(this.buildStepGroup());
+    }
+
+    addIngredients(newIng: string) {
+        /*const control = <FormArray>this.recipeForm.controls['ingredients'];
+        control.push(this.initIngredient(newIng));*/
+        //this.recipe.ingredients.push(newIng)
+
+        let ingredient: any = {
+            'description': newIng,
+        }
+
+        if (ingredient.name != "") {
+            console.log(ingredient);
+            this.recipe.ingredients.push(ingredient);
+            this.ingredientName.reset();
+        } else {
+            console.log('Empty Fields!');
+        }
+
+        this.newIng.reset();
+    }
+    removeIngredients(i: number) {
+        const control = <FormArray>this.recipeForm.controls['ingredients'];
+        control.removeAt(i);
+    }
+
+    initIngredient(newIng: string) {
+        return this.fb.group({
+            description: [newIng, Validators.required]
+        });
+    }
+
+    /*addSteps(newStep: string){
+        const control = <FormArray>this.recipeForm.controls['steps'];
+        control.push(this.initStep(newStep));
+        this.newStep.reset();
+    }
+
+    initStep(newStep: string){
+        return this.fb.group({
+            description: [newStep, Validators.required]
+        });
+    }
+
+    removeSteps(i: number){
+        const control = <FormArray>this.recipeForm.controls['steps'];
+        control.removeAt(i);
+    }*/
+
 
     noWhitespace(event: any){
         if (event.which === 32 &&  event.target.selectionStart === 0)
@@ -175,7 +250,7 @@ export class RecipeEditComponent implements OnInit {
     }
 
     onSubmit() {
-        Object.assign(this.recipe, this.recipeForm.value);
+        //Object.assign(this.recipe, this.recipeForm.value);
         this.dataService.updateRecipe(this.recipe)
             .subscribe((status: boolean) => {
                 if (status) {
@@ -200,7 +275,7 @@ export class RecipeEditComponent implements OnInit {
 
     addIngredient(name: HTMLInputElement) {
         let ingredient: any = {
-            'name': name,
+            'description': name,
         }
 
         if (ingredient.name != "") {

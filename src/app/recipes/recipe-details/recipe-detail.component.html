@@ -59,7 +59,7 @@
                             <li *ngFor="let ingredient of recipe.ingredients; let i = index">
                                 <input type="checkbox" [attr.name]="'checkbox'+i" [attr.id]="'checkbox'+i"
                                        class="css-checkbox"/>
-                                <label [attr.for]="'checkbox'+i" class="css-label">{{ingredient.name}}</label>
+                                <label [attr.for]="'checkbox'+i" class="css-label">{{ingredient.description}}</label>
                             </li>
                         </ul>
                     </fieldset>
