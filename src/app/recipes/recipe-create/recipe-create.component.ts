@@ -119,29 +119,6 @@ export class RecipeCreateComponent implements OnInit {
 
     }
 
-    addIngredients(newIng: string) {
-        const control = <FormArray>this.recipeForm.controls['ingredients'];
-        control.push(this.initIngredient(newIng));
-        this.newIng.reset();
-    }
-    removeIngredients(i: number) {
-        const control = <FormArray>this.recipeForm.controls['ingredients'];
-        control.removeAt(i);
-    }
-
-    initIngredient(newIng: string): FormGroup {
-        return this.fb.group({
-            description: [newIng, Validators.required]
-        });
-    }
-
-
-
-    /*addSteps(newStep: string){
-        const control = <FormArray>this.recipeForm.controls['steps'];
-        control.push(this.initStep(newStep));
-        this.newStep.reset();
-    }*/
     buildStepArray(): FormArray{
         this.steps = this.fb.array([
             this.buildStepGroup()
@@ -151,7 +128,7 @@ export class RecipeCreateComponent implements OnInit {
 
     buildStepGroup(): FormGroup{
         return this.fb.group({
-            description: ['', Validators.required]
+            stepDescription: ['', Validators.required]
         });
     }
 
@@ -163,10 +140,33 @@ export class RecipeCreateComponent implements OnInit {
         const control = <FormArray>this.recipeForm.controls['steps'];
         control.removeAt(i);
     }
+    addIngredients(newIng: string) {
+        const control = <FormArray>this.recipeForm.controls['ingredients'];
+        control.push(this.initIngredient(newIng));
+        this.newIng.reset();
+    }
+
+    removeIngredients(i: number) {
+        const control = <FormArray>this.recipeForm.controls['ingredients'];
+        control.removeAt(i);
+    }
+
+
+
+    initIngredient(newIng: string): FormGroup {
+        return this.fb.group({
+            description: [newIng, Validators.required]
+        });
+    }
+    /*addSteps(newStep: string){
+        const control = <FormArray>this.recipeForm.controls['steps'];
+        control.push(this.initStep(newStep));
+        this.newStep.reset();
+    }*/
 
 
     onSubmit() {
-        Object.assign(this.recipe, this.recipeForm.value);
+        //Object.assign(this.recipe, this.recipeForm.value);
         this.dataService.addRecipe(this.recipeForm.value)
             .subscribe(
                 (data) => {
@@ -178,6 +178,10 @@ export class RecipeCreateComponent implements OnInit {
             );
         //console.log(this.recipe);
 
+    }
+
+    updateSteps() {
+        // this.recipeForm.controls['steps'].value
     }
 
     noWhitespace(event: any){

@@ -199,7 +199,7 @@
                                               class="form-control"
                                               rows="5"
                                               aria-describedby="basic-addon4"
-                                              formControlName="description"
+                                              formControlName="stepDescription"
                                               (onkeydown)="noWhitespace($event)"
                                         ></textarea>
                                         <span class="input-group-btn" style="vertical-align: top;">
@@ -214,7 +214,7 @@
                                         </span>
 
                                     </div>
-                                    <div *ngIf="!recipeForm.controls.steps.controls[i].controls.description.valid"
+                                    <div *ngIf="!recipeForm.controls.steps.controls[i].controls.stepDescription.valid"
                                          class="alert alert-danger" style="margin-top: -25px;">
                                         Direction field is empty.
                                     </div>
@@ -224,13 +224,16 @@
 
 
                             </div>
+
+
+
                             <button type="button" (click)="addSteps()" class="btn btn-outline-primary">Add Steps</button>
                         </div>
 
                         <div class="top">
                             <ul class="list-group">
                                 <li class="list-group-item" *ngFor="let step of recipeForm.controls.steps.value">
-                                    {{step.description}}
+                                    {{step.stepDescription}}
                                 </li>
                             </ul>
                         </div>

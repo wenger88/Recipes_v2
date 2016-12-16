@@ -47,7 +47,7 @@ export interface Ingredients {
 export interface Steps {
     id: number,
     image: string,
-    description: string
+    stepDescription: string
 }
 
 export interface Comments {

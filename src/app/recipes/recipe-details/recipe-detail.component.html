@@ -69,7 +69,7 @@
                         <p-accordion>
                             <p-accordionTab *ngFor="let step of recipe.steps; let i = index" header="Step {{i+1}}"
                                             [selected]="i==0">
-                                {{step.description}}
+                                {{step.stepDescription}}
                             </p-accordionTab>
                         </p-accordion>
                     </div>

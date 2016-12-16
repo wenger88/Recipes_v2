@@ -30,6 +30,7 @@ export class RecipeEditComponent implements OnInit {
     directionName = new FormControl;
     newIng = new FormControl;
     newStep = new FormControl;
+    prevStep = new FormControl;
     image = new FormControl;
     cuisines: any[];
     courses: any[];
@@ -39,7 +40,7 @@ export class RecipeEditComponent implements OnInit {
     mainIngredient: any[];
     _ = require('lodash');
     errorMessage: string;
-    steps: FormArray;
+    steps: any[] = [];
     cloudinaryImage: any;
     cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
         cloud_name: 'wenger88',
@@ -84,7 +85,7 @@ export class RecipeEditComponent implements OnInit {
                         occasionId: [this.recipe.occasionId],
                         skillLevelId: [this.recipe.skillLevelId],
                         ingredients: [this.recipe.ingredients],
-                        steps: this.buildStepArray()
+                        steps: this.fb.array(this.buildSteps())
                     })
             })
 
@@ -129,29 +130,43 @@ export class RecipeEditComponent implements OnInit {
 
     }
 
-    buildStepArray(): FormArray{
+    /*buildStepArray(): FormArray{
         this.steps = this.fb.array([
-            this.previousSteps,
             this.buildStepGroup()
         ]);
         return this.steps;
-    }
+    }*/
 
     buildStepGroup(): FormGroup{
         return this.fb.group({
-
-            description: ['', Validators.required]
+            stepDescription: ['', Validators.required]
         });
     }
 
-    previousSteps(): FormGroup{
-        return this.fb.group({
-            steps: [this.recipe.steps]
-        })
+    buildSteps() {
+        let steps: any[] = [];
+        _.forEach(this.recipe.steps, (step) => {
+            steps.push(
+                this.fb.group({
+                    'stepDescription': [step.stepDescription, Validators.required]
+                })
+            );
+        });
+        return steps;
     }
 
-    addSteps(){
-        this.steps.push(this.buildStepGroup());
+
+    addSteps(step: any){
+        let description:any = {
+            stepDescription: step
+        }
+
+        this.recipeForm.controls['steps'].value.push(description);
+        this.newStep.reset();
+    }
+
+    removeSteps(i: number){
+        this.recipeForm.controls['steps'].value.splice(i, 1);
     }
 
     addIngredients(newIng: string) {
@@ -180,27 +195,9 @@ export class RecipeEditComponent implements OnInit {
 
     initIngredient(newIng: string) {
         return this.fb.group({
-            description: [newIng, Validators.required]
+            stepDescription: [newIng, Validators.required]
         });
     }
-
-    /*addSteps(newStep: string){
-        const control = <FormArray>this.recipeForm.controls['steps'];
-        control.push(this.initStep(newStep));
-        this.newStep.reset();
-    }
-
-    initStep(newStep: string){
-        return this.fb.group({
-            description: [newStep, Validators.required]
-        });
-    }
-
-    removeSteps(i: number){
-        const control = <FormArray>this.recipeForm.controls['steps'];
-        control.removeAt(i);
-    }*/
-
 
     noWhitespace(event: any){
         if (event.which === 32 &&  event.target.selectionStart === 0)
