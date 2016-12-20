@@ -4,7 +4,7 @@
 
 import {Component, Input, OnInit, ViewChild} from "@angular/core";
 import {Router, ActivatedRoute} from "@angular/router";
-import {NgForm, FormBuilder, FormGroup} from "@angular/forms";
+import {NgForm, FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
 
 import {Recipe, Comments} from "../../../shared/interfaces";
 import {DataService} from "../../../core/services/data.service";
@@ -34,9 +34,9 @@ export class RecipeCommentsComponent implements OnInit {
     ngOnInit(): void {
 
         this.recipeComment = this.fb.group({
-            commentName: [''],
-            rating: [''],
-            content: ['']
+            commentName: new FormControl('', [Validators.required]),
+            rating: new FormControl(''),
+            content: new FormControl('', [Validators.required])
         })
 
 

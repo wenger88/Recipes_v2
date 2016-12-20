@@ -1,231 +1,105 @@
 {
   "recipes": [
     {
+      "comments": [],
+      "date": "2016-12-20T10:48:45.601Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482231023/recipe-images/tdpzgmpz3zsoqh8hvuyd.jpg",
+      "author": "Teach09",
+      "title": "Loaded Mashed Potato Cakes",
+      "description": "Mashed potato cakes have been a staple in my southern family all throughout my childhood. I came up with this recipe when trying to put a new spin on an old favorite.",
+      "readyIn": "55",
+      "servings": "8",
+      "mainIngredientId": "14",
+      "recipeTypeId": "19",
+      "cuisineId": "14",
+      "courseId": "7",
+      "occasionId": "",
+      "skillLevelId": "0",
       "ingredients": [
         {
-          "name": "3 skinless, boneless chicken breast halves - cut into 1/2 inch strips"
+          "description": "3 slices bacon"
         },
         {
-          "name": "2 tablespoons ketchup"
+          "description": "2 tablespoons butter"
         },
         {
-          "name": "2 tablespoons olive oil"
+          "description": "1 small onion, chopped"
         },
         {
-          "name": "1 1/2 teaspoons white wine vinegar"
+          "description": "1 stalk celery, chopped"
         },
         {
-          "name": "1 teaspoon dried oregano"
+          "description": "1/4 teaspoon minced garlic"
         },
         {
-          "name": "1 teaspoon mustard powder"
+          "description": "1 1/4 cups mashed potatoes"
         },
         {
-          "name": "1 1/2 teaspoons curry powder, or to taste"
+          "description": "1 cup shredded American cheese"
         },
         {
-          "name": "4 pita breads, cut in half"
+          "description": "3/4 cup all-purpose flour"
         },
         {
-          "name": "2 cups mixed salad greens"
+          "description": "1 egg, slightly beaten"
         },
         {
-          "name": "1 cup plain yogurt"
+          "description": "1/4 teaspoon prepared yellow mustard"
+        },
+        {
+          "description": "1/8 teaspoon ground black pepper"
+        },
+        {
+          "description": "1 dash hot sauce"
+        },
+        {
+          "description": "1 tablespoon vegetable oil"
+        },
+        {
+          "description": "2 tablespoons sour cream"
         }
       ],
       "steps": [
         {
-          "description": "Place the chicken strips side by side in a broiling pan. In a cup or small bowl, stir together the ketchup, olive oil, white wine vinegar, oregano, mustard powder and curry powder. Pour over the chicken. Allow the chicken to marinate while you preheat the oven's broiler."
+          "stepDescription": "Place bacon in a large skillet and cook over medium-high heat, turning occasionally, until evenly browned, about 10 minutes. Drain the bacon slices on paper towels, reserving bacon grease in skillet; crumble bacon."
         },
         {
-          "description": "Broil uncovered for 15 minutes with the meat about 6 inches from the heat. Just until the chicken is cooked through, but not browned. If left too long, it will turn stringy and dry."
+          "stepDescription": "Melt butter in bacon grease over medium heat; cook and stir onion, celery, and garlic until tender and lightly browned, about 15 minutes. Transfer vegetables and bacon to large bowl; stir in mashed potatoes, American cheese, flour, egg, mustard, black pepper, and hot sauce."
         },
         {
-          "description": "Place hot chicken into pita pockets and spoon some of the juices from the pan over it. Top with salad greens and plain yogurt."
+          "stepDescription": "Heat vegetable oil in a clean skillet over medium heat. Drop spoonfuls of mashed potato mixture, flattening slightly, and fry patties until golden brown on both sides, 5 to 7 minutes. Serve with sour cream."
         }
       ],
-      "comments": [],
-      "date": "2016-12-13T15:49:00.317Z",
-      "image": "http://res.cloudinary.com/wenger88/image/upload/v1481644153/recipe-images/r2cqpqcx1yozepkypec5.jpg",
-      "author": "ITSIE",
-      "title": "Koula's Best Ever Chicken Gyros",
-      "description": "This is an unusual version of classic Middle Eastern gyros (only home made under the oven grill). Very tasty and quick to make. Perfect week day dinner. You can prepare it in advance, let it marinade and just stick it in the oven. Best served inside pita bread pockets, with salad and yogurt.",
-      "readyIn": "30",
-      "servings": "4",
-      "mainIngredientId": "3",
-      "recipeTypeId": "15",
-      "cuisineId": "17",
-      "courseId": "2",
-      "occasionId": "7",
-      "skillLevelId": "0",
       "id": 1
-    },
-    {
-      "ingredients": [
-        {
-          "name": "6 English muffins, split in half"
-        },
-        {
-          "name": "PAM® Original No-Stick Cooking Spray"
-        },
-        {
-          "name": "1/2 pound Odom's Tennessee Pride® Mild Country Sausage, thawed if frozen"
-        },
-        {
-          "name": "1/2 cup chopped yellow onion"
-        },
-        {
-          "name": "1/2 cup chopped green bell pepper"
-        },
-        {
-          "name": "1/2 cup chopped fresh button mushrooms"
-        },
-        {
-          "name": "8 eggs, beaten"
-        },
-        {
-          "name": "1/2 teaspoon salt"
-        },
-        {
-          "name": "1/4 teaspoon ground black pepper"
-        },
-        {
-          "name": "1 1/2 cups shredded part-skim mozzarella cheese"
-        }
-      ],
-      "steps": [
-        {
-          "description": "Preheat broiler. Place English muffin halves on baking sheet; set aside. Spray large skillet with cooking spray. Heat over medium-high heat. Add sausage, onion, bell pepper and mushrooms; cook 5 minutes or until sausage is crumbled and vegetables are tender, stirring occasionally. Drain. Remove from skillet and keep warm."
-        },
-        {
-          "description": "Reduce heat to medium. Add eggs to same skillet; sprinkle with salt and black pepper. Cook without stirring until edges and bottom begin to set. Gently turn to scramble; continue cooking until set."
-        },
-        {
-          "description": "Broil English muffin halves 2 minutes or until toasted. Top halves evenly with sausage mixture, scrambled eggs and cheese. Broil 3 minutes more or until cheese melts. Serve immediately."
-        }
-      ],
-      "comments": [],
-      "date": "2016-12-14T10:30:04.709Z",
-      "image": "http://res.cloudinary.com/wenger88/image/upload/v1481711410/recipe-images/ytc5hkcaiaavt0mgojez.jpg",
-      "author": "Pam Cooking Spray",
-      "title": "English Muffin Breakfast Pizzas",
-      "description": "Toasted English muffins make a perfect crust for mini breakfast pizzas.",
-      "readyIn": "30",
-      "servings": "12",
-      "mainIngredientId": "5",
-      "recipeTypeId": "15",
-      "cuisineId": "10",
-      "courseId": "2",
-      "occasionId": "",
-      "skillLevelId": "0",
-      "id": 2
-    },
-    {
-      "author": "Goran",
-      "title": "Chickennnnn",
-      "description": "Chickennnnn",
-      "readyIn": "2",
-      "servings": "2",
-      "mainIngredientId": "",
-      "recipeTypeId": "",
-      "cuisineId": "",
-      "courseId": "",
-      "occasionId": "",
-      "skillLevelId": "",
-      "ingredients": [],
-      "steps": [
-        {
-          "description": "go in the kitchen"
-        },
-        {
-          "description": "stare at the wall"
-        },
-        {
-          "description": "go back in the living room"
-        },
-        {
-          "description": "go to bed"
-        },
-        {
-          "description": "close your eyes"
-        },
-        {
-          "description": "dadasd"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "author": "2",
-      "title": "2",
-      "description": "2",
-      "readyIn": "2",
-      "servings": "2",
-      "mainIngredientId": "",
-      "recipeTypeId": "",
-      "cuisineId": "",
-      "courseId": "",
-      "occasionId": "",
-      "skillLevelId": "",
-      "ingredients": [],
-      "steps": [
-        {
-          "stepDescription": "a"
-        },
-        {
-          "stepDescription": "aaa"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "author": "asdasd",
-      "title": "asdasd",
-      "description": "asdasd",
-      "readyIn": "2",
-      "servings": "2",
-      "mainIngredientId": "",
-      "recipeTypeId": "",
-      "cuisineId": "",
-      "courseId": "",
-      "occasionId": "",
-      "skillLevelId": "",
-      "ingredients": [],
-      "steps": [
-        {
-          "stepDescription": "sdf"
-        },
-        {
-          "stepDescription": "df"
-        },
-        {
-          "stepDescription": "ss"
-        },
-        {
-          "stepDescription": "ff"
-        }
-      ],
-      "id": 5
     }
   ],
   "comments": [
     {
-      "name": "LemonLush",
-      "content": "These were OK, but I prefer a more mediteranean taste. Try marinating your chicken breast strips in olive oil, lemon, oregano, parsley, garlic and a dash of pepper. We prefer tzaziki sauce, tomatoes, onion and a bit of lettuce if you like. It's also really good if you charcoal a whole chicken (or buy one from Costco!) and strip the meat - dark and white from the chicken and use it for the gyros. We called these Chicken Souvlaki in Australia. Try serving with Tabouli salad and hummus on the side for a nice summer meal!",
+      "name": "sd",
+      "content": "sd",
       "recipeId": 1,
       "rating": 3,
-      "date": "2016-12-13T15:51:29.873Z",
+      "date": "2016-12-20T10:59:56.281Z",
       "likes": 0,
       "id": 1
     },
     {
-      "name": "ITSIE",
-      "content": "I just wanted to say that I submited this recipe, and originally I advised the use of 'tahini' - Middle Eastern susame paste traditionally used in flavoring gyros - but it was changed by the site into plain yogurt, which I think does a disservice to this recipe. In general, the addition of tahini all over the Middle East gives that final extra kick to the otherwise rather bland taste of grilled gyros. Also, lamb gyros is much more fragrant and robust than chicken one, so its even more important for the chicken one to have a right condiment.",
+      "name": "sdfsdf",
+      "content": "sdfsdfsdf",
       "recipeId": 1,
-      "rating": 5,
-      "date": "2016-12-13T15:53:06.829Z",
+      "rating": 2,
+      "date": "2016-12-20T11:00:21.271Z",
       "likes": 0,
       "id": 2
+    },
+    {
+      "name": "l",
+      "content": "l",
+      "recipeId": 1,
+      "rating": 3,
+      "date": "2016-12-20T11:00:51.295Z",
+      "likes": 0,
+      "id": 3
     }
   ],
   "cuisine": [

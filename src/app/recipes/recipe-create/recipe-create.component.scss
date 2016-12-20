@@ -94,6 +94,20 @@
     }
   }
 
+  .add{
+    margin-top: 0;
+    margin-bottom: 30px;
+    background: #6ebe3b;
+    color: #fff;
+    transition: 0.2s all ease-in-out;
+    border-radius: 0;
+    border: none;
+    font-size: 16px;
+    &:hover {
+      background: #000000;
+    }
+  }
+
   .alert-danger {
     margin-top: 5px;
   }

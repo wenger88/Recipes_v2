@@ -27,19 +27,15 @@ export class RecipeCreateComponent implements OnInit {
         comments: []
     }
     postRecipeToServer: string;
-    //@ViewChild('recipeForm') recipeForm: NgForm;
     recipeForm: FormGroup;
-    ingredientName = new FormControl;
-    directionName = new FormControl;
     cuisines: any[];
     courses: any[];
     skillLevel: any[];
     recipeTypes: any[];
     occasion: any[];
     mainIngredient: any[];
-    newIng = new FormControl;
-    newStep = new FormControl;
     steps: FormArray;
+    ingredients: FormArray;
     image = new FormControl;
     _ = require('lodash');
     cloudinaryImage: any;
@@ -48,6 +44,7 @@ export class RecipeCreateComponent implements OnInit {
         upload_preset: 'uqocz1cg',
         autoUpload: true,
     });
+
     private uploader = new CloudinaryUploader(this.cloudinaryOptions);
     options: CloudinaryOptions = new CloudinaryOptions({cloud_name: 'wenger88'});
 
@@ -113,10 +110,32 @@ export class RecipeCreateComponent implements OnInit {
             courseId: new FormControl(''),
             occasionId: new FormControl(''),
             skillLevelId: new FormControl(''),
-            ingredients: this.fb.array([]),
+            ingredients: this.buildIngredientArray(),
             steps: this.buildStepArray()
         })
 
+    }
+
+    buildIngredientArray(): FormArray{
+        this.ingredients = this.fb.array([
+            this.buildIngredientGroup()
+        ]);
+        return this.ingredients;
+    }
+
+    buildIngredientGroup(): FormGroup{
+        return this.fb.group({
+            description: ['', Validators.required]
+        });
+    }
+
+    addIngredients(){
+        this.ingredients.push(this.buildIngredientGroup());
+    }
+
+    removeIngredients(i: number){
+        const control = <FormArray>this.recipeForm.controls['ingredients'];
+        control.removeAt(i);
     }
 
     buildStepArray(): FormArray{
@@ -139,35 +158,19 @@ export class RecipeCreateComponent implements OnInit {
     removeSteps(i: number){
         const control = <FormArray>this.recipeForm.controls['steps'];
         control.removeAt(i);
+        /*this.recipeForm['value'].steps.splice(i, 1);*/
     }
-    addIngredients(newIng: string) {
-        const control = <FormArray>this.recipeForm.controls['ingredients'];
-        control.push(this.initIngredient(newIng));
-        this.newIng.reset();
-    }
-
-    removeIngredients(i: number) {
-        const control = <FormArray>this.recipeForm.controls['ingredients'];
-        control.removeAt(i);
-    }
-
-
 
     initIngredient(newIng: string): FormGroup {
         return this.fb.group({
             description: [newIng, Validators.required]
         });
     }
-    /*addSteps(newStep: string){
-        const control = <FormArray>this.recipeForm.controls['steps'];
-        control.push(this.initStep(newStep));
-        this.newStep.reset();
-    }*/
 
 
     onSubmit() {
-        //Object.assign(this.recipe, this.recipeForm.value);
-        this.dataService.addRecipe(this.recipeForm.value)
+        Object.assign(this.recipe, this.recipeForm.value);
+        this.dataService.addRecipe(this.recipe)
             .subscribe(
                 (data) => {
                     this.postRecipeToServer = JSON.stringify(data);
@@ -189,47 +192,5 @@ export class RecipeCreateComponent implements OnInit {
             return false;
     }
 
-    removeDirection(i: number) {
-        this.recipe.steps.splice(i, 1);
-        //this.recipeForm.form.markAsDirty();
-    }
-
-    /*removeIngredient(i: number) {
-        this.recipe.ingredients.splice(i, 1);
-        //this.recipeForm.form.markAsDirty();
-    }
-
-    addIngredient(name: HTMLInputElement) {
-        let ingredient: any = {
-            'name': name,
-        }
-
-        if (ingredient.name != "") {
-            console.log(ingredient);
-            this.recipe.ingredients.push(ingredient);
-            //name = null;
-            this.ingredientName.reset();
-        } else {
-            console.log('Empty Fields!');
-        }
-        console.log(ingredient);
-    }*/
-
-
-    addDirection(directionName: HTMLInputElement) {
-        let direction: any = {
-            'description': directionName,
-        }
-
-        if (direction.name != "") {
-            console.log(direction);
-            this.recipe.steps.push(direction);
-            //directionName.value = null;
-            this.directionName.reset();
-        } else {
-            console.log('Empty Fields!');
-        }
-        console.log(direction);
-    }
 
 }

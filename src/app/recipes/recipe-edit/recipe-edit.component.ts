@@ -24,13 +24,9 @@ import {RecipeService} from "../recipes.service";
 export class RecipeEditComponent implements OnInit {
 
     recipe: Recipe;
-    //@ViewChild('recipeForm') recipeForm: NgForm;
     recipeForm: FormGroup;
-    ingredientName = new FormControl;
-    directionName = new FormControl;
-    newIng = new FormControl;
-    newStep = new FormControl;
-    prevStep = new FormControl;
+    steps: FormArray;
+    ingredients: FormArray;
     image = new FormControl;
     cuisines: any[];
     courses: any[];
@@ -40,13 +36,14 @@ export class RecipeEditComponent implements OnInit {
     mainIngredient: any[];
     _ = require('lodash');
     errorMessage: string;
-    steps: any[] = [];
     cloudinaryImage: any;
+
     cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
         cloud_name: 'wenger88',
         upload_preset: 'uqocz1cg',
         autoUpload: true,
     });
+
     private uploader = new CloudinaryUploader(this.cloudinaryOptions);
 
     constructor(private route: ActivatedRoute,
@@ -84,8 +81,8 @@ export class RecipeEditComponent implements OnInit {
                         courseId: [this.recipe.courseId],
                         occasionId: [this.recipe.occasionId],
                         skillLevelId: [this.recipe.skillLevelId],
-                        ingredients: [this.recipe.ingredients],
-                        steps: this.fb.array(this.buildSteps())
+                        ingredients: this.buildIngredientArray(),
+                        steps: this.buildStepsArray()
                     })
             })
 
@@ -126,78 +123,64 @@ export class RecipeEditComponent implements OnInit {
                 this.mainIngredient = mainIngredient
             })
 
-
-
     }
 
-    /*buildStepArray(): FormArray{
-        this.steps = this.fb.array([
-            this.buildStepGroup()
-        ]);
-        return this.steps;
-    }*/
+    buildIngredientArray(): FormArray {
+        let arr: any[] = [];
+        _.forEach(this.recipe.ingredients, (address, i) => {
+            arr.push(this.buildIngredientGroup(i));
+        });
+        this.ingredients = this.fb.array(arr);
 
-    buildStepGroup(): FormGroup{
+        return this.ingredients;
+    }
+
+    buildIngredientGroup(index: number):FormGroup{
         return this.fb.group({
-            stepDescription: ['', Validators.required]
-        });
+            description: [this.recipe.ingredients[index].description, Validators.required],
+        })
     }
 
-    buildSteps() {
-        let steps: any[] = [];
-        _.forEach(this.recipe.steps, (step) => {
-            steps.push(
-                this.fb.group({
-                    'stepDescription': [step.stepDescription, Validators.required]
-                })
-            );
-        });
-        return steps;
+    addIngredients(){
+        let description = this.fb.group({
+            description: ['', Validators.required],
+        })
+        this.ingredients.push(description);
     }
 
-
-    addSteps(step: any){
-        let description:any = {
-            stepDescription: step
-        }
-
-        this.recipeForm.controls['steps'].value.push(description);
-        this.newStep.reset();
-    }
-
-    removeSteps(i: number){
-        this.recipeForm.controls['steps'].value.splice(i, 1);
-    }
-
-    addIngredients(newIng: string) {
-        /*const control = <FormArray>this.recipeForm.controls['ingredients'];
-        control.push(this.initIngredient(newIng));*/
-        //this.recipe.ingredients.push(newIng)
-
-        let ingredient: any = {
-            'description': newIng,
-        }
-
-        if (ingredient.name != "") {
-            console.log(ingredient);
-            this.recipe.ingredients.push(ingredient);
-            this.ingredientName.reset();
-        } else {
-            console.log('Empty Fields!');
-        }
-
-        this.newIng.reset();
-    }
-    removeIngredients(i: number) {
+    removeIngredients(i: number){
         const control = <FormArray>this.recipeForm.controls['ingredients'];
         control.removeAt(i);
     }
 
-    initIngredient(newIng: string) {
-        return this.fb.group({
-            stepDescription: [newIng, Validators.required]
+    buildStepsArray(): FormArray {
+        let arr: any[] = [];
+        _.forEach(this.recipe.steps, (address, i) => {
+            arr.push(this.buildStepsGroup(i));
         });
+        this.steps = this.fb.array(arr);
+
+        return this.steps;
     }
+
+    buildStepsGroup(index: number):FormGroup{
+        return this.fb.group({
+            stepDescription: [this.recipe.steps[index].stepDescription, Validators.required ],
+        })
+    }
+
+    addSteps(){
+        let description = this.fb.group({
+            stepDescription: ['', Validators.required ],
+        })
+        this.steps.push(description);
+    }
+
+    removeSteps(i: number){
+        const control = <FormArray>this.recipeForm.controls['steps'];
+        control.removeAt(i);
+    }
+
 
     noWhitespace(event: any){
         if (event.which === 32 &&  event.target.selectionStart === 0)
@@ -247,7 +230,7 @@ export class RecipeEditComponent implements OnInit {
     }
 
     onSubmit() {
-        //Object.assign(this.recipe, this.recipeForm.value);
+        Object.assign(this.recipe, this.recipeForm.value);
         this.dataService.updateRecipe(this.recipe)
             .subscribe((status: boolean) => {
                 if (status) {
@@ -260,7 +243,7 @@ export class RecipeEditComponent implements OnInit {
             });
     }
 
-    removeDirection(i: number) {
+    /*removeDirection(i: number) {
         this.recipe.steps.splice(i, 1);
         //this.recipeForm.form.markAsDirty();
     }
@@ -302,6 +285,6 @@ export class RecipeEditComponent implements OnInit {
 
         console.log(direction);
 
-    }
+    }*/
 
 }

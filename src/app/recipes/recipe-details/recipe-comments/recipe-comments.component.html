@@ -20,7 +20,7 @@
         <textarea formControlName="content" rows="5" class="form-control"></textarea>
     </div>
 
-    <button type="submit" class="btn customButton" >Add comment
+    <button type="submit" class="btn customButton" [disabled]="!recipeComment.valid">Add comment
     </button>
 
 </form>
