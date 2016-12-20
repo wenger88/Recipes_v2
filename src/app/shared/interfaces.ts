@@ -7,6 +7,7 @@ export interface Recipe {
     title: string,
     description: string,
     image: string,
+    images: any[],
     ingredients: Ingredients[],
     steps: Steps[],
     yields: number,
@@ -58,6 +59,11 @@ export interface Comments {
     date: string,
     rating: number,
     likes: number
+}
+
+export interface Images{
+    id: number,
+    recipeId: number,
 }
 
 /*

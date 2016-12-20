@@ -31,6 +31,7 @@ import {Ng2PaginationModule} from "ng2-pagination";
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ConvertMinutesPipe} from "./shared/convert-minutes.pipe";
 import {RecipeService} from "./recipes/recipes.service";
+import {RecipeCarouselComponent} from "./recipes/recipe-details/recipe-carousel/recipe-carousel.component";
 
 @NgModule({
     imports: [
@@ -64,7 +65,8 @@ import {RecipeService} from "./recipes/recipes.service";
         RecipeCommentsComponent,
         RecipeSingleCommentComponent,
         RecipeItemComponent,
-        ConvertMinutesPipe
+        ConvertMinutesPipe,
+        RecipeCarouselComponent
     ],
     providers: [
         DataService,

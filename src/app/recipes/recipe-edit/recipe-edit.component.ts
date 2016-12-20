@@ -2,17 +2,17 @@
  * Created by goran.pavlovski on 11/23/2016.
  */
 
-import {Component, OnInit, ViewChild} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {Router, ActivatedRoute, Params} from "@angular/router";
 import {Response} from "@angular/http";
-import {NgForm, FormBuilder, FormControl, FormGroup, Validators, FormArray} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators, FormArray} from "@angular/forms";
 
 import {DataService} from "../../core/services/data.service";
+import {RecipeService} from "../recipes.service";
 import {Recipe} from "../../shared/interfaces";
 
 import {CloudinaryOptions, CloudinaryUploader} from "ng2-cloudinary";
 import * as _ from 'lodash';
-import {RecipeService} from "../recipes.service";
 
 
 @Component({
@@ -28,6 +28,7 @@ export class RecipeEditComponent implements OnInit {
     steps: FormArray;
     ingredients: FormArray;
     image = new FormControl;
+    images: any[] = [];
     cuisines: any[];
     courses: any[];
     skillLevel: any[];
@@ -57,6 +58,7 @@ export class RecipeEditComponent implements OnInit {
             _self.cloudinaryImage = JSON.parse(response);
             console.log("ImageUpload:uploaded:", this.cloudinaryImage);
             this.recipe.image = _self.cloudinaryImage.url;
+            this.recipe.images.push(this.recipe.image);
         };
 
     }
@@ -72,6 +74,7 @@ export class RecipeEditComponent implements OnInit {
                     this.recipeForm = this.fb.group({
                         author: [this.recipe.author, Validators.required],
                         title: [this.recipe.title, Validators.required],
+                        images: [this.recipe.images, Validators.required],
                         description: [this.recipe.description, Validators.required],
                         readyIn: [this.recipe.readyIn, Validators.required],
                         servings: [this.recipe.servings, Validators.required],
@@ -235,7 +238,7 @@ export class RecipeEditComponent implements OnInit {
             .subscribe((status: boolean) => {
                 if (status) {
                     //this.recipeForm.form.markAsPristine();
-                    this.router.navigate(['/recipe-details', this.recipe.id]);
+                    this.router.navigate(['/details', this.recipe.id]);
                     console.log(this.recipeForm);
                 } else {
                     this.errorMessage = 'Unable to save recipe';
@@ -243,48 +246,11 @@ export class RecipeEditComponent implements OnInit {
             });
     }
 
-    /*removeDirection(i: number) {
-        this.recipe.steps.splice(i, 1);
-        //this.recipeForm.form.markAsDirty();
+    removeImage(index: number){
+        this.recipe.images.splice(index, 1);
+        /*this.recipe.image = '';*/
+        this.cloudinaryImage = '';
+        this.image.reset();
     }
-
-    removeIngredient(i: number) {
-        this.recipe.ingredients.splice(i, 1);
-        //this.recipeForm.form.markAsDirty();
-    }
-
-    addIngredient(name: HTMLInputElement) {
-        let ingredient: any = {
-            'description': name,
-        }
-
-        if (ingredient.name != "") {
-            console.log(ingredient);
-            this.recipe.ingredients.push(ingredient);
-            this.ingredientName.reset();
-        } else {
-            console.log('Empty Fields!');
-        }
-
-        console.log(ingredient);
-
-    }
-
-    addDirection(directionName: HTMLInputElement) {
-        let direction: any = {
-            'description': directionName,
-        }
-
-        if (direction.name != "") {
-            console.log(direction);
-            this.recipe.steps.push(direction);
-            this.directionName.reset();
-        } else {
-            console.log('Empty Fields!');
-        }
-
-        console.log(direction);
-
-    }*/
 
 }

@@ -44,17 +44,27 @@
                             </div>
                         </div>
 
-                        <div class="img-container" *ngIf="recipe.image != null">
-                            <img class="img-fluid" [src]="recipe.image" alt="">
+                        <div class="row">
+                            <div *ngFor="let img of images; let i = index">
+                                <div class="col-md-4 ">
+                                    <div class="img-container  img-thumbnail">
+                                        <img class="img-fluid" [src]="img" alt="">
+                                        <span (click)="removeImage(i)"> <i class="fa fa-remove"></i></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <!--<div class="img-container" *ngIf="recipe.image != null">
+                            <img class="img-fluid" [src]="recipe.image" alt="">
+                        </div>-->
 
                         <div class="form-group">
                             <label>Recipe Title</label>
                             <input type="text"
                                    class="form-control"
                                    formControlName="title"
-                                   (onkeydown)="noWhitespace($event)"
-                            >
+                                   (onkeydown)="noWhitespace($event)">
                             <div *ngIf="recipeForm.controls['title'].hasError('required') && recipeForm.controls['title'].touched"
                                  class="alert alert-danger">
                                 You must include title.
@@ -65,8 +75,9 @@
                             <textarea formControlName="description"
                                       rows="5"
                                       class="form-control"
-                                      (onkeydown)="noWhitespace($event)"
-                            ></textarea>
+                                      (onkeydown)="noWhitespace($event)">
+
+                            </textarea>
                             <div *ngIf="recipeForm.controls['description'].hasError('required') && recipeForm.controls['description'].touched"
                                  class="alert alert-danger">
                                 You must include description.
@@ -88,8 +99,7 @@
                                                     type="button"
                                                     class="btn"
                                                     id="basic-addon2"
-                                                    (click)="removeIngredients(i)"
-                                            >
+                                                    (click)="removeIngredients(i)">
                                                  <i class="fa fa-remove"></i>
                                             </button>
                                         </span>
@@ -121,7 +131,8 @@
                                               formControlName="stepDescription"
                                               (onkeydown)="noWhitespace($event)">
                                     </textarea>
-                                    <span class="input-group-btn" style="vertical-align: top;" *ngIf="recipeForm.controls.steps.controls.length > 1">
+                                    <span class="input-group-btn" style="vertical-align: top;"
+                                          *ngIf="recipeForm.controls.steps.controls.length > 1">
                                             <button style="background: #FF4136; color: #fff;"
                                                     type="button"
                                                     class="btn"
@@ -260,15 +271,15 @@
 
                             <div class="text-xs-center">
                                 <button class="btn customButton" type="submit"
-                                        [disabled]="!recipeForm.valid || recipe.image == null">Submit Your Recipe
+                                        [disabled]="!recipeForm.valid || images.length < 1">Submit Your Recipe
                                 </button>
                             </div>
 
                         </div>
 
-
                     </form>
-                    {{recipeForm.value | json}}
+                    <pre>{{recipeForm.value | json}}</pre>
+
                 </div>
 
             </div>

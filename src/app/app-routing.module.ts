@@ -18,11 +18,11 @@ const APP_ROUTES_PROVIDERS: Routes = [
         component: RecipesComponent
     },
     {
-        path: 'recipe-details/:id',
+        path: 'details/:id',
         component: RecipeDetailComponent
     },
     {
-        path: 'recipe-edit/:id',
+        path: 'edit/:id',
         component: RecipeEditComponent
     },
     {

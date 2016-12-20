@@ -21,7 +21,8 @@
                 <div class="recipe-details-image">
 
                     <figure>
-                        <img [src]="recipe.image" class="img-fluid" alt="">
+                        <img [src]="recipe.images[0]" class="img-fluid" alt="" *ngIf="recipe.images.length < 2">
+                        <recipe-carousel [recipe]="recipe"  *ngIf="recipe.images.length > 1"></recipe-carousel>
                         <figcaption>
                             <ul class="recipe-details-specs">
                                 <li><span>Main: </span>{{recipe.mainIngredientName}}</li>
@@ -79,7 +80,7 @@
 
                     <div class="clearfix">
                         <button class="btn customButton edit btn-primary float-xs-left" type="button"
-                                [routerLink]="['/recipe-edit', recipe.id]"><i class="fa fa-pencil-square-o"></i> Edit
+                                [routerLink]="['/edit', recipe.id]"><i class="fa fa-pencil-square-o"></i> Edit
                         </button>
                         <button class="btn customButton btn-danger float-xs-right" type="button" (click)="onDelete()"><i
                                 class="fa fa-trash-o"></i> Delete

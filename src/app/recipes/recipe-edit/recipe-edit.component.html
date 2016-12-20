@@ -10,7 +10,6 @@
         </div>
     </div>
 
-
     <div *ngIf="recipe">
         <div class="container">
             <div class="row">
@@ -36,22 +35,38 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Upload Image</label>
-                                    <input type="file" ng2FileSelect [uploader]="uploader" name="file"
-                                           class="form-control" style="padding: 5px"/>
+                                    <input type="file"
+                                           ng2FileSelect
+                                           [uploader]="uploader"
+                                           [formControl]="image"
+                                           name="file"
+                                           class="form-control"
+                                           style="padding: 5px"/>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="img-container" *ngIf="recipe.image != ''">
+                        <!--<div class="img-container" *ngIf="recipe.image != ''">
                             <img class="img-fluid" [src]="recipe.image" alt="">
+                        </div>-->
+
+                        <div class="row">
+                            <div *ngFor="let img of recipeForm.controls.images.value; let i = index">
+                                <div class="col-md-4 ">
+                                    <div class="img-container  img-thumbnail">
+                                        <img class="img-fluid" [src]="img" alt="">
+                                        <span (click)="removeImage(i)"> <i class="fa fa-remove"></i></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="form-group">
                             <label>Recipe Title</label>
                             <input type="text"
                                    class="form-control"
                                    formControlName="title"
-                                   (onkeydown)="noWhitespace($event)"
-                            >
+                                   (onkeydown)="noWhitespace($event)">
                             <div *ngIf="recipeForm.controls['title'].hasError('required')" class="alert alert-danger">
                                 You must include title.
                             </div>
@@ -61,8 +76,8 @@
                             <textarea rows="5"
                                       class="form-control"
                                       formControlName="description"
-                                      (onkeydown)="noWhitespace($event)"
-                            ></textarea>
+                                      (onkeydown)="noWhitespace($event)">
+                            </textarea>
                             <div *ngIf="recipeForm.controls['description'].hasError('required')"
                                  class="alert alert-danger">
                                 You must include description.
@@ -72,13 +87,15 @@
                         <div class="top">
                             <label>Ingredients</label>
                             <div formArrayName="ingredients">
-                                <div *ngFor="let ingredient of ingredients.controls; let i = index;" [formGroupName]="i">
+                                <div *ngFor="let ingredient of ingredients.controls; let i = index;"
+                                     [formGroupName]="i">
                                     <div class="input-group">
                                         <input type="text"
                                                class="form-control"
                                                formControlName="description"
                                                (onkeydown)="noWhitespace($event)">
-                                        <span class="input-group-btn" *ngIf="recipeForm.controls.ingredients.controls.length > 1">
+                                        <span class="input-group-btn"
+                                              *ngIf="recipeForm.controls.ingredients.controls.length > 1">
                                             <button style="background: #FF4136; color: #fff;"
                                                     type="button"
                                                     class="btn"
@@ -89,7 +106,7 @@
                                     </div>
                                     <div *ngIf="!recipeForm.controls.ingredients.controls[i].controls.description.valid && recipeForm.controls.ingredients.controls[i].controls.description.touched"
                                          class="alert alert-danger" style="margin-top: -25px;">
-                                    Ingredient field is empty.
+                                        Ingredient field is empty.
                                     </div>
 
                                 </div>
@@ -109,11 +126,13 @@
                                 <div *ngFor="let step of steps.controls; let i = index;" [formGroupName]="i">
                                     <div class="input-group">
                                         <textarea class="form-control"
-                                          rows="5"
-                                          formControlName="stepDescription"
-                                          (onkeydown)="noWhitespace($event)">
+                                                  rows="5"
+                                                  formControlName="stepDescription"
+                                                  (onkeydown)="noWhitespace($event)">
                                         </textarea>
-                                        <span class="input-group-btn" *ngIf="recipeForm.controls.steps.controls.length > 1" style="vertical-align: top;">
+                                        <span class="input-group-btn"
+                                              *ngIf="recipeForm.controls.steps.controls.length > 1"
+                                              style="vertical-align: top;">
                                              <button style="background: #FF4136; color: #fff;"
                                                      type="button"
                                                      class="btn"
@@ -143,8 +162,7 @@
                                     <label>Main Ingredient</label>
                                     <select formControlName="mainIngredientId"
                                             class="form-control font-italic"
-                                            style="font-size: 0.875rem"
-                                    >
+                                            style="font-size: 0.875rem">
                                         <option *ngFor="let mainIng of mainIngredient" [value]="mainIng.id">
                                             {{mainIng.name}}
                                         </option>
@@ -157,8 +175,7 @@
                                     <input type="text"
                                            class="form-control"
                                            formControlName="servings"
-                                           onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
-                                    >
+                                           onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;">
                                     <div *ngIf="recipeForm.controls['servings'].hasError('required')"
                                          class="alert alert-danger">
                                         You must include servings.
@@ -171,8 +188,7 @@
                                     <label>Occasion</label>
                                     <select formControlName="occasionId"
                                             class="form-control font-italic"
-                                            style="font-size: 0.875rem"
-                                    >
+                                            style="font-size: 0.875rem">
                                         <option *ngFor="let occ of occasion" [value]="occ.id">{{occ.name}}</option>
                                     </select>
                                 </div>
@@ -186,8 +202,7 @@
                                     <input type="text"
                                            class="form-control"
                                            formControlName="readyIn"
-                                           onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;"
-                                    >
+                                           onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;">
                                     <div *ngIf="recipeForm.controls['readyIn'].hasError('required')"
                                          class="alert alert-danger">
                                         You must include time.
@@ -203,8 +218,7 @@
                                     <label>Recipe Type</label>
                                     <select formControlName="recipeTypeId"
                                             class="form-control font-italic"
-                                            style="font-size: 0.875rem"
-                                    >
+                                            style="font-size: 0.875rem">
                                         <option *ngFor="let type of recipeTypes" [value]="type.id">{{type.name}}
                                         </option>
                                     </select>
@@ -214,8 +228,7 @@
                                 <div class="form-group">
                                     <label>Cuisine</label>
                                     <select formControlName="cuisineId"
-                                            class="form-control font-italic" style="font-size: 0.875rem"
-                                    >
+                                            class="form-control font-italic" style="font-size: 0.875rem">
                                         <option *ngFor="let cuisine of cuisines" [value]="cuisine.id">{{cuisine.name}}
                                         </option>
                                     </select>
@@ -226,8 +239,7 @@
                                     <label>Course</label>
                                     <select formControlName="courseId"
                                             class="form-control font-italic"
-                                            style="font-size: 0.875rem"
-                                    >
+                                            style="font-size: 0.875rem">
                                         <option *ngFor="let course of courses" [value]="course.id">{{course.name}}
                                         </option>
                                     </select>
@@ -237,8 +249,7 @@
                                 <div class="form-group">
                                     <label>Skill Level</label>
                                     <select formControlName="skillLevelId"
-                                            class="form-control font-italic" style="font-size: 0.875rem" #skills
-                                    >
+                                            class="form-control font-italic" style="font-size: 0.875rem" #skills>
                                         <option *ngFor="let skill of skillLevel" [value]="skill.id">{{skill.name}}
                                         </option>
                                     </select>
@@ -246,7 +257,7 @@
                             </div>
 
                             <div class="text-xs-center">
-                                <button class="btn customButton" type="submit" [disabled]="!recipeForm.valid">Save Your
+                                <button class="btn customButton" type="submit" [disabled]="!recipeForm.valid || recipe.images.length < 1">Save Your
                                     Recipe
                                 </button>
                             </div>

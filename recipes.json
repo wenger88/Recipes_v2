@@ -2,104 +2,173 @@
   "recipes": [
     {
       "comments": [],
-      "date": "2016-12-20T10:48:45.601Z",
-      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482231023/recipe-images/tdpzgmpz3zsoqh8hvuyd.jpg",
-      "author": "Teach09",
-      "title": "Loaded Mashed Potato Cakes",
-      "description": "Mashed potato cakes have been a staple in my southern family all throughout my childhood. I came up with this recipe when trying to put a new spin on an old favorite.",
-      "readyIn": "55",
-      "servings": "8",
-      "mainIngredientId": "14",
-      "recipeTypeId": "19",
-      "cuisineId": "14",
-      "courseId": "7",
-      "occasionId": "",
+      "date": "2016-12-20T14:34:10.472Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482244802/recipe-images/gj7kgbfwiy2wmrwvilkt.jpg",
+      "author": "Chef Mike",
+      "title": "Garlic Prime Rib",
+      "images": [
+        "http://res.cloudinary.com/wenger88/image/upload/v1482244593/recipe-images/iogbut1yrvjyqlh7blcr.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482244796/recipe-images/n4odnzkolqifkdiif4bf.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482244798/recipe-images/wfrru30fplidgr7mwyan.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482244802/recipe-images/gj7kgbfwiy2wmrwvilkt.jpg"
+      ],
+      "description": "Quick and easy marinade and so tasty, I was trusted with this recipe but I can't keep it to myself!",
+      "readyIn": "100",
+      "servings": "15",
+      "mainIngredientId": "10",
+      "recipeTypeId": "15",
+      "cuisineId": "24",
+      "courseId": "12",
+      "occasionId": "1",
       "skillLevelId": "0",
       "ingredients": [
         {
-          "description": "3 slices bacon"
+          "description": "1 (10 pound) prime rib roast"
         },
         {
-          "description": "2 tablespoons butter"
+          "description": "10 cloves garlic, minced"
         },
         {
-          "description": "1 small onion, chopped"
+          "description": "2 tablespoons olive oil"
         },
         {
-          "description": "1 stalk celery, chopped"
+          "description": "2 teaspoons salt"
         },
         {
-          "description": "1/4 teaspoon minced garlic"
+          "description": "2 teaspoons ground black pepper"
         },
         {
-          "description": "1 1/4 cups mashed potatoes"
-        },
-        {
-          "description": "1 cup shredded American cheese"
-        },
-        {
-          "description": "3/4 cup all-purpose flour"
-        },
-        {
-          "description": "1 egg, slightly beaten"
-        },
-        {
-          "description": "1/4 teaspoon prepared yellow mustard"
-        },
-        {
-          "description": "1/8 teaspoon ground black pepper"
-        },
-        {
-          "description": "1 dash hot sauce"
-        },
-        {
-          "description": "1 tablespoon vegetable oil"
-        },
-        {
-          "description": "2 tablespoons sour cream"
+          "description": "2 teaspoons dried thyme"
         }
       ],
       "steps": [
         {
-          "stepDescription": "Place bacon in a large skillet and cook over medium-high heat, turning occasionally, until evenly browned, about 10 minutes. Drain the bacon slices on paper towels, reserving bacon grease in skillet; crumble bacon."
+          "stepDescription": "Place the roast in a roasting pan with the fatty side up. In a small bowl, mix together the garlic, olive oil, salt, pepper and thyme. Spread the mixture over the fatty layer of the roast, and let the roast sit out until it is at room temperature, no longer than 1 hour."
         },
         {
-          "stepDescription": "Melt butter in bacon grease over medium heat; cook and stir onion, celery, and garlic until tender and lightly browned, about 15 minutes. Transfer vegetables and bacon to large bowl; stir in mashed potatoes, American cheese, flour, egg, mustard, black pepper, and hot sauce."
+          "stepDescription": "Preheat the oven to 500 degrees F (260 degrees C)."
         },
         {
-          "stepDescription": "Heat vegetable oil in a clean skillet over medium heat. Drop spoonfuls of mashed potato mixture, flattening slightly, and fry patties until golden brown on both sides, 5 to 7 minutes. Serve with sour cream."
+          "stepDescription": "Bake the roast for 20 minutes in the preheated oven, then reduce the temperature to 325 degrees F (165 degrees C), and continue roasting for an additional 60 to 75 minutes. The internal temperature of the roast should be at 135 degrees F (57 degrees C) for medium rare."
+        },
+        {
+          "stepDescription": "Allow the roast to rest for 10 or 15 minutes before carving so the meat can retain its juices."
         }
       ],
-      "id": 1
+      "id": 2
+    },
+    {
+      "comments": [],
+      "date": "2016-12-20T14:49:19.190Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482245393/recipe-images/vq6gzd9w0x5bb18knds5.jpg",
+      "author": "Kimber",
+      "title": "Shrimp Scampi Bake",
+      "images": [
+        "http://res.cloudinary.com/wenger88/image/upload/v1482245375/recipe-images/v4nuzqx40cplcnhqb2j2.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482245384/recipe-images/b2lnleziugvztrymgti9.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482245390/recipe-images/t2i95fbhpdnkr2yoodvc.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482245393/recipe-images/vq6gzd9w0x5bb18knds5.jpg"
+      ],
+      "description": "Easy version of this classic with the wonderful 'zip' of Dijon-style mustard.",
+      "readyIn": "45",
+      "servings": "6",
+      "mainIngredientId": "12",
+      "recipeTypeId": "15",
+      "cuisineId": "11",
+      "courseId": "7",
+      "occasionId": "2",
+      "skillLevelId": "0",
+      "ingredients": [
+        {
+          "description": "1 cup butter"
+        },
+        {
+          "description": "2 tablespoons prepared Dijon-style mustard"
+        },
+        {
+          "description": "1 tablespoon fresh lemon juice"
+        },
+        {
+          "description": "1 tablespoon chopped garlic"
+        },
+        {
+          "description": "1 tablespoon chopped fresh parsley"
+        },
+        {
+          "description": "2 pounds medium raw shrimp, shelled, deveined, with tails attached"
+        }
+      ],
+      "steps": [
+        {
+          "stepDescription": "Preheat oven to 450 degrees F (230 degrees C)."
+        },
+        {
+          "stepDescription": "In a small saucepan over medium heat, combine the butter, mustard, lemon juice, garlic, and parsley. When the butter melts completely, remove from heat."
+        },
+        {
+          "stepDescription": "Arrange shrimp in a shallow baking dish. Pour the butter mixture over the shrimp."
+        },
+        {
+          "stepDescription": "Bake in preheated oven for 12 to 15 minutes or until the shrimp are pink and opaque."
+        }
+      ],
+      "id": 3
     }
   ],
   "comments": [
     {
-      "name": "sd",
-      "content": "sd",
-      "recipeId": 1,
-      "rating": 3,
-      "date": "2016-12-20T10:59:56.281Z",
+      "name": "JENNLOREN",
+      "content": "I made this for Christmas and my family loved it. I used the baking instructions from the \"Perfect Prime Rib\" article found on this website. I chose to sear the meat then do cook the meat at the low temperature for a long time. It turned out great. Here is the information: Time and Temperature There are two ways you can roast it: At a low temperature for a long time, or At a high temperature for a shorter time. Your roast will shrink less if you cook it low and slow, but you won't get the same flavorful, well-browned exterior that a high roasting temperature gives you. It's possible to combine the two methods by starting the roast at a high temperature to sear the outside of it, then turning down the oven after 30 to 45 minutes to finish the roasting. If roasting at 325 degrees F (165 degrees C), the meat will take about 17 to 20 minutes per pound. If you start the roast at 450 degrees F (235 degrees C) for the first 30 minutes and then reduce the temperature to 325 degrees F (165 degrees C), allow about 13 to 15 minutes per pound. The meat was tender and delicious. Thanks!",
+      "recipeId": 2,
+      "rating": 5,
+      "date": "2016-12-20T14:44:00.243Z",
       "likes": 0,
       "id": 1
     },
     {
-      "name": "sdfsdf",
-      "content": "sdfsdfsdf",
-      "recipeId": 1,
-      "rating": 2,
-      "date": "2016-12-20T11:00:21.271Z",
+      "name": "naples34102",
+      "content": "Fairly standard roasting directions. Marinade nothing special. I'm curious as to what makes other reviewers believe this average \"recipe\" is 5-star caliber.",
+      "recipeId": 2,
+      "rating": 3,
+      "date": "2016-12-20T14:44:52.279Z",
       "likes": 0,
       "id": 2
     },
     {
-      "name": "l",
-      "content": "l",
-      "recipeId": 1,
-      "rating": 3,
-      "date": "2016-12-20T11:00:51.295Z",
+      "name": "LUCKYVEE",
+      "content": "Wonderful! Even though I cooked a 4.5 lb roast, I made the amount of garlic mixture called for in the recipe, which covered the fat very generously and produced a delicious crust. One reviewer mentioned their garlic was bitter. I imagine that the high initial temperature of 500 degrees scorched the garlic. I seared my roast at 460 for 12 minutes, and then since the fat seemed like it was on the verge of smoking, I turned the oven down to 400 for the last 8 minutes. I then roasted at 350 degrees rather than the 325 in the recipe, until my meat thermometer read 130 degrees. It was juicy with beautiful pink color in the center. Thanks Chen!",
+      "recipeId": 2,
+      "rating": 4,
+      "date": "2016-12-20T14:45:20.011Z",
       "likes": 0,
       "id": 3
+    },
+    {
+      "name": "TUNISIANSWIFE",
+      "content": "This recipe couldn't be any easier to fix..a wonderful meal to prepare in a hurry but tasting like you worked long and hard! I didn't have fresh shrimp..had 2 12oz bags of frozen so thawed them first and drained off all the water; proceeded with the recipe as stated. I used just a shy tbsp. of the dijon and on the advice of others, only used 1/2 cup butter. When I got the mixture together, I didn't think there would be enough but continued to heed the repetative advice of other reviewers and stuck with half cup...am glad I did...it was plenty enough and hubby dipped his french bread in the garlic butter! I used 2 cloves of garlic and rough chopped a handful of parsley. I also added a splash of dry white wine...this was fabulous and will definitely make again..don't be shy to try it with the frozen shrimp...just dethaw first and drain off all the water. I served this over linguine.",
+      "recipeId": 3,
+      "rating": 5,
+      "date": "2016-12-20T14:52:50.022Z",
+      "likes": 0,
+      "id": 4
+    },
+    {
+      "name": "Debbie Paskow Taveira",
+      "content": "This dish would have been much better w/ at least half of the mustard. The mustard overpowered the garlic so I felt like I was eating mustard shrimp as opposed to garlic.",
+      "recipeId": 3,
+      "rating": 2,
+      "date": "2016-12-20T14:53:53.636Z",
+      "likes": 0,
+      "id": 5
+    },
+    {
+      "name": "RANCHGIRL_59714",
+      "content": "The main reason this is a 5* rating comes from the ease of preparation in relation to the awesome results! My boyfriend and co. devoured this last night at dinner, along with Baked Pineapple and Cheese Vegetable Soup as a starter course (see reviews). In agreement with another reviewer, I found the amount of butter excessive and cut it down to only a little over half. I also doubled the fresh parsley, tripled the garlic (as per usual:-), used bottled lemon juice (since it was all i had on hand and the lemons at the market looked HORRID...gotta love MT produce eh???) and sprinkled the shrimp with old bay, s&p before buttering them. **My shrimp were quite large, and were done in 7-8 minutes....DEFINATELY keep an eye on them, as they tend to get tough, rubbery, and dry when cooked too long. Awesome!!",
+      "recipeId": 3,
+      "rating": 5,
+      "date": "2016-12-20T14:54:15.493Z",
+      "likes": 0,
+      "id": 6
     }
   ],
   "cuisine": [

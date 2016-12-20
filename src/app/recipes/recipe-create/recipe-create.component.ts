@@ -37,6 +37,7 @@ export class RecipeCreateComponent implements OnInit {
     steps: FormArray;
     ingredients: FormArray;
     image = new FormControl;
+    images: any[] = [];
     _ = require('lodash');
     cloudinaryImage: any;
     cloudinaryOptions: CloudinaryOptions = new CloudinaryOptions({
@@ -59,6 +60,7 @@ export class RecipeCreateComponent implements OnInit {
             _self.cloudinaryImage = JSON.parse(response);
             console.log("ImageUpload:uploaded:", this.cloudinaryImage);
             this.recipe.image = _self.cloudinaryImage.url;
+            this.images.push(this.recipe.image);
         };
     }
 
@@ -101,6 +103,7 @@ export class RecipeCreateComponent implements OnInit {
         this.recipeForm = this.fb.group({
             author: new FormControl('', [Validators.required]),
             title: new FormControl('', [Validators.required]),
+            images: new FormControl(this.images),
             description: new FormControl('', [Validators.required]),
             readyIn: new FormControl('', [Validators.required]),
             servings: new FormControl('', [Validators.required]),
@@ -190,6 +193,13 @@ export class RecipeCreateComponent implements OnInit {
     noWhitespace(event: any){
         if (event.which === 32 &&  event.target.selectionStart === 0)
             return false;
+    }
+
+    removeImage(index: number){
+        this.images.splice(index, 1);
+        /*this.recipe.image = '';*/
+        this.cloudinaryImage = '';
+        this.image.reset();
     }
 
 

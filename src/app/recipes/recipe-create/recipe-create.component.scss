@@ -118,8 +118,32 @@
 }
 
 .img-container {
-  width: 200px;
   margin-bottom: 20px;
+  height: 125px;
+  overflow: hidden;
+  position: relative;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+  span{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #FF4136;
+    color: #fff;
+    top: 0px;
+    text-align: center;
+    line-height: 30px;
+    right: 0px;
+    border-bottom-left-radius: 0.25rem;
+    cursor: pointer;
+    &:hover{
+      background: #000000;
+    }
+  }
 }
 
 .has-error{

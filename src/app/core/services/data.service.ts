@@ -65,43 +65,6 @@ export class DataService {
          .catch(this.handleError);*/
     }
 
-/*    getAllRecipeTypes(): Observable<Response[]> {
-        return this.http.get(this.recipeTypeUrl)
-            .map((res: Response) => res.json())
-            .catch(this.handleError)
-    }
-
-    getAllCuisines(): Observable<Response[]> {
-        return this.http.get(this.cuisineUrl)
-            .map((res: Response) => res.json())
-            .catch(this.handleError)
-    }
-
-    getAllCourses(): Observable<Response[]> {
-        return this.http.get(this.courseUrl)
-            .map((res: Response) => res.json())
-            .catch(this.handleError)
-    }
-
-    getAllOccasions(): Observable<Response[]> {
-        return this.http.get(this.occasionUrl)
-            .map((res: Response) => res.json())
-            .catch(this.handleError)
-    }
-
-    getAllSkills(): Observable<Response[]> {
-        return this.http.get(this.skillUrl)
-            .map((res: Response) => res.json())
-            .catch(this.handleError)
-    }
-
-    getMainIngredient(): Observable<Response[]> {
-        return this.http.get(this.mainIngredientUrl)
-            .map((res: Response) => res.json())
-            .catch(this.handleError)
-    }*/
-
-
     addComment(body: Object): Observable<Comments> {
         let bodyString = JSON.stringify(body); // Stringify payload
         let headers = new Headers({'Content-Type': 'application/json'}); // ... Set content type to JSON

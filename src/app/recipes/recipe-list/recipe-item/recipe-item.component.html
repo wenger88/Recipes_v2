@@ -1,12 +1,12 @@
 <div class="recipe-set">
 
     <div class="recipe-set-image">
-        <a [routerLink]="['/recipe-details', recipe.id]">
-            <img [src]="recipe.image" alt="" class="img-fluid">
+        <a [routerLink]="['/details', recipe.id]">
+            <img [src]="recipe.images[0]" alt="" class="img-fluid">
         </a>
     </div>
     <div class="recipe-set-detail">
-        <h4 class="ellipsis"><a [routerLink]="['/recipe-details', recipe.id]">{{recipe.title}}</a></h4>
+        <h4 class="ellipsis"><a [routerLink]="['/details', recipe.id]">{{recipe.title}}</a></h4>
         <p>{{recipe.description}}</p>
         <div class="detail-meta">
             <ul class="list-inline flex-container">
