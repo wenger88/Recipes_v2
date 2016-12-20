@@ -113,6 +113,331 @@
         }
       ],
       "id": 3
+    },
+    {
+      "comments": [],
+      "date": "2016-12-20T15:24:40.646Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482247663/recipe-images/e60xnntwflqoswwvicry.jpg",
+      "author": "piscesbetty",
+      "title": "Honey Butter Yule Ham",
+      "images": [
+        "http://res.cloudinary.com/wenger88/image/upload/v1482247650/recipe-images/bklxt2qas14uwnlwjpu9.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482247659/recipe-images/pstwwobnp5ezlk6ynsd5.jpg"
+      ],
+      "description": "The ham yields a moist, sweet taste. The honey butter baste makes it extra right.",
+      "readyIn": "250",
+      "servings": "20",
+      "mainIngredientId": "10",
+      "recipeTypeId": "1",
+      "cuisineId": "9",
+      "courseId": "7",
+      "occasionId": "",
+      "skillLevelId": "0",
+      "ingredients": [
+        {
+          "description": "1 (12 pound) bone-in ham"
+        },
+        {
+          "description": "3/4 cup butter, softened"
+        },
+        {
+          "description": "3/4 cup honey"
+        },
+        {
+          "description": "1/2 cup whole cloves (optional)"
+        }
+      ],
+      "steps": [
+        {
+          "stepDescription": "Preheat the oven to 350 degrees F (175 degrees C)."
+        },
+        {
+          "stepDescription": "Cut 1 inch deep criss-crosses into the flat side of the ham. In a small bowl, mix together the butter and honey. Slather onto the ham, making sure to get in the crevices too. Insert cloves into the ham if desired. Place in a roasting pan."
+        },
+        {
+          "stepDescription": "Bake for 4 hours in the preheated oven, or 20 minutes per pound. The internal temperature should reach 160 degrees F (70 degrees C). Baste every 20 minutes with the drippings. Remove, slice, serve, savor."
+        }
+      ],
+      "id": 4
+    },
+    {
+      "comments": [],
+      "date": "2016-12-20T15:31:24.734Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482247990/recipe-images/kvwxfsl133br0gmqlyaq.jpg",
+      "author": "PFEIFFER",
+      "title": "Khoresht Fesenjaan (Chicken with Pomegranate Sauce)",
+      "images": [
+        "http://res.cloudinary.com/wenger88/image/upload/v1482247990/recipe-images/kvwxfsl133br0gmqlyaq.jpg"
+      ],
+      "description": "This is a well-known Persian dish of chicken with a pomegranate and walnut sauce. Khoresht Fesenjan should be served with white rice.",
+      "readyIn": "230",
+      "servings": "12",
+      "mainIngredientId": "3",
+      "recipeTypeId": "1",
+      "cuisineId": "26",
+      "courseId": "12",
+      "occasionId": "",
+      "skillLevelId": "1",
+      "ingredients": [
+        {
+          "description": "1/2 cup vegetable oil"
+        },
+        {
+          "description": "4 medium red onions, thinly sliced"
+        },
+        {
+          "description": "3 pounds bone-in chicken pieces"
+        },
+        {
+          "description": "2 cups hot water or as needed"
+        },
+        {
+          "description": "2 1/2 cups pomegranate juice"
+        },
+        {
+          "description": "4 cups chopped walnuts"
+        },
+        {
+          "description": "2 tablespoons freshly ground cardamom"
+        },
+        {
+          "description": "2 tablespoons ground cinnamon"
+        },
+        {
+          "description": "1 medium butternut squash, seeded and cubed"
+        },
+        {
+          "description": "1/4 teaspoon saffron powder"
+        },
+        {
+          "description": "1 teaspoon salt, or to taste"
+        }
+      ],
+      "steps": [
+        {
+          "stepDescription": "Heat the oil in a large heavy skillet over medium heat. Stir in sliced onions; cook and stir until the onion has softened and turned translucent, about 5 minutes. Reduce heat to medium-low, and continue cooking and stirring until the onion is very tender and dark brown, 15 to 20 minutes more."
+        },
+        {
+          "stepDescription": "Raise heat to medium-high. Add chicken pieces, and fry until lightly browned on the outside. Pour in the water, and bring to a boil. Reduce heat to low and simmer for about 30 minutes, adding more water if necessary to keep the mixture from drying out."
+        },
+        {
+          "stepDescription": "Preheat the oven to 325 degrees F (65 degrees C)."
+        },
+        {
+          "stepDescription": "Combine the walnuts and pomegranate juice in the container of a blender or food processor. Process into liquid. (This can be done in small batches if necessary.) Add walnut-pomegranate mixture to the simmering chicken. Season with cardamom, cinnamon, saffron powder, and salt. Stir in the cubed squash. Transfer the entire mixture to a 9x13-inch baking dish."
+        },
+        {
+          "stepDescription": "Bake, loosely covered, for 2 1/2 hours in the preheated oven. Serve with white rice."
+        }
+      ],
+      "id": 5
+    },
+    {
+      "comments": [],
+      "date": "2016-12-20T15:41:37.131Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482248513/recipe-images/hteq6xbep94qwnje0eum.jpg",
+      "author": "Victoria M.H.",
+      "title": "Green Banana Fries",
+      "images": [
+        "http://res.cloudinary.com/wenger88/image/upload/v1482248501/recipe-images/sinomnhf3e82nwoqyuhy.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482248509/recipe-images/qeoospsmwjibw6hhmrwc.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482248513/recipe-images/hteq6xbep94qwnje0eum.jpg"
+      ],
+      "description": "I learned about this when I was in Kenya. I've never tasted better fries nor more nutritious fries. Potatoes aren't that common in Kenya but bananas and roots are. They taste as good as any fast food French fries and are healthier. Green bananas are the healthiest because they have all their vitamins where ripe ones lose most of them because they're too ripe. Green banana's do not have a strong banana flavor at all. It's very deceptive and very healthy. I couldn't stop eating them.",
+      "readyIn": "40",
+      "servings": "6",
+      "mainIngredientId": "",
+      "recipeTypeId": "15",
+      "cuisineId": "1",
+      "courseId": "7",
+      "occasionId": "",
+      "skillLevelId": "0",
+      "ingredients": [
+        {
+          "description": "5 small unripe (green) bananas"
+        },
+        {
+          "description": "1 quart oil for frying, or as needed"
+        },
+        {
+          "description": "salt to taste"
+        }
+      ],
+      "steps": [
+        {
+          "stepDescription": "Peel the bananas using a knife, as they are not ripe and will not peel like a yellow banana. Slice into long thin wedges or strings to make fries."
+        },
+        {
+          "stepDescription": "Heat the oil in a heavy deep skillet over medium-high heat. If you have a deep-fryer, heat the oil to 375 degrees F (190 degrees C). Place the banana fries into the hot oil, and fry until golden brown, 5 to 7 minutes. Remove from the oil, and drain on paper towels. Pat off the excess oil, and season with salt. Serve immediately."
+        }
+      ],
+      "id": 6
+    },
+    {
+      "comments": [],
+      "date": "2016-12-20T15:45:25.066Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482248849/recipe-images/ijcisjcuav0ehm49cvdj.jpg",
+      "author": "Yakuta",
+      "title": "Chicken Tikka Masala",
+      "images": [
+        "http://res.cloudinary.com/wenger88/image/upload/v1482248838/recipe-images/qwwp0oqolphnecgjp1ud.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482248842/recipe-images/ctshwascpigkmxxrbs2w.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482248846/recipe-images/ljytpo8pe5z4mdqj0npg.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482248849/recipe-images/ijcisjcuav0ehm49cvdj.jpg"
+      ],
+      "description": "This is an easy recipe for Chicken Tikka Masala - Chicken marinated in yogurt and spices and then served in a tomato cream sauce. Serve with rice or warm pita bread.",
+      "readyIn": "140",
+      "servings": "4",
+      "mainIngredientId": "",
+      "recipeTypeId": "13",
+      "cuisineId": "15",
+      "courseId": "12",
+      "occasionId": "",
+      "skillLevelId": "0",
+      "ingredients": [
+        {
+          "description": "1 cup yogurt"
+        },
+        {
+          "description": "1 tablespoon lemon juice"
+        },
+        {
+          "description": "2 teaspoons ground cumin"
+        },
+        {
+          "description": "1 teaspoon ground cinnamon"
+        },
+        {
+          "description": "2 teaspoons cayenne pepper"
+        },
+        {
+          "description": "2 teaspoons freshly ground black pepper"
+        },
+        {
+          "description": "1 tablespoon minced fresh ginger"
+        },
+        {
+          "description": "4 teaspoons salt, or to taste"
+        },
+        {
+          "description": "3 boneless skinless chicken breasts, cut into bite-size pieces"
+        },
+        {
+          "description": "4 long skewers"
+        },
+        {
+          "description": "1 tablespoon butter"
+        },
+        {
+          "description": "1 clove garlic, minced"
+        },
+        {
+          "description": "1 jalapeno pepper, finely chopped"
+        },
+        {
+          "description": "2 teaspoons ground cumin"
+        },
+        {
+          "description": "2 teaspoons paprika"
+        },
+        {
+          "description": "1 tablespoon salt, or to taste"
+        },
+        {
+          "description": "1 (8 ounce) can tomato sauce"
+        },
+        {
+          "description": "1 cup heavy cream"
+        },
+        {
+          "description": "1/4 cup chopped fresh cilantro"
+        }
+      ],
+      "steps": [
+        {
+          "stepDescription": "In a large bowl, combine yogurt, lemon juice, 2 teaspoons cumin, cinnamon, cayenne, black pepper, ginger, and 4 teaspoons salt. Stir in chicken, cover, and refrigerate for 1 hour."
+        },
+        {
+          "stepDescription": "Preheat a grill for high heat."
+        },
+        {
+          "stepDescription": "Lightly oil the grill grate. Thread chicken onto skewers, and discard marinade. Grill until juices run clear, about 5 minutes on each side."
+        },
+        {
+          "stepDescription": "Melt butter in a large heavy skillet over medium heat. Saute garlic and jalapeno for 1 minute. Season with 2 teaspoons cumin, paprika, and 3 teaspoons salt. Stir in tomato sauce and cream. Simmer on low heat until sauce thickens, about 20 minutes. Add grilled chicken, and simmer for 10 minutes. Transfer to a serving platter, and garnish with fresh cilantro."
+        }
+      ],
+      "id": 7
+    },
+    {
+      "comments": [],
+      "date": "2016-12-20T15:52:05.947Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482249437/recipe-images/kr0mwm76fhtxzhn0vvlt.jpg",
+      "author": "Dianne",
+      "title": "Restaurant Style Beef and Broccoli",
+      "images": [
+        "http://res.cloudinary.com/wenger88/image/upload/v1482249427/recipe-images/dpmbqhzx5urfohrbu1ut.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482249430/recipe-images/szpueqnbke2oesw9jcxs.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482249432/recipe-images/j5ppgrfxtpczspbyezug.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482249435/recipe-images/if6p6ywyfffnqvo064au.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482249437/recipe-images/kr0mwm76fhtxzhn0vvlt.jpg"
+      ],
+      "description": "This is my go-to recipe when I want Chinese food without having to go out. Very easy and delicious. Substituting chicken for the beef works great too. Serve over rice.",
+      "readyIn": "60",
+      "servings": "4",
+      "mainIngredientId": "1",
+      "recipeTypeId": "7",
+      "cuisineId": "6",
+      "courseId": "1",
+      "occasionId": "11",
+      "skillLevelId": "0",
+      "ingredients": [
+        {
+          "description": "1/3 cup oyster sauce"
+        },
+        {
+          "description": "2 teaspoons Asian (toasted) sesame oil"
+        },
+        {
+          "description": "1/3 cup sherry"
+        },
+        {
+          "description": "1 teaspoon soy sauce"
+        },
+        {
+          "description": "1 teaspoon white sugar"
+        },
+        {
+          "description": "1 teaspoon cornstarch"
+        },
+        {
+          "description": "3/4 pound beef round steak, cut into 1/8-inch thick strips"
+        },
+        {
+          "description": "3 tablespoons vegetable oil, plus more if needed"
+        },
+        {
+          "description": "1 thin slice of fresh ginger root"
+        },
+        {
+          "description": "1 clove garlic, peeled and smashed"
+        },
+        {
+          "description": "1 pound broccoli, cut into florets"
+        }
+      ],
+      "steps": [
+        {
+          "stepDescription": "Whisk together the oyster sauce, sesame oil, sherry, soy sauce, sugar, and cornstarch in a bowl, and stir until the sugar has dissolved. Place the steak pieces into a shallow bowl, pour the oyster sauce mixture over the meat, stir to coat well, and marinate for at least 30 minutes in refrigerator."
+        },
+        {
+          "stepDescription": "Heat vegetable oil in a wok or large skillet over medium-high heat, and stir in the ginger and garlic. Let them sizzle in the hot oil for about 1 minute to flavor the oil, then remove and discard. Stir in the broccoli, and toss and stir in the hot oil until bright green and almost tender, 5 to 7 minutes. Remove the broccoli from the wok, and set aside."
+        },
+        {
+          "stepDescription": "Pour a little more oil into the wok, if needed, and stir and toss the beef with the marinade until the sauce forms a glaze on the beef, and the meat is no longer pink, about 5 minutes. Return the cooked broccoli to the wok, and stir until the meat and broccoli are heated through, about 3 minutes."
+        }
+      ],
+      "id": 8
     }
   ],
   "comments": [
@@ -169,6 +494,123 @@
       "date": "2016-12-20T14:54:15.493Z",
       "likes": 0,
       "id": 6
+    },
+    {
+      "name": "Clearview",
+      "content": "Beyond perfection - and really easy! I had a 20 lb ham, so I did two sticks of butter and a cup and half of honey. I only really had to baste a handful of times. My company raved and raved and raved about this, asking where I bought the ham, and trying to decide why it was so delicious--everyone wanted to take leftovers. A huge success!",
+      "recipeId": 4,
+      "rating": 5,
+      "date": "2016-12-20T15:28:09.390Z",
+      "likes": 0,
+      "id": 7
+    },
+    {
+      "name": "MamaRidd07",
+      "content": "Very easy & very good. I had plenty of lefover butter mix for my 10.5 lb ham, so if you don't have all the butter on-hand, don't sweat it. The ham came out wonderfully moist & still a little sweet. I did have to cover the ham with tin foil half-way through as the top was burning quite a bit, but I will definitely use this recipe again!",
+      "recipeId": 4,
+      "rating": 5,
+      "date": "2016-12-20T15:28:50.424Z",
+      "likes": 0,
+      "id": 8
+    },
+    {
+      "name": "S2BR1",
+      "content": "YUM~ I had a whole uncooked ham that I had cut into 3rds and frozen. Not sure how much. But I put one of the thirds in the slow cooker on high for 8 hours. I melted some butter and honey and added 1/4 tsp ground cloves. Poured it over the top and let it cook all day. The house smelled great - like grandma was doing the cooking. I ladled a spoon of the sauce over the ham before serving. Ended up very moist, tender, tasty! YUM~",
+      "recipeId": 4,
+      "rating": 5,
+      "date": "2016-12-20T15:29:15.344Z",
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "name": "MCD77",
+      "content": "Tried this recipe last night and -- overall -- a tasty dish. I’ve had this several times in my favorite NYC Persian restaurant and would like to offer a few suggestions:\n \n 1.)\tIn order to balance the potentially overpowering taste of the various spices, include about two tablespoons of lemon juice (or the juice of one lemon) and two or three tablespoons of sugar. This helps balance the flavor and seems more authentic to the dish – I think.\n 2.)\tAlso, do watch the cooking time. Mine was ready in about 1 hour and 45 minutes. \n \n This is pretty close to the authentic way of preparing the dish. It is, however, an acquired taste.",
+      "recipeId": 5,
+      "rating": 4,
+      "date": "2016-12-20T15:36:52.174Z",
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "name": "Granny Shanny",
+      "content": "I had made banana fries before I found this posting, and I want to add that for people who must monitor their blood glucose, green bananas have resistant starch which is less likely to elevate bg. I have type 2 diabetes, and I have eaten as many as three bananas prepared this way - all within 2 or 3 hours' time, and never suffered a spike in blood glucose. They are delicious and healthy!",
+      "recipeId": 6,
+      "rating": 5,
+      "date": "2016-12-20T15:43:52.455Z",
+      "likes": 0,
+      "id": 11
+    },
+    {
+      "name": "Homer365",
+      "content": "Well firstly mine looked nothing like the colour of fries in the picture and they were not what I expected. They were a little sweet, which was expected but disappointing. Totally not recommend for people with any high expectations .",
+      "recipeId": 6,
+      "rating": 1,
+      "date": "2016-12-20T15:44:38.634Z",
+      "likes": 0,
+      "id": 12
+    },
+    {
+      "name": "Paddie5",
+      "content": "Yum, Amazing! With a little ketchup, you couldn't tell the difference! Be sure to use small green bananas, and cut them really thin!!",
+      "recipeId": 6,
+      "rating": 5,
+      "date": "2016-12-20T15:44:53.089Z",
+      "likes": 0,
+      "id": 13
+    },
+    {
+      "name": "EC",
+      "content": "I have visited 4 different Indian restaurants over the last 2 years (since being introduced to Indian food). I LOVE chicken tikka masala. This recipe tastes above and beyond all the restaurants I've been to. It's also at least twice as spicy. During my first attempt at this recipe I made it verbatim minus the salt. Turned out perfect but a bit spicy for my taste. My second batch was double. Again I left out the salt (per reviewers' suggestions) and halved the cayenne. Deliciously met my Indian food requirements. My suggestions to you all: 1. Leave out the salt altogether 2. The recipe as written is pretty spicy. Make it the first time as written (minus the salt), but if the spiciness is more/less what you want than modify it the next time. 3. Please don't diss this recipe without trying a few modifications of your own. This is the first chicken tikka masala recipe I ever tried. It turned out wonderfully, but it was way too spicy in the beginning and I listened to the salt warnings, so I modified it slightly. This is the only recipe I will ever use for this meal. !!!!! :-)",
+      "recipeId": 7,
+      "rating": 5,
+      "date": "2016-12-20T15:50:29.077Z",
+      "likes": 0,
+      "id": 14
+    },
+    {
+      "name": "HAWESA",
+      "content": "This was sooo good! We loved it! I did make some changes. In the marinade, I used 1 tsp. garam masala instead of cinnamon, and only 1 tsp salt. I marinated all day. For the sauce, I used 3 cloves garlic. I doubled the amount of the sauce, which I would definitely recommend doing or there won't be enough to soak up with rice. :) For a doubled recipe, I used 2 tsp cumin, 2 tsp paprika, and 3 tsp garam masala (garam masala is KEY!) and only 1/2 tsp salt. I used a 15oz can of tomato sauce and about 1.75 cups heavy cream (we'll try coconut milk next time). Seriously, this tasted just like the chicken tikka masala we get at our favorite Indian restaurant. Would be delicious with Naan!",
+      "recipeId": 7,
+      "rating": 5,
+      "date": "2016-12-20T15:51:11.699Z",
+      "likes": 0,
+      "id": 15
+    },
+    {
+      "name": "MTV",
+      "content": "Excellent with the following changes--1) For medium heat, omit all cayenne pepper. Believe it or not the black pepper in the marinade provides plenty of heat. 2) Choose a jalapeno pepper with a rounded tip & remove the seeds. The rounder the more mild, the more pointed the hotter the pepper. 3) Aside from a sprinkle of salt in the sauce, omit all salt. 4) If you don't want to fire up the grill, make a makeshift \"grill\" using a cookie rack over a foil-lined cookie sheet. Place the marinated chicken on the rack and broil on high (@ 5 min. each side) I also used thigh instead of breast meat & used olive oil instead of butter to saute the garlic & jalepeno. For easy sides, I served with basmati rice, naan, choli/garbanzo beans & raita (all from Trader Joes). Enjoy!",
+      "recipeId": 7,
+      "rating": 4,
+      "date": "2016-12-20T15:51:45.863Z",
+      "likes": 0,
+      "id": 16
+    },
+    {
+      "name": "naples34102",
+      "content": "Familiar with Chinese cooking, I recognized this as a classic blend of seasonings and ingredients as well as an accurate cooking method. Therefore, I prepared this exactly as written - and it was perfect, just as I had anticipated it would be. My only criticism, and the only thing I did differently, was that the recipe calls for round steak, which I don't think is suited for this style of cooking. I used a New York strip steak, but tenderloin or sirloin would have worked well too. The ingredients in the marinade are so traditional and so key to the dish that I don't really see how you could make any changes and get a fair result. This was just delicious and made hubs and I members of \"the clean plate club.\" Just a tip - if you partially freeze the steak for a half hour or so until semi-firm you will find this so much easier to cut into the thin slice so necessary for this style of cooking.",
+      "recipeId": 8,
+      "rating": 5,
+      "date": "2016-12-20T15:57:47.529Z",
+      "likes": 0,
+      "id": 17
+    },
+    {
+      "name": "jgt",
+      "content": "The beef is kinda tough if you just throw it in pan . If you parboil in diluted sauce for about 20 mins the meat is very tender as in restaurant style.",
+      "recipeId": 8,
+      "rating": 2,
+      "date": "2016-12-20T15:58:10.022Z",
+      "likes": 0,
+      "id": 18
+    },
+    {
+      "name": "Karen's Cupcakes",
+      "content": "This is delicious, I made one change because I have a friend who worked in a Chinese restaurant for years and she told me the secret to always tender beef even using tough cuts of meat is to cut the beef into strips then place in a plastic bag overnight with 1/2 t baking soda. Before preparing the recipe, rinse the beef off twice and dry on paper towels. Other than that difference, I followed the recipe to a T. Next time might add a few dried chilies, because I like the heat, but the sauce is wonderful!",
+      "recipeId": 8,
+      "rating": 4,
+      "date": "2016-12-20T15:58:21.916Z",
+      "likes": 0,
+      "id": 19
     }
   ],
   "cuisine": [

@@ -46,7 +46,7 @@
 
                         <div class="row">
                             <div *ngFor="let img of images; let i = index">
-                                <div class="col-md-4 ">
+                                <div class="col-sm-4 ">
                                     <div class="img-container  img-thumbnail">
                                         <img class="img-fluid" [src]="img" alt="">
                                         <span (click)="removeImage(i)"> <i class="fa fa-remove"></i></span>
@@ -278,7 +278,7 @@
                         </div>
 
                     </form>
-                    <pre>{{recipeForm.value | json}}</pre>
+                    <!--<pre>{{recipeForm.value | json}}</pre>-->
 
                 </div>
 
