@@ -46,7 +46,7 @@ export class RecipeFilterComponent {
             'courseId': [null],
             'mainIngredientId': [null],
             'occasionId': [null],
-            'readyIn_lte': [null],
+            'readyIn_lte': [null]
         });
     }
 

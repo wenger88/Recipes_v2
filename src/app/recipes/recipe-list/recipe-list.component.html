@@ -1,7 +1,23 @@
+
 <recipe-filter (filter)="getAll($event)"></recipe-filter>
 
 <div class="row">
-    <div class="col-lg-9">
+
+    <div class="col-md-12 col-lg-3 push-lg-9">
+        <form [formGroup]="searchForm" (ngSubmit)="getAll()">
+            <div class="input-group form-search" style="margin-top: 28px;">
+                <input type="search" class="form-control" formControlName="search" placeholder="Search for...">
+                <!--<span><i class="fa fa-remove"></i></span>-->
+                <span class="input-group-btn">
+
+                <button *ngIf="searchForm.value.search" class="btn resetBtn" (click)="reset()" type="button"><i class="fa fa-remove"></i></button>
+                <button class="btn searchBtn" type="submit"><i class="fa fa-search"></i></button>
+             </span>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-12 col-lg-9 pull-lg-3">
         <div class="recent-recipes">
             <h2>Recent Recipes</h2>
             <recipe-item [recipe]="recipe" *ngFor="let recipe of recipes"></recipe-item>
@@ -9,5 +25,7 @@
                             (pageChange)="getAll()"></ngb-pagination>
         </div>
     </div>
+
+
 
 </div>

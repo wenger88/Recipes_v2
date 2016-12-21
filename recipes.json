@@ -180,16 +180,13 @@
       "skillLevelId": "1",
       "ingredients": [
         {
-          "description": "1/2 cup vegetable oil"
-        },
-        {
-          "description": "4 medium red onions, thinly sliced"
-        },
-        {
           "description": "3 pounds bone-in chicken pieces"
         },
         {
           "description": "2 cups hot water or as needed"
+        },
+        {
+          "description": "4 medium red onions, thinly sliced"
         },
         {
           "description": "2 1/2 cups pomegranate juice"
@@ -201,16 +198,19 @@
           "description": "2 tablespoons freshly ground cardamom"
         },
         {
-          "description": "2 tablespoons ground cinnamon"
-        },
-        {
-          "description": "1 medium butternut squash, seeded and cubed"
-        },
-        {
           "description": "1/4 teaspoon saffron powder"
         },
         {
+          "description": "2 tablespoons ground cinnamon"
+        },
+        {
+          "description": "1/2 cup vegetable oil"
+        },
+        {
           "description": "1 teaspoon salt, or to taste"
+        },
+        {
+          "description": "1 medium butternut squash, seeded and cubed"
         }
       ],
       "steps": [
@@ -438,6 +438,57 @@
         }
       ],
       "id": 8
+    },
+    {
+      "comments": [],
+      "date": "2016-12-21T13:03:19.280Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482325515/recipe-images/ajlqobk20ahe0jxnfqrx.jpg",
+      "author": "Bethany Joyful",
+      "title": "Seared Ahi Tuna Steaks",
+      "images": [
+        "http://res.cloudinary.com/wenger88/image/upload/v1482325482/recipe-images/gz17bwlidyonokzv6eqb.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482325490/recipe-images/ijsieesmyujhohdtzdiq.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482325506/recipe-images/ewywdv6hic8oxwwaeuex.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482325515/recipe-images/ajlqobk20ahe0jxnfqrx.jpg"
+      ],
+      "description": "This is an elegantly simple way to cook tuna that any restaurant would be jealous of!",
+      "readyIn": "17",
+      "servings": "2",
+      "mainIngredientId": "6",
+      "recipeTypeId": "15",
+      "cuisineId": "9",
+      "courseId": "2",
+      "occasionId": "",
+      "skillLevelId": "0",
+      "ingredients": [
+        {
+          "description": "2 (5 ounce) ahi tuna steaks"
+        },
+        {
+          "description": "1 teaspoon kosher salt"
+        },
+        {
+          "description": "1/4 teaspoon cayenne pepper"
+        },
+        {
+          "description": "1/2 tablespoon butter"
+        },
+        {
+          "description": "2 tablespoons olive oil"
+        },
+        {
+          "description": "1 teaspoon whole peppercorns"
+        }
+      ],
+      "steps": [
+        {
+          "stepDescription": "Season the tuna steaks with salt and cayenne pepper."
+        },
+        {
+          "stepDescription": "Melt the butter with the olive oil in a skillet over medium-high heat. Cook the peppercorns in the mixture until they soften and pop, about 5 minutes. Gently place the seasoned tuna in the skillet and cook to desired doneness, 1 1/2 minutes per side for rare."
+        }
+      ],
+      "id": 9
     }
   ],
   "comments": [
@@ -611,6 +662,33 @@
       "date": "2016-12-20T15:58:21.916Z",
       "likes": 0,
       "id": 19
+    },
+    {
+      "name": "Kellee",
+      "content": "This was very easy and tasty, however the entire house filled with smoke and I literally had to open all the windows and have my husband take our baby outside. Now I'm no cook, but I thought this was odd because I followed the directions exactly as they were written. Next time I will cook at a lower heat and forget about trying to pop the peppercorns, because this was when the oil began to burn and fill the house with smoke (and they never popped anyway).",
+      "recipeId": 9,
+      "rating": 4,
+      "date": "2016-12-21T13:07:17.369Z",
+      "likes": 0,
+      "id": 20
+    },
+    {
+      "name": "Mushka",
+      "content": "Absolutely wonderful! And my husband raved about it as well. I did have to cook the peppercorns a bit longer as mentioned in another review, but it was worth it. I'll make it again for company.",
+      "recipeId": 9,
+      "rating": 4,
+      "date": "2016-12-21T13:08:07.822Z",
+      "likes": 0,
+      "id": 21
+    },
+    {
+      "name": "Sactown_Baker",
+      "content": "Nice simple recipe for a good piece of tuna. A few things though, first off I would advise to heat the skillet with oil and butter BEFORE seasoning the fish. If you put the salt on too early it will dry the fish out by drawing out the moisture. Second, I used only a pinch of salt on each side so maybe even a little less than what this calls for but its all about personal taste. Lastly I added a few splashes of white wine when I put the steaks in the pan. It not only adds a nice flavor to the fish but if you then take out the fish and add a little more wine while the pan is really hot it will deglaze your pan and leave you with a really nice white wine and peppercorn reduction (or pan gravy however you wanna call it) for your fish.",
+      "recipeId": 9,
+      "rating": 4,
+      "date": "2016-12-21T13:08:28.921Z",
+      "likes": 0,
+      "id": 22
     }
   ],
   "cuisine": [

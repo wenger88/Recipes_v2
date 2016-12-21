@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="form-filter-btn">
-                            <button type="submit" class="btn searchButton"
+                            <button type="submit" class="btn searchButton" (click)="showFilter()"
                                     [disabled]="filterForm.value.cuisineId == null && filterForm.value.mainIngredientId == null && filterForm.value.courseId == null && filterForm.value.readyIn_lte == null && filterForm.value.occasionId == null ">
                                 <i class="fa fa-search"></i></button>
                         </div>

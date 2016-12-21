@@ -18,14 +18,16 @@ export class DataService {
 
     _limit: number = 5;
     _page: number = 1;
+    q: string = "";
     recipe: Recipe[];
 
 
     constructor(private http: Http) {
     }
 
-    getFilters(page: number, filters: any) {
+    getFilters(search: string ="",page: number, filters: any) {
         let params: URLSearchParams = new URLSearchParams();
+        params.set('q', search)
         params.set('_page', page.toString());
         params.set('_limit', this._limit.toString());
         if (typeof filters !== 'undefined') {
@@ -38,8 +40,8 @@ export class DataService {
         return params;
     }
 
-    getAllRecipes(page: number = 1, filters?: any): Observable<Recipe[]> {
-        return this.http.get(this.recipesUrl, {search: this.getFilters(page, filters)})
+    getAllRecipes(search: string = "", page: number = 1, filters?: any): Observable<Recipe[]> {
+        return this.http.get(this.recipesUrl, {search: this.getFilters(search, page, filters)})
             .map((res: Response) => {
                 console.log(res)
                 let response = res.json();
@@ -64,6 +66,43 @@ export class DataService {
          .map((res: Response) => res.json())
          .catch(this.handleError);*/
     }
+
+/*    getAllRecipeTypes(): Observable<Response[]> {
+        return this.http.get(this.recipeTypeUrl)
+            .map((res: Response) => res.json())
+            .catch(this.handleError)
+    }
+
+    getAllCuisines(): Observable<Response[]> {
+        return this.http.get(this.cuisineUrl)
+            .map((res: Response) => res.json())
+            .catch(this.handleError)
+    }
+
+    getAllCourses(): Observable<Response[]> {
+        return this.http.get(this.courseUrl)
+            .map((res: Response) => res.json())
+            .catch(this.handleError)
+    }
+
+    getAllOccasions(): Observable<Response[]> {
+        return this.http.get(this.occasionUrl)
+            .map((res: Response) => res.json())
+            .catch(this.handleError)
+    }
+
+    getAllSkills(): Observable<Response[]> {
+        return this.http.get(this.skillUrl)
+            .map((res: Response) => res.json())
+            .catch(this.handleError)
+    }
+
+    getMainIngredient(): Observable<Response[]> {
+        return this.http.get(this.mainIngredientUrl)
+            .map((res: Response) => res.json())
+            .catch(this.handleError)
+    }*/
+
 
     addComment(body: Object): Observable<Comments> {
         let bodyString = JSON.stringify(body); // Stringify payload

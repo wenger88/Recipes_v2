@@ -140,6 +140,78 @@
 
 }
 
+.form-search{
+  /*border-bottom:1px solid #e4d9d1;*/
+
+  .form-control:focus, .input-group .form-control:active, .input-group .form-control:hover {
+    /* z-index: 3; */
+  }
+
+  input{
+    outline: 0;
+    border-color: #e4d9d1;
+    border-right: none;
+    font-family: 'Lora', sans-serif;
+    font-style: italic;
+    &:focus, &:active, &:hover{
+      z-index: 0;
+    }
+
+    &::-webkit-input-placeholder{
+      font-family: 'Lora', sans-serif;
+      color: #ccc;
+      font-style: italic;
+      font-size: 16px;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      font-family: 'Lora', sans-serif;
+      color: #ccc;
+      font-style: italic;
+      font-size: 16px;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      font-family: 'Lora', sans-serif;
+      color: #ccc;
+      font-style: italic;
+      font-size: 16px;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      font-family: 'Lora', sans-serif;
+      color: #ccc;
+      font-style: italic;
+      font-size: 16px;
+    }
+  }
+
+  .btn{
+    outline: 0;
+    background: #fff;
+    &.resetBtn{
+      background: #fff;
+      color: #FF4136;
+      border-color: #e4d9d1;
+      border-left: none!important;
+      /*&:hover{
+        border: none;
+      }*/
+    }
+    &.searchBtn{
+      background: #6ebe3b;
+      color: #fff;
+      border-color: #6ebe3b;
+    }
+
+
+    
+
+  }
+
+}
+
+.input-group-btn:not(:first-child) > .btn:hover{
+  z-index: 0;
+}
+
 @include media-breakpoint-down(sm) {
 
   .recipe-set {

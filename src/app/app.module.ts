@@ -66,7 +66,7 @@ import {RecipeCarouselComponent} from "./recipes/recipe-details/recipe-carousel/
         RecipeSingleCommentComponent,
         RecipeItemComponent,
         ConvertMinutesPipe,
-        RecipeCarouselComponent
+        RecipeCarouselComponent,
     ],
     providers: [
         DataService,

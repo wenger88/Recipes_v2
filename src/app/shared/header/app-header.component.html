@@ -46,25 +46,25 @@
                                 <ul class="nav navbar-nav float-md-right">
                                     <li class="nav-item">
                                         <a class="nav-link" [routerLink]="['/recipes']"
-                                           routerLinkActive="active">Home</a>
+                                           routerLinkActive="active" (click)="closeNav()">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">About</a>
+                                        <a class="nav-link" href="#" (click)="closeNav()">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Recent Recipes</a>
+                                        <a class="nav-link" href="#" (click)="closeNav()">Recent Recipes</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Chefs</a>
+                                        <a class="nav-link" href="#" (click)="closeNav()">Chefs</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Blog</a>
+                                        <a class="nav-link" href="#" (click)="closeNav()">Blog</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Contact</a>
+                                        <a class="nav-link" href="#" (click)="closeNav()">Contact</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a [routerLink]="['/create']" class="btn nav-item-btn">Submit Recipe</a>
+                                        <a [routerLink]="['/create']" class="btn nav-item-btn" (click)="closeNav()">Submit Recipe</a>
                                     </li>
                                 </ul>
                             </div>

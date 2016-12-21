@@ -13,4 +13,8 @@ export class AppHeaderComponent {
     constructor() {
     }
 
+    closeNav(){
+        this.isCollapsed = true;
+    }
+
 }

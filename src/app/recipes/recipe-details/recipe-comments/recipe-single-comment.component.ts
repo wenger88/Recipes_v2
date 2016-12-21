@@ -26,5 +26,6 @@ export class RecipeSingleCommentComponent {
 
     likedComment() {
         this.liked = true;
+        this.comment.likes++;
     }
 }
