@@ -2,9 +2,10 @@
  * Created by goran.pavlovski on 11/29/2016.
  */
 
-import {Component, Input, OnInit, ViewChild} from "@angular/core";
+import {Component, Input, OnInit} from "@angular/core";
 import {Router, ActivatedRoute} from "@angular/router";
-import {NgForm, FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
+import * as _ from 'lodash';
 
 import {Recipe, Comments} from "../../../shared/interfaces";
 import {DataService} from "../../../core/services/data.service";
@@ -52,6 +53,7 @@ export class RecipeCommentsComponent implements OnInit {
 
     onSubmit(name: HTMLInputElement, comment: HTMLInputElement, rating: any) {
 
+
         let newComments: any = {
             'name': name,
             'content': comment,
@@ -67,19 +69,38 @@ export class RecipeCommentsComponent implements OnInit {
                 .subscribe(
                     (data) => {
                         let postCommentsToServer = JSON.stringify(data);
+
+                        this.dataService.getAllComments(this.recipe.id)
+                            .subscribe((comments: Comments[]) => {
+                                this.comments = comments;
+                                if (this.comments.length != 0) {
+                                    this.recipe.rating = _.chain(this.comments)
+                                        .filter(n => n.rating > 0)
+                                        .map('rating')
+                                        .sum()
+                                        .value()
+                                    this.recipe.rating = Math.round(this.recipe.rating / this.comments.length);
+                                    console.log(this.recipe.rating);
+                                } else {
+                                    this.recipe.rating = 0;
+                                }
+                                console.log(this.comments);
+                            })
                     },
                     error => console.log("Error HTTP Post Service"), // in case of failure show this message
                     () => console.log("Job Done Post!")
+
                 );
             this.recipeComment.reset();
             console.log(this.recipe.rating);
-            window.location.reload();
+
+            return false;
+            //window.location.reload();
 
         } else {
             console.log('Empty Fields!');
         }
 
-        //console.log(newComments);
     }
 
 }
