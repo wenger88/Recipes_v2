@@ -489,6 +489,130 @@
         }
       ],
       "id": 9
+    },
+    {
+      "comments": [],
+      "date": "2016-12-21T15:38:58.340Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482334775/recipe-images/dijz5jyelb9tlqji6ccs.jpg",
+      "author": "LINKYJ",
+      "title": "Marinated Tuna Steak",
+      "images": [
+        "http://res.cloudinary.com/wenger88/image/upload/v1482334754/recipe-images/hnmqtzosd6jmx3rbupfm.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482334762/recipe-images/vcyshjpot0qihivrlajf.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482334775/recipe-images/dijz5jyelb9tlqji6ccs.jpg"
+      ],
+      "description": "This mixture of orange juice, soy sauce, and garlic gives this marinade a wonderful taste.",
+      "readyIn": "51",
+      "servings": "4",
+      "mainIngredientId": "6",
+      "recipeTypeId": "13",
+      "cuisineId": "14",
+      "courseId": "",
+      "occasionId": "8",
+      "skillLevelId": "0",
+      "ingredients": [
+        {
+          "description": "1/4 cup orange juice"
+        },
+        {
+          "description": "1/4 cup soy sauce"
+        },
+        {
+          "description": "2 tablespoons olive oil"
+        },
+        {
+          "description": "1 tablespoon lemon juice"
+        },
+        {
+          "description": "2 tablespoons chopped fresh parsley"
+        },
+        {
+          "description": "1 clove garlic, minced"
+        },
+        {
+          "description": "1/2 teaspoon chopped fresh oregano"
+        },
+        {
+          "description": "1/2 teaspoon ground black pepper"
+        },
+        {
+          "description": "4 (4 ounce) tuna steaks"
+        }
+      ],
+      "steps": [
+        {
+          "stepDescription": "In a large non-reactive dish, mix together the orange juice, soy sauce, olive oil, lemon juice, parsley, garlic, oregano, and pepper. Place the tuna steaks in the marinade and turn to coat. Cover, and refrigerate for at least 30 minutes."
+        },
+        {
+          "stepDescription": "Preheat grill for high heat."
+        },
+        {
+          "stepDescription": "Lightly oil grill grate. Cook the tuna steaks for 5 to 6 minutes, then turn and baste with the marinade. Cook for an additional 5 minutes, or to desired doneness. Discard any remaining marinade."
+        }
+      ],
+      "id": 10
+    },
+    {
+      "comments": [],
+      "date": "2016-12-21T15:46:16.437Z",
+      "image": "http://res.cloudinary.com/wenger88/image/upload/v1482335318/recipe-images/mwpgv5eujcy6wrpyy8st.jpg",
+      "author": "BLONDIEPEREZ",
+      "title": "Marinated Grilled Shrimp",
+      "images": [
+        "http://res.cloudinary.com/wenger88/image/upload/v1482335305/recipe-images/hbnh1jwj3nkruzswgqe8.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482335312/recipe-images/rm34nkm50kkvgyyqmcwp.jpg",
+        "http://res.cloudinary.com/wenger88/image/upload/v1482335318/recipe-images/mwpgv5eujcy6wrpyy8st.jpg"
+      ],
+      "description": "A very simple and easy marinade that makes your shrimp so yummy you don't even need cocktail sauce! Don't let the cayenne pepper scare you, you don't even taste it. My 2 and 4 year-olds love it and eat more shrimp than their parents! It is also a big hit with company, and easy to prepare. I make this with frozen or fresh shrimp and use my indoor electric grill if the weather is not good for outside grilling. Try it with a salad, baked potato, and garlic bread. You will not be disappointed!!!",
+      "readyIn": "55",
+      "servings": "6",
+      "mainIngredientId": "12",
+      "recipeTypeId": "13",
+      "cuisineId": "27",
+      "courseId": "12",
+      "occasionId": "",
+      "skillLevelId": "0",
+      "ingredients": [
+        {
+          "description": "3 cloves garlic, minced"
+        },
+        {
+          "description": "1/3 cup olive oil"
+        },
+        {
+          "description": "1/4 cup tomato sauce"
+        },
+        {
+          "description": "2 tablespoons red wine vinegar"
+        },
+        {
+          "description": "2 tablespoons chopped fresh basil"
+        },
+        {
+          "description": "1/2 teaspoon salt"
+        },
+        {
+          "description": "1/4 teaspoon cayenne pepper"
+        },
+        {
+          "description": "2 pounds fresh shrimp, peeled and deveined"
+        },
+        {
+          "description": "skewers"
+        }
+      ],
+      "steps": [
+        {
+          "stepDescription": "In a large bowl, stir together the garlic, olive oil, tomato sauce, and red wine vinegar. Season with basil, salt, and cayenne pepper. Add shrimp to the bowl, and stir until evenly coated. Cover, and refrigerate for 30 minutes to 1 hour, stirring once or twice."
+        },
+        {
+          "stepDescription": "Preheat grill for medium heat. Thread shrimp onto skewers, piercing once near the tail and once near the head. Discard marinade."
+        },
+        {
+          "stepDescription": "Lightly oil grill grate. Cook shrimp on preheated grill for 2 to 3 minutes per side, or until opaque."
+        }
+      ],
+      "id": 11
     }
   ],
   "comments": [
@@ -691,49 +815,49 @@
       "id": 22
     },
     {
-      "name": "asd",
-      "content": "asd",
-      "recipeId": 2,
+      "name": "BOGINIA2",
+      "content": "WOW!!! This tuna steak was insanely good. I followed the recipe exactly, except I pan seared the tuna for 3 minutes on each side instead of grilling it. I let the steaks marinade for 2 hours and then rest at room temperature for 10 minutes before cooking it. The fish came out awesome, so juicy and wonderfully tasty - I loved it (and I don't even like fish). I will make this again and again and again. Thanks Carin!",
+      "recipeId": 10,
+      "rating": 5,
+      "date": "2016-12-21T15:42:42.793Z",
+      "likes": 0,
+      "id": 28
+    },
+    {
+      "name": "PATTIBAR",
+      "content": "It was a nice marinade,but I used the GEORGE fORMAN GRILL AND THE STEAKS WERE VERY DRY.",
+      "recipeId": 10,
+      "rating": 2,
+      "date": "2016-12-21T15:42:42.793Z",
+      "likes": 0,
+      "id": 29
+    },
+    {
+      "name": "Ma'am",
+      "content": "My son caught a Blue Fin Tuna yesterday off Cape Cod. We had never cooked tuna before and gave this recipe a try. It was excellent and everyone like it. I did marinate it for about 2 hours. Much longer than called for. Other than that I did everything as it was written. Thanks, I'll be making this recipe again.",
+      "recipeId": 10,
+      "rating": 5,
+      "date": "2016-12-21T15:42:42.793Z",
+      "likes": 0,
+      "id": 30
+    },
+    {
+      "name": "AUSSIEMUM1",
+      "content": "These were very nice. I was expecting outstanding flavour for five stars though and this just didn't make it. Next time I would add sweet chilli sauce, more tomato and garlic. Fresh basil is a must! UPDATE: I have now modified this recipe to suit our family's taste and I have to say that it is worthy of 5* now. Instead of tomato sauce, I used a whole can of diced tomatoes, doubled the garlic, more basil, 1/4 cup sweet chilli sauce, 1 tblsn of red wine vinegar, 1/4 cup oil and pulsed the lot in my food processor. Verrryyy nice.",
+      "recipeId": 11,
       "rating": 4,
-      "date": "2016-12-21T15:05:48.718Z",
+      "date": "2016-12-21T15:49:03.143Z",
       "likes": 0,
-      "id": 23
+      "id": 31
     },
     {
-      "name": "dsa",
-      "content": "dsa",
-      "recipeId": 2,
-      "rating": 4,
-      "date": "2016-12-21T15:05:48.718Z",
+      "name": "Raspberry Tart",
+      "content": "We followed the directions exactly as given and even used yummy fresh shrimp we brought home from our Gulf vacation, but I thought this was very blah. Even with loads of fresh basil and marinating it for a solid hour, I found it just okay and my husband said it tasted too tomato-y. Disappointed for a five-star ranking.",
+      "recipeId": 11,
+      "rating": 3,
+      "date": "2016-12-21T15:49:03.143Z",
       "likes": 0,
-      "id": 24
-    },
-    {
-      "name": "a",
-      "content": "a",
-      "recipeId": 2,
-      "rating": 1,
-      "date": "2016-12-21T15:05:48.718Z",
-      "likes": 0,
-      "id": 25
-    },
-    {
-      "name": "a",
-      "content": "a",
-      "recipeId": 2,
-      "rating": 1,
-      "date": "2016-12-21T15:05:48.718Z",
-      "likes": 0,
-      "id": 26
-    },
-    {
-      "name": "a",
-      "content": "a",
-      "recipeId": 2,
-      "rating": 1,
-      "date": "2016-12-21T15:05:48.718Z",
-      "likes": 0,
-      "id": 27
+      "id": 32
     }
   ],
   "cuisine": [

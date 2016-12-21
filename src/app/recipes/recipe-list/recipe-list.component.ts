@@ -33,8 +33,6 @@ export class RecipeListComponent implements OnInit {
             search: new FormControl('')
         })
 
-        this.term = this.searchForm.value.search;
-
         this.getAll();
     }
 
