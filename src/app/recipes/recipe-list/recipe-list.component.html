@@ -4,25 +4,27 @@
 <div class="row">
 
     <div class="col-md-12 col-lg-3 push-lg-9">
-        <form [formGroup]="searchForm" (ngSubmit)="getAll()">
-            <div class="input-group form-search" style="margin-top: 28px;">
-                <input type="search" class="form-control" formControlName="search" placeholder="Search for...">
-                <!--<span><i class="fa fa-remove"></i></span>-->
-                <span class="input-group-btn">
-
-                <button *ngIf="searchForm.value.search" class="btn resetBtn" (click)="reset()" type="button"><i class="fa fa-remove"></i></button>
-                <button class="btn searchBtn" type="submit"><i class="fa fa-search"></i></button>
-             </span>
-            </div>
-        </form>
+        <recipe-search (search)="getSearch($event)" ></recipe-search>
     </div>
 
     <div class="col-md-12 col-lg-9 pull-lg-3">
-        <div class="recent-recipes">
+        <div class="recent-recipes" *ngIf="recipes && recipes.length > 0">
             <h2>Recent Recipes</h2>
             <recipe-item [recipe]="recipe" *ngFor="let recipe of recipes"></recipe-item>
             <ngb-pagination [collectionSize]="totalCount" [pageSize]="5" [(page)]="page"
                             (pageChange)="getAll()"></ngb-pagination>
+        </div>
+        <div class="recent-recipes" *ngIf="recipes && recipes.length < 1">
+            <h2>Recent Recipes</h2>
+            <div class="text-xs-center">
+                <h5 style="font-family: 'Lora', sans-serif; font-style: italic;">No such recipes found!</h5>
+                <p style="font-family: 'Segoe UI', sans-serif">Clear the form to see all recipes!</p>
+            </div>
+
+            <div class="sad-egg">
+                <img src="http://res.cloudinary.com/wenger88/image/upload/v1482407404/sad_toast_by_earcl01-d4dzy3v_upuwrw.png" class="img-fluid" alt="">
+            </div>
+
         </div>
     </div>
 

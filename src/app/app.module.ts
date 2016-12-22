@@ -32,6 +32,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ConvertMinutesPipe} from "./shared/convert-minutes.pipe";
 import {RecipeService} from "./recipes/recipes.service";
 import {RecipeCarouselComponent} from "./recipes/recipe-details/recipe-carousel/recipe-carousel.component";
+import {RecipeSearchComponent} from "./recipes/recipe-list/recipe-search/recipe-search.component";
 
 @NgModule({
     imports: [
@@ -67,6 +68,7 @@ import {RecipeCarouselComponent} from "./recipes/recipe-details/recipe-carousel/
         RecipeItemComponent,
         ConvertMinutesPipe,
         RecipeCarouselComponent,
+        RecipeSearchComponent
     ],
     providers: [
         DataService,

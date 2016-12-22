@@ -288,7 +288,7 @@
       "description": "This is an easy recipe for Chicken Tikka Masala - Chicken marinated in yogurt and spices and then served in a tomato cream sauce. Serve with rice or warm pita bread.",
       "readyIn": "140",
       "servings": "4",
-      "mainIngredientId": "",
+      "mainIngredientId": "3",
       "recipeTypeId": "13",
       "cuisineId": "15",
       "courseId": "12",

@@ -53,7 +53,7 @@ export class RecipeFilterComponent {
     //*
     onSubmit() {
         this.filter.emit(this.filterForm.value);
-        console.log(this.filterForm.value)
+        console.log(this.filterForm.value);
     }
 
     //*/
