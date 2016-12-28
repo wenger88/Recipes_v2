@@ -46,7 +46,7 @@
                                 <ul class="nav navbar-nav float-md-right">
                                     <li class="nav-item">
                                         <a class="nav-link" [routerLink]="['/recipes']"
-                                           routerLinkActive="active" (click)="closeNav()">Home</a>
+                                           [routerLinkActive]="['active']" (click)="closeNav()">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" (click)="closeNav()">About</a>

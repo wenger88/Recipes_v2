@@ -176,7 +176,7 @@ export class RecipeCreateComponent implements OnInit {
         this.dataService.addRecipe(this.recipe)
             .subscribe(
                 (data) => {
-                    this.postRecipeToServer = JSON.stringify(data);
+                    //this.postRecipeToServer = JSON.stringify(data);
                     this.router.navigate(['/recipes']);
                 },
                 error => console.log("Error HTTP Post Service"), // in case of failure show this message
@@ -184,10 +184,6 @@ export class RecipeCreateComponent implements OnInit {
             );
         //console.log(this.recipe);
 
-    }
-
-    updateSteps() {
-        // this.recipeForm.controls['steps'].value
     }
 
     noWhitespace(event: any){

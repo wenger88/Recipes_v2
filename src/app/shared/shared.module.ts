@@ -20,7 +20,7 @@ import {BrowserModule} from "@angular/platform-browser";
     ],
     providers: [],
     declarations: [
-        AppHeaderComponent,
+        AppHeaderComponent
     ]
 })
 

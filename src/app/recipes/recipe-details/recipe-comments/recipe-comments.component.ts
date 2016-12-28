@@ -21,7 +21,6 @@ export class RecipeCommentsComponent implements OnInit {
 
     @Input() recipe: Recipe;
     @Input() comments: Comments[];
-    //@ViewChild('recipeComment') recipeComment: NgForm;
     recipeComment: FormGroup;
     _ = require('lodash');
     date: any;

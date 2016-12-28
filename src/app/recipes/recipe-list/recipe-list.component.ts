@@ -39,7 +39,6 @@ export class RecipeListComponent implements OnInit {
         this.term = serch;
         this.filters = {};
         this.getAll();
-
     }
 
 
